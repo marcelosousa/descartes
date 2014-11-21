@@ -35,6 +35,7 @@ import soot.jimple.GotoStmt;
 import soot.Local;
 import soot.jimple.IntConstant;
 import soot.jimple.FieldRef;
+import soot.jimple.InstanceFieldRef;
 import soot.jimple.EqExpr;
 import soot.jimple.GeExpr;
 import soot.jimple.GtExpr;
@@ -58,12 +59,33 @@ public class MyMain {
                                            new Transform("jtp.myTransform", new BodyTransformer() {
 
                                                    protected void internalTransform(Body body, String phase, Map options) {
+                                                       String name = body.getMethod().getName();
                                                        ExceptionalUnitGraph eug = new ExceptionalUnitGraph(body);
                                                        MyAnalysis02 b = new MyAnalysis02(eug);
                                                        List<Unit> heads = eug.getHeads();
+                                                       try {
                                                        for (Iterator<Unit> i1 = heads.iterator(); i1.hasNext(); ) {
                                                            Unit u1 = i1.next();
-                                                           G.v().out.println("The flow at this head is " + b.getFlowAfter(u1).toString());
+                                                           ArrayList<BoolExpr> conds = b.getFlowAfter(u1);
+                                                           G.v().out.println("The flow at this head is " + conds.toString());
+                                                           if (name.equals("compare")) {
+
+                                                               IntExpr eo = b.ctx.MkIntConst("o");
+
+                                                               String p0 = body.getParameterLocal(0).toString();
+                                                               String p1 = body.getParameterLocal(1).toString();
+                                                               Expr e0=b.m1.get(p0);
+                                                               Expr e1=b.m1.get(p1);
+                                                               final ListIterator<BoolExpr> li = conds.listIterator();
+                                                               while (li.hasNext()) {
+                                                                   li.set((BoolExpr) li.next().Substitute(new Expr[] {e0, e1}, new Expr[] {eo, eo}));
+                                                               }
+                                                               G.v().out.println(conds.toString());
+                                                               
+                                                           }
+                                                       }
+                                                       } catch (Z3Exception E) {
+                                                           E.printStackTrace();
                                                        }
 
                                                        MyAnalysis01 a = new MyAnalysis01(eug);
@@ -75,7 +97,6 @@ public class MyMain {
 
                                                        // new CombinedDUAnalysis(eug);
 
-                                                       String name = body.getMethod().getName();
                                                        if (name.equals("compare")) {
                                                            G.v().out.println("Here's a compare body.");
                                                            for (Iterator<Unit> i1 = eug.iterator();
@@ -97,8 +118,8 @@ public class MyMain {
                                                                                      " an integer constant and " +
                                                                                      (((DefinitionStmt)u1).getRightOp() instanceof Local ? "is" : "is not")
                                                                                      + " a local and " +
-                                                                                     (((DefinitionStmt)u1).getRightOp() instanceof FieldRef ? "is" : "is not") +
-                                                                                     " a field reference.");
+                                                                                     (((DefinitionStmt)u1).getRightOp() instanceof InstanceFieldRef ? "is" : "is not") +
+                                                                                     " an instance field reference.");
                                                                else if (u1 instanceof ReturnStmt)
                                                                    G.v().out.println("Here's a return statement unit, with op " +
                                                                                      ((ReturnStmt)u1).getOp().toString() + ", which " + (((ReturnStmt)u1).getOp() instanceof Local ? "is" : "is not") + " a local.");
@@ -195,7 +216,7 @@ public class MyMain {
             cfg.put("model", "true");
             try {
                 ctx = new Context(cfg);
-                Field = ctx.MkFuncDecl("g", new Sort[] {ctx.IntSort(), ctx.IntSort()}, ctx.IntSort());
+                Field = ctx.MkFuncDecl("Field", new Sort[] {ctx.IntSort(), ctx.IntSort()}, ctx.IntSort());
             } catch (Z3Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -228,16 +249,16 @@ public class MyMain {
                             li.set((BoolExpr) li.next().Substitute
                                    (new Expr[] {m1.get(arg11.getLeftOp().toString())},
                                     new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)}));
-                    } else if (arg11.getRightOp() instanceof FieldRef || arg11.getRightOp() instanceof Local) {
+                    } else if (arg11.getRightOp() instanceof InstanceFieldRef || arg11.getRightOp() instanceof Local) {
                         IntExpr temp1;
-                        if (arg11.getRightOp() instanceof FieldRef) {
-                            String name2 = ((FieldRef)arg11.getRightOp()).getField().toString();
+                        if (arg11.getRightOp() instanceof InstanceFieldRef) {
+                            String name2 = ((InstanceFieldRef)arg11.getRightOp()).getBase().toString();
                             IntExpr temp2 = m1.get(name2);
                             if (temp2 == null) {
                                 temp2 = ctx.MkIntConst(name2);
                                 m1.put(name2, temp2);
                             }
-                            String name3 = ((FieldRef)arg11.getRightOp()).getFieldRef().toString();
+                            String name3 = ((InstanceFieldRef)arg11.getRightOp()).getField().toString();
                             IntExpr temp3 = m1.get(name3);
                             if (temp3 == null) {
                                 temp3 = ctx.MkIntConst(name3);
