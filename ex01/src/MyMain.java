@@ -293,9 +293,9 @@ public class MyMain {
                     }
                     BoolExpr temp4 = ctx.MkNot(temp3);
                     for (BoolExpr b1: arg1)
-                        arg3.add(ctx.MkImplies(temp3, b1));
+                        arg3.add(ctx.MkImplies(temp4, b1));
                     for (BoolExpr b2: arg2)
-                        arg3.add(ctx.MkImplies(temp4, b2));
+                        arg3.add(ctx.MkImplies(temp3, b2));
                 }
             } else {
                 arg3.addAll(arg1);
