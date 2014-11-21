@@ -88,16 +88,7 @@ public class MyMain {
                                                            E.printStackTrace();
                                                        }
 
-                                                       MyAnalysis01 a = new MyAnalysis01(eug);
-                                                       heads = eug.getHeads();
-                                                       for (Iterator<Unit> i1 = heads.iterator(); i1.hasNext(); ) {
-                                                           Unit u1 = i1.next();
-                                                           G.v().out.println("The flow at this head is " + a.getFlowAfter(u1));
-                                                       }
-
-                                                       // new CombinedDUAnalysis(eug);
-
-                                                       if (name.equals("compare")) {
+                                                     if (name.equals("compare")) {
                                                            G.v().out.println("Here's a compare body.");
                                                            for (Iterator<Unit> i1 = eug.iterator();
                                                                 i1.hasNext();
@@ -130,7 +121,6 @@ public class MyMain {
                                                                    G.v().out.println("Here's a unit.");
                                                                    G.v().out.println(u1.toString());
                                                                }
-                                                               G.v().out.println("The flow at this unit is " + a.getFlowAfter(u1));
                                                                G.v().out.println("The flow at this unit is " + b.getFlowAfter(u1));
                                                            }
                                                            (new CFGToDotGraph()).drawCFG(eug, body).plot("/tmp/"+name+".dot");
@@ -155,52 +145,6 @@ public class MyMain {
                                                }));
 		
         soot.Main.main(args);
-    }
-
-    public static class MyAnalysis01 extends BackwardFlowAnalysis<Unit, StringBuilder> {
-
-        public MyAnalysis01(ExceptionalUnitGraph exceptionalUnitGraph) {
-            super(exceptionalUnitGraph);
-
-            //set up buncha data structures
-
-            doAnalysis();
-            // System.out.println(exceptionalUnitGraph.toStringBuilder());
-
-        }
-
-        @Override
-            protected void flowThrough(StringBuilder arg0, Unit arg1, StringBuilder arg2) {
-            arg2.append(arg0);
-            // TODO Auto-generated method stub
-			
-        }
-
-        @Override
-            protected void copy(StringBuilder arg0, StringBuilder arg1) {
-            arg1.setLength(0);arg1.append(arg0);
-            // TODO Auto-generated method stub
-			
-        }
-
-        @Override
-            protected StringBuilder entryInitialFlow() {
-            // TODO Auto-generated method stub
-            return new StringBuilder("-");
-        }
-
-        @Override
-            protected void merge(StringBuilder arg0, StringBuilder arg1, StringBuilder arg2) {
-            arg2.append(arg0).append(arg1);
-            // TODO Auto-generated method stub
-            
-        }
-
-        @Override
-            protected StringBuilder newInitialFlow() {
-            // TODO Auto-generated method stub
-            return new StringBuilder(".");
-        }
     }
 
     public static class MyAnalysis02 extends BackwardFlowAnalysis<Unit, ArrayList<BoolExpr>> {
