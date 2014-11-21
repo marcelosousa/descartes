@@ -66,21 +66,16 @@ public class MyMain {
                                                        try {
                                                        for (Iterator<Unit> i1 = heads.iterator(); i1.hasNext(); ) {
                                                            Unit u1 = i1.next();
-                                                           ArrayList<BoolExpr> conds = b.getFlowAfter(u1);
+                                                           AnalysisContainer conds = b.getFlowAfter(u1);
                                                            G.v().out.println("The flow at this head is " + conds.toString());
                                                            if (name.equals("compare")) {
-
-                                                               IntExpr eo = b.ctx.MkIntConst("o");
 
                                                                String p0 = body.getParameterLocal(0).toString();
                                                                String p1 = body.getParameterLocal(1).toString();
                                                                Expr e0=b.m1.get(p0);
                                                                Expr e1=b.m1.get(p1);
-                                                               final ListIterator<BoolExpr> li = conds.listIterator();
-                                                               while (li.hasNext()) {
-                                                                   li.set((BoolExpr) li.next().Substitute(new Expr[] {e0, e1}, new Expr[] {eo, eo}));
-                                                               }
-                                                               G.v().out.println(conds.toString());
+                                                               BoolExpr reflexCond = ((BoolExpr) conds.eq0.Substitute(new Expr[] {e1}, new Expr[] {e0}));
+                                                               G.v().out.println("reflexCond is " + reflexCond.toString());
                                                                
                                                            }
                                                        }
@@ -147,7 +142,19 @@ public class MyMain {
         soot.Main.main(args);
     }
 
-    public static class MyAnalysis02 extends BackwardFlowAnalysis<Unit, ArrayList<BoolExpr>> {
+    public static class AnalysisContainer {
+        BoolExpr lt0;
+        BoolExpr eq0;
+        BoolExpr gt0;
+
+        @Override
+        public String toString() {
+            return "{" + this.lt0.toString() + ", " + this.eq0.toString() + ", " + this.gt0.toString() + "}";
+        }
+
+    }
+
+    public static class MyAnalysis02 extends BackwardFlowAnalysis<Unit, AnalysisContainer> {
 
         Context ctx;
         Map<String, IntExpr> m1;
@@ -172,27 +179,30 @@ public class MyMain {
         }
 
         @Override
-            protected void flowThrough(ArrayList<BoolExpr> arg0, Unit arg1, ArrayList<BoolExpr> arg2) {
+            protected void flowThrough(AnalysisContainer arg0, Unit arg1, AnalysisContainer arg2) {
             // TODO Auto-generated method stub
             try {
                 if (arg1 instanceof ReturnStmt) {
-                    arg2.clear();
-
                     String name = ((ReturnStmt)arg1).getOp().toString();
                     IntExpr temp1 = ctx.MkIntConst(name);
                     m1.put(name, temp1);
-                    // arg2.add(ctx.MkLt(temp1, ctx.MkInt(0)));
-                    arg2.add(ctx.MkEq(temp1, ctx.MkInt(0)));
+                    arg2.lt0 = ctx.MkLt(temp1, ctx.MkInt(0));
+                    arg2.eq0 = ctx.MkEq(temp1, ctx.MkInt(0));
+                    arg2.gt0 = ctx.MkGt(temp1, ctx.MkInt(0));
 
                 } else if (arg1 instanceof DefinitionStmt) {
                     DefinitionStmt arg11 = ((DefinitionStmt)arg1);
                     copy(arg0, arg2);
                     if (arg11.getRightOp() instanceof IntConstant) {
-                        final ListIterator<BoolExpr> li = arg2.listIterator();
-                        while (li.hasNext()) 
-                            li.set((BoolExpr) li.next().Substitute
-                                   (new Expr[] {m1.get(arg11.getLeftOp().toString())},
-                                    new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)}));
+                        arg2.lt0 = (BoolExpr) arg2.lt0.Substitute
+                            (new Expr[] {m1.get(arg11.getLeftOp().toString())},
+                             new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)});
+                        arg2.eq0 = (BoolExpr) arg2.eq0.Substitute
+                            (new Expr[] {m1.get(arg11.getLeftOp().toString())},
+                             new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)});
+                        arg2.gt0 = (BoolExpr) arg2.gt0.Substitute
+                            (new Expr[] {m1.get(arg11.getLeftOp().toString())},
+                             new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)});
                     } else if (arg11.getRightOp() instanceof InstanceFieldRef || arg11.getRightOp() instanceof Local) {
                         IntExpr temp1;
                         if (arg11.getRightOp() instanceof InstanceFieldRef) {
@@ -217,17 +227,18 @@ public class MyMain {
                                 m1.put(name, temp1);
                             }
                         }
-                        final ListIterator<BoolExpr> li = arg2.listIterator();
-                        while (li.hasNext()) {
-                            Expr temp2 = m1.get(arg11.getLeftOp().toString());
-                            if (temp2 != null)
-                                li.set((BoolExpr) li.next().Substitute
-                                       (new Expr[] {temp2},
-                                        new Expr[] {temp1}));
-                            else
-                                li.next();
+                        Expr temp2 = m1.get(arg11.getLeftOp().toString());
+                        if (temp2 != null) {
+                            arg2.lt0 = ((BoolExpr) arg2.lt0.Substitute
+                                        (new Expr[] {temp2},
+                                         new Expr[] {temp1}));
+                            arg2.eq0 = ((BoolExpr) arg2.eq0.Substitute
+                                        (new Expr[] {temp2},
+                                         new Expr[] {temp1}));
+                            arg2.gt0 = ((BoolExpr) arg2.gt0.Substitute
+                                        (new Expr[] {temp2},
+                                         new Expr[] {temp1}));
                         }
-                        
                     }
                 } else {
                     copy(arg0, arg2);
@@ -239,76 +250,97 @@ public class MyMain {
         }
 
         @Override
-            protected void copy(ArrayList<BoolExpr> arg0, ArrayList<BoolExpr> arg1) {
-            arg1.clear();
-            arg1.addAll(arg0);
+            protected void copy(AnalysisContainer arg0, AnalysisContainer arg1) {
+            arg1.lt0 = arg0.lt0;
+            arg1.eq0 = arg0.eq0;
+            arg1.gt0 = arg0.gt0;
         }
 
         @Override
-            protected ArrayList<BoolExpr> entryInitialFlow() {
-            return new ArrayList<BoolExpr> ();
-        }
-
-        @Override
-            protected void merge(ArrayList<BoolExpr> arg0, ArrayList<BoolExpr> arg1, ArrayList<BoolExpr> arg2) {
-            arg2.clear();
-            arg2.addAll(arg0);
-            arg2.addAll(arg1);
-			
-        }
-
-        @Override
-            protected void merge(Unit arg0, ArrayList<BoolExpr> arg1, ArrayList<BoolExpr> arg2, ArrayList<BoolExpr> arg3) {
-            arg3.clear();
+            protected AnalysisContainer entryInitialFlow() {
+            AnalysisContainer temp1 = new AnalysisContainer ();
             try {
-            if (arg0 instanceof IfStmt) {
-                BoolExpr temp3 = null;
-                if (((IfStmt)arg0).getCondition() instanceof BinopExpr) {
-                    String name1 = ((BinopExpr)((IfStmt)arg0).getCondition()).getOp1().toString();
-                    IntExpr temp1 = m1.get(name1);
-                    if (temp1 == null) {
-                        temp1 = ctx.MkIntConst(name1);
-                        m1.put(name1, temp1);
-                    }
-                    String name2 = ((BinopExpr)((IfStmt)arg0).getCondition()).getOp2().toString();
-                    IntExpr temp2 = m1.get(name2);
-                    if (temp2 == null) {
-                        temp2 = ctx.MkIntConst(name2);
-                        m1.put(name2, temp2);
-                    }
-                    if (((IfStmt)arg0).getCondition() instanceof EqExpr) {
-                        temp3 = ctx.MkEq(temp1, temp2);
-                    } else if (((IfStmt)arg0).getCondition() instanceof GeExpr) {
-                        temp3 = ctx.MkGe(temp1, temp2);
-                    } else if (((IfStmt)arg0).getCondition() instanceof GtExpr) {
-                        temp3 = ctx.MkGt(temp1, temp2);
-                    } else if (((IfStmt)arg0).getCondition() instanceof LeExpr) {
-                        temp3 = ctx.MkLe(temp1, temp2);
-                    } else if (((IfStmt)arg0).getCondition() instanceof LtExpr) {
-                        temp3 = ctx.MkLt(temp1, temp2);
-                    } else if (((IfStmt)arg0).getCondition() instanceof LtExpr) {
-                        temp3 = ctx.MkLt(temp1, temp2);
-                    } else if (((IfStmt)arg0).getCondition() instanceof NeExpr) {
-                        temp3 = ctx.MkNot(ctx.MkEq(temp1, temp2));
-                    }
-                    BoolExpr temp4 = ctx.MkNot(temp3);
-                    for (BoolExpr b1: arg1)
-                        arg3.add(ctx.MkImplies(temp4, b1));
-                    for (BoolExpr b2: arg2)
-                        arg3.add(ctx.MkImplies(temp3, b2));
-                }
-            } else {
-                arg3.addAll(arg1);
-                arg3.addAll(arg2);
-            }
-            } catch (Z3Exception E) {
-                E.printStackTrace();
+                temp1.lt0 = this.ctx.MkTrue();
+                temp1.eq0 = this.ctx.MkTrue();
+                temp1.gt0 = this.ctx.MkTrue();
+            } catch (Z3Exception e) {
+                e.printStackTrace();
+            } finally {
+                return temp1;
             }
         }
 
         @Override
-            protected ArrayList<BoolExpr> newInitialFlow() {
-            return new ArrayList<BoolExpr> ();
+            protected void merge(AnalysisContainer arg0, AnalysisContainer arg1, AnalysisContainer arg2) {
+            try {
+                arg2.lt0 = this.ctx.MkAnd(new BoolExpr[] {arg1.lt0, arg0.lt0});
+                arg2.eq0 = this.ctx.MkAnd(new BoolExpr[] {arg1.eq0, arg0.eq0});
+                arg2.gt0 = this.ctx.MkAnd(new BoolExpr[] {arg1.gt0, arg0.gt0});
+            } catch (Z3Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+            protected void merge(Unit arg0, AnalysisContainer arg1, AnalysisContainer arg2, AnalysisContainer arg3) {
+            try {
+                if (arg0 instanceof IfStmt) {
+                    BoolExpr temp3 = null;
+                    if (((IfStmt)arg0).getCondition() instanceof BinopExpr) {
+                        String name1 = ((BinopExpr)((IfStmt)arg0).getCondition()).getOp1().toString();
+                        IntExpr temp1 = m1.get(name1);
+                        if (temp1 == null) {
+                            temp1 = ctx.MkIntConst(name1);
+                            m1.put(name1, temp1);
+                        }
+                        String name2 = ((BinopExpr)((IfStmt)arg0).getCondition()).getOp2().toString();
+                        IntExpr temp2 = m1.get(name2);
+                        if (temp2 == null) {
+                            temp2 = ctx.MkIntConst(name2);
+                            m1.put(name2, temp2);
+                        }
+                        if (((IfStmt)arg0).getCondition() instanceof EqExpr) {
+                            temp3 = ctx.MkEq(temp1, temp2);
+                        } else if (((IfStmt)arg0).getCondition() instanceof GeExpr) {
+                            temp3 = ctx.MkGe(temp1, temp2);
+                        } else if (((IfStmt)arg0).getCondition() instanceof GtExpr) {
+                            temp3 = ctx.MkGt(temp1, temp2);
+                        } else if (((IfStmt)arg0).getCondition() instanceof LeExpr) {
+                            temp3 = ctx.MkLe(temp1, temp2);
+                        } else if (((IfStmt)arg0).getCondition() instanceof LtExpr) {
+                            temp3 = ctx.MkLt(temp1, temp2);
+                        } else if (((IfStmt)arg0).getCondition() instanceof LtExpr) {
+                            temp3 = ctx.MkLt(temp1, temp2);
+                        } else if (((IfStmt)arg0).getCondition() instanceof NeExpr) {
+                            temp3 = ctx.MkNot(ctx.MkEq(temp1, temp2));
+                        }
+                        BoolExpr temp4 = ctx.MkNot(temp3);
+                        arg3.lt0 = (BoolExpr) this.ctx.MkAnd(new BoolExpr[] {this.ctx.MkImplies(temp3, arg2.lt0), this.ctx.MkImplies(temp4, arg1.lt0)});
+                        arg3.eq0 = (BoolExpr) this.ctx.MkAnd(new BoolExpr[] {this.ctx.MkImplies(temp3, arg2.eq0), this.ctx.MkImplies(temp4, arg1.eq0)});
+                        arg3.gt0 = (BoolExpr) this.ctx.MkAnd(new BoolExpr[] {this.ctx.MkImplies(temp3, arg2.gt0), this.ctx.MkImplies(temp4, arg1.gt0)});
+                    }
+                } else {
+                    arg3.lt0 = this.ctx.MkAnd(new BoolExpr[] {arg1.lt0, arg2.lt0});
+                    arg3.eq0 = this.ctx.MkAnd(new BoolExpr[] {arg1.eq0, arg2.eq0});
+                    arg3.gt0 = this.ctx.MkAnd(new BoolExpr[] {arg1.gt0, arg2.gt0});
+                }
+            } catch (Z3Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+            protected AnalysisContainer newInitialFlow() {
+            AnalysisContainer temp1 = new AnalysisContainer ();
+            try {
+                temp1.lt0 = this.ctx.MkTrue();
+                temp1.eq0 = this.ctx.MkTrue();
+                temp1.gt0 = this.ctx.MkTrue();
+            } catch (Z3Exception e) {
+                e.printStackTrace();
+            } finally {
+                return temp1;
+            }
         }
     	
     }
