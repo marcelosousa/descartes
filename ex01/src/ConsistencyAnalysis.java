@@ -55,9 +55,15 @@ public class ConsistencyAnalysis extends BackwardFlowAnalysis<Unit, AnalysisCont
         // TODO Auto-generated method stub
         try {
             if (arg1 instanceof ReturnStmt) {
-                String name = ((ReturnStmt)arg1).getOp().toString();
-                IntExpr temp1 = ctx.MkIntConst(name);
-                m1.put(name, temp1);
+                IntExpr temp1=null;
+                Object temp2 = ((ReturnStmt)arg1).getOp();
+                if (temp2 instanceof Local) {
+                    String name = temp2.toString();
+                    temp1 = ctx.MkIntConst(name);
+                    m1.put(name, temp1);
+                } else if (temp2 instanceof IntConstant) {
+                    temp1 = ctx.MkInt(((IntConstant) temp2).value);
+                }
                 arg2.lt0 = ctx.MkLt(temp1, ctx.MkInt(0));
                 arg2.eq0 = ctx.MkEq(temp1, ctx.MkInt(0));
                 arg2.gt0 = ctx.MkGt(temp1, ctx.MkInt(0));
