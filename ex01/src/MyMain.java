@@ -213,57 +213,46 @@ public class MyMain {
 
                 } else if (arg1 instanceof DefinitionStmt) {
                     DefinitionStmt arg11 = ((DefinitionStmt)arg1);
+                    Expr temp2 = m1.get(arg11.getLeftOp().toString());
+                    if (temp2 != null) {
+                        if (arg11.getRightOp() instanceof IntConstant ||
+                            arg11.getRightOp() instanceof InstanceFieldRef ||
+                            arg11.getRightOp() instanceof Local) {
+                            IntExpr temp1;
+                            if (arg11.getRightOp() instanceof IntConstant)
+                                temp1 = ctx.MkInt(((IntConstant) arg11.getRightOp()).value);
+                            else if (arg11.getRightOp() instanceof InstanceFieldRef) {
+                                String name3 = ((InstanceFieldRef)arg11.getRightOp()).getBase().toString();
+                                IntExpr temp3 = m1.get(name3);
+                                if (temp3 == null) {
+                                    temp3 = ctx.MkIntConst(name3);
+                                    m1.put(name3, temp3);
+                                }
+                                String name4 = ((InstanceFieldRef)arg11.getRightOp()).getField().toString();
+                                IntExpr temp4 = m1.get(name4);
+                                if (temp4 == null) {
+                                    temp4 = ctx.MkIntConst(name4);
+                                    m1.put(name4, temp4);
+                                }
+                                temp1 = (IntExpr) ctx.MkApp(Field, new Expr[] {temp3, temp4});
+                            } else /*Local*/ {
+                                String name = arg11.getRightOp().toString();
+                                temp1 = m1.get(name);
+                                if (temp1 == null) {
+                                    temp1 = ctx.MkIntConst(name);
+                                    m1.put(name, temp1);
+                                }
+                            }
+                            Expr[] temp3 = new Expr[] {temp2}, temp4 = new Expr[] {temp1};
+                            arg2.lt0 = (BoolExpr) arg0.lt0.Substitute(temp3, temp4);
+                            arg2.eq0 = (BoolExpr) arg0.eq0.Substitute(temp3, temp4);
+                            arg2.gt0 = (BoolExpr) arg0.gt0.Substitute(temp3, temp4);
+                        } else
+                            copy(arg0, arg2);
+                    } else
+                        copy(arg0, arg2);
+                } else 
                     copy(arg0, arg2);
-                    if (arg11.getRightOp() instanceof IntConstant) {
-                        arg2.lt0 = (BoolExpr) arg2.lt0.Substitute
-                            (new Expr[] {m1.get(arg11.getLeftOp().toString())},
-                             new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)});
-                        arg2.eq0 = (BoolExpr) arg2.eq0.Substitute
-                            (new Expr[] {m1.get(arg11.getLeftOp().toString())},
-                             new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)});
-                        arg2.gt0 = (BoolExpr) arg2.gt0.Substitute
-                            (new Expr[] {m1.get(arg11.getLeftOp().toString())},
-                             new Expr[] {ctx.MkInt(((IntConstant) arg11.getRightOp()).value)});
-                    } else if (arg11.getRightOp() instanceof InstanceFieldRef || arg11.getRightOp() instanceof Local) {
-                        IntExpr temp1;
-                        if (arg11.getRightOp() instanceof InstanceFieldRef) {
-                            String name2 = ((InstanceFieldRef)arg11.getRightOp()).getBase().toString();
-                            IntExpr temp2 = m1.get(name2);
-                            if (temp2 == null) {
-                                temp2 = ctx.MkIntConst(name2);
-                                m1.put(name2, temp2);
-                            }
-                            String name3 = ((InstanceFieldRef)arg11.getRightOp()).getField().toString();
-                            IntExpr temp3 = m1.get(name3);
-                            if (temp3 == null) {
-                                temp3 = ctx.MkIntConst(name3);
-                                m1.put(name3, temp3);
-                            }
-                            temp1 = (IntExpr) ctx.MkApp(Field, new Expr[] {temp2, temp3});
-                        } else {
-                            String name = arg11.getRightOp().toString();
-                            temp1 = m1.get(name);
-                            if (temp1 == null) {
-                                temp1 = ctx.MkIntConst(name);
-                                m1.put(name, temp1);
-                            }
-                        }
-                        Expr temp2 = m1.get(arg11.getLeftOp().toString());
-                        if (temp2 != null) {
-                            arg2.lt0 = ((BoolExpr) arg2.lt0.Substitute
-                                        (new Expr[] {temp2},
-                                         new Expr[] {temp1}));
-                            arg2.eq0 = ((BoolExpr) arg2.eq0.Substitute
-                                        (new Expr[] {temp2},
-                                         new Expr[] {temp1}));
-                            arg2.gt0 = ((BoolExpr) arg2.gt0.Substitute
-                                        (new Expr[] {temp2},
-                                         new Expr[] {temp1}));
-                        }
-                    }
-                } else {
-                    copy(arg0, arg2);
-                }
             } catch (Z3Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
