@@ -18,6 +18,7 @@
  */
 import java.util.Map;
 
+import soot.jimple.*;
 import soot.Body;
 import soot.BodyTransformer;
 import soot.G;
@@ -26,25 +27,12 @@ import soot.Transform;
 import soot.Unit;
 import soot.toolkits.graph.DirectedGraph;
 import soot.toolkits.graph.ExceptionalUnitGraph;
-import soot.jimple.IfStmt;
-import soot.jimple.DefinitionStmt;
 import soot.util.cfgcmd.CFGToDotGraph;
 import soot.toolkits.scalar.BackwardFlowAnalysis;
-import soot.jimple.ReturnStmt;
-import soot.jimple.GotoStmt;
 import soot.Local;
-import soot.jimple.IntConstant;
-import soot.jimple.FieldRef;
-import soot.jimple.InstanceFieldRef;
-import soot.jimple.EqExpr;
-import soot.jimple.GeExpr;
-import soot.jimple.GtExpr;
-import soot.jimple.LeExpr;
-import soot.jimple.LtExpr;
-import soot.jimple.NeExpr;
-import soot.jimple.BinopExpr;
 
 import com.microsoft.z3.*;
+import com.microsoft.z3.Expr;
 
 import java.util.ArrayList;
 import java.util.HashMap;
