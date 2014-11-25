@@ -96,8 +96,8 @@ public class OverloadMain {
                                                            E.printStackTrace();
                                                        }
 
-                                                     if (name.equals("compare")) {
-                                                           G.v().out.println("Here's a compare body.");
+                                                     if (name.equals("compare") || name.equals("compareTo")) {
+                                                           G.v().out.println("Here's a compare/compareTo body.");
                                                            for (Iterator<Unit> i1 = eug.iterator();
                                                                 i1.hasNext();
                                                                 ) {
@@ -131,7 +131,6 @@ public class OverloadMain {
                                                                }
                                                                G.v().out.println("The flow at this unit is " + b.getFlowAfter(u1));
                                                            }
-                                                           (new CFGToDotGraph()).drawCFG(eug, body).plot("/tmp/"+name+".dot");
                                                        } else if (false) {
                                                            G.v().out.println("Here's a body.");
 
@@ -144,10 +143,11 @@ public class OverloadMain {
 
                                                            }
                                                        }
+                                                     (new CFGToDotGraph()).drawCFG(eug, body).plot("/tmp/"+name+".dot");
 
                                                        // use G.v().out instead of System.out so that Soot can
                                                        // redirect this output to the Eclipse console
-                                                       G.v().out.println(body.getMethod());
+                                                     G.v().out.println(body.getMethod());
                                                    }
 
                                                }));

@@ -1,23 +1,23 @@
-public class test01 {
+public class test02 implements java.lang.Comparable<test02> {
     public static void main(String[] args) {
-        test01 f = new test01();
+        test02 f = new test02();
         int a = 7;
         int b = 14;
         int x = (f.bar(21) + a) * b;
     }
     public int bar(int n) { return n + 42; }
     int x; int y;
-    public int compare(test01 o1, test01 o2) {
-        if (o1.x < o2.x)
+	@Override
+	public int compareTo(test02 o) {
+        if (this.x < o.x)
             return -1;
-        else if (o1.x > o2.x)
+        else if (this.x > o.x)
             return 1;
-        if (o1.y < o2.y)
+        if (this.y < o.y)
             return -1;
-        else if (o1.y > o2.y)
+        else if (this.y > o.y)
             return 1;
         else
             return 0;
     }
-
 }
