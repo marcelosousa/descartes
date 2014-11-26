@@ -48,7 +48,7 @@ public class OverloadMain {
 
     public static void main(String[] args) {
         PackManager.v().getPack("jtp").add(
-                                           new Transform("jtp.myTransform", new BodyTransformer() {
+                                           new Transform("jtp.OverloadTransform", new BodyTransformer() {
 
                                                    protected void internalTransform(Body body, String phase, Map options) {
                                                        String name = body.getMethod().getName();
