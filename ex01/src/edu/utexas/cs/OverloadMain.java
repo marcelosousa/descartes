@@ -72,22 +72,25 @@ public class OverloadMain {
                                                                    b.m1.put(o[i2], e[i2] = b.ctx.MkIntConst(o[i2]));
                                                                }
                                                                BoolExpr reflexCond = (BoolExpr) conds.eq0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[0], e[0]});
-                                                               BoolExpr symmCond = b.ctx.MkIff(
-                                                                                               (BoolExpr) conds.lt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[0], e[1]}),
-                                                                                               (BoolExpr) conds.gt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[1], e[0]}));
+                                                               BoolExpr symmCond = b.ctx.MkImplies(b.ctx.MkNot(b.ctx.MkEq(e[0], e[1])),
+                                                                                                   b.ctx.MkIff(
+                                                                                                               (BoolExpr) conds.lt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[0], e[1]}),
+                                                                                                               (BoolExpr) conds.gt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[1], e[0]})));
                                                                BoolExpr transCond = b.ctx.MkImplies(b.ctx.MkAnd(new BoolExpr[]
-                                                                   {(BoolExpr) conds.lt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[0], e[1]}),
+                                                                   {b.ctx.MkNot(b.ctx.MkEq(e[0], e[1])),
+                                                                    (BoolExpr) conds.lt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[0], e[1]}),
+                                                                    b.ctx.MkNot(b.ctx.MkEq(e[1], e[2])),
                                                                     (BoolExpr) conds.lt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[1], e[2]})}),
                                                                                                     (BoolExpr) conds.lt0.Substitute(new Expr[] {e0, e1}, new Expr[] {e[0], e[2]}));
                                                                Solver solver = b.ctx.MkSolver();
                                                                solver.Push(); solver.Assert(b.ctx.MkNot(reflexCond));
-                                                               G.v().out.println("reflexCond is " + (solver.Check() == Status.UNSATISFIABLE ? "proved" : "not proved"));
+                                                               G.v().out.println("reflexCond is " + (solver.Check() == Status.UNSATISFIABLE ? "proved" : ("not proved with counter-example " + solver.Model())));
                                                                solver.Pop();
                                                                solver.Push(); solver.Assert(b.ctx.MkNot(symmCond));
-                                                               G.v().out.println("symmCond is " + (solver.Check() == Status.UNSATISFIABLE ? "proved" : "not proved"));
+                                                               G.v().out.println("symmCond is " + (solver.Check() == Status.UNSATISFIABLE ? "proved" : ("not proved with counter-example " + solver.Model())));
                                                                solver.Pop();
                                                                solver.Push(); solver.Assert(b.ctx.MkNot(transCond));
-                                                               G.v().out.println("transCond is " + (solver.Check() == Status.UNSATISFIABLE ? "proved" : "not proved"));
+                                                               G.v().out.println("transCond is " + (solver.Check() == Status.UNSATISFIABLE ? "proved" : ("not proved with counter-example " + solver.Model())));
                                                                solver.Pop();
                                                                
                                                            }
