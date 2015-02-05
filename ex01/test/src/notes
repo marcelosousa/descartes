@@ -1,20 +1,20 @@
 test06: passes to attribute type, generates attribute by string concatenation
-test07: passes to other type by function call
+test07: compare fields, passes to other type by function call
 test08: passes to other type by function call
 test09: compare fields one by one (including a random field)
 test10: compare fields one by one
 test11: compare fields
-test12: has loop, compares array elements one by one
-test13: compare fields
-test14: compare fields (identical to test13)
-test15: compare fields one by one
+test12: has loop, compares array elements one by one, compare fields one by one
+test13: compare fields, passes to other type by function call
+test14: compare fields, passes to other type by function call (identical to test13)
+test15: compare fields one by one, throws exceptions
 test16: compare fields one by one
 test17: compare fields one by one, passes to other type by function call
 test18: compare fields one by one, passes to other type by function call, checks for aliasing,  uses a weird method
-test19: compare fields one by one
+test19: compare fields one by one, has nullness checks
 test20:
-test21: passes to other type by function call
-test22: passes to other type by function call
+test21: uses a weird method
+test22: uses a weird method
 test23: compare fields one by one, passes to other type by function call, has nullness checks
 test24: compare fields one by one
 test25: compare fields one by one, uses a weird method
@@ -22,7 +22,6 @@ test26: compare fields, uses a weird method
 test27: compare fields one by one, uses a weird method
 test28: passes to other type by function call
 test29: compare fields
-test30:
 test31: compare fields one by one, has loop, compares array elements one by one, uses a weird method
 test32: compare fields one by one, has nullness checks
 test33: compare fields
@@ -38,3 +37,15 @@ test42: compare fields, has nullness checks
 test43: compare fields one by one, has nullness checks
 test44: compare fields one by one, passes to other type by function call
 test45: compare fields one by one, passes to other type by function call
+Out of 39 test cases:
+-39 have a single argument of the same type.
+-11 refer to the compareTo method of another type, entirely or in part.
+-7 refer to weird function calls which are not called compareTo.
+-1 involves a string concatenation of fields.
+-33 involve comparison of fields, out of which 20 involve more than one.
+-2 involve loops.
+-1 checks for aliasing.
+-8 check for nullness.
+-1 was too strange to understand.
+
+Release versions???
