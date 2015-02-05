@@ -1,0 +1,40 @@
+test06: passes to attribute type, generates attribute by string concatenation
+test07: passes to other type by function call
+test08: passes to other type by function call
+test09: compare fields one by one (including a random field)
+test10: compare fields one by one
+test11: compare fields
+test12: has loop, compares array elements one by one
+test13: compare fields
+test14: compare fields (identical to test13)
+test15: compare fields one by one
+test16: compare fields one by one
+test17: compare fields one by one, passes to other type by function call
+test18: compare fields one by one, passes to other type by function call, checks for aliasing,  uses a weird method
+test19: compare fields one by one
+test20:
+test21: passes to other type by function call
+test22: passes to other type by function call
+test23: compare fields one by one, passes to other type by function call, has nullness checks
+test24: compare fields one by one
+test25: compare fields one by one, uses a weird method
+test26: compare fields, uses a weird method
+test27: compare fields one by one, uses a weird method
+test28: passes to other type by function call
+test29: compare fields
+test30:
+test31: compare fields one by one, has loop, compares array elements one by one, uses a weird method
+test32: compare fields one by one, has nullness checks
+test33: compare fields
+test34: compare fields, has nullness checks
+test35: compare fields
+test36: compare fields
+test37: compare fields one by one
+test38: compare fields one by one
+test39: compare fields one by one
+test40: compare fields, has nullness checks, throws exceptions
+test41: compare fields, has nullness checks
+test42: compare fields, has nullness checks
+test43: compare fields one by one, has nullness checks
+test44: compare fields one by one, passes to other type by function call
+test45: compare fields one by one, passes to other type by function call
