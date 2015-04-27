@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry excluding="src/" kind="src" path="test"/>
-	<classpathentry kind="src" path="test/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/com.microsoft.z3.jar"/>
 	<classpathentry kind="lib" path="lib/soot.jar"/>
