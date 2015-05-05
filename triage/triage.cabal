@@ -1,0 +1,21 @@
+Name:               triage
+Version:            0.1
+Cabal-Version:      >= 1.2
+Author:             Marcelo Sousa
+Synopsis:           Triage
+Description:        Syntactic analysis of Java programs
+Build-Type:         Simple
+
+Executable triage
+    Main-Is:          Main.hs
+    Build-Depends:    base          
+                    , containers    
+                    , filepath   
+                    , directory
+                    , mtl           
+                    , cmdargs
+                    , language-java
+    Hs-Source-Dirs:   src/
+    ghc-options:      -O3 -rtsopts
+    Extensions:       DoAndIfThenElse
+
