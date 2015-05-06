@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-core/src/main/java/org/springframework/util/MimeType.java */
 /*
  * Copyright 2002-2014 the original author or authors.
  *

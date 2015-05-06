@@ -1,3 +1,4 @@
+/* ./Trinea-android-common-c345339/src/cn/trinea/android/common/service/CacheFullRemoveType.java */
 package cn.trinea.android.common.service;
 
 import java.io.Serializable;

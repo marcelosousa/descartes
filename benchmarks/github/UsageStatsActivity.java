@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/tests/UsageStatsTest/src/com/android/tests/usagestats/UsageStatsActivity.java */
 /*
  * Copyright (C) 2014 The Android Open Source Project
  *

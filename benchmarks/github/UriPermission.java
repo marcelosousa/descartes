@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/services/core/java/com/android/server/am/UriPermission.java */
 /*
  * Copyright (C) 2006 The Android Open Source Project
  *

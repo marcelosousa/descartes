@@ -1,3 +1,4 @@
+/* ./47deg-android-swipelistview-be7e266/swipelistview/src/main/java/com/fortysevendeg/swipelistview/SwipeListViewTouchListener.java */
 /*
  * Copyright (C) 2013 47 Degrees, LLC
  * http://47deg.com

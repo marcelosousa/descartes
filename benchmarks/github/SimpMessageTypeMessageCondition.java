@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-messaging/src/main/java/org/springframework/messaging/simp/SimpMessageTypeMessageCondition.java */
 /*
  * Copyright 2002-2013 the original author or authors.
  *

@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/gdx/src/com/badlogic/gdx/graphics/g3d/attributes/TextureAttribute.java */
 /*******************************************************************************
  * Copyright 2011 See AUTHORS file.
  * 

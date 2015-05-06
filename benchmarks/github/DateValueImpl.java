@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/third-party/com-google-ical/src/com/google/ical/values/DateValueImpl.java */
 /*
  * Copyright (C) 2006 Google Inc.
  *

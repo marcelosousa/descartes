@@ -1,3 +1,4 @@
+/* ./elastic-elasticsearch-b2e022b/src/main/java/org/elasticsearch/common/inject/internal/Errors.java */
 /**
  * Copyright (C) 2006 Google Inc.
  *

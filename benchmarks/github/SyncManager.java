@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/services/core/java/com/android/server/content/SyncManager.java */
 /*
  * Copyright (C) 2008 The Android Open Source Project
  *

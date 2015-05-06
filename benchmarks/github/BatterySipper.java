@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/core/java/com/android/internal/os/BatterySipper.java */
 /*
  * Copyright (C) 2009 The Android Open Source Project
  *

@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/marketplace/marketplace-api/src/com/liferay/marketplace/model/ModuleWrapper.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

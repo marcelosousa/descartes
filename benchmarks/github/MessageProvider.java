@@ -1,3 +1,4 @@
+/* ./k9mail-k-9-ce86e77/k9mail/src/main/java/com/fsck/k9/provider/MessageProvider.java */
 package com.fsck.k9.provider;
 
 import android.app.Application;

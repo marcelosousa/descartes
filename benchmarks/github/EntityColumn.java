@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/util/portal-tools-service-builder/src/com/liferay/portal/tools/service/builder/EntityColumn.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

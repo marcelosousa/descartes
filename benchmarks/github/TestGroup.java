@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/portal-impl/test/integration/com/liferay/portal/security/membershippolicy/bundle/sitemembershippolicyfactoryimpl/TestGroup.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

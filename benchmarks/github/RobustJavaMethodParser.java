@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/extensions/gdx-jnigen/src/com/badlogic/gdx/jnigen/parsing/RobustJavaMethodParser.java */
 /*******************************************************************************
  * Copyright 2011 See AUTHORS file.
  * 

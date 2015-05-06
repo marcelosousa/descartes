@@ -1,3 +1,4 @@
+/* ./Bukkit-Bukkit-f210234/src/main/java/org/bukkit/help/HelpTopicComparator.java */
 package org.bukkit.help;
 
 import org.bukkit.help.HelpTopic;

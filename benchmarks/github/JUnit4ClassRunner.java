@@ -1,3 +1,4 @@
+/* ./junit-team-junit-387e851/src/main/java/org/junit/internal/runners/JUnit4ClassRunner.java */
 package org.junit.internal.runners;
 
 import java.lang.annotation.Annotation;

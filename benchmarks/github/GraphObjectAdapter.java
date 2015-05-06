@@ -1,3 +1,4 @@
+/* ./Wizcorp-phonegap-facebook-plugin-3d52b1e/platforms/android/FacebookLib/src/com/facebook/widget/GraphObjectAdapter.java */
 /**
  * Copyright 2010-present Facebook.
  *

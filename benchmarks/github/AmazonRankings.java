@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/amazon-rankings/amazon-rankings-web/src/com/liferay/amazon/rankings/web/model/AmazonRankings.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

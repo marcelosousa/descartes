@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/core/java/android/widget/AppSecurityPermissions.java */
 /*
 **
 ** Copyright 2007, The Android Open Source Project

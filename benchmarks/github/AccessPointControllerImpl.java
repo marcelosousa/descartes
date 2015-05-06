@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/packages/SystemUI/src/com/android/systemui/statusbar/policy/AccessPointControllerImpl.java */
 /*
  * Copyright (C) 2014 The Android Open Source Project
  *

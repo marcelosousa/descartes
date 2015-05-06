@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/translator/translator-web/src/com/liferay/translator/web/util/TranslatorUtil.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

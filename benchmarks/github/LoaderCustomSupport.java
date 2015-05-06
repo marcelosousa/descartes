@@ -1,3 +1,4 @@
+/* ./JakeWharton-ActionBarSherlock-2c71339/actionbarsherlock-samples/fragments/src/com/actionbarsherlock/sample/fragments/LoaderCustomSupport.java */
 /*
  * Copyright (C) 2010 The Android Open Source Project
  *

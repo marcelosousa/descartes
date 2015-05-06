@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/core/java/android/gesture/InstanceLearner.java */
 /*
  * Copyright (C) 2008-2009 The Android Open Source Project
  *

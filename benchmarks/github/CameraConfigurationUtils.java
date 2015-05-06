@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/android-core/src/main/java/com/google/zxing/client/android/camera/CameraConfigurationUtils.java */
 /*
  * Copyright (C) 2014 ZXing authors
  *

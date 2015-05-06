@@ -1,3 +1,4 @@
+/* ./google-iosched-b3c3ae2/android/src/main/java/com/google/samples/apps/iosched/nearby/NearbyDeviceAdapter.java */
 /*
  * Copyright 2014 Google Inc. All rights reserved.
  *

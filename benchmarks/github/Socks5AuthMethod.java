@@ -1,3 +1,4 @@
+/* ./netty-netty-410aa42/codec-socks/src/main/java/io/netty/handler/codec/socksx/v5/Socks5AuthMethod.java */
 /*
  * Copyright 2013 The Netty Project
  *

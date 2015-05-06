@@ -1,3 +1,4 @@
+/* ./wildfly-wildfly-9d813ae/jdr/jboss-as-jdr/src/main/java/org/jboss/as/jdr/commands/CollectFiles.java */
 /*
  * JBoss, Home of Professional Open Source.
  * Copyright 2012, Red Hat, Inc., and individual contributors

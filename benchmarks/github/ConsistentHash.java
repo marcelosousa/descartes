@@ -1,3 +1,4 @@
+/* ./kohsuke-hudson-7a64e03/core/src/main/java/hudson/util/ConsistentHash.java */
 /*
  * The MIT License
  *

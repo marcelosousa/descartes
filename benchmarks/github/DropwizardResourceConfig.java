@@ -1,3 +1,4 @@
+/* ./dropwizard-dropwizard-70c3822/dropwizard-jersey/src/main/java/io/dropwizard/jersey/DropwizardResourceConfig.java */
 package io.dropwizard.jersey;
 
 import com.codahale.metrics.MetricRegistry;

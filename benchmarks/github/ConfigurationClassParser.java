@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-context/src/main/java/org/springframework/context/annotation/ConfigurationClassParser.java */
 /*
  * Copyright 2002-2015 the original author or authors.
  *

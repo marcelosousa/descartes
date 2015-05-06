@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/util-java/src/com/liferay/util/xml/AttributeComparator.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

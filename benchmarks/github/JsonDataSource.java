@@ -1,3 +1,4 @@
+/* ./google-iosched-b3c3ae2/updater/src/main/java/com/google/iosched/model/JsonDataSource.java */
 /*
  * Copyright 2014 Google Inc. All rights reserved.
  *

@@ -1,3 +1,4 @@
+/* ./wildfly-wildfly-9d813ae/naming/src/main/java/org/jboss/as/naming/deployment/JndiName.java */
 /*
  * JBoss, Home of Professional Open Source.
  * Copyright 2010, Red Hat, Inc., and individual contributors

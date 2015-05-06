@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-boot-0f62f05/spring-boot-cli/src/main/java/org/springframework/boot/cli/command/init/ServiceCapabilitiesReportGenerator.java */
 /*
  * Copyright 2012-2015 the original author or authors.
  *

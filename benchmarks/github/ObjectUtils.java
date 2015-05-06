@@ -1,3 +1,4 @@
+/* ./Trinea-android-common-c345339/src/cn/trinea/android/common/util/ObjectUtils.java */
 package cn.trinea.android.common.util;
 
 /**

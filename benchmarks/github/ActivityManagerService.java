@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/services/core/java/com/android/server/am/ActivityManagerService.java */
 /*
  * Copyright (C) 2006-2008 The Android Open Source Project
  *

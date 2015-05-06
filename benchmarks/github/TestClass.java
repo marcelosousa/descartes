@@ -1,3 +1,4 @@
+/* ./junit-team-junit-387e851/src/main/java/org/junit/runners/model/TestClass.java */
 package org.junit.runners.model;
 
 import static java.lang.reflect.Modifier.isStatic;

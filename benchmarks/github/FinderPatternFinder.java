@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/core/src/main/java/com/google/zxing/qrcode/detector/FinderPatternFinder.java */
 /*
  * Copyright 2007 ZXing authors
  *

@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/core/registry-api/src/com/liferay/registry/collections/internal/ServiceTrackerCollectionImpl.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

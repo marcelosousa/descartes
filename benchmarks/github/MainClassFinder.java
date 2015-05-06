@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-boot-0f62f05/spring-boot-tools/spring-boot-loader-tools/src/main/java/org/springframework/boot/loader/tools/MainClassFinder.java */
 /*
  * Copyright 2012-2014 the original author or authors.
  *

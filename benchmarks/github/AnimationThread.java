@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/tools/layoutlib/bridge/src/android/animation/AnimationThread.java */
 /*
  * Copyright (C) 2010 The Android Open Source Project
  *

@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/core/java/android/content/res/Configuration.java */
 /*
  * Copyright (C) 2008 The Android Open Source Project
  *

@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/packages/Keyguard/src/com/android/keyguard/KeyguardMultiUserSelectorView.java */
 /*
  * Copyright (C) 2012 The Android Open Source Project
  *

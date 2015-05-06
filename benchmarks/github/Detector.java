@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/core/src/main/java/com/google/zxing/datamatrix/detector/Detector.java */
 /*
  * Copyright 2008 ZXing authors
  *

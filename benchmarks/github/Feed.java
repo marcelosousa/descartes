@@ -1,3 +1,4 @@
+/* ./commonsguy-cw-advandroid-ab8e52a/Honeycomb/FeedFragments/src/com/commonsware/android/feedfrags/Feed.java */
 /***
   Copyright (c) 2008-2012 CommonsWare, LLC
   Licensed under the Apache License, Version 2.0 (the "License"); you may not

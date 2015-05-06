@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/tests/gdx-tests/src/com/badlogic/gdx/tests/g3d/ShaderTest.java */
 /*******************************************************************************
  * Copyright 2011 See AUTHORS file.
  * 

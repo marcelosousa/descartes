@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/tests/Camera2Tests/CameraToo/src/com/example/android/camera2/cameratoo/CameraTooActivity.java */
 /*
  * Copyright (C) 2014 The Android Open Source Project
  *

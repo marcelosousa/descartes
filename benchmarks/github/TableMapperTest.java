@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/portal-impl/test/unit/com/liferay/portal/service/persistence/impl/TableMapperTest.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

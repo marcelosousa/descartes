@@ -1,3 +1,4 @@
+/* ./nicolasgramlich-AndEngine-720897f/src/org/andengine/opengl/texture/atlas/buildable/builder/BlackPawnTextureAtlasBuilder.java */
 package org.andengine.opengl.texture.atlas.buildable.builder;
 
 import java.util.ArrayList;

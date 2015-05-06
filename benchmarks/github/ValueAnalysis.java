@@ -1,3 +1,4 @@
+/* ./wildfly-wildfly-9d813ae/iiop-openjdk/src/main/java/org/wildfly/iiop/openjdk/rmi/ValueAnalysis.java */
 /*
  * JBoss, Home of Professional Open Source.
  * Copyright 2008, Red Hat Middleware LLC, and individual contributors

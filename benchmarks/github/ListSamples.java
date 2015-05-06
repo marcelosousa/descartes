@@ -1,3 +1,4 @@
+/* ./JakeWharton-ViewPagerIndicator-8cd549f/sample/src/com/viewpagerindicator/sample/ListSamples.java */
 package com.viewpagerindicator.sample;
 
 import java.text.Collator;

@@ -1,3 +1,4 @@
+/* ./nostra13-Android-Universal-Image-Loader-d56d2f8/library/src/com/nostra13/universalimageloader/utils/MemoryCacheUtils.java */
 /*******************************************************************************
  * Copyright 2011-2014 Sergey Tarasevich
  *

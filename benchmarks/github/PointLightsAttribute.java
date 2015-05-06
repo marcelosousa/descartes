@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/gdx/src/com/badlogic/gdx/graphics/g3d/attributes/PointLightsAttribute.java */
 
 package com.badlogic.gdx.graphics.g3d.attributes;
 

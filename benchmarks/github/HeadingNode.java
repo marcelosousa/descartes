@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/wiki/wiki-service/src/com/liferay/wiki/parser/creole/ast/HeadingNode.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

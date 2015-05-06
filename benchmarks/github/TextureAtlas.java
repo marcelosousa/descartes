@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/gdx/src/com/badlogic/gdx/graphics/g2d/TextureAtlas.java */
 /*******************************************************************************
  * Copyright 2011 See AUTHORS file.
  * 

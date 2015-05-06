@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-beans/src/main/java/org/springframework/beans/ExtendedBeanInfo.java */
 /*
  * Copyright 2002-2014 the original author or authors.
  *

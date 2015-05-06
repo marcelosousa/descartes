@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/core/src/main/java/com/google/zxing/aztec/encoder/HighLevelEncoder.java */
 /*
  * Copyright 2013 ZXing authors
  *

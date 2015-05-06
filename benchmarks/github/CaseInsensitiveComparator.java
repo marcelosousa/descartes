@@ -1,3 +1,4 @@
+/* ./kohsuke-hudson-7a64e03/core/src/main/java/hudson/util/CaseInsensitiveComparator.java */
 /*
  * The MIT License
  * 

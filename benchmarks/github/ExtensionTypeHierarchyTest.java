@@ -1,3 +1,4 @@
+/* ./kohsuke-hudson-7a64e03/test/src/test/java/jenkins/model/ExtensionTypeHierarchyTest.java */
 package jenkins.model;
 
 import static org.junit.Assert.assertEquals;

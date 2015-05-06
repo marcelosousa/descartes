@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-core/src/test/java/org/springframework/core/convert/converter/ConvertingComparatorTests.java */
 /*
  * Copyright 2002-2012 the original author or authors.
  *

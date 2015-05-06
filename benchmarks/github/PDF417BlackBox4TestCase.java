@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/core/src/test/java/com/google/zxing/pdf417/PDF417BlackBox4TestCase.java */
 /*
  * Copyright 2013 ZXing authors
  *

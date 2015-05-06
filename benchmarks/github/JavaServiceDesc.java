@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/third-party/org-apache-axis/src/org/apache/axis/description/JavaServiceDesc.java */
 /* @generated */
 /*
  * Copyright 2002-2004 The Apache Software Foundation.

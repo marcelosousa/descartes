@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/portal/portal-wab-extender/test/unit/com/liferay/portal/wab/extender/internal/definition/MockBundle.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

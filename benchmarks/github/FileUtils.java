@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/core/java/android/os/FileUtils.java */
 /*
  * Copyright (C) 2006 The Android Open Source Project
  *

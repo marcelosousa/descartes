@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/core/src/main/java/com/google/zxing/multi/qrcode/QRCodeMultiReader.java */
 /*
  * Copyright 2009 ZXing authors
  *

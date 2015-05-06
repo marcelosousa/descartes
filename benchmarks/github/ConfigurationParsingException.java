@@ -1,3 +1,4 @@
+/* ./dropwizard-dropwizard-70c3822/dropwizard-configuration/src/main/java/io/dropwizard/configuration/ConfigurationParsingException.java */
 package io.dropwizard.configuration;
 
 import com.fasterxml.jackson.core.JsonLocation;

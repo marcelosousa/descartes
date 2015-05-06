@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/marketplace/marketplace-service/src/com/liferay/marketplace/util/comparator/PluginComparator.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

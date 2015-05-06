@@ -1,3 +1,4 @@
+/* ./kohsuke-hudson-7a64e03/core/src/main/java/hudson/logging/LogRecorder.java */
 /*
  * The MIT License
  * 

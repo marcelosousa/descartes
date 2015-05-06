@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/bookmarks/bookmarks-api/src/com/liferay/bookmarks/model/BookmarksEntryModel.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

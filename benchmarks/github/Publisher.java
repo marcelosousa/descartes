@@ -1,3 +1,4 @@
+/* ./kohsuke-hudson-7a64e03/core/src/main/java/hudson/tasks/Publisher.java */
 /*
  * The MIT License
  * 

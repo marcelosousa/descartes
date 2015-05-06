@@ -1,3 +1,4 @@
+/* ./Bukkit-Bukkit-f210234/src/main/java/org/bukkit/plugin/RegisteredServiceProvider.java */
 package org.bukkit.plugin;
 
 /**

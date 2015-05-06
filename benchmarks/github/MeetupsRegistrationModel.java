@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/apps/social/social-networking-api/src/com/liferay/social/networking/model/MeetupsRegistrationModel.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

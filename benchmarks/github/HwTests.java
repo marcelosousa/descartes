@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/tests/HwAccelerationTest/src/com/android/test/hwui/HwTests.java */
 /*
  * Copyright (C) 2012 The Android Open Source Project
  *

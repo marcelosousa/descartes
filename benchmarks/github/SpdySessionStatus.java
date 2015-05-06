@@ -1,3 +1,4 @@
+/* ./netty-netty-410aa42/codec-http/src/main/java/io/netty/handler/codec/spdy/SpdySessionStatus.java */
 /*
  * Copyright 2013 The Netty Project
  *

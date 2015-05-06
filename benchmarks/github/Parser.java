@@ -1,3 +1,4 @@
+/* ./bigbluebutton-bigbluebutton-9261791/bbb-voice/src/main/java/org/zoolu/tools/Parser.java */
 /*
  * Copyright (C) 2005 Luca Veltri - University of Parma - Italy
  * 

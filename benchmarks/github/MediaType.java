@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-web/src/main/java/org/springframework/http/MediaType.java */
 /*
  * Copyright 2002-2015 the original author or authors.
  *

@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/modules/third-party/com-browseengine-bobo/src/com/browseengine/bobo/sort/ReverseDocComparatorSource.java */
 /* @generated */
 package com.browseengine.bobo.sort;
 

@@ -1,3 +1,4 @@
+/* ./Trinea-android-common-c345339/src/cn/trinea/android/common/service/impl/RemoveTypeBitmapSmall.java */
 package cn.trinea.android.common.service.impl;
 
 import android.graphics.Bitmap;

@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-expression/src/main/java/org/springframework/expression/TypeComparator.java */
 /*
  * Copyright 2002-2013 the original author or authors.
  *

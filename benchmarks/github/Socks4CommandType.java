@@ -1,3 +1,4 @@
+/* ./netty-netty-410aa42/codec-socks/src/main/java/io/netty/handler/codec/socksx/v4/Socks4CommandType.java */
 /*
  * Copyright 2012 The Netty Project
  *

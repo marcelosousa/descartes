@@ -1,3 +1,4 @@
+/* ./excilys-androidannotations-b4ae83a/AndroidAnnotations/androidannotations/src/test/java/org/androidannotations/utils/ClassFinder.java */
 /**
  * Copyright (C) 2010-2015 eBusiness Information, Excilys Group
  *

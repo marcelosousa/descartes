@@ -1,3 +1,4 @@
+/* ./nicolasgramlich-AndEngine-720897f/src/org/andengine/util/algorithm/path/astar/AStarPathFinder.java */
 package org.andengine.util.algorithm.path.astar;
 
 import org.andengine.util.adt.list.ShiftList;

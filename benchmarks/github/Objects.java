@@ -1,3 +1,4 @@
+/* ./android-platform_frameworks_base-adcb47a/tools/layoutlib/create/src/com/android/tools/layoutlib/java/Objects.java */
 /*
  * Copyright (C) 2013 The Android Open Source Project
  *

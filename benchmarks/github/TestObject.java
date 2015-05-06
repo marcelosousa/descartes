@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-core/src/test/java/org/springframework/tests/sample/objects/TestObject.java */
 /*
  * Copyright 2002-2013 the original author or authors.
  *

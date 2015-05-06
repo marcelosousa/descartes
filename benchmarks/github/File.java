@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/io/File.java */
 /*
  * Copyright 2010 Google Inc.
  * 

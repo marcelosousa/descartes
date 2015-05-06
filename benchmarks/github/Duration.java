@@ -1,3 +1,4 @@
+/* ./dropwizard-dropwizard-70c3822/dropwizard-util/src/main/java/io/dropwizard/util/Duration.java */
 package io.dropwizard.util;
 
 import com.fasterxml.jackson.annotation.JsonCreator;

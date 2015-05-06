@@ -1,3 +1,4 @@
+/* ./wildfly-wildfly-9d813ae/testsuite/integration/basic/src/test/java/org/jboss/as/test/integration/ee/jmx/property/JMXPropertyEditorsTestCase.java */
 /*
  * JBoss, Home of Professional Open Source.
  * Copyright 2011, Red Hat, Inc., and individual contributors

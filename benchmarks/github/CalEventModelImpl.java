@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/portal-impl/src/com/liferay/portlet/calendar/model/impl/CalEventModelImpl.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

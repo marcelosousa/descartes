@@ -1,3 +1,4 @@
+/* ./bigbluebutton-bigbluebutton-9261791/bbb-lti/src/java/net/oauth/signature/OAuthSignatureMethod.java */
 /*
  * Copyright 2007 Netflix, Inc.
  *

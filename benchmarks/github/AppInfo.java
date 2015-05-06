@@ -1,3 +1,4 @@
+/* ./zxing-zxing-295cac5/android/src/com/google/zxing/client/android/share/AppInfo.java */
 /*
  * Copyright (C) 2013 ZXing authors
  *

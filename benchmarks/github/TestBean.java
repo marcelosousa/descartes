@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-beans/src/test/java/org/springframework/tests/sample/beans/TestBean.java */
 /*
  * Copyright 2002-2012 the original author or authors.
  *

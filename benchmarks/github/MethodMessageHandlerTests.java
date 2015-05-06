@@ -1,3 +1,4 @@
+/* ./spring-projects-spring-framework-7891c0d/spring-messaging/src/test/java/org/springframework/messaging/handler/invocation/MethodMessageHandlerTests.java */
 /*
  * Copyright 2002-2014 the original author or authors.
  *

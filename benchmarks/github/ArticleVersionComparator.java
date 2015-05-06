@@ -1,3 +1,4 @@
+/* ./liferay-liferay-portal-b66e4b4/portal-service/src/com/liferay/portlet/journal/util/comparator/ArticleVersionComparator.java */
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *

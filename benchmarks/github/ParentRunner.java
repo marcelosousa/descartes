@@ -1,3 +1,4 @@
+/* ./junit-team-junit-387e851/src/main/java/org/junit/runners/ParentRunner.java */
 package org.junit.runners;
 
 import static org.junit.internal.runners.rules.RuleMemberValidator.CLASS_RULE_METHOD_VALIDATOR;

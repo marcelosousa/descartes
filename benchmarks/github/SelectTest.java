@@ -1,3 +1,4 @@
+/* ./libgdx-libgdx-d0121ac/tests/gdx-tests/src/com/badlogic/gdx/tests/SelectTest.java */
 /*******************************************************************************
  * Copyright 2011 See AUTHORS file.
  *
