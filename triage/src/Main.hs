@@ -164,7 +164,16 @@ analyse (MethodBody mbody) =
 analyseBlockStmt :: BlockStmt -> Statistics
 analyseBlockStmt (BlockStmt s) = analyseStmt s
 analyseBlockStmt (LocalClass d) = error "local class declaration inside comparator"
-analyseBlockStmt (LocalVars _ _ vars) = Statistics (length vars) 0 0 0 []
+analyseBlockStmt (LocalVars _ _ vars) = foldr (\s r -> analyseVars s `plus` r) initial vars
+
+analyseVars :: VarDecl -> Statistics
+analyseVars (VarDecl _ Nothing) = Statistics 1 0 0 0 []
+analyseVars (VarDecl _ (Just vinit)) = analyseVarInit vinit
+
+analyseVarInit :: VarInit -> Statistics
+analyseVarInit vinit = case vinit of
+  InitExp e -> Statistics 1 0 0 0 [] `plus` analyseExpr e
+  InitArray (ArrayInit ves) -> Statistics 1 0 0 0 [] `plus` foldr (\s r -> analyseVarInit s `plus` r) initial ves
 
 analyseStmt :: Stmt -> Statistics
 analyseStmt s = case s of
@@ -214,4 +223,7 @@ analyseExpr e = case e of
   BinOp e1 _ e2    -> analyseExpr e1 `plus` analyseExpr e2
   Cond c e1 e2  -> Statistics 0 1 0 0 [] `plus` analyseExpr c `plus` analyseExpr e1 `plus` analyseExpr e2
   Assign _ _ e' -> analyseExpr e'
+  FieldAccess fa -> case fa of
+    PrimaryFieldAccess e' i -> analyseExpr e'
+    _ -> initial
   _ -> initial 
