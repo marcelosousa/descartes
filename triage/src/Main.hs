@@ -11,6 +11,7 @@ import System.Console.CmdArgs
 import System.FilePath.Posix
 import System.Directory
 import Data.List
+import Debug.Trace
 
 data Statistics = Statistics 
   {  nl :: Int
@@ -69,24 +70,34 @@ runOption (Collect d) = do
   res <- mapM triage files
   -- @ start post-processing
   let (errs, res') = partition isLeft res 
-      valid = foldl (\a r -> right r ++ a) [] res'
-  -- @ simplistic examples without conditionals or loops
-      (simple, rest) = partition (\(f,stat) -> isSimple stat) valid
-  -- @ examples that contain loops
-      (cond, loopy) = partition (\(f,stat) -> noLoops stat) rest
-      (lres,lerrs,lres',lvalid,lsimple,lcond,lloopy) = (length res, length errs, length res', length valid, length simple, length cond, length loopy)
+      valid = foldl (\a r -> right r ++ a) [] res'      
+  -- @ simplistic examples without conditionals, loops or method calls
+      simple = filter (\(f,stat) -> not (hasCond stat || hasLoops stat || hasMethodCalls stat)) valid
+      cNlNm = filter (\(f,stat) -> hasCond stat && not (hasLoops stat || hasMethodCalls stat)) valid
+      clNm = filter (\(f,stat) -> hasCond stat && hasLoops stat && not (hasMethodCalls stat)) valid
+      clm = filter (\(f,stat) -> hasCond stat && hasLoops stat && hasMethodCalls stat) valid
+      ncNlm = filter (\(f,stat) -> not (hasCond stat || hasLoops stat) && hasMethodCalls stat) valid
+      cNlm = filter (\(f,stat) -> hasCond stat && not (hasLoops stat) && hasMethodCalls stat) valid
+      (lres,lerrs,lres',lvalid) = (length res, length errs, length res', length valid)
+      (lsimple,lcNlNm,lclNm,lclm,lncNlm,lcNlm) = (length simple, length cNlNm, length clNm, length clm, length ncNlm, length cNlm)
   writeFile "errs.log" $ show errs
 --  writeFile "todo.log" $ show todo
-  writeFile "simple.log" $ pp simple
-  writeFile "cond.log" $ pp cond
-  writeFile "loops.log" $ pp loopy
+  writeFile "Nocond-Noloops-Nometh.log" $ pp simple
+  writeFile "Cond-Noloops-Nometh.log" $ pp cNlNm
+  writeFile "Cond-Loops-Nometh.log" $ pp clNm
+  writeFile "Cond-Loops-Meth.log" $ pp clm
+  writeFile "NoCond-NoLoops-Meth.log" $ pp ncNlm
+  writeFile "Cond-NoLoops-Meth.log" $ pp cNlm
   print $ "err/all ratio:"++ show (lerrs, lres, percent lerrs lres)
   print $ "ack/all ratio:"++ show (lres', lres, percent lres' lres)
   print $ "valid/ack ratio: " ++ show (lvalid, lres', percent lvalid lres')
   print $ "simple/valid ratio: " ++ show (lsimple, lvalid, percent lsimple lvalid)
-  print $ "cond/valid ratio: " ++ show (lcond, lvalid, percent lcond lvalid)
-  print $ "loopy/valid ratio: " ++ show (lloopy, lvalid, percent lloopy lvalid)
-
+  print $ "cond/valid ratio: " ++ show (lcNlNm, lvalid, percent lcNlNm lvalid)
+  print $ "cond+loop/valid ratio: " ++ show (lclNm, lvalid, percent lclNm lvalid)
+  print $ "cond+loop+meth/valid ratio: " ++ show (lclm, lvalid, percent lclm lvalid)
+  print $ "meth/valid ratio: " ++ show (lncNlm, lvalid, percent lncNlm lvalid)
+  print $ "cond+meth/valid ratio: " ++ show (lcNlm, lvalid, percent lcNlm lvalid)
+  
 pp :: [(String,Statistics)] -> String
 pp [] = ""
 pp ((f,s):rest) = f ++ ": " ++ show s ++ "\n" ++ pp rest
@@ -100,17 +111,26 @@ isLeft :: Either a b -> Bool
 isLeft (Left a) = True
 isLeft (Right b) = False
         
+noComparators :: Either a (String,[Statistics]) -> Bool
+noComparators (Left a) = error "not suppose to happen"
+noComparators (Right (a,l)) = null l
+
 right :: Either a (String,[Statistics]) -> [(String,Statistics)]
 right (Left a) = []
 right (Right (f,s)) = map (\s' -> (f,s')) s
 
 isSimple :: Statistics -> Bool
-isSimple (Statistics _ 0 0 0 _) = True
+isSimple (Statistics _ 0 0 0 []) = True
 isSimple _ = False
 
-noLoops ::  Statistics -> Bool
-noLoops (Statistics _ _ 0 0 _) = True
-noLoops _ = False
+hasMethodCalls :: Statistics -> Bool
+hasMethodCalls (Statistics _ _ _ _ n) = length n > 0
+
+hasLoops ::  Statistics -> Bool
+hasLoops (Statistics _ _ n1 n2 _) = n1 > 0 || n2 > 0
+
+hasCond :: Statistics -> Bool
+hasCond (Statistics _ c _ _ _) = c > 0
 
 triage :: FilePath -> IO (Either String (String,[Statistics]))
 triage file = do 
@@ -129,15 +149,15 @@ class HasComparators a where
 
 instance HasComparators TypeDecl where 
   getComparators (ClassTypeDecl d) = getComparators d
-  getComparators (InterfaceTypeDecl _) = error "triage: interface type declaration not supported"
+  getComparators (InterfaceTypeDecl _) = trace "triage: interface type declaration not supported" $ []
 
 instance HasComparators ClassDecl where
   getComparators (ClassDecl _ _ _ _ _ (ClassBody body)) = foldr (\d r -> getComparators d ++ r) [] body
-  getComparators (EnumDecl  _ _ _ _ ) = error "triage: enumdecl in class declaration not supported"
+  getComparators (EnumDecl  _ _ _ _ ) = trace "triage: enumdecl in class declaration not supported" $ []
 
 instance HasComparators Decl where
   getComparators (MemberDecl m) = getComparators m
-  getComparators (InitDecl _ _) = error "triage: init decl not supported"
+  getComparators (InitDecl _ _) = trace "triage: init decl not supported" $ []
 
 instance HasComparators MemberDecl where
   getComparators (MethodDecl _ _ _ (Ident i) _ _ m) = 
@@ -195,6 +215,7 @@ analyseStmt s = case s of
   Labeled _ s -> analyseStmt s
   Throw e -> (Statistics 1 0 0 0 []) `plus` analyseExpr e
   ExpStmt e -> (Statistics 1 0 0 0 []) `plus` analyseExpr e
+  Return (Just e) -> (Statistics 1 0 0 0 []) `plus` analyseExpr e
   _ -> Statistics 1 0 0 0 []
   where
       analyseSwitch :: SwitchBlock -> Statistics

@@ -1,0 +1,277 @@
+WrappedByteBuf.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "buf",Ident "compareTo"])]}
+WorkflowInstanceLinkWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_workflowInstanceLink",Ident "compareTo"])]}
+WorkflowDefinitionLinkWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_workflowDefinitionLink",Ident "compareTo"])]}
+WikiPageWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_wikiPage",Ident "compareTo"])]}
+WikiPageResourceWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_wikiPageResource",Ident "compareTo"])]}
+WikiNodeWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_wikiNode",Ident "compareTo"])]}
+WebsiteWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_website",Ident "compareTo"])]}
+WebDAVPropsWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_webDAVProps",Ident "compareTo"])]}
+WallEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_wallEntry",Ident "compareTo"])]}
+VirtualHostWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_virtualHost",Ident "compareTo"])]}
+VirtualFile.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "o",Ident "getName"]),I (Ident "compareToIgnoreCase")]}
+UserWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_user",Ident "compareTo"])]}
+UserTrackerWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userTracker",Ident "compareTo"])]}
+UserTrackerPathWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userTrackerPath",Ident "compareTo"])]}
+UserNotificationEventWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userNotificationEvent",Ident "compareTo"])]}
+UserNotificationDeliveryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userNotificationDelivery",Ident "compareTo"])]}
+UserIdMapperWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userIdMapper",Ident "compareTo"])]}
+UserGroupWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userGroup",Ident "compareTo"])]}
+UserGroupRoleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userGroupRole",Ident "compareTo"])]}
+UserGroupRoleModelImpl.java: Statistics {nl = 2, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userGroupRole",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "compareTo")]}
+UserGroupGroupRoleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_userGroupGroupRole",Ident "compareTo"])]}
+UserGroupGroupRoleModelImpl.java: Statistics {nl = 2, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userGroupGroupRole",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "compareTo")]}
+User.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "idStrategy"]),I (Ident "compare")]}
+UriPermission.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Long",Ident "compare"])]}
+Uri.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "toString"]),N (Name [Ident "other",Ident "toString"]),I (Ident "compareTo")]}
+TrashVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_trashVersion",Ident "compareTo"])]}
+TrashEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_trashEntry",Ident "compareTo"])]}
+TicketWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ticket",Ident "compareTo"])]}
+TestSection.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "o",Ident "getName"]),N (Name [Ident "name",Ident "compareTo"])]}
+TestGrouping.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "class1",Ident "getName"]),N (Name [Ident "class2",Ident "getName"]),I (Ident "compareTo")]}
+TestClass.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "left",Ident "getName"]),N (Name [Ident "right",Ident "getName"]),I (Ident "compareTo")]}
+TestClass.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "left",Ident "getMethod"]),N (Name [Ident "right",Ident "getMethod"]),N (Name [Ident "NAME_ASCENDING",Ident "compare"])]}
+TemplateHandlerComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "templateHandler1",Ident "getName"]),N (Name [Ident "templateHandler2",Ident "getName"]),N (Name [Ident "templateHandlerName1",Ident "compareTo"])]}
+TeamWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_team",Ident "compareTo"])]}
+TableNameOrderByComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_orderByComparator",Ident "compare"])]}
+SystemEventWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_systemEvent",Ident "compareTo"])]}
+SwappedByteBuf.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ByteBufUtil",Ident "compare"])]}
+SubscriptionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_subscription",Ident "compareTo"])]}
+StringText.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bytes"]),N (Name [Ident "text",Ident "bytes"]),N (Name [Ident "UTF8SortedAsUnicodeComparator",Ident "utf8SortedAsUnicodeSortOrder",Ident "compare"])]}
+StringAndBytesText.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bytes"]),N (Name [Ident "text",Ident "bytes"]),N (Name [Ident "UTF8SortedAsUnicodeComparator",Ident "utf8SortedAsUnicodeSortOrder",Ident "compare"])]}
+StagedAssetTagImpl.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetTag",Ident "compareTo"])]}
+SpdyStreamStatus.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "code"]),N (Name [Ident "o",Ident "code"])]}
+SpdySessionStatus.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "code"]),N (Name [Ident "o",Ident "code"])]}
+Sorter.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "comparator",Ident "compare"])]}
+SocialRequestWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialRequest",Ident "compareTo"])]}
+SocialRelationWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialRelation",Ident "compareTo"])]}
+SocialActivityWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialActivity",Ident "compareTo"])]}
+SocialActivitySetWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialActivitySet",Ident "compareTo"])]}
+SocialActivitySettingWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialActivitySetting",Ident "compareTo"])]}
+SocialActivityLimitWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialActivityLimit",Ident "compareTo"])]}
+SocialActivityDefinitionNameComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "activityDefinition1",Ident "getName"]),N (Name [Ident "activityDefinition2",Ident "getName"]),N (Name [Ident "name1",Ident "compareTo"])]}
+SocialActivityCounterWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialActivityCounter",Ident "compareTo"])]}
+SocialActivityCounterNameComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "LanguageUtil",Ident "get"]),N (Name [Ident "LanguageUtil",Ident "get"]),N (Name [Ident "name1",Ident "compareTo"])]}
+SocialActivityAchievementWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_socialActivityAchievement",Ident "compareTo"])]}
+ShoppingOrderWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingOrder",Ident "compareTo"])]}
+ShoppingOrderItemWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingOrderItem",Ident "compareTo"])]}
+ShoppingItemWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingItem",Ident "compareTo"])]}
+ShoppingItemPriceWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingItemPrice",Ident "compareTo"])]}
+ShoppingItemImpl.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compare")]}
+ShoppingItemFieldWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingItemField",Ident "compareTo"])]}
+ShoppingCouponWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingCoupon",Ident "compareTo"])]}
+ShoppingCategoryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingCategory",Ident "compareTo"])]}
+ShoppingCartWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shoppingCart",Ident "compareTo"])]}
+ShardWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_shard",Ident "compareTo"])]}
+ServiceComponentWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_serviceComponent",Ident "compareTo"])]}
+SCProductVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_scProductVersion",Ident "compareTo"])]}
+SCProductScreenshotWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_scProductScreenshot",Ident "compareTo"])]}
+SCProductEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_scProductEntry",Ident "compareTo"])]}
+ScoreAccessor.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "score"),N (Name [Ident "o",Ident "floatValue"]),N (Name [Ident "Float",Ident "compare"])]}
+SCLicenseWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_scLicense",Ident "compareTo"])]}
+SCFrameworkVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_scFrameworkVersion",Ident "compareTo"])]}
+SACPEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_sacpEntry",Ident "compareTo"])]}
+RoleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_role",Ident "compareTo"])]}
+ReverseDocComparatorSource.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_comparator",Ident "compare"])]}
+ResourceTypePermissionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_resourceTypePermission",Ident "compareTo"])]}
+ResourcePermissionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_resourcePermission",Ident "compareTo"])]}
+ResourceBlockWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_resourceBlock",Ident "compareTo"])]}
+ResourceBlockPermissionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_resourceBlockPermission",Ident "compareTo"])]}
+ResourceActionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_resourceAction",Ident "compareTo"])]}
+RequestMethodsRequestCondition.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "other",Ident "methods",Ident "size"]),I (Ident "size")]}
+RepositoryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_repository",Ident "compareTo"])]}
+RepositoryEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_repositoryEntry",Ident "compareTo"])]}
+ReplayingDecoderByteBuf.java: Statistics {nl = 2, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "reject"])]}
+RemoveTypeDataSmall.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "obj1",Ident "getData"]),N (Name [Ident "obj2",Ident "getData"]),N (Name [Ident "ObjectUtils",Ident "compare"])]}
+RemoveTypeDataBig.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "obj2",Ident "getData"]),N (Name [Ident "obj1",Ident "getData"]),N (Name [Ident "ObjectUtils",Ident "compare"])]}
+ReleaseWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_release",Ident "compareTo"])]}
+RegionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_region",Ident "compareTo"])]}
+RatingsStatsWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ratingsStats",Ident "compareTo"])]}
+RatingsEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ratingsEntry",Ident "compareTo"])]}
+PublicRenderParameterIdentifierConfigurationComparator.java: Statistics {nl = 5, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "publicRenderParameterConfiguration1",Ident "getPublicRenderParameter"]),N (Name [Ident "publicRenderParameterConfiguration2",Ident "getPublicRenderParameter"]),N (Name [Ident "publicRenderParameter1",Ident "getIdentifier"]),N (Name [Ident "publicRenderParameter2",Ident "getIdentifier"]),N (Name [Ident "identifier1",Ident "compareTo"])]}
+PublicRenderParameterIdentifierComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "publicRenderParameter1",Ident "getIdentifier"]),N (Name [Ident "publicRenderParameter2",Ident "getIdentifier"]),N (Name [Ident "identifier1",Ident "compareTo"])]}
+PropertyComparatorTests.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "nickName",Ident "compareTo"])]}
+PriorityComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "acFirst",Ident "getPriority"]),N (Name [Ident "acSecond",Ident "getPriority"])]}
+PrioritizedRunnable.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "priority",Ident "compareTo"])]}
+PortletWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_portlet",Ident "compareTo"])]}
+PortletPreferencesWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_portletPreferences",Ident "compareTo"])]}
+PortletItemWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_portletItem",Ident "compareTo"])]}
+PortletCategoryComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "portletCategory1",Ident "getName"]),N (Name [Ident "LanguageUtil",Ident "get"]),N (Name [Ident "portletCategory2",Ident "getName"]),N (Name [Ident "LanguageUtil",Ident "get"]),N (Name [Ident "name1",Ident "compareTo"])]}
+PortalPreferencesWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_portalPreferences",Ident "compareTo"])]}
+PollsVoteWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_pollsVote",Ident "compareTo"])]}
+PollsQuestionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_pollsQuestion",Ident "compareTo"])]}
+PollsChoiceWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_pollsChoice",Ident "compareTo"])]}
+PluginWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shortName",Ident "compareToIgnoreCase"])]}
+PluginSettingWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_pluginSetting",Ident "compareTo"])]}
+PluginComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_getName"]),N (Name [Ident "_getName"]),N (Name [Ident "name1",Ident "compareTo"])]}
+PlainShardIterator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "o",Ident "shardId"]),N (Name [Ident "shardId",Ident "compareTo"])]}
+PhoneWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_phone",Ident "compareTo"])]}
+PathWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "unwrapPath"]),N (Name [Ident "_path",Ident "compareTo"])]}
+PasswordTrackerWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_passwordTracker",Ident "compareTo"])]}
+PasswordPolicyWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_passwordPolicy",Ident "compareTo"])]}
+PasswordPolicyRelWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_passwordPolicyRel",Ident "compareTo"])]}
+ParamsRequestCondition.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "other",Ident "expressions",Ident "size"]),I (Ident "size")]}
+OrgLaborWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_orgLabor",Ident "compareTo"])]}
+OrgGroupRoleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_orgGroupRole",Ident "compareTo"])]}
+OrgGroupRoleModelImpl.java: Statistics {nl = 2, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "orgGroupRole",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "compareTo")]}
+OrganizationWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_organization",Ident "compareTo"])]}
+OrderComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "doCompare"])]}
+OrderByComparatorAdapter.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "adapt"]),N (Name [Ident "adapt"]),N (Name [Ident "_orderByComparator",Ident "compare"])]}
+OAuthSignatureMethod.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compareTo")]}
+NettyBackedChannelBuffer.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ChannelBuffers",Ident "compare"])]}
+NetlinkTracker.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Long",Ident "compare"])]}
+ModuleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_module",Ident "compareTo"])]}
+ModelResourceWeightComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ResourceActionsUtil",Ident "getModelResourceWeight"]),N (Name [Ident "ResourceActionsUtil",Ident "getModelResourceWeight"]),N (Name [Ident "Double",Ident "compare"])]}
+ModelResourceComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ResourceActionsUtil",Ident "getModelResource"]),N (Name [Ident "ResourceActionsUtil",Ident "getModelResource"]),N (Name [Ident "resource1",Ident "compareTo"])]}
+MixedFileUpload.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "fileUpload",Ident "compareTo"])]}
+MixedAttribute.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "attribute",Ident "compareTo"])]}
+MessageListFragment.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mDelegate",Ident "compare"])]}
+MessageListFragment.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "cursor1",Ident "getInt"]),N (Name [Ident "cursor2",Ident "getInt"])]}
+MemoryAttribute.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "o",Ident "getName"]),I (Ident "compareToIgnoreCase")]}
+MembershipRequestWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_membershipRequest",Ident "compareTo"])]}
+MeetupsRegistrationWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_meetupsRegistration",Ident "compareTo"])]}
+MeetupsEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_meetupsEntry",Ident "compareTo"])]}
+MediaRouteChooserDialog.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "lhs",Ident "getName"]),I (Ident "toString"),N (Name [Ident "rhs",Ident "getName"]),I (Ident "toString"),I (Ident "compareTo")]}
+MDRRuleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mdrRule",Ident "compareTo"])]}
+MDRRuleGroupWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mdrRuleGroup",Ident "compareTo"])]}
+MDRRuleGroupInstanceWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mdrRuleGroupInstance",Ident "compareTo"])]}
+MDRActionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mdrAction",Ident "compareTo"])]}
+MBThreadWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbThread",Ident "compareTo"])]}
+MBThreadFlagWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbThreadFlag",Ident "compareTo"])]}
+MBStatsUserWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbStatsUser",Ident "compareTo"])]}
+MBMessageWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbMessage",Ident "compareTo"])]}
+MBMailingListWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbMailingList",Ident "compareTo"])]}
+MBDiscussionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbDiscussion",Ident "compareTo"])]}
+MBCategoryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbCategory",Ident "compareTo"])]}
+MBBanWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_mbBan",Ident "compareTo"])]}
+MaxRectsPacker.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Rect",Ident "getAtlasName"]),N (Name [Ident "Rect",Ident "getAtlasName"]),I (Ident "compareTo")]}
+LockWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_lock",Ident "compareTo"])]}
+LocalTransport.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "key",Ident "compareTo"])]}
+LocalePicker.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "sCollator",Ident "compare"])]}
+LocalAddress.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "id",Ident "compareTo"])]}
+ListTypeWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_listType",Ident "compareTo"])]}
+LayoutWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layout",Ident "compareTo"])]}
+LayoutSetWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutSet",Ident "compareTo"])]}
+LayoutSetPrototypeWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutSetPrototype",Ident "compareTo"])]}
+LayoutSetBranchWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutSetBranch",Ident "compareTo"])]}
+LayoutRevisionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutRevision",Ident "compareTo"])]}
+LayoutPrototypeWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutPrototype",Ident "compareTo"])]}
+LayoutFriendlyURLWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutFriendlyURL",Ident "compareTo"])]}
+LayoutBranchWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_layoutBranch",Ident "compareTo"])]}
+Label.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compareTo")]}
+KeyValuePair.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "kvp",Ident "getKey"]),N (Name [Ident "_key",Ident "compareTo"])]}
+JSONWebServiceActionConfig.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_signature",Ident "compareTo"])]}
+JsonDataSource.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "sourceType",Ident "name"]),N (Name [Ident "o",Ident "sourceType",Ident "name"]),I (Ident "compareTo")]}
+JournalFolderWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_journalFolder",Ident "compareTo"])]}
+JournalFeedWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_journalFeed",Ident "compareTo"])]}
+JournalContentSearchWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_journalContentSearch",Ident "compareTo"])]}
+JournalArticleWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_journalArticle",Ident "compareTo"])]}
+JournalArticleResourceWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_journalArticleResource",Ident "compareTo"])]}
+JournalArticleImageWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_journalArticleImage",Ident "compareTo"])]}
+JndiName.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getAbsoluteName"]),N (Name [Ident "other",Ident "getAbsoluteName"]),I (Ident "compareTo")]}
+JavaMethodComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "method1",Ident "getName"]),N (Name [Ident "method2",Ident "getName"]),N (Name [Ident "name1",Ident "compareTo"])]}
+ItemMetadata.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "o",Ident "getName"]),I (Ident "compareTo")]}
+InternalAttribute.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "o",Ident "getName"]),I (Ident "compareToIgnoreCase")]}
+IndexMetadata.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "StringUtil",Ident "merge"]),N (Name [Ident "StringUtil",Ident "merge"]),N (Name [Ident "columnNames",Ident "compareTo"])]}
+ImageWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_image",Ident "compareTo"])]}
+IdStrategy.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "CaseInsensitiveComparator",Ident "INSTANCE",Ident "compare"])]}
+IdStrategy.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "id1",Ident "compareTo"])]}
+IdStrategy.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "keyFor"]),N (Name [Ident "keyFor"]),I (Ident "compareTo")]}
+HttpResponseStatus.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "code"]),N (Name [Ident "o",Ident "code"])]}
+HttpMethod.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "name"]),N (Name [Ident "o",Ident "name"]),I (Ident "compareTo")]}
+HelpTopicComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "lhs",Ident "getName"]),N (Name [Ident "rhs",Ident "getName"]),N (Name [Ident "tnc",Ident "compare"])]}
+HeadersRequestCondition.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "other",Ident "expressions",Ident "size"]),I (Ident "size")]}
+GroupWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_group",Ident "compareTo"])]}
+FileComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "file1",Ident "getName"]),N (Name [Ident "file2",Ident "getName"]),N (Name [Ident "name1",Ident "compareTo"])]}
+Feed.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "toString"]),N (Name [Ident "another",Ident "toString"]),I (Ident "compareTo")]}
+ExportImportConfigurationWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_exportImportConfiguration",Ident "compareTo"])]}
+ExponentialBackoffMsgRetryManager.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Long",Ident "valueOf"]),N (Name [Ident "Long",Ident "valueOf"]),I (Ident "compareTo")]}
+ExpandoValueWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_expandoValue",Ident "compareTo"])]}
+ExpandoTableWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_expandoTable",Ident "compareTo"])]}
+ExpandoRowWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_expandoRow",Ident "compareTo"])]}
+ExpandoColumnWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_expandoColumn",Ident "compareTo"])]}
+ExceptionDepthComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getDepth"]),N (Name [Ident "getDepth"])]}
+EventData.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "messageId",Ident "getSequenceNumber"]),N (Name [Ident "ed",Ident "getMessageId"]),I (Ident "getSequenceNumber"),I (Ident "compareTo")]}
+EntityColumn.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_name",Ident "compareTo"])]}
+EmailAddressWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_emailAddress",Ident "compareTo"])]}
+DropwizardResourceConfig.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ComparisonChain",Ident "start"]),I (Ident "compare"),I (Ident "compare"),I (Ident "result")]}
+DnsResponseCode.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "intValue"]),N (Name [Ident "o",Ident "intValue"])]}
+DnsRecordType.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "intValue"]),N (Name [Ident "o",Ident "intValue"])]}
+DLSyncEventWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlSyncEvent",Ident "compareTo"])]}
+DLFolderWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFolder",Ident "compareTo"])]}
+DLFileVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFileVersion",Ident "compareTo"])]}
+DLFileShortcutWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFileShortcut",Ident "compareTo"])]}
+DLFileRankWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFileRank",Ident "compareTo"])]}
+DLFileEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFileEntry",Ident "compareTo"])]}
+DLFileEntryTypeWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFileEntryType",Ident "compareTo"])]}
+DLFileEntryMetadataWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlFileEntryMetadata",Ident "compareTo"])]}
+DLDisplayContextFactoryReference.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_serviceReference",Ident "compareTo"])]}
+DLContentWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_dlContent",Ident "compareTo"])]}
+DisplayContextFactoryReference.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_serviceReference",Ident "compareTo"])]}
+DiskAttribute.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "o",Ident "getName"]),I (Ident "compareToIgnoreCase")]}
+DescriptionComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "description1",Ident "getDisplayName"]),N (Name [Ident "description2",Ident "getDisplayName"]),N (Name [Ident "displayName1",Ident "compareTo"])]}
+DependencyGraph.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "topologicalOrder",Ident "compare"])]}
+DDMTemplateWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmTemplate",Ident "compareTo"])]}
+DDMTemplateVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmTemplateVersion",Ident "compareTo"])]}
+DDMStructureWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmStructure",Ident "compareTo"])]}
+DDMStructureVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmStructureVersion",Ident "compareTo"])]}
+DDMStructureLinkWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmStructureLink",Ident "compareTo"])]}
+DDMStructureLayoutWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmStructureLayout",Ident "compareTo"])]}
+DDMStorageLinkWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmStorageLink",Ident "compareTo"])]}
+DDMContentWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddmContent",Ident "compareTo"])]}
+DDLRecordWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddlRecord",Ident "compareTo"])]}
+DDLRecordVersionWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddlRecordVersion",Ident "compareTo"])]}
+DDLRecordSetWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_ddlRecordSet",Ident "compareTo"])]}
+DateUtil_IW.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "DateUtil",Ident "compareTo"])]}
+DateUtil_IW.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "DateUtil",Ident "compareTo"])]}
+CustomAttributesDisplayComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "customAttributesDisplay1",Ident "getClassName"]),N (Name [Ident "customAttributesDisplay2",Ident "getClassName"]),N (Name [Ident "_modelResourceComparator",Ident "compare"])]}
+CountryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_country",Ident "compareTo"])]}
+CountryListLoader.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "lhs",Ident "get"]),N (Name [Ident "rhs",Ident "get"]),I (Ident "compareTo")]}
+CounterWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_counter",Ident "compareTo"])]}
+CounterModelImpl.java: Statistics {nl = 2, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "counter",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "compareTo")]}
+Correction.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "compareTo"])]}
+ConvertingComparatorTests.java: Statistics {nl = 4, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "instanceOf"]),N (Name [Ident "assertThat"]),N (Name [Ident "instanceOf"]),N (Name [Ident "assertThat"]),I (Ident "compare")]}
+ConvertingComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "convert"),I (Ident "convert"),I (Ident "compare")]}
+ContactWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_contact",Ident "compareTo"])]}
+ContactID.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getKey"]),N (Name [Ident "o",Ident "getKey"])]}
+ComparableComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "o1",Ident "compareTo"])]}
+CompanyWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_company",Ident "compareTo"])]}
+ColorSchemeImpl.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "colorScheme",Ident "getName"]),I (Ident "compareTo")]}
+ClusterGroupWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_clusterGroup",Ident "compareTo"])]}
+ClassNameWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_className",Ident "compareTo"])]}
+CaseInsensitiveComparator.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "lhs",Ident "compareToIgnoreCase"])]}
+CalEventWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_calEvent",Ident "compareTo"])]}
+BytesText.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bytes"]),N (Name [Ident "text",Ident "bytes"]),N (Name [Ident "UTF8SortedAsUnicodeComparator",Ident "utf8SortedAsUnicodeSortOrder",Ident "compare"])]}
+BrowserTrackerWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_browserTracker",Ident "compareTo"])]}
+BookmarksFolderWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_bookmarksFolder",Ident "compareTo"])]}
+BookmarksEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_bookmarksEntry",Ident "compareTo"])]}
+BlogsStatsUserWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_blogsStatsUser",Ident "compareTo"])]}
+BlogsEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_blogsEntry",Ident "compareTo"])]}
+BackgroundTaskWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_backgroundTask",Ident "compareTo"])]}
+AttributeComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "attr1",Ident "getValue"]),N (Name [Ident "attr2",Ident "getValue"]),N (Name [Ident "attr1Value",Ident "compareTo"])]}
+AssetVocabularyWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetVocabulary",Ident "compareTo"])]}
+AssetTagWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetTag",Ident "compareTo"])]}
+AssetTagStatsWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetTagStats",Ident "compareTo"])]}
+AssetRendererFactoryTypeNameComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetRendererFactory1",Ident "getTypeName"]),N (Name [Ident "assetRendererFactory2",Ident "getTypeName"]),N (Name [Ident "assetRendererFactoryType1",Ident "compareTo"])]}
+AssetLinkWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetLink",Ident "compareTo"])]}
+AssetEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetEntry",Ident "compareTo"])]}
+AssetCategoryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetCategory",Ident "compareTo"])]}
+AssetCategoryPropertyWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_assetCategoryProperty",Ident "compareTo"])]}
+AspectJAwareAdvisorAutoProxyCreator.java: Statistics {nl = 2, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compare")]}
+AppWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_app",Ident "compareTo"])]}
+AppSecurityPermissions.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "sCollator",Ident "compare"])]}
+AppInfo.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "label",Ident "compareTo"])]}
+AnnouncementsFlagWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_announcementsFlag",Ident "compareTo"])]}
+AnnouncementsEntryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_announcementsEntry",Ident "compareTo"])]}
+AnnouncementsDeliveryWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_announcementsDelivery",Ident "compareTo"])]}
+AddressWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_address",Ident "compareTo"])]}
+AddressableNode.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compareTo")]}
+ActivityChooserModel.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Float",Ident "floatToIntBits"]),N (Name [Ident "Float",Ident "floatToIntBits"])]}
+ActionComparator.java: Statistics {nl = 3, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ResourceActionsUtil",Ident "getAction"]),N (Name [Ident "ResourceActionsUtil",Ident "getAction"]),N (Name [Ident "action1",Ident "compareTo"])]}
+AccountWrapper.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_account",Ident "compareTo"])]}
+AC.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "getPriority"),N (Name [Ident "ac",Ident "getPriority"])]}
+AbstractQueueSorterImpl.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "compare"])]}
+AbstractMethodMessageHandler.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compare")]}
+AbstractMediaTypeExpression.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "getMediaType"),N (Name [Ident "other",Ident "getMediaType"]),N (Name [Ident "MediaType",Ident "SPECIFICITY_COMPARATOR",Ident "compare"])]}
+AbstractHandlerMethodMapping.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [I (Ident "compare")]}
+AbstractChannelBuffer.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ChannelBuffers",Ident "compare"])]}
+AbstractByteBuf.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ByteBufUtil",Ident "compare"])]}
