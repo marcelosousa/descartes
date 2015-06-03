@@ -11,7 +11,9 @@ import System.Console.CmdArgs
 import System.FilePath.Posix
 import System.Directory
 import Data.List
-import Debug.Trace
+import qualified Debug.Trace as T
+
+trace a b = b
 
 data Statistics = Statistics 
   {  nl :: Int
@@ -63,7 +65,10 @@ main = do options <- cmdArgsRun progModes
 runOption :: Option -> IO ()
 runOption (Analyse f) = do
   r <- triage f
-  print r
+  case r of 
+    Left _ -> return ()
+    Right (_,[]) -> return ()
+    _ ->  print r
 runOption (Collect d) = do
   lfiles <- getDirectoryContents d
   let files = filter (\f -> snd (splitExtensions f) == ".java") lfiles
