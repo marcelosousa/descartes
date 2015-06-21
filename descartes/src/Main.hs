@@ -7,12 +7,19 @@ module Main where
 
 import Language.Java.Parser
 import Language.Java.Syntax
+import Language.Java.Pretty
+
 import System.Console.CmdArgs
 import System.FilePath.Posix
+import System.FilePath.Find
 import System.Directory
-import Data.List
 import qualified Debug.Trace as T
+
 import Analysis.CHA
+import Analysis.Verifier
+import Analysis.Util
+import Analysis.Types
+import Analysis.Consolidation
 
 trace a b = b
 
@@ -39,13 +46,18 @@ main = do options <- cmdArgsRun progModes
           runOption options
 
 runOption :: Option -> IO ()
-runOption (Verify f) = do
-  frontend f
+runOption (Verify path) = find always (extension ==? ".java") path >>=
+                          mapM_ frontend
   
 frontend :: FilePath -> IO ()
 frontend file = do 
   ast <- parser compilationUnit `fmap` readFile file 
   case ast of 
-    Left e -> print $ file ++ ":" ++ show e
-    Right cu -> print cu
-
+    Left e -> print $ file ++ ": " ++ show e
+    Right cu -> do
+        let comps = getComps cu
+            comps1 = map (\c -> map (\idx -> rename idx c) [1,2]) comps
+        print cu
+--        print comps
+--        print comps1
+--        mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comps1
