@@ -21,6 +21,8 @@ import Analysis.Util
 import Analysis.Types
 import Analysis.Consolidation
 
+import Z3.Monad
+
 trace a b = b
 
 _program, _summary :: String
@@ -55,9 +57,13 @@ frontend file = do
   case ast of 
     Left e -> print $ file ++ ": " ++ show e
     Right cu -> do
-        let comps = getComps cu
-            comps1 = map (\c -> map (\idx -> rename idx c) [1,2]) comps
-        print cu
+        let classMap = getInfo cu
+            comps = getComps cu
+            comparators = map (\c -> map (\idx -> rename idx c) [1,2,3]) comps
+        mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
+        print classMap
+        vals <- evalZ3 $ verify classMap (head comparators) transitivity
+        print vals
 --        print comps
 --        print comps1
---        mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comps1
+--        

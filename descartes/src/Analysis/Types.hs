@@ -5,12 +5,28 @@
 module Analysis.Types where
 
 import Data.Map (Map)
+import qualified Data.Map as M
 import Control.Monad.State.Strict
 import Language.Java.Syntax
 
 -- | ClassMap: Map Identifier ClassDeclaration
-type ClassMap = Map Ident ClassInfo
+type ClassMap = Map String ClassInfo
 
+getFieldNames :: String -> ClassMap -> [String]
+getFieldNames str cInfo = 
+    case M.lookup str cInfo of
+        Nothing -> []
+        Just (ClassInfo _ fields) -> foldl (\acc f -> getFieldName f ++ acc) [] fields
+
+getFieldName :: MemberDecl -> [String]
+getFieldName mDecl = case mDecl of
+    FieldDecl _ _ varDecl -> foldl (\acc f -> getName f ++ acc) [] varDecl
+    _ -> []
+
+getName :: VarDecl -> [String]
+getName (VarDecl (VarId (Ident str)) _) = [str]
+getName _ = []
+    
 -- | CHA Graph: Class Hierarchy Graph
 type ClassGraph = Map Ident ([Ident],[Ident])
 

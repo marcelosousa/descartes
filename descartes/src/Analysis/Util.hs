@@ -12,6 +12,12 @@ import Language.Java.Syntax
 
 import Analysis.Types
 
+--
+safeLookup :: Ord k => String -> k -> Map k a -> a
+safeLookup err k m = case M.lookup k m of
+    Nothing -> error err
+    Just a  -> a
+    
 class GetInfo a where
     getInfo :: a -> ClassMap
 
@@ -20,8 +26,26 @@ instance GetInfo CompilationUnit where
         foldl (\acc tyDecl -> M.union acc $ getInfo tyDecl) M.empty typeDecls
 
 instance GetInfo TypeDecl where
-    getInfo = undefined
+    getInfo tyDecl = case tyDecl of
+        ClassTypeDecl classDecl -> getInfo classDecl 
+        InterfaceTypeDecl interDecl -> M.empty
 
+instance GetInfo ClassDecl where
+    getInfo clDecl = case clDecl of
+        ClassDecl mods ident tyParms mRefTy refTys (ClassBody classBody) ->
+            let fields = foldl (\acc c -> getFields c ++ acc) [] classBody
+            in M.singleton (toString ident) (ClassInfo ident fields)
+        EnumDecl  mods ident refTys enumBody -> M.empty
+
+getFields :: Decl -> [MemberDecl]
+getFields (MemberDecl mdecl) = getField mdecl
+getFields (InitDecl _ _) = []
+
+getField :: MemberDecl -> [MemberDecl]
+getField mdecl = case mdecl of
+    FieldDecl mods ty vardecls -> [mdecl]    
+    _ -> []
+    
 data CompInter = Comparator | Comparable
   deriving (Show,Eq,Ord)
 
@@ -93,9 +117,27 @@ type Spec = Int
     
 --  type Substitutions = Map Ident Ident
         
+getObjectType :: Comparator -> String
+getObjectType (Comp (Ident str) _ ) = str
+
 getParameters :: Comparator -> [FormalParam]
 getParameters (Comp _ (MethodDecl _ _ _ _ pars _ _)) = pars
 getParameters _ = error "getParameters"
+
+getParIdents :: [FormalParam] -> [String]
+getParIdents pars = map getParIdent pars
+
+getParIdent :: FormalParam -> String
+getParIdent (FormalParam _ _ _ (VarId ident)) = toString ident
+getParIdent _ = error "getParIdent"
+
+toString :: Ident -> String
+toString (Ident str) = str
+
+getBlocks :: [Comparator] -> [Block]
+getBlocks comps = map getBlock comps
+    where getBlock (Comp _ (MethodDecl _ _ _ _ _ _ (MethodBody Nothing))) = error "getBlock"
+          getBlock (Comp _ (MethodDecl _ _ _ _ _ _ (MethodBody (Just b)))) = b
 
 {-
 Alfa-renaming:
