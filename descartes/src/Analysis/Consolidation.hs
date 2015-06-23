@@ -93,11 +93,37 @@ verify :: ClassMap -> [Comparator] -> Prop -> Z3 Result
 verify classMap comps prop = do
     (objSort, pars, res, fields) <- prelude classMap comps
     (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res)
-    let blocks = getBlocks comps
-    ast <- analyse (objSort, pars, res, fields, pre) blocks
-    assert =<< mkNot =<< mkImplies ast post
-    check
-    
+    let blocks = zip [0..] $ getBlocks comps
+    analyser (objSort, pars, res, fields, pre, post) blocks
+    --assert =<< mkNot =<< mkImplies ast post
+    --check
+
+-- strongest post condition
+analyser :: (Sort, Args, [AST], Fields, AST, AST) -> [(Int, Block)] -> Z3 Result
+analyser (objSort, pars, res, fields, pre, post) [] = helper pre post
+analyser env ((pid,Block []):rest) = analyser env rest
+analyser env@(objSort, pars, res, fields, pre, post) ((pid,Block (bstmt:r1)):rest) = 
+    case bstmt of
+        BlockStmt stmt -> case stmt of
+            StmtBlock (Block block) -> analyser env ((pid, Block (block ++ r1)):rest)
+            Return Nothing -> error "analyser: return Nothing"
+            Return (Just expr) -> trace ("processing return of pid " ++ show pre) $ do
+                exprPsi <- processExp (objSort, pars, res, fields) expr
+                let resPid = res !! pid  
+                r <- trace ("making equality between" ++ show resPid) $ mkEq resPid exprPsi
+                nPre <- mkAnd [pre,r]
+                test <- helper nPre post
+                case test of
+                    Unsat -> return test
+                    _ -> analyser (objSort, pars, res, fields, nPre, post) rest
+            _ -> error "not supported"
+        _ -> error "analyser: bstmt is not a BlockStmt"
+
+--
+helper pre post = do
+    assert =<< mkNot =<< mkImplies pre post
+    check    
+
 analyse :: (Sort, Args, [AST], Fields, AST) -> [Block] -> Z3 AST
 analyse (objSort, pars, res, fields, psi) progs = 
     foldM (\fml (prog, pid) -> process (objSort, pars, res, fields, fml) pid prog) psi $ zip progs [0..]
