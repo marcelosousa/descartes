@@ -267,6 +267,8 @@ instance Renamable MethodInvocation where
     -}
     
 instance Renamable Name where
+    rename idx (Name [ident]) = 
+        Name [rename idx ident]
     rename idx (Name idents) = 
         let idents' = map (rename idx) $ init idents
         in Name $ idents' ++ [last idents]

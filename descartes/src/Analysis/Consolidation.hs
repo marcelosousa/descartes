@@ -13,62 +13,11 @@ import Language.Java.Syntax
 
 import Analysis.Types
 import Analysis.Util
+import Analysis.Props
 
 import Debug.Trace
 
 type ConState = AState Comparator
-
--- receives the parameters and returns to specify the pre and post-condition
--- need to use maps for the parameters, returns, fields
-type Args = Map Ident AST
-type Res  = [AST]
-type Fields = Map Ident FuncDecl
-
-type Prop = (Args, Res) -> Z3 (AST, AST)
-
-testProp :: Prop
-testProp (args, [res1]) = do
-    i0 <- mkIntNum (0 :: Integer)
-    post <- mkGt res1 i0
-    pre <- mkTrue
-    return (pre, post)
-    
-transitivity :: Prop
-transitivity (args, [res1,res2,res3]) = do
-    let o11 = safeLookup "trans" (Ident "o11") args
-        o12 = safeLookup "trans" (Ident "o12") args
-        o13 = safeLookup "trans" (Ident "o13") args
-        o21 = safeLookup "trans" (Ident "o21") args
-        o22 = safeLookup "trans" (Ident "o22") args
-        o23 = safeLookup "trans" (Ident "o23") args    
-    eq1 <- mkEq o11 o13
-    eq2 <- mkEq o21 o12
-    eq3 <- mkEq o22 o23
-    pre <- mkAnd [eq1,eq2,eq3]
-    i0 <- mkIntNum (0 :: Integer)
-    r1 <- mkGt res1 i0
-    r2 <- mkGt res2 i0
-    r3 <- mkGt res3 i0
-    r12 <- mkAnd [r1,r2]
-    pos <- mkImplies r12 r3
-    return (pre, pos)
-
-antisymmetry :: Prop
-antisymmetry (args, [res1, res2]) = do
-    let o11 = safeLookup "trans" (Ident "o11") args
-        o12 = safeLookup "trans" (Ident "o12") args
-        o21 = safeLookup "trans" (Ident "o21") args
-        o22 = safeLookup "trans" (Ident "o22") args
-    eq1 <- mkEq o11 o22
-    eq2 <- mkEq o21 o12
-    pre <- mkAnd [eq1,eq2]
-    i0 <- mkIntNum (0 :: Integer)
-    r1 <- mkGt res1 i0
-    r2 <- mkLt res2 i0
-    r12 <- mkImplies r1 r2
-    r21 <- mkImplies r2 r1
-    pos <- mkAnd [r12, r21]
-    return (pre,pos)
     
 -- result: (ObjectType, Parameters, Results)
 prelude :: ClassMap -> [Comparator] -> Z3 (Sort, Args, [AST], Fields)
@@ -92,7 +41,7 @@ prelude classMap comps = do
 verify :: ClassMap -> [Comparator] -> Prop -> Z3 Result
 verify classMap comps prop = do
     (objSort, pars, res, fields) <- prelude classMap comps
-    (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res)
+    (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
     let blocks = zip [0..] $ getBlocks comps
     analyser (objSort, pars, res, fields, pre, post) blocks
     --assert =<< mkNot =<< mkImplies ast post
@@ -100,24 +49,52 @@ verify classMap comps prop = do
 
 -- strongest post condition
 analyser :: (Sort, Args, [AST], Fields, AST, AST) -> [(Int, Block)] -> Z3 Result
-analyser (objSort, pars, res, fields, pre, post) [] = helper pre post
+analyser (objSort, pars, res, fields, pre, post) [] = local $ helper pre post
 analyser env ((pid,Block []):rest) = analyser env rest
 analyser env@(objSort, pars, res, fields, pre, post) ((pid,Block (bstmt:r1)):rest) = 
     case bstmt of
         BlockStmt stmt -> case stmt of
             StmtBlock (Block block) -> analyser env ((pid, Block (block ++ r1)):rest)
             Return Nothing -> error "analyser: return Nothing"
-            Return (Just expr) -> trace ("processing return of pid " ++ show pre) $ do
+            Return (Just expr) -> trace ("processing return of pid " ++ show pid ++ " " ++ show stmt) $ do
                 exprPsi <- processExp (objSort, pars, res, fields) expr
                 let resPid = res !! pid  
-                r <- trace ("making equality between" ++ show resPid) $ mkEq resPid exprPsi
+                r <- mkEq resPid exprPsi
                 nPre <- mkAnd [pre,r]
-                test <- helper nPre post
-                case test of
-                    Unsat -> return test
-                    _ -> analyser (objSort, pars, res, fields, nPre, post) rest
+             --   test <- local $ helper nPre post
+             --   trace ("return test = " ++ show test) $ case test of
+             --       Unsat -> analyser (objSort, pars, res, fields, nPre, post) rest -- trace ("stopped") $ return test
+             --       _ -> analyser (objSort, pars, res, fields, nPre, post) rest
+                analyser (objSort, pars, res, fields, nPre, post) rest
+            IfThenElse cond s1 s2 -> trace ("processing conditional " ++ show cond) $ do
+                condSmt <- processExp (objSort, pars, res, fields) cond
+                -- then branch
+                preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
+                push 
+                assert preThen
+                cThen <- check
+                pop 1
+                resThen <- case cThen of
+                    Unsat -> trace ("preThen becomes false") $ return Unsat
+                    _ -> analyser (objSort, pars, res, fields, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)                
+                -- else branch
+                ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
+                preElse <- mkAnd [pre, ncondSmt]
+                push
+                assert preElse
+                cElse <- check
+                pop 1
+                resElse <- case cElse of
+                    Unsat -> trace ("preElse becomes false") $ return Unsat
+                    _ -> analyser (objSort, pars, res, fields, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
+                trace ("IfThenElse " ++ show (resThen, resElse)) $ combine resThen resElse
             _ -> error "not supported"
         _ -> error "analyser: bstmt is not a BlockStmt"
+
+combine :: Result -> Result -> Z3 Result
+combine Unsat Unsat = return Unsat
+combine Unsat res   = return res
+combine res   _     = return res
 
 --
 helper pre post = do
@@ -163,13 +140,19 @@ processExp env@(objSort, pars, res, fields) expr =
             rhs <- processExp env rhsE
             processBinOp op lhs rhs
         FieldAccess fldAccess -> error "processExp: FieldAccess not supported"
-        _ -> undefined
+        PreMinus nexpr -> do 
+            nexprEnc <- processExp env nexpr
+            mkUnaryMinus nexprEnc
+        _ -> error $  "processExpr: " ++ show expr
         
 processLit :: Literal -> Z3 AST
 processLit (Int i) = mkIntNum i
 processLit _ = error "processLit: not supported"
 
 processName :: (Sort, Args, [AST], Fields) -> Name -> Z3 AST
+processName env@(objSort, pars, res, fields) (Name [obj]) = do
+    let par = safeLookup "processName: Object" obj pars
+    return par
 processName env@(objSort, pars, res, fields) (Name [obj,field]) = do
     let par = safeLookup "processName: Object" obj pars
         fn = safeLookup "processName: Field"  field fields
@@ -179,7 +162,9 @@ processBinOp :: Op -> AST -> AST -> Z3 AST
 processBinOp op lhs rhs = do 
     case op of
         Sub -> mkSub [lhs,rhs]
-        _ -> error "processBinOp: not supported"
+        LThan -> mkLt lhs rhs
+        GThan -> mkGt lhs rhs
+        _ -> error $ "processBinOp: not supported " ++ show op
     
 mkObjectSort :: String -> Z3 Sort
 mkObjectSort str = do
