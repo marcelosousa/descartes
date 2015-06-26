@@ -18,7 +18,10 @@ import Analysis.Props
 import Debug.Trace
 
 type ConState = AState Comparator
+type SSAMap = Map Ident (AST, Sort, Int)
     
+iSSAMap = M.empty
+
 -- result: (ObjectType, Parameters, Results)
 prelude :: ClassMap -> [Comparator] -> Z3 (Sort, Args, [AST], Fields)
 prelude classMap comps = do
@@ -43,21 +46,21 @@ verify classMap comps prop = do
     (objSort, pars, res, fields) <- prelude classMap comps
     (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
     let blocks = zip [0..] $ getBlocks comps
-    analyser (objSort, pars, res, fields, pre, post) blocks
+    analyser (objSort, pars, res, fields, iSSAMap, pre, post) blocks
     --assert =<< mkNot =<< mkImplies ast post
     --check
 
 -- strongest post condition
-analyser :: (Sort, Args, [AST], Fields, AST, AST) -> [(Int, Block)] -> Z3 Result
-analyser (objSort, pars, res, fields, pre, post) [] = local $ helper pre post
+analyser :: (Sort, Args, [AST], Fields, SSAMap, AST, AST) -> [(Int, Block)] -> Z3 Result
+analyser (objSort, pars, res, fields, ssamap, pre, post) [] = local $ helper pre post
 analyser env ((pid,Block []):rest) = analyser env rest
-analyser env@(objSort, pars, res, fields, pre, post) ((pid,Block (bstmt:r1)):rest) = 
+analyser env@(objSort, pars, res, fields, ssamap, pre, post) ((pid,Block (bstmt:r1)):rest) = 
     case bstmt of
         BlockStmt stmt -> case stmt of
             StmtBlock (Block block) -> analyser env ((pid, Block (block ++ r1)):rest)
             Return Nothing -> error "analyser: return Nothing"
             Return (Just expr) -> trace ("processing return of pid " ++ show pid ++ " " ++ show stmt) $ do
-                exprPsi <- processExp (objSort, pars, res, fields) expr
+                exprPsi <- processExp (objSort, pars, res, fields, ssamap) expr
                 let resPid = res !! pid  
                 r <- mkEq resPid exprPsi
                 nPre <- mkAnd [pre,r]
@@ -65,9 +68,9 @@ analyser env@(objSort, pars, res, fields, pre, post) ((pid,Block (bstmt:r1)):res
              --   trace ("return test = " ++ show test) $ case test of
              --       Unsat -> analyser (objSort, pars, res, fields, nPre, post) rest -- trace ("stopped") $ return test
              --       _ -> analyser (objSort, pars, res, fields, nPre, post) rest
-                analyser (objSort, pars, res, fields, nPre, post) rest
+                analyser (objSort, pars, res, fields, ssamap, nPre, post) rest
             IfThenElse cond s1 s2 -> trace ("processing conditional " ++ show cond) $ do
-                condSmt <- processExp (objSort, pars, res, fields) cond
+                condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
                 -- then branch
                 preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
                 push 
@@ -76,7 +79,7 @@ analyser env@(objSort, pars, res, fields, pre, post) ((pid,Block (bstmt:r1)):res
                 pop 1
                 resThen <- case cThen of
                     Unsat -> trace ("preThen becomes false") $ return Unsat
-                    _ -> analyser (objSort, pars, res, fields, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)                
+                    _ -> analyser (objSort, pars, res, fields, ssamap, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)                
                 -- else branch
                 ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
                 preElse <- mkAnd [pre, ncondSmt]
@@ -86,9 +89,28 @@ analyser env@(objSort, pars, res, fields, pre, post) ((pid,Block (bstmt:r1)):res
                 pop 1
                 resElse <- case cElse of
                     Unsat -> trace ("preElse becomes false") $ return Unsat
-                    _ -> analyser (objSort, pars, res, fields, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
+                    _ -> analyser (objSort, pars, res, fields, ssamap, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
                 trace ("IfThenElse " ++ show (resThen, resElse)) $ combine resThen resElse
+            ExpStmt (Assign lhs aOp rhs) -> do
+                rhsAst <- processExp (objSort, pars, res, fields, ssamap) rhs
+                case lhs of
+                    NameLhs (Name [ident@(Ident str)]) -> do
+                        let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
+                            ni = i+1
+                            nstr = str ++ show ni
+                        sym <- mkStringSymbol nstr
+                        var <- mkVar sym sort
+                        let nssamap = M.insert ident (var, sort, ni) ssamap
+                        ass <- processAssign var aOp rhsAst plhsAST
+                        npre <- mkAnd [pre, ass]
+                        analyser (objSort, pars, res, fields, nssamap, npre, post) ((pid, Block r1):rest)
+                    _ -> error $ "Assign " ++ show stmt ++ " not supported"                
             _ -> error "not supported"
+        LocalVars mods ty vars -> do
+            sort <- processType ty
+            (nssamap, npre) <- foldM (\(ssamap', pre') v -> processNewVar (objSort, pars, res, fields, ssamap', pre') sort v 1) (ssamap, pre) vars
+--            let nssamap = foldl (\m (ident,ast, _) -> M.insert ident (ast, sort, 1) m) ssamap idAst
+            analyser (objSort, pars, res, fields, nssamap, npre, post) ((pid, Block r1):rest)
         _ -> error "analyser: bstmt is not a BlockStmt"
 
 combine :: Result -> Result -> Z3 Result
@@ -101,37 +123,44 @@ helper pre post = do
     assert =<< mkNot =<< mkImplies pre post
     check    
 
-analyse :: (Sort, Args, [AST], Fields, AST) -> [Block] -> Z3 AST
-analyse (objSort, pars, res, fields, psi) progs = 
-    foldM (\fml (prog, pid) -> process (objSort, pars, res, fields, fml) pid prog) psi $ zip progs [0..]
+processAssign :: AST -> AssignOp -> AST -> AST -> Z3 AST
+processAssign lhs op rhs plhs = do
+    case op of 
+        EqualA -> mkEq lhs rhs
+        AddA -> do
+            rhs' <- mkAdd [plhs, rhs]
+            mkEq lhs rhs'
+        _ -> error $ "processAssign: " ++ show op ++ " not supported"
 
-process :: (Sort, Args, [AST], Fields, AST) -> Int -> Block -> Z3 AST
-process (objSort, pars, res, fields, psi) pid (Block bstmt) = -- needs to change
-    foldM (\fml stmt -> processBlock (objSort, pars, res, fields, fml) pid stmt) psi bstmt
+processType :: Type -> Z3 Sort
+processType (PrimType ty) = do 
+    case ty of
+        BooleanT -> mkBoolSort
+        IntT -> mkIntSort
+        _ -> error $ "processType: " ++ show ty ++ " not supported"
+processType (RefType _) = error "processType: not supported"
 
-processBlock :: (Sort, Args, [AST], Fields, AST) -> Int -> BlockStmt -> Z3 AST
-processBlock (objSort, pars, res, fields, psi) pid bstmt =
-    case bstmt of
-        BlockStmt stmt -> processStmt (objSort, pars, res, fields, psi) pid stmt
-        _ -> error "processBlock"
-
-processStmt :: (Sort, Args, [AST], Fields, AST) -> Int -> Stmt -> Z3 AST
-processStmt (objSort, pars, res, fields, psi) pid stmt = 
-    case stmt of
-        StmtBlock block -> process (objSort, pars, res, fields, psi) pid block
-        Return Nothing -> error "processStmt: return nothing"
-        Return (Just expr) -> trace ("processing return of pid " ++ show psi) $ do
-            exprPsi <- processExp (objSort, pars, res, fields) expr
-            let resPid = res !! pid  
-            r <- trace ("making equality between" ++ show resPid) $ mkEq resPid exprPsi
-            mkAnd [psi,r]
-        IfThen cond stm -> do
-            cpsi <- processExp (objSort, pars, res, fields) cond
-            psi' <- mkAnd [cpsi,psi]
-            return psi'
-
-processExp :: (Sort, Args, [AST], Fields) -> Exp -> Z3 AST
-processExp env@(objSort, pars, res, fields) expr =
+processNewVar :: (Sort, Args, [AST], Fields, SSAMap, AST) -> Sort -> VarDecl -> Int -> Z3 (SSAMap, AST)
+processNewVar (objSort, pars, res, fields, ssamap', pre') sort (VarDecl varid mvarinit) i = do
+    (ident, idAst) <- case varid of
+        VarId ident@(Ident str) -> do
+            let nstr = str ++ show i
+            sym <- mkStringSymbol nstr
+            var <- mkVar sym sort
+            return (ident, var)
+        _ -> error $ "processNewVar: not supported " ++ show varid
+    let nssamap = M.insert ident (idAst, sort, i) ssamap'
+    case mvarinit of
+        Nothing -> return (nssamap, pre')
+        Just (InitExp expr) -> do
+            expAst <- processExp (objSort, pars, res, fields, nssamap) expr
+            eqIdExp <- mkEq idAst expAst
+            pre <- mkAnd [pre', eqIdExp]
+            return (nssamap, pre)
+        Just _ -> error "processNewVar: not supported"
+    
+processExp :: (Sort, Args, [AST], Fields, SSAMap) -> Exp -> Z3 AST
+processExp env@(objSort, pars, res, fields, ssamap) expr =
     case expr of
         Lit lit -> processLit lit
         ExpName name -> processName env name
@@ -149,11 +178,14 @@ processLit :: Literal -> Z3 AST
 processLit (Int i) = mkIntNum i
 processLit _ = error "processLit: not supported"
 
-processName :: (Sort, Args, [AST], Fields) -> Name -> Z3 AST
-processName env@(objSort, pars, res, fields) (Name [obj]) = do
-    let par = safeLookup "processName: Object" obj pars
-    return par
-processName env@(objSort, pars, res, fields) (Name [obj,field]) = do
+processName :: (Sort, Args, [AST], Fields, SSAMap) -> Name -> Z3 AST
+processName env@(objSort, pars, res, fields, ssamap) (Name [obj]) = do
+    case M.lookup obj pars of
+        Nothing -> case M.lookup obj ssamap of
+            Nothing -> error $ "Can't find " ++ show obj
+            Just (ast,_,_) -> return ast
+        Just ast -> return ast
+processName env@(objSort, pars, res, fields, ssamap) (Name [obj,field]) = do
     let par = safeLookup "processName: Object" obj pars
         fn = safeLookup "processName: Field"  field fields
     mkApp fn [par]

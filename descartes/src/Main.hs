@@ -61,10 +61,10 @@ frontend file = do
         let classMap = getInfo cu
             comps = getComps cu
             comparators = map (\c -> map (\idx -> rename idx c) [1,2]) comps
-        --mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
-        print comparators 
+        mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
+        --print comparators 
         print classMap
-        vals <- evalZ3 $ verify classMap (head comparators) antisymmetry
+        vals <- evalZ3 $ verify classMap (head comparators) testSSA
         print vals
 --        print comps
 --        print comps1
