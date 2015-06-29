@@ -196,6 +196,8 @@ processBinOp op lhs rhs = do
         Sub -> mkSub [lhs,rhs]
         LThan -> mkLt lhs rhs
         GThan -> mkGt lhs rhs
+        GThanE -> mkGe lhs rhs
+        Equal -> mkEq lhs rhs
         _ -> error $ "processBinOp: not supported " ++ show op
     
 mkObjectSort :: String -> Z3 Sort
@@ -210,8 +212,7 @@ mkField name sort = do
     
 run :: IO ()
 run = do 
-   evalZ3 funcScript >>= print
-   evalZ3 test >>= print
+   evalZ3 forallEx >>= print
    
 --test :: Z3     
 mytest :: Z3 Result 
@@ -251,7 +252,39 @@ test = do
     mkImplies r12 r3 >>= mkNot >>= assert
     (res, mbModel) <- getModel
     return res
-       
+
+forallEx :: Z3 Result
+forallEx = do
+    intSort <- mkIntSort
+    compareDecl <- mkFreshFuncDecl "compare" [intSort, intSort] intSort
+    x <- mkStringSymbol "x"
+    y <- mkStringSymbol "y"
+    z <- mkStringSymbol "z"
+    xc <- mkConst x intSort
+    yc <- mkConst y intSort
+    zc <- mkConst z intSort
+    i0 <- mkIntNum (0 :: Integer)
+    cmpxy <- mkApp compareDecl [xc,yc] >>= \app -> mkGt app i0
+    cmpyz <- mkApp compareDecl [yc,zc] >>= \app -> mkGt app i0
+    cmpxz <- mkApp compareDecl [xc,zc] >>= \app -> mkGt app i0
+    compxyz <- mkAnd [cmpxy, cmpyz]
+    ax1bdy <- mkImplies compxyz cmpxz
+    axiom1 <- mkForall [] [x,y,z] [intSort,intSort,intSort] ax1bdy
+    xPy <- mkAdd [xc,yc]
+    yPx <- mkAdd [yc,xc]
+    yPz <- mkAdd [yc,zc]
+    zPy <- mkAdd [zc,yc]
+    cmpXyYx <- mkApp compareDecl [xPy,yPx] >>= \app -> mkGt app i0
+    cmpYzZy <- mkApp compareDecl [yPz,zPy] >>= \app -> mkGt app i0
+    ax2bdy <- mkImplies cmpxy cmpXyYx
+    axiom2 <- mkForall [] [x,y] [intSort,intSort] ax2bdy
+    pre <- mkAnd [cmpXyYx,cmpYzZy]
+    phi <- mkImplies pre cmpxz >>= mkNot
+    mkAnd [axiom1, axiom2] >>= assert
+    assert phi
+    (res, mbModel) <- getModel
+    return res
+    
 type RetType = ([([Integer], Integer)], Integer)
 
 toIntsPair :: ([AST], AST) -> Z3 ([Integer], Integer)
