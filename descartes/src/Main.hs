@@ -62,10 +62,10 @@ frontend file = do
             comps = getComps cu
             comparators = map (\c -> map (\idx -> rename idx c) [1]) comps
         mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
-        --print comparators 
+        print cu --comparators 
         print classMap
-        vals <- evalZ3 $ verify classMap (head comparators) equality --antisymmetry
-        print vals
+        --vals <- evalZ3 $ verify classMap (head comparators) equality --antisymmetry
+        --print vals
 --        print comps
 --        print comps1
 --        

@@ -31,15 +31,32 @@ prelude classMap comps = do
     else do
         let objType = getObjectType $ head comps
         objSort <- mkObjectSort objType
-        let fieldNames = getFieldNames objType classMap
-        fields <- mapM (\f -> mkField f objSort) fieldNames
-        let fields' = foldl (\r (k,v) -> M.insert (Ident k) v r) M.empty $ zip fieldNames fields
+        let objFields = fields $ safeLookup "prelude" objType classMap
+            fieldNames = getFieldNames objType classMap
+--        fields <- mapM (\f -> mkField f objSort) fieldNames
+        let --fields' = foldl (\r (k,v) -> M.insert (Ident k) v r) M.empty $ zip fieldNames fields
             parsId = concatMap (getParIdents . getParameters) comps
+        -- methods
+        fields' <- foldM (mkAttribute objSort) M.empty objFields
         pars <- mapM (\par -> mkFreshConst par objSort) parsId
         let pars' = foldl (\r (k,v) -> M.insert (Ident k) v r) M.empty $ zip parsId pars
         intSort <- mkIntSort
         res <- mapM (\idx -> mkFreshConst ("res"++show idx) intSort) [1..arity]
         return (objSort, pars', res, fields')
+
+mkAttribute :: Sort -> Fields -> MemberDecl -> Z3 Fields
+mkAttribute objSort m mDecl = case mDecl of
+    FieldDecl  mods ty vardecls -> do
+        retSort <- processType ty
+        foldM (\nm vardecl -> mkField nm vardecl objSort retSort) m vardecls 
+    MethodDecl mods ty (Just rty) (Ident name) pars exTy (MethodBody Nothing) -> do
+        retSort <- processType rty
+        parsSort <- mapM processParam pars
+        fn <- mkFreshFuncDecl name (objSort:parsSort) retSort
+        return $ M.insert (Ident name) fn m
+
+processParam :: FormalParam -> Z3 Sort
+processParam (FormalParam mods ty _ _) = processType ty 
 
 verify :: ClassMap -> [Comparator] -> Prop -> Z3 Result
 verify classMap comps prop = do
@@ -205,10 +222,12 @@ mkObjectSort str = do
     myint <- mkStringSymbol str
     mkUninterpretedSort myint
 
-mkField :: String -> Sort -> Z3 FuncDecl
-mkField name sort = do
-    intSort <- mkIntSort
-    mkFreshFuncDecl name [sort] intSort
+mkField :: Fields -> VarDecl -> Sort -> Sort -> Z3 Fields
+mkField m (VarDecl (VarId (Ident name)) Nothing) parSort retSort = do
+--    intSort <- mkIntSort
+    fn <- mkFreshFuncDecl name [parSort] retSort
+    return $ M.insert (Ident name) fn m
+    
     
 run :: IO ()
 run = do 

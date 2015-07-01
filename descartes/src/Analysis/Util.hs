@@ -12,6 +12,7 @@ import Language.Java.Syntax
 
 import Analysis.Types
 
+import Debug.Trace
 --
 safeLookup :: Ord k => String -> k -> Map k a -> a
 safeLookup err k m = case M.lookup k m of
@@ -43,7 +44,8 @@ getFields (InitDecl _ _) = []
 
 getField :: MemberDecl -> [MemberDecl]
 getField mdecl = case mdecl of
-    FieldDecl mods ty vardecls -> [mdecl]    
+    FieldDecl mods ty vardecls -> [mdecl]
+    MethodDecl mods ty rty ident pars exTy (MethodBody Nothing) -> [mdecl]
     _ -> []
     
 data CompInter = Comparator | Comparable
@@ -166,8 +168,13 @@ instance Renamable FormalParam where
     rename idx (FormalParam mods ty arity varid) = FormalParam mods ty arity $ rename idx varid
 
 instance Renamable VarDecl where
-    rename idx (VarDecl vardeclid minit) = VarDecl (rename idx vardeclid) minit
-
+    rename idx (VarDecl vardeclid Nothing) = VarDecl (rename idx vardeclid) Nothing
+    rename idx (VarDecl vardeclid (Just i)) = VarDecl (rename idx vardeclid) (Just $ rename idx i)
+    
+instance Renamable VarInit where
+    rename idx (InitExp expr) = InitExp $ rename idx expr
+    rename idx (InitArray _) = error "InitArray not supported"
+    
 instance Renamable VarDeclId where
     rename idx (VarId ident) = VarId $ rename idx ident
     rename idx (VarDeclArray varid) = VarDeclArray $ rename idx varid
@@ -253,10 +260,10 @@ instance Renamable FieldAccess where
         ClassFieldAccess cName fIdent -> ClassFieldAccess cName fIdent
     
 instance Renamable MethodInvocation where
-    rename idx mInv = error "rename: Method Invocation not supported" 
+    rename idx mInv = case mInv of
+        MethodCall name args -> MethodCall (rename idx name) $ map (rename idx) args
+        _ -> error $ "MethodInvocation not supported: " ++ show mInv
     {-
-    case mInv of
-        MethodCall name args -> MethodCall name $ map (rename idx) args
         PrimaryMethodCall expr refTys ident args -> PrimaryMethodCall (rename idx ) Exp [RefType] Ident [Argument]
             -- | Invoking a method of the super class, giving arguments for any generic type parameters.
             | SuperMethodCall [RefType] Ident [Argument]
