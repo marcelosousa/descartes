@@ -9,6 +9,7 @@ import Data.Map (Map)
 import qualified Data.Map as M
 import Control.Monad.State.Strict
 import Language.Java.Syntax
+import Language.Java.Pretty
 
 import Analysis.Types
 
@@ -285,3 +286,205 @@ instance Renamable Lhs where
         NameLhs name -> NameLhs $ rename idx name
         FieldLhs fAccess -> FieldLhs $ rename idx fAccess
         ArrayLhs aIndex -> error "rename: ArrayLhs not supported"
+
+class Rewritable a where
+    rewrite :: a -> a
+
+instance Rewritable Comparator where
+    rewrite (Comp mth mdecl) = Comp mth $ rewrite mdecl
+
+instance Rewritable MemberDecl where
+    rewrite mdecl = case mdecl of 
+        MethodDecl mods typar mty ident pars exty body -> 
+            let nbody = rewrite body
+            in MethodDecl mods typar mty ident pars exty nbody
+        _ -> error "attemping to rewrite a MemberDecl which is not a MethodDecl"
+        
+instance Rewritable MethodBody where
+    rewrite (MethodBody mbody) = case mbody of
+        Nothing -> MethodBody Nothing
+        Just block -> MethodBody $ Just $ rewrite block
+
+instance Rewritable Block where
+    rewrite (Block block) = Block $ map rewrite block
+    
+instance Rewritable BlockStmt where
+    rewrite stm = case stm of
+        BlockStmt st -> BlockStmt $ rewrite st
+        LocalVars mods ty vardecls -> LocalVars mods ty vardecls
+        LocalClass classdecl -> error "rewrite: LocalClass is not supported"
+
+instance Rewritable Stmt where
+    rewrite stm = case stm of 
+        StmtBlock block -> StmtBlock $ rewrite block
+        IfThen cond _then -> IfThen cond $ rewrite _then 
+        IfThenElse cond _then _else -> IfThenElse cond (rewrite _then) (rewrite _else)
+        While cond _body -> transform $ normalize stm 
+        BasicFor mForInit mExp mLExp _body -> error "rewrite: BasicFor not supported"
+        EnhancedFor mods ty ident expr _body -> error "rewrite: EnhancedFor not supported"
+        Empty -> Empty
+        ExpStmt expr -> ExpStmt expr
+        Assert expr mexpr -> Assert expr mexpr
+        Switch expr lSwitchBlock -> error "rename: Switch not supported"
+        Do _body cond -> error "rewrite: Do not supported"
+        Break mident -> Break mident
+        Continue mident -> Continue mident
+        Return mexp -> Return mexp
+        Synchronized _ _ -> error "rewrite: Synchronized not supported"
+        Throw expr -> Throw expr
+        Try block lCatch finally -> error "rewrite: Try not supported"
+        Labeled ident _stmt -> Labeled ident $ rewrite _stmt
+        Assume expr -> Assume expr
+
+-- apply the transform rules
+transform :: Stmt -> Stmt
+transform (While cond body) = 
+    case body of
+        StmtBlock (Block bstm) -> 
+            let (_cond, _body, (Block rest)) = trans bstm                
+                loop = While cond (IfThenElse _cond (StmtBlock _body) $ Break Nothing) 
+            in StmtBlock $ Block $ [BlockStmt loop] ++ rest
+        _ -> error "transform"
+
+trans :: [BlockStmt] -> (Exp, Block, Block)
+trans [BlockStmt (IfThenElse _cond (StmtBlock _then) _else)] = 
+    let ass = Assume $ PreNot _cond
+        _else' = case _else of
+            Break _ -> []
+            Return _ -> [BlockStmt _else]
+            StmtBlock (Block bstm) -> bstm -- need to change this: remove break statement if exists
+        rest = Block $ (BlockStmt ass):_else'
+    in (_cond, _then, rest)
+trans ((BlockStmt (IfThenElse _cond t@(StmtBlock (Block _then)) _else)):r) = 
+    let (c', Block s', Block s'') = trans r
+        c'' = BinOp _cond And $ wp t c'
+        _then' = Block $ _then ++ s'
+        _thenRest = StmtBlock $ Block $ [BlockStmt $ Assume _cond] ++ _then ++ s''
+        _else' = case _else of
+            Break _ -> []
+            Return _ -> [BlockStmt _else]
+            StmtBlock (Block bstm) -> init bstm
+        _elseRest = StmtBlock $ Block $ (BlockStmt $ Assume (PreNot _cond)):_else'
+        rest = Block $ [BlockStmt $ IfThenElse Nondet _thenRest _elseRest]
+    in (c'', _then', rest)
+
+-- simple weakest pre-condition
+wp :: Stmt -> Exp -> Exp
+wp stm phi = case stm of 
+    StmtBlock (Block bstm) -> foldl (\phi' (BlockStmt stm) -> wp stm phi') phi bstm
+    ExpStmt expr -> wpExpr expr phi
+    _ -> error $ "wp:" ++ show stm ++ " not supported"
+
+wpExpr :: Exp -> Exp -> Exp
+wpExpr (Assign (NameLhs name) EqualA rhs) phi = replace name rhs phi
+wpExpr expr phi = error $ "wpExpr: " ++ show expr ++ " not supported"
+
+replace :: Name -> Exp -> Exp -> Exp
+replace name rhs phi = 
+    case phi of 
+        Lit lit -> phi
+        BinOp left op right -> BinOp (replace name rhs left) op (replace name rhs right)
+        ExpName _name -> if name == _name then rhs else phi
+        PostDecrement expr -> PostDecrement $ replace name rhs expr
+        PostIncrement expr -> PostIncrement $ replace name rhs expr
+        PreIncrement  expr -> PreIncrement  $ replace name rhs expr
+        PreDecrement  expr -> PreDecrement  $ replace name rhs expr
+        PrePlus       expr -> PrePlus       $ replace name rhs expr
+        PreMinus      expr -> PreMinus      $ replace name rhs expr
+        PreBitCompl   expr -> PreBitCompl   $ replace name rhs expr
+        PreNot        expr -> PreNot        $ replace name rhs expr
+        MethodInv (MethodCall _name args) -> 
+            let args' = map (replace name rhs) args
+                nname = if name == _name then error "dont know what to do" else _name
+            in MethodInv $ MethodCall nname args'
+        _ -> error $ "replace: " ++ show phi ++ " not supported"
+
+normalize :: Stmt -> Stmt
+normalize (While cond body) = 
+    let (lHead, rest) = loopHead body
+        lHead' = map BlockStmt lHead
+        _then = StmtBlock (Block lHead')
+        _else = Break Nothing
+        cb1 = IfThenElse cond _then _else
+        cbN = loopConditions rest
+        nBody = StmtBlock $ Block $ map BlockStmt (cb1:cbN)
+        nCond = Lit $ Boolean True
+    in if checkBody nBody 
+       then While nCond nBody
+       else error "normalize: not the right final body format"
+normalize _ = error "normalize: not a while loop"
+
+-- check that loop body is of the format in the paper
+checkBody :: Stmt -> Bool
+checkBody stm = case stm of 
+    StmtBlock (Block bstm) -> all checkCondition bstm
+    _ -> error "checkBody"
+    
+checkCondition :: BlockStmt -> Bool
+checkCondition (BlockStmt (IfThenElse _ _ _)) = True
+checkCondition _ = False
+
+-- loopHead: under some condition, splits the statement 
+--  into two parts: 
+--   1. The statements that always execute under this condition
+--   2. Either the break/return, or a conditional that contains a break
+loopHead :: Stmt -> ([Stmt],[Stmt])
+loopHead stm = case stm of 
+    StmtBlock (Block bstm) -> splitBody bstm
+    Break mident -> ([], [stm])
+    Return mexp -> ([], [stm])
+    IfThen cond _then -> 
+        if containsBreak _then
+        then ([], [stm])
+        else ([stm],[])
+    IfThenElse cond _then _else -> 
+        if containsBreak _then || containsBreak _else
+        then ([], [stm])
+        else ([stm],[])
+    _ -> ([stm],[])
+    
+splitBody :: [BlockStmt] -> ([Stmt], [Stmt])
+splitBody [] = ([], [])
+splitBody ((BlockStmt stm):rest) = 
+    case loopHead stm of
+        (left, []) -> 
+            let (left', right) = splitBody rest
+            in (left ++ left', right)
+        (left, right) -> (left, right ++ [StmtBlock (Block rest)])        
+splitBody _ = error "splitBody: BlockStmt is not BlockStmt"
+
+loopConditions :: [Stmt] -> [Stmt]
+loopConditions [] = []
+loopConditions (s:ss) = 
+    case s of
+        IfThen cond _then -> 
+            if containsBreak _then
+            then let stm = StmtBlock $ Block $ map BlockStmt ss
+                     (lHead, rest) = loopHead stm
+                     nCond = PreNot cond
+                     nThen = StmtBlock $ Block $ map BlockStmt lHead
+                     nIf = IfThenElse nCond nThen _then
+                     others = loopConditions rest
+                 in nIf:others
+            else error "No break"
+        IfThenElse cond _then _else -> undefined
+        _ -> error "loopConditions: not a conditional statement"
+
+containsBreak :: Stmt -> Bool
+containsBreak stm = case stm of
+    StmtBlock (Block bstm) -> any containsBreak' bstm
+    IfThen cond _then -> 
+        if containsBreak _then
+        then error "containsBreak in nested conditional"
+        else False
+    IfThenElse cond _then _else -> 
+        if containsBreak _then || containsBreak _else
+        then error "containsBreak in nested conditional"
+        else False
+    Break _ -> True
+    Return _ -> True
+    _ -> False
+
+containsBreak' :: BlockStmt -> Bool
+containsBreak' (BlockStmt stm) = containsBreak stm
+containsBreak' _ = False

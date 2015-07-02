@@ -50,7 +50,11 @@ mkAttribute objSort m mDecl = case mDecl of
         retSort <- processType ty
         foldM (\nm vardecl -> mkField nm vardecl objSort retSort) m vardecls 
     MethodDecl mods ty (Just rty) (Ident name) pars exTy (MethodBody Nothing) -> do
+    if name == "get"
+    then return m
+    else trace ("processing " ++ name ++ " " ++ show (rty,pars) ) $ do
         retSort <- processType rty
+        i <- mkIntSort
         parsSort <- mapM processParam pars
         fn <- mkFreshFuncDecl name (objSort:parsSort) retSort
         return $ M.insert (Ident name) fn m
@@ -121,8 +125,8 @@ analyser env@(objSort, pars, res, fields, ssamap, pre, post) ((pid,Block (bstmt:
                         ass <- processAssign var aOp rhsAst plhsAST
                         npre <- mkAnd [pre, ass]
                         analyser (objSort, pars, res, fields, nssamap, npre, post) ((pid, Block r1):rest)
-                    _ -> error $ "Assign " ++ show stmt ++ " not supported"                
-            _ -> error "not supported"
+                    _ -> error $ "Assign " ++ show stmt ++ " not supported"             
+            _ -> error $ "not supported: " ++ show stmt
         LocalVars mods ty vars -> do
             sort <- processType ty
             (nssamap, npre) <- foldM (\(ssamap', pre') v -> processNewVar (objSort, pars, res, fields, ssamap', pre') sort v 1) (ssamap, pre) vars
@@ -180,7 +184,7 @@ processExp :: (Sort, Args, [AST], Fields, SSAMap) -> Exp -> Z3 AST
 processExp env@(objSort, pars, res, fields, ssamap) expr =
     case expr of
         Lit lit -> processLit lit
-        ExpName name -> processName env name
+        ExpName name -> processName env name []
         BinOp lhsE op rhsE -> do
             lhs <- processExp env lhsE
             rhs <- processExp env rhsE
@@ -189,23 +193,32 @@ processExp env@(objSort, pars, res, fields, ssamap) expr =
         PreMinus nexpr -> do 
             nexprEnc <- processExp env nexpr
             mkUnaryMinus nexprEnc
+        MethodInv (MethodCall name args) -> do
+            argsAST <- mapM (processExp env) args
+            processName env name argsAST    
+        Cond cond _then _else -> do
+            condEnc <- processExp env cond
+            _thenEnc <- processExp env _then
+            _elseEnc <- processExp env _else
+            mkIte condEnc _thenEnc _elseEnc        
         _ -> error $  "processExpr: " ++ show expr
-        
+
 processLit :: Literal -> Z3 AST
 processLit (Int i) = mkIntNum i
 processLit _ = error "processLit: not supported"
 
-processName :: (Sort, Args, [AST], Fields, SSAMap) -> Name -> Z3 AST
-processName env@(objSort, pars, res, fields, ssamap) (Name [obj]) = do
+processName :: (Sort, Args, [AST], Fields, SSAMap) -> Name -> [AST] -> Z3 AST
+processName env@(objSort, pars, res, fields, ssamap) (Name [obj]) [] = do
     case M.lookup obj pars of
         Nothing -> case M.lookup obj ssamap of
             Nothing -> error $ "Can't find " ++ show obj
             Just (ast,_,_) -> return ast
         Just ast -> return ast
-processName env@(objSort, pars, res, fields, ssamap) (Name [obj,field]) = do
+processName env@(objSort, pars, res, fields, ssamap) (Name [obj,field]) args = do
     let par = safeLookup "processName: Object" obj pars
         fn = safeLookup "processName: Field"  field fields
-    mkApp fn [par]
+    mkApp fn (par:args)
+processName env _ _ = error "processName: corner case"
 
 processBinOp :: Op -> AST -> AST -> Z3 AST
 processBinOp op lhs rhs = do 
