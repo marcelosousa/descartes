@@ -113,7 +113,8 @@ genAntiSymAxiom sort fn = do
     rhsbody <- mkApp fn [y,x] >>= \a -> mkLt a i0
     body <- mkIff lhsbody rhsbody
     mkForallConst [] [xApp, yApp] body
-    
+
+
 -- strongest post condition
 analyser :: (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST, AST) -> [(Int, Block)] -> Z3 (Result, Maybe Model)
 analyser (objSort, pars, res, fields, ssamap, axioms, iPre, pre, post) [] = do 

@@ -8,9 +8,6 @@ public class SimpleString implements Comparator<SimpleString>{
 
   public int compare(SimpleString o1, SimpleString o2){
     if (o1.length() == 0){
-      if (o2.length() == 0){
-        return 0;
-      }
       return 1;
     }
    
