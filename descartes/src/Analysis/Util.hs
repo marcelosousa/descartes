@@ -207,7 +207,22 @@ instance Renamable Stmt where
         IfThen cond _then -> IfThen (rename idx cond) $ rename idx _then 
         IfThenElse cond _then _else -> IfThenElse (rename idx cond) (rename idx _then) (rename idx _else)
         While cond _body -> While (rename idx cond) (rename idx _body)
-        BasicFor mForInit mExp mLExp _body -> error "rename: BasicFor not supported"
+        BasicFor mForInit mExp mLExp _body -> 
+            case mForInit of
+                Just (ForLocalVars mods ty vardecls) -> 
+                    let b1 = LocalVars mods ty vardecls
+                        cond = case mExp of
+                            Nothing -> error $ "rename: BasicFor not supported" -- ++ show (mForInit, mExp, mLExp)
+                            Just c -> c
+                        rest = case mLExp of
+                            Nothing -> []
+                            Just exps -> map (BlockStmt . ExpStmt) exps
+                        body = StmtBlock (Block ((BlockStmt _body):rest))
+                        l = BlockStmt $ While cond body
+                    in rename idx $ StmtBlock (Block [b1,l])
+                Just _ -> undefined
+                Nothing -> error $ "rename: BasicFor not supported" -- ++ show (mForInit, mExp, mLExp)
+
         EnhancedFor mods ty ident expr _body -> error "rename: EnhancedFor not supported"
         Empty -> Empty
         ExpStmt expr -> ExpStmt $ rename idx expr
@@ -262,6 +277,9 @@ instance Renamable FieldAccess where
     
 instance Renamable MethodInvocation where
     rename idx mInv = case mInv of
+        MethodCall name@(Name [Ident "Double",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
+        MethodCall name@(Name [Ident "Int",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
+        MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name args -> MethodCall (rename idx name) $ map (rename idx) args
         _ -> error $ "MethodInvocation not supported: " ++ show mInv
     {-
@@ -342,7 +360,7 @@ transform (While cond body) =
     case body of
         StmtBlock (Block bstm) -> 
             let (_cond, _body, (Block rest)) = trans bstm                
-                loop = While cond (IfThenElse _cond (StmtBlock _body) $ Break Nothing) 
+                loop = While _cond (StmtBlock _body)
             in StmtBlock $ Block $ [BlockStmt loop] ++ rest
         _ -> error "transform"
 
@@ -451,7 +469,7 @@ splitBody ((BlockStmt stm):rest) =
             let (left', right) = splitBody rest
             in (left ++ left', right)
         (left, right) -> (left, right ++ [StmtBlock (Block rest)])        
-splitBody _ = error "splitBody: BlockStmt is not BlockStmt"
+splitBody l = error $ "splitBody: BlockStmt is not BlockStmt: " ++ show l
 
 loopConditions :: [Stmt] -> [Stmt]
 loopConditions [] = []

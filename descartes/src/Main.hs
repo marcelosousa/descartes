@@ -5,6 +5,8 @@
 -------------------------------------------------------------------------------
 module Main where
 
+import Data.Maybe 
+
 import Language.Java.Parser
 import Language.Java.Syntax
 import Language.Java.Pretty
@@ -60,12 +62,16 @@ frontend file = do
     Right cu -> do
         let classMap = getInfo cu
             comps = getComps cu
-            comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1]) comps
+            comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1,2]) comps
         mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
---          print comparators 
+--        print cu
         print classMap
---        vals <- evalZ3 $ verify classMap (head comparators) antisymmetry
---        print vals
+        (vals, models) <- evalZ3 $ verify classMap (head comparators) antisymmetry -- transitivity
+        case vals of
+            Unsat -> print "Unsat"
+            Sat -> do
+                putStrLn "Comparator is buggy!: Counter example:"
+                putStrLn $ fromJust models
 --        print comps
 --        print comps1
 --        

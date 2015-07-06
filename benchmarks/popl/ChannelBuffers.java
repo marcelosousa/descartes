@@ -21,7 +21,7 @@ import java.nio.ByteBuffer;
 /**
  * @author <a href="mailto:gang.lvg@alibaba-inc.com">kimi</a>
  */
-public final class ChannelBuffers {
+public final class ChannelBuffers implements Comparator<ChannelBuffers> {
 
     public static final ChannelBuffer EMPTY_BUFFER = new HeapChannelBuffer(0);
 
@@ -101,7 +101,7 @@ public final class ChannelBuffers {
 
         int aIndex = bufferA.readerIndex();
         int bIndex = bufferB.readerIndex();
-
+        
         for (int i = byteCount; i > 0; i--) {
             if (bufferA.getByte(aIndex) != bufferB.getByte(bIndex)) {
                 return false;
@@ -120,8 +120,8 @@ public final class ChannelBuffers {
 
         int aIndex = bufferA.readerIndex();
         int bIndex = bufferB.readerIndex();
-
-        for (int i = minLength; i > 0; i--) {
+        int i;
+        for (i = minLength; i > 0; i--) {
             byte va = bufferA.getByte(aIndex);
             byte vb = bufferB.getByte(bIndex);
             if (va > vb) {
