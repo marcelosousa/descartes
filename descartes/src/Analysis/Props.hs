@@ -76,7 +76,7 @@ prop3 (args, [res1,res2,res3], fields) = do
         o21 = safeLookup "trans" (Ident "o21") args
         o22 = safeLookup "trans" (Ident "o22") args
         o23 = safeLookup "trans" (Ident "o23") args    
-    eq1 <- mkEq o11 o21
+    eq1 <- mkEq o11 o12
     eq2 <- mkEq o21 o13
     eq3 <- mkEq o22 o23
     pre <- mkAnd [eq1,eq2,eq3]
