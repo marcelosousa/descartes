@@ -56,7 +56,7 @@ main = do options <- cmdArgsRun progModes
           runOption options
 
 runOption :: Option -> IO ()
-runOption (Verify path p logLevel) = descartes_main logLevel path (arity p) (toProp p) (show p)
+runOption (Verify path p logLevel) = descartes_main logLevel path (arity p) (toProp p) (showProp p)
 --runOption (Verify path) = find always (extension ==? ".java") path >>=
 --                          mapM_ frontend
   
@@ -96,5 +96,5 @@ descartes classMap comparator prop propName = do
         case vals of
             Unsat -> putStrLn "Unsat"
             Sat -> do
-                putStrLn $ "Comparator is buggy!" ++ propName ++ " fails! Counter-example:"
+                putStrLn $ "Comparator is buggy! " ++ propName ++ " fails!\nCounter-example:"
                 putStrLn $ fromJust models   
