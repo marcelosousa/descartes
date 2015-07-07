@@ -2,11 +2,11 @@ Name:               descartes
 Version:            0.1
 Cabal-Version:      >= 1.2
 Author:             Marcelo Sousa
-Synopsis:           Triage
+Synopsis:           Cartesian Hoare Logic Verifier 
 Description:        Cartesian Hoare Logic Verifier
 Build-Type:         Simple
 
-Executable triage
+Executable descartes
     Main-Is:          Main.hs
     Build-Depends:    base          
                     , containers    
@@ -15,6 +15,7 @@ Executable triage
                     , mtl           
                     , cmdargs
                     , language-java
+                    , z3
     Hs-Source-Dirs:   src/
     ghc-options:      -O3 -rtsopts
     Extensions:       DoAndIfThenElse

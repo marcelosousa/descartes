@@ -19,7 +19,10 @@ import Analysis.Util
 import Analysis.Props
 
 import System.IO.Unsafe
-import Debug.Trace
+import qualified Debug.Trace as T
+
+trace a b = b
+--trace = T.trace
 
 type ConState = AState Comparator
 type SSAMap = Map Ident (AST, Sort, Int)
@@ -397,7 +400,7 @@ processName env@(objSort, pars, res, fields, ssamap) (Name [obj,field]) args = d
     let par = safeLookup ("processName: Object" ++ show obj) obj pars
         fn = safeLookup ("processName: Field" ++ show field)  field fields
     mkApp fn (par:args)
-processName env _ _ = error "processName: corner case"
+processName env name args = error $  "processName: corner case" ++ show name
 
 processBinOp :: Op -> AST -> AST -> Z3 AST
 processBinOp op lhs rhs = do 
@@ -407,6 +410,7 @@ processBinOp op lhs rhs = do
         Add -> mkAdd [lhs,rhs]
         Sub -> mkSub [lhs,rhs]
         LThan -> mkLt lhs rhs
+        LThanE -> mkLe lhs rhs
         GThan -> mkGt lhs rhs
         GThanE -> mkGe lhs rhs
         Equal -> mkEq lhs rhs

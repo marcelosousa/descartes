@@ -485,7 +485,7 @@ loopConditions (s:ss) =
                      others = loopConditions rest
                  in nIf:others
             else error "No break"
-        IfThenElse cond _then _else -> undefined
+        IfThenElse cond _then _else -> error "loopConditions: if then else?"
         _ -> error "loopConditions: not a conditional statement"
 
 containsBreak :: Stmt -> Bool

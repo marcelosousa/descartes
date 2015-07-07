@@ -30,7 +30,7 @@ public class PokerHand implements Comparator<PokerHand> {
         int tripleCount1 = o1.countOccurrencesOf(3);
         int tripleCount2 = o2.countOccurrencesOf(3);
         if ((tripleCount1 > 1) || ((tripleCount1 == 1) && (o1.indexOf(2) != -1))) {  // Full house
-						if ((tripleCount2 > 1) || ((tripleCount2 == 1) && (o2.indexOf(2) != -1))) {
+			if ((tripleCount2 > 1) || ((tripleCount2 == 1) && (o2.indexOf(2) != -1))) {
             	int higherTriple = o1.lastIndexOf(3);
             	if (higherTriple == o2.lastIndexOf(3)) {
                 i = 12;
