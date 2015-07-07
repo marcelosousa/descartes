@@ -16,7 +16,8 @@ import Language.Java.Pretty
 
 import Analysis.Types
 import Analysis.Util
-import Analysis.Props
+import Analysis.Properties
+import Analysis.Axioms
 
 import System.IO.Unsafe
 import qualified Debug.Trace as T
@@ -85,38 +86,6 @@ verify classMap comps prop = do
         Sat -> do
             str <- showModel $ fromJust mmodel
             return (Sat, Just str)
-
-addAxioms :: Sort -> Fields -> Z3 (Fields, AST)
-addAxioms objSort fields = do
-    iSort <- mkIntSort
-    fnDouble <- mkFreshFuncDecl "compareDouble" [iSort, iSort] iSort
-    fnInt <- mkFreshFuncDecl "compareInt" [iSort, iSort] iSort
-    fnStr <- mkFreshFuncDecl "compareIgnoreCaseString" [objSort, objSort] iSort
-    let fields' = M.insert (Ident "compareDouble") fnDouble $ M.insert (Ident "compareInt") fnInt $ M.insert (Ident "compareIgnoreCaseString") fnStr fields
-    -- add anti-symmetry axiom for Double.compare
-    asymAxiomDouble <- genAntiSymAxiom iSort fnDouble
-    -- add anti-symmetry axiom for Double.compare
-    asymAxiomInt <- genAntiSymAxiom iSort fnInt    
-    -- add anti-symmetry axiom for String.compareIgnoreCase
-    asymAxiomStr <- genAntiSymAxiom objSort fnStr
-    axioms <- mkAnd [asymAxiomInt, asymAxiomDouble, asymAxiomStr]
-    return (fields', axioms)
-
--- Generate anti-symmetry axiom
-genAntiSymAxiom :: Sort -> FuncDecl -> Z3 AST
-genAntiSymAxiom sort fn = do    
-    xSym <- mkStringSymbol "x"
-    x <- mkConst xSym sort
-    xApp <- toApp x
-    ySym <- mkStringSymbol "y"
-    y <- mkConst ySym sort
-    yApp <- toApp y
-    i0 <- mkIntNum 0
-    lhsbody <- mkApp fn [x,y] >>= \a -> mkGt a i0
-    rhsbody <- mkApp fn [y,x] >>= \a -> mkLt a i0
-    body <- mkIff lhsbody rhsbody
-    mkForallConst [] [xApp, yApp] body
-
 
 -- strongest post condition
 analyser :: (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST, AST) -> [(Int, Block)] -> Z3 (Result, Maybe Model)

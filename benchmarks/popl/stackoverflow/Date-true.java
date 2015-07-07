@@ -4,12 +4,12 @@
  */
 
 public class Date implements Comparator<Date> {
-	 double calcSmoothDays();
+   double calcSmoothDays();
 
    int compare (Date o1, Date o2) {
       double d1 = o1.calcSmoothDays();
       double d2 = o2.calcSmoothDays();
 			
-			return Double.compare(d1,d2);
+	  return Double.compare(d1,d2);
 	 }
 }

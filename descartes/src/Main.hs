@@ -22,7 +22,7 @@ import Analysis.Verifier
 import Analysis.Util
 import Analysis.Types
 import Analysis.Consolidation
-import Analysis.Props
+import Analysis.Properties
 
 import Z3.Monad
 

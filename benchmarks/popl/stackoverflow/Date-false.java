@@ -9,7 +9,7 @@ public class Date implements Comparator<Date> {
       double d1 = o1.calcSmoothDays();
       double d2 = o2.calcSmoothDays();
 
-			if(d1 >= d2){
+      if(d1 >= d2){
         return 1;
       }
       else {

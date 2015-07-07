@@ -1,11 +1,11 @@
 -------------------------------------------------------------------------------
--- Module    :  Analysis.Props
+-- Module    :  Analysis.Properties
 -- Copyright :  (c) 2015 Marcelo Sousa
 -- Defines the properties of comparators:
 --  https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html
 -------------------------------------------------------------------------------
 
-module Analysis.Props where
+module Analysis.Properties where
 
 import Data.Map (Map)
 import qualified Data.Map as M
@@ -39,7 +39,7 @@ prop1 (args, [res1,res2], fields) = do
     r1eq <- mkEq res1 i0
     r2eq <- mkEq res2 i0
     poseq <- mkIff r1eq r2eq
-    -- compare(x,y) < 0 and compare(y,z) < 0 => compare(x,z) < 0
+    -- compare(x,y) > 0 iff compare(y,x) < 0
     r1gt <- mkGt res1 i0
     r2lt <- mkLt res2 i0
     posas <- mkIff r1gt r2lt
