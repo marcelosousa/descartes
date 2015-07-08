@@ -381,10 +381,11 @@ trans ((BlockStmt (IfThenElse _cond t@(StmtBlock (Block _then)) _else)):r) =
         _else' = case _else of
             Break _ -> []
             Return _ -> [BlockStmt _else]
-            StmtBlock (Block bstm) -> init bstm
+            StmtBlock (Block bstm) -> bstm --init bstm
         _elseRest = StmtBlock $ Block $ (BlockStmt $ Assume (PreNot _cond)):_else'
         rest = Block $ [BlockStmt $ IfThenElse Nondet _thenRest _elseRest]
     in (c'', _then', rest)
+
 
 -- simple weakest pre-condition
 wp :: Stmt -> Exp -> Exp
@@ -506,3 +507,23 @@ containsBreak stm = case stm of
 containsBreak' :: BlockStmt -> Bool
 containsBreak' (BlockStmt stm) = containsBreak stm
 containsBreak' _ = False
+
+replaceExp :: Ident -> Ident -> Exp -> Exp
+replaceExp i j phi = 
+  case phi of 
+    Lit lit -> phi
+    BinOp left op right -> BinOp (replaceExp i j left) op (replaceExp i j right)
+    ExpName (Name names) -> ExpName $ Name $ map (\ident -> if ident == i then j else ident) names
+    PostDecrement expr -> PostDecrement $ replaceExp i j expr
+    PostIncrement expr -> PostIncrement $ replaceExp i j expr
+    PreIncrement  expr -> PreIncrement  $ replaceExp i j expr
+    PreDecrement  expr -> PreDecrement  $ replaceExp i j expr
+    PrePlus       expr -> PrePlus       $ replaceExp i j expr
+    PreMinus      expr -> PreMinus      $ replaceExp i j expr
+    PreBitCompl   expr -> PreBitCompl   $ replaceExp i j expr
+    PreNot        expr -> PreNot        $ replaceExp i j expr
+    MethodInv (MethodCall _name args) -> 
+        let args' = map (replaceExp i j) args
+        in MethodInv $ MethodCall _name args'
+    _ -> error $ "replace: " ++ show phi ++ " not supported"
+

@@ -27,24 +27,30 @@ public class PokerHand implements Comparator<PokerHand> {
         }
         int tripleCount1 = o1.countOccurrencesOf(3);
         int tripleCount2 = o2.countOccurrencesOf(3);
-        if ((tripleCount1 > 1) || ((tripleCount1 == 1) && (o1.indexOf(2) != -1)) || (tripleCount2 > 1) || ((tripleCount2 == 1) && (o2.indexOf(2) != -1))) {  // Full house
-            int higherTriple = o1.lastIndexOf(3);
-            if (higherTriple == o2.lastIndexOf(3)) {
-                int i2=0;
-                while(i2 <= 12){
-                    if ((i2 != higherTriple) && (((o1.charAt(i2) == 2) || (o1.charAt(i2) == 3)) && ((o2.charAt(i2) == 2) || (o2.charAt(i2) == 3)))) {
-                        return 0;
+
+        if ((tripleCount1 > 1) || ((tripleCount1 == 1) && (o1.indexOf(2) != -1))) {      // c1 Full house
+            if ((tripleCount2 > 1) || ((tripleCount2 == 1) && (o2.indexOf(2) != -1))) {  // c2 Full house too
+                int higherTriple = o1.lastIndexOf(3);
+                if (higherTriple == o2.lastIndexOf(3)) {
+                    int i2=0;
+                    while(i2 <= 12){
+                        if ((i2 != higherTriple) && (((o1.charAt(i2) == 2) || (o1.charAt(i2) == 3)) && ((o2.charAt(i2) == 2) || (o2.charAt(i2) == 3)))) {
+                            return 0;
+                        }
+                        if ((i2 != higherTriple) && ((o1.charAt(i2) == 2) || (o1.charAt(i2) == 3))) { // only c1 Full house
+                            return -1;                                                
+                        }
+                        if ((i2 != higherTriple) && ((o2.charAt(i2) == 2) || (o2.charAt(i2) == 3))) { // only c2 Full house
+                            return 1;
+                        }
                     }
-                    if ((i2 != higherTriple) && ((o1.charAt(i2) == 2) || (o1.charAt(i2) == 3))) {
-                        return -1;
-                    }
-                    if ((i2 != higherTriple) && ((o2.charAt(i2) == 2) || (o2.charAt(i2) == 3))) {
-                        return 1;
-                    }
-                    i2++;
                 }
+                return higherTriple - o2.lastIndexOf(3);
             }
-            return higherTriple - o2.lastIndexOf(3);
+            return 1;
+        }
+        if ((tripleCount2 > 1) || ((tripleCount2 == 1) && (o2.indexOf(2) != -1))) {
+            return -1;
         }
         return 0;
     }
