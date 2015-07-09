@@ -4,34 +4,34 @@
  */
 
 public class NzbFile implements Comparator<NzbFile> {
-  int getFileName();
+  int getFileName;
   boolean getFileName_toLowerCase_endsWith(int str);
   int getSubject();
    
   int compare(NzbFile o1, NzbFile o2){
     if (o1 == o2) { return 0; }
-    if ((o1.getFileName() != null) && (o2.getFileName() != null)){
+    if ((o1.getFileName != 0) && (o2.getFileName != 0)){
  
-        int i = 1;
-        while (i <= 5){
+        int i = 0;
+        while (i < 5){
           if(o1.getFileName_toLowerCase_endsWith(i) && o2.getFileName_toLowerCase_endsWith(i)){
             return 0;
           }
            if(o1.getFileName_toLowerCase_endsWith(i)){
-            return -1000 + (i-1);
+            return -1000 + i;
           } 
           if(o2.getFileName_toLowerCase_endsWith(i)){
-            return 1000 + (i-1);
+            return 1000 + i;
           }
           i++;
         }
-        return Int.compare(o1.getFileName(), o2.getFileName());
+        return Int.compare(o1.getFileName, o2.getFileName);
     }
-    else if ((o1.getFileName() != null) && (o2.getFileName() == null))
+    else if ((o1.getFileName != 0) && (o2.getFileName == 0))
     {
         return -995;
     }
-    else if ((o1.getFileName() == null) && (o2.getFileName() != null))
+    else if ((o1.getFileName == 0) && (o2.getFileName != 0))
     {
         return 1005;
     }
