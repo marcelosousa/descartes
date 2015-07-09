@@ -222,7 +222,7 @@ selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block
                             (Unsat,_) -> do
                                 nPre <- mkAnd [inv, condAst]
                                 let s = [(pid, Block [BlockStmt _body])] 
-                                bodyCheck <- undefined -- local $ selfcomposition (objSort, pars, res, fields, ssamap, axioms, nPre, inv) s
+                                bodyCheck <- local $ analyser True (objSort, pars, res, fields, ssamap, axioms, nPre, inv) s
                                 case bodyCheck of
                                     (Unsat,_) -> do 
                                         rPre <- mkAnd [inv, pre]
