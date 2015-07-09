@@ -98,10 +98,10 @@ descartes mode classMap comparator prop propName = do
                 1 -> evalZ3 $ verify False classMap comparator prop
                 2 -> evalZ3 $ verifyWithSelf classMap comparator prop
         case vals of
-            Unsat -> putStrLn "Unsat"
+            Unsat -> putStrLn $ "Unsat: Comparator OBEYS " ++ propName
             Sat -> do
-                putStrLn $ "Comparator is buggy! " ++ propName ++ " fails!\nCounter-example:"
-                putStrLn $ fromJust models
+                putStrLn $ "Sat: Comparator VIOLATES " ++ propName --is buggy! " ++ propName ++ " fails!\nCounter-example:"
+--                putStrLn $ fromJust models
 
 test = evalZ3With Nothing opts testQE >>= \mbSol ->
          case mbSol of
