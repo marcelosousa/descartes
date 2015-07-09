@@ -209,7 +209,7 @@ selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block
                         selfcomposition (objSort, pars, res, fields, nssamap, axioms, npre) (pid, Block r1)
                     _ -> error $ "PostIncrement " ++ show stmt ++ " not supported"
             While _cond _body -> trace ("\nProcessing While loop from PID" ++ show pid ++"\n") $ do
-                inv <- buildInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
+                inv <- guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
                 checkInv <- local $ helper axioms pre inv
                 invStr <- astToString inv
                 preStr <- astToString pre
@@ -396,7 +396,7 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
                 --if all isLoop rest
                 --then applyFusion env ((pid,Block (bstmt:r1)):rest)
                 --else analyser env $ (rest ++ [(pid,Block (bstmt:r1))])
-                inv <- buildInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
+                inv <- guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
                 checkInv <- local $ helper axioms pre inv
                 invStr <- astToString inv
                 preStr <- astToString pre
@@ -440,7 +440,7 @@ splitLoop _ = error "splitLoop"
 makeApp :: SSAMap -> Int -> Z3 (AST,App)
 makeApp ssamap pid = do
     let i = Ident $ "i" ++ show (pid+1)
-        (iAST,_,_)  = safeLookup "buildInvariant: i" i ssamap
+        (iAST,_,_)  = safeLookup "guessInvariant: i" i ssamap
     iApp <- toApp iAST
     return (iAST,iApp)
 
@@ -480,28 +480,34 @@ applyFusion opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) list
                 _ -> error "couldnt prove the loop bodies with invariant"
         _ -> error "precondition does not imply the invariant"
 
-buildInvariant :: (Sort, Args, [AST], Fields, SSAMap) -> Int -> Exp  -> AST -> Z3 AST
-buildInvariant (objSort, pars, res, fields, ssamap) pid cond pre = do
-    let i = getCondCounter cond 
-        (iAST,_,_)  = safeLookup "buildInvariant: i" i ssamap
-    -- i >= 0
-    i0 <- mkIntNum 0
-    c1 <- mkGe iAST i0
-    -- exists i. pre
-    iApp <- toApp iAST
-    ex1 <- mkExistsConst [] [iApp] pre
-    -- forall j. 0 <= j < i => cond
-    gen <- generalizeCond (objSort, pars, res, fields, ssamap) i iAST cond pid
-    mkAnd [ex1, gen, c1]
+-- 
+guessInvariant :: (Sort, Args, [AST], Fields, SSAMap) -> Int -> Exp  -> AST -> Z3 AST
+guessInvariant (objSort, pars, res, fields, ssamap) pid cond pre = do
+    case getCondCounter cond  of 
+        Nothing -> mkTrue
+        Just i -> do
+            let (iAST,_,_)  = safeLookup "guessInvariant: i" i ssamap
+            -- i >= 0
+            i0 <- mkIntNum 0
+            c1 <- mkGe iAST i0
+            -- exists i. pre
+            iApp <- toApp iAST
+            ex1 <- mkExistsConst [] [iApp] pre
+            -- forall j. 0 <= j < i => cond
+            gen <- generalizeCond (objSort, pars, res, fields, ssamap) i iAST cond pid
+            case gen of
+                Nothing -> mkTrue
+                Just genInv -> mkAnd [ex1, genInv, c1]
     
-getCondCounter :: Exp -> Ident
+getCondCounter :: Exp -> Maybe Ident
 getCondCounter expr = 
-    case expr of 
-        BinOp (BinOp (ExpName (Name [i])) _ _) And _ -> i
-        BinOp (BinOp (BinOp (ExpName (Name [i])) _ _) _ _) And _ -> i
-        _ -> error $ "getCondCounter: " ++ show expr
+    case expr of
+        BinOp (ExpName (Name [i])) _ _ -> Just i
+        BinOp (BinOp (ExpName (Name [i])) _ _) And _ -> Just i
+        BinOp (BinOp (BinOp (ExpName (Name [i])) _ _) _ _) And _ -> Just i
+        _ -> Nothing --error $ "getCondCounter: " ++ show expr
 
-generalizeCond :: (Sort, Args, [AST], Fields, SSAMap) -> Ident -> AST -> Exp -> Int -> Z3 AST
+generalizeCond :: (Sort, Args, [AST], Fields, SSAMap) -> Ident -> AST -> Exp -> Int -> Z3 (Maybe AST)
 generalizeCond env@(objSort, pars, res, fields, ssamap) i iAST _cond pid = do
     case _cond of 
         BinOp _ And cond -> do
@@ -518,30 +524,8 @@ generalizeCond env@(objSort, pars, res, fields, ssamap) i iAST _cond pid = do
             let ssamap' = M.insert jIdent (j, sort, pid) ssamap
             c2 <- processExp (objSort, pars, res, fields, ssamap') cond'
             -- \forall j. c1 => c2
-            mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body
-        _ -> error $ "generalizeCond: " ++ show _cond
-{-    
-buildInvariant :: Args -> SSAMap -> Fields -> Int -> Z3 AST
-buildInvariant args ssamap fields pid = do
-    let i = Ident $ "i" ++ show pid
-        (iAST,iSort,_)  = safeLookup "buildInvariant: i" i ssamap
-        thisPos = Ident $ "thisPos" ++ show pid
-        (thisPosAST,_,_) = safeLookup "buildInvariant: thisPos" thisPos ssamap
-        otherPos = Ident $ "otherPos" ++ show pid
-        (otherPosAST,_,_) = safeLookup "buildInvariant: otherPos" otherPos ssamap
-        getFn = safeLookup ("buildInvariant: get" ++ show fields) (Ident "get") fields
-        o1 = safeLookup "buildInvariant: o1x" (Ident $ "o1" ++ show pid) args
-        o2 = safeLookup "buildInvariant: o2x" (Ident $ "o2" ++ show pid) args
-    j <- mkStringSymbol $ "j" ++ show pid
-    jc <- mkConst j iSort
-    lhs <- mkAdd [thisPosAST, jc] >>= \s -> mkApp getFn [o1,s]
-    rhs <- mkAdd [otherPosAST, jc] >>= \s -> mkApp getFn [o2,s]    
-    rhsbody <- mkEq lhs rhs 
-    i0 <- mkIntNum 0
-    lhsbody <- mkLe i0 jc >>= \s1 -> mkLt jc iAST >>= \s2 -> mkAnd [s1, s2]
-    body <- mkImplies lhsbody rhsbody
-    mkForall [] [j] [iSort] body
--}
+            mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body >>= \inv -> return $ Just inv
+        _ -> return Nothing -- error $ "generalizeCond: " ++ show _cond
     
 combine :: (Result, Maybe Model) -> (Result, Maybe Model) -> Z3 (Result, Maybe Model)
 combine (Unsat,_) (Unsat,_) = return (Unsat, Nothing)
