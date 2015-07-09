@@ -9,7 +9,7 @@ public class ExportTerm implements Comparator<ExportTerm>{
     if (o1.sortLabel == null){
       return -1;
     }
-    if (o2.sortLabel == null){
+        if (o2.sortLabel == null){
       return 1;
     }
 

@@ -36,12 +36,13 @@ _help    = "The input parameter is a Java project directory."
 data Property = P1 | P2 | P3
   deriving (Show, Data, Typeable, Eq)
   
-data Option = Verify {input :: FilePath, prop :: Int, logLevel :: Int}
+data Option = Verify {input :: FilePath, prop :: Int, mode :: Int, logLevel :: Int}
   deriving (Show, Data, Typeable, Eq)
 
 verifyMode :: Option
 verifyMode = Verify {input = def &= args
                     ,prop = def
+                    ,mode = def
                     ,logLevel = def} &= help "verify a input Java file"
 
 progModes :: Mode (CmdArgs Option)
@@ -56,7 +57,7 @@ main = do options <- cmdArgsRun progModes
           runOption options
 
 runOption :: Option -> IO ()
-runOption (Verify path p logLevel) = descartes_main logLevel path (arity p) (toProp p) (showProp p)
+runOption (Verify path p mode logLevel) = descartes_main logLevel mode path (arity p) (toProp p) (showProp p)
 --runOption (Verify path) = find always (extension ==? ".java") path >>=
 --                          mapM_ frontend
   
@@ -75,8 +76,8 @@ showProp 1 = "Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,
 showProp 2 = "Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0."
 showProp 3 = "Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z))."
     
-descartes_main :: Int -> FilePath -> Int -> Prop -> String -> IO ()
-descartes_main logLevel file arity prop propName = do 
+descartes_main :: Int -> Int -> FilePath -> Int -> Prop -> String -> IO ()
+descartes_main logLevel mode file arity prop propName = do 
   ast <- parser compilationUnit `fmap` readFile file 
   case ast of 
     Left e -> print $ file ++ ": " ++ show e
@@ -87,17 +88,20 @@ descartes_main logLevel file arity prop propName = do
         if logLevel > 0
         then do 
             mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
-            descartes classMap (head comparators) prop propName
-        else descartes classMap (head comparators) prop propName
+            descartes mode classMap (head comparators) prop propName
+        else descartes mode classMap (head comparators) prop propName
 
-
-descartes classMap comparator prop propName = do 
-        (vals, models) <- evalZ3 $ verify classMap comparator prop
+descartes mode classMap comparator prop propName = do 
+        (vals, models) <- 
+            case mode of 
+                0 -> evalZ3 $ verify True classMap comparator prop
+                1 -> evalZ3 $ verify False classMap comparator prop
+                2 -> evalZ3 $ verifyWithSelf classMap comparator prop
         case vals of
             Unsat -> putStrLn "Unsat"
             Sat -> do
                 putStrLn $ "Comparator is buggy! " ++ propName ++ " fails!\nCounter-example:"
-                putStrLn $ fromJust models   
+                putStrLn $ fromJust models
 
 test = evalZ3With Nothing opts testQE >>= \mbSol ->
          case mbSol of

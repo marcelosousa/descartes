@@ -171,3 +171,10 @@ mkFieldApp o1 o2 field fields = do
     o1app <- mkApp fn [o1]
     o2app <- mkApp fn [o2]
     mkNot =<< mkEq o1app o2app
+
+testProp :: Prop
+testProp (args, [res], fields) = do
+    i0 <- mkIntNum (0 :: Integer)
+    pre <- mkTrue
+    pos <- mkEq res i0
+    return (pre,pos)
