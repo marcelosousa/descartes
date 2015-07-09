@@ -74,7 +74,8 @@ processParam :: FormalParam -> Z3 Sort
 processParam (FormalParam mods ty _ _) = processType ty 
 
 verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)
-verify opt classMap comps prop = do
+verify opt classMap _comps prop = do
+    let comps = map rewrite _comps
     (objSort, pars, res, fields) <- prelude classMap comps
     (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
     (fields', axioms) <- addAxioms objSort fields
@@ -267,7 +268,7 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
                 then do
                   test <- local $ helper axioms nPre post
                   case fst test of
-                      Unsat -> T.trace ("pruned state space") $ return test
+                      Unsat -> T.trace ("Optimizer: Pruned Path") $ return test
                       _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
                 else analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
             IfThen cond s1 -> do
@@ -391,6 +392,7 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
                         analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
                     _ -> error $ "PostIncrement " ++ show stmt ++ " not supported"
             While _cond _body -> trace ("\nProcessing While loop from PID" ++ show pid ++"\n") $ do
+                let 
                 --if all isLoop rest
                 --then applyFusion env ((pid,Block (bstmt:r1)):rest)
                 --else analyser env $ (rest ++ [(pid,Block (bstmt:r1))])

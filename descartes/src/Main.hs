@@ -84,7 +84,7 @@ descartes_main logLevel mode file arity prop propName = do
     Right cu -> do
         let classMap = getInfo cu
             comps = getComps cu
-            comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1..arity]) comps
+            comparators = map (\c -> map (\idx -> rename idx c) [1..arity]) comps
         if logLevel > 0
         then do 
             mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
