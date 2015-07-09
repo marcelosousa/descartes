@@ -1,0 +1,159 @@
+Property 2
+descartes -p=2 -m=0: 
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o11!1 of sort SimpleString
+o21!2 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.052s
+user	0m0.044s
+sys	0m0.008s
+descartes -p=2 -m=1: 
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o11!1 of sort SimpleString
+o21!2 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.138s
+user	0m0.129s
+sys	0m0.008s
+descartes -p=2 -m=2: 
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o11!1 of sort SimpleString
+o21!2 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o12!3 of sort SimpleString
+o22!4 of sort SimpleString
+
+WARNING: invalid function application for compareIgnoreCaseString!13, sort mismatch on argument at position 1, expected Int but given SimpleString
+WARNING: (declare-fun compareIgnoreCaseString!13 (Int Int) Int) applied to: 
+o13!5 of sort SimpleString
+o23!6 of sort SimpleString
+
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.028s
+user	0m0.028s
+sys	0m0.000s

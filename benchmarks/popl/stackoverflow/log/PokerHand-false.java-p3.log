@@ -1,0 +1,19 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m7.974s
+user	0m7.961s
+sys	0m0.012s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	1m12.217s
+user	1m12.134s
+sys	0m0.080s
+descartes -p=3 -m=2: 
+descartes: guessInvariant procedure can't compute valid invariant
+
+real	0m0.034s
+user	0m0.026s
+sys	0m0.007s

@@ -1,0 +1,19 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.316s
+user	0m0.311s
+sys	0m0.004s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.346s
+user	0m0.333s
+sys	0m0.012s
+descartes -p=1 -m=2: 
+descartes: guessInvariant procedure can't compute valid invariant
+
+real	0m0.010s
+user	0m0.005s
+sys	0m0.005s

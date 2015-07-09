@@ -1,0 +1,19 @@
+Property 3
+descartes -p=3 -m=0: 
+Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m5.481s
+user	0m5.461s
+sys	0m0.020s
+descartes -p=3 -m=1: 
+Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	1m33.920s
+user	1m33.792s
+sys	0m0.120s
+descartes -p=3 -m=2: 
+descartes: guessInvariant procedure can't compute valid invariant
+
+real	0m0.038s
+user	0m0.038s
+sys	0m0.000s
