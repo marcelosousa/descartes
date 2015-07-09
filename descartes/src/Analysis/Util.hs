@@ -277,6 +277,8 @@ instance Renamable FieldAccess where
     
 instance Renamable MethodInvocation where
     rename idx mInv = case mInv of
+        MethodCall name@(Name [Ident "assume"]) args -> MethodCall name $ map (rename idx) args
+        MethodCall name@(Name [Ident "nondet"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Double",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Int",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args -> MethodCall name $ map (rename idx) args

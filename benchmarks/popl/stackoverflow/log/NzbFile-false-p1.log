@@ -1,0 +1,31 @@
+descartes Prop 1:
+Comparator is buggy! Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x)) fails!
+Counter-example:
+o21!4 -> NzbFile!val!1
+res2!8 -> (- 1000)
+o12!5 -> NzbFile!val!1
+elem!13 -> NzbFile!val!2
+res1!7 -> (- 1000)
+o11!3 -> NzbFile!val!0
+o22!6 -> NzbFile!val!0
+compareDouble!9 -> {
+  0
+}
+getFileName!2 -> {
+  NzbFile!val!0 -> 4
+  else -> 3
+}
+getFileName_toLowerCase_endsWith!1 -> {
+  true
+}
+compareInt!10 -> {
+  0
+}
+compareIgnoreCaseString!11 -> {
+  0
+}
+
+
+real	0m0.401s
+user	0m0.131s
+sys	0m0.040s

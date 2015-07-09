@@ -1,0 +1,27 @@
+descartes Prop 1:
+Comparator is buggy! Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x)) fails!
+Counter-example:
+elem!11 -> ValueComparator!val!2
+res2!6 -> 1
+o12!3 -> ValueComparator!val!1
+o22!4 -> ValueComparator!val!0
+res1!5 -> 1
+o11!1 -> ValueComparator!val!0
+o21!2 -> ValueComparator!val!1
+compareIgnoreCaseString!9 -> {
+  0
+}
+get!0 -> {
+  0
+}
+compareDouble!7 -> {
+  0
+}
+compareInt!8 -> {
+  0
+}
+
+
+real	0m0.261s
+user	0m0.025s
+sys	0m0.033s

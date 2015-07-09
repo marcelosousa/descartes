@@ -102,7 +102,7 @@ analyser env ((pid,Block []):rest) = analyser env rest
 analyser env@(objSort, pars, res, fields, ssamap, axioms, iPre, pre, post) ((pid,Block (bstmt:r1)):rest) = do
     preStr  <- astToString pre
     postStr <- astToString post
-    --let k = trace ("\n-----------------\nAnalyser State:\nStatement: " ++ prettyPrint bstmt ++ "\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
+    --let k = T.trace ("\n-----------------\nAnalyser State:\nStatement: " ++ prettyPrint bstmt ++ "\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
     case bstmt of
         BlockStmt stmt -> case stmt of
             StmtBlock (Block block) -> analyser env ((pid, Block (block ++ r1)):rest)
@@ -116,10 +116,10 @@ analyser env@(objSort, pars, res, fields, ssamap, axioms, iPre, pre, post) ((pid
                 let resPid = res !! pid  
                 r <- mkEq resPid exprPsi
                 nPre <- mkAnd [pre,r]
-             --   test <- local $ helper nPre post
-             --   trace ("return test = " ++ show test) $ case test of
-             --       Unsat -> analyser (objSort, pars, res, fields, nPre, post) rest -- trace ("stopped") $ return test
-             --       _ -> analyser (objSort, pars, res, fields, nPre, post) rest
+                --test <- local $ helper axioms nPre post
+                --case fst test of
+                --    Unsat -> T.trace ("stopped") $ return test
+                --    _ -> analyser (objSort, pars, res, fields, ssamap, axioms, iPre, nPre, post) rest
                 analyser (objSort, pars, res, fields, ssamap, axioms, iPre, nPre, post) rest
             IfThen cond s1 -> do
                 condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
@@ -169,6 +169,10 @@ analyser env@(objSort, pars, res, fields, ssamap, axioms, iPre, pre, post) ((pid
                     Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
                     _ -> analyser (objSort, pars, res, fields, ssamap, axioms, iPre, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
                 trace ("IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
+            ExpStmt (MethodInv (MethodCall (Name [Ident "assume"]) [expr])) -> do 
+                expAST <- processExp (objSort, pars, res, fields, ssamap) expr
+                npre <- mkAnd [pre,expAST]
+                analyser (objSort, pars, res, fields, ssamap, axioms, iPre, npre, post) ((pid, Block r1):rest)
             ExpStmt (Assign lhs aOp rhs) -> do
                 rhsAst <- processExp (objSort, pars, res, fields, ssamap) rhs
                 case lhs of
@@ -326,6 +330,7 @@ getCondCounter :: Exp -> Ident
 getCondCounter expr = 
     case expr of 
         BinOp (BinOp (ExpName (Name [i])) _ _) And _ -> i
+        BinOp (BinOp (BinOp (ExpName (Name [i])) _ _) _ _) And _ -> i
         _ -> error $ "getCondCounter: " ++ show expr
 
 generalizeCond :: (Sort, Args, [AST], Fields, SSAMap) -> Ident -> AST -> Exp -> Int -> Z3 AST
@@ -441,7 +446,7 @@ processExp env@(objSort, pars, res, fields, ssamap) expr =
             mkUnaryMinus nexprEnc
         MethodInv (MethodCall name args) -> do
             argsAST <- mapM (processExp env) args
-            processName env name argsAST    
+            processName env name argsAST
         Cond cond _then _else -> do
             condEnc <- processExp env cond
             _thenEnc <- processExp env _then
@@ -466,6 +471,9 @@ processName env@(objSort, pars, res, fields, ssamap) (Name [obj]) [] = do
             Nothing -> error $ "Can't find " ++ show obj
             Just (ast,_,_) -> return ast
         Just ast -> return ast
+processName env@(objSort, pars, res, fields, ssamap) (Name [Ident "nondet"]) args = do
+    let fn = safeLookup ("processName: nondet")  (Ident "nondet") fields
+    mkApp fn args
 processName env@(objSort, pars, res, fields, ssamap) (Name [Ident "Double",Ident "compare"]) args = do
     let fnName = Ident "compareDouble"
         fn = safeLookup ("processName: Field" ++ show fnName)  fnName fields

@@ -5,7 +5,8 @@
 
 public class SimpleString implements Comparator<SimpleString>{
   int length();
-
+  int toString;
+  
   public int compare(SimpleString o1, SimpleString o2){
     if (o1.length() == 0){
       return 1;
@@ -15,6 +16,6 @@ public class SimpleString implements Comparator<SimpleString>{
       return -1;
     }
 
-    return String.compareIgnoreCase(o1, o2);
+    return String.compareIgnoreCase(o1.toString, o2.toString);
   }
 }

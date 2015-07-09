@@ -1,0 +1,42 @@
+descartes Prop 3:
+Comparator is buggy! Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)). fails!
+Counter-example:
+o23!8 -> Node!val!2
+o13!7 -> Node!val!1
+res3!11 -> 0
+o21!4 -> Node!val!1
+order121 -> (- 1)
+o22!6 -> Node!val!2
+order221 -> 0
+o12!5 -> Node!val!0
+res1!9 -> 0
+elem!16 -> Node!val!3
+o11!3 -> Node!val!0
+res2!10 -> (- 1)
+getID!2 -> {
+  Node!val!1 -> 5
+  Node!val!2 -> 6
+  else -> 3
+}
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  0
+}
+containsKey!1 -> {
+  Node!val!1 5 -> false
+  else -> true
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+get!0 -> {
+  Node!val!2 6 -> 0
+  else -> (- 1)
+}
+
+
+real	0m0.117s
+user	0m0.092s
+sys	0m0.012s

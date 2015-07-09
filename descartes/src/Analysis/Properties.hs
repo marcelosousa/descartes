@@ -92,7 +92,7 @@ prop3 (args, [res1,res2,res3], fields) = do
     r3eq <- mkEq res3 i0
     poseq <- mkIff r2eq r3eq    
     pos' <- mkAnd [posgt,poseq]
-    pos <- mkImplies r1 poseq
+    pos <- mkImplies r1 pos'
     return (pre, pos)
     
 -- transitivity

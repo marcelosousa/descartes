@@ -1,0 +1,47 @@
+descartes Prop 3:
+Comparator is buggy! Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)). fails!
+Counter-example:
+res3!10 -> 0
+n211 -> 0
+res2!9 -> (- 1)
+o12!4 -> FileItem!val!0
+o21!3 -> FileItem!val!1
+n221 -> (- 1)
+result31 -> 0
+o22!5 -> FileItem!val!2
+n111 -> (- 2)
+result11 -> 0
+result21 -> 0
+elem!15 -> FileItem!val!3
+n231 -> (- 1)
+res1!8 -> 0
+result22 -> (- 1)
+o13!6 -> FileItem!val!1
+o11!2 -> FileItem!val!0
+o23!7 -> FileItem!val!2
+n131 -> 0
+n121 -> (- 2)
+compareInt!12 -> {
+  0
+}
+compareDouble!11 -> {
+  0
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+getFileName!1 -> {
+  FileItem!val!1 -> 0
+  FileItem!val!2 -> (- 1)
+  else -> (- 2)
+}
+toInt!0 -> {
+  FileItem!val!1 -> 4
+  FileItem!val!2 -> 6
+  else -> 3
+}
+
+
+real	0m0.088s
+user	0m0.069s
+sys	0m0.011s
