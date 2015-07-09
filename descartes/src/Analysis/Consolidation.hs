@@ -102,7 +102,7 @@ verifyWithSelf classMap comps prop = do
     pres <- mapM (selfcomposition (objSort, pars, res, fields', iSSAMap, axioms, pre)) blocks
     pre' <- mkAnd pres
     preStr  <- astToString pre'
-    (res, mmodel) <- T.trace ("\n-----------------\nFinal Pre:\n" ++ preStr) $ local $ helper axioms pre' post
+    (res, mmodel) <- trace ("\n-----------------\nFinal Pre:\n" ++ preStr) $ local $ helper axioms pre' post
     case res of 
         Unsat -> return (Unsat, Nothing)
         Sat -> do
@@ -214,7 +214,7 @@ selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block
                 invStr <- astToString inv
                 preStr <- astToString pre
                 --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
-                case T.trace ("Using invariant: " ++ invStr) $ checkInv of
+                case checkInv of
                     (Unsat,_) -> do
                         condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
                         ncondAst <- mkNot condAst
@@ -268,7 +268,7 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
                 then do
                   test <- local $ helper axioms nPre post
                   case fst test of
-                      Unsat -> T.trace ("Optimizer: Pruned Path") $ return test
+                      Unsat -> trace ("Optimizer: Pruned Path") $ return test
                       _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
                 else analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
             IfThen cond s1 -> do
@@ -401,7 +401,7 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
                 invStr <- astToString inv
                 preStr <- astToString pre
                 --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
-                case T.trace ("Using invariant: " ++ invStr) $ checkInv of
+                case checkInv of
                     (Unsat,_) -> do
                         condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
                         ncondAst <- mkNot condAst
@@ -484,7 +484,7 @@ applyFusion opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) list
 guessInvariant :: (Sort, Args, [AST], Fields, SSAMap) -> Int -> Exp  -> AST -> Z3 AST
 guessInvariant (objSort, pars, res, fields, ssamap) pid cond pre = do
     case getCondCounter cond  of 
-        Nothing -> mkTrue
+        Nothing -> error "guessInvariant procedure can't compute valid invariant" -- mkTrue
         Just i -> do
             let (iAST,_,_)  = safeLookup "guessInvariant: i" i ssamap
             -- i >= 0
@@ -496,7 +496,7 @@ guessInvariant (objSort, pars, res, fields, ssamap) pid cond pre = do
             -- forall j. 0 <= j < i => cond
             gen <- generalizeCond (objSort, pars, res, fields, ssamap) i iAST cond pid
             case gen of
-                Nothing -> mkTrue
+                Nothing -> error "guessInvariant procedure can't compute valid invariant" -- mkTrue
                 Just genInv -> mkAnd [ex1, genInv, c1]
     
 getCondCounter :: Exp -> Maybe Ident
