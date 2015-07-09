@@ -214,7 +214,7 @@ selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block
                 invStr <- astToString inv
                 preStr <- astToString pre
                 --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
-                case checkInv of
+                case T.trace ("Using invariant: " ++ invStr) $ checkInv of
                     (Unsat,_) -> do
                         condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
                         ncondAst <- mkNot condAst
@@ -401,7 +401,7 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
                 invStr <- astToString inv
                 preStr <- astToString pre
                 --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
-                case checkInv of
+                case T.trace ("Using invariant: " ++ invStr) $ checkInv of
                     (Unsat,_) -> do
                         condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
                         ncondAst <- mkNot condAst
