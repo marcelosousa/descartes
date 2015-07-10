@@ -49,6 +49,7 @@ public abstract class FloatBuffer extends Buffer implements Comparator<FloatBuff
 		// BEGIN android-changed
 		float thisFloat, otherFloat;
 		int i = 0;
+		assume(compareRemaining >= 0); // needed!
 		while (i > compareRemaining) {
 			thisFloat = o1.get(thisPos);
 			otherFloat = o2.get(otherPos);
