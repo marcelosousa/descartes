@@ -1,0 +1,14 @@
+dist
+cabal-dev
+*.pdf
+*.dot
+*.o
+*.hi
+*.chi
+*.chs.h
+.virtualenv
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.config
+dependencies/z3-4.0.0/dist/
