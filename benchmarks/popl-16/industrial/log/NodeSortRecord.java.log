@@ -63,9 +63,9 @@ stringValue!1!803 -> {
 }
 
 
-real	0m0.649s
+real	0m0.644s
 user	0m0.637s
-sys	0m0.012s
+sys	0m0.004s
 Property 2
 descartes -p=2 -m=0: 
 Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
@@ -159,8 +159,8 @@ settingsGetSortOrdersLength!5 -> {
 }
 
 
-real	0m3.834s
-user	0m3.808s
+real	0m3.927s
+user	0m3.902s
 sys	0m0.024s
 Property 3
 descartes -p=3 -m=0: 
@@ -244,6 +244,6 @@ get!4!1680 -> {
 }
 
 
-real	0m1.157s
-user	0m1.152s
-sys	0m0.004s
+real	0m1.141s
+user	0m1.132s
+sys	0m0.008s
