@@ -2,18 +2,18 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
 
-real	0m1.129s
-user	0m1.117s
-sys	0m0.012s
+real	0m1.138s
+user	0m1.132s
+sys	0m0.004s
 descartes -p=2 -m=1: 
 Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
 
-real	0m9.693s
-user	0m9.664s
-sys	0m0.028s
+real	0m9.620s
+user	0m9.595s
+sys	0m0.025s
 descartes -p=2 -m=2: 
 descartes: guessInvariant procedure can't compute valid invariant
 
-real	0m0.012s
-user	0m0.004s
-sys	0m0.008s
+real	0m0.015s
+user	0m0.007s
+sys	0m0.007s

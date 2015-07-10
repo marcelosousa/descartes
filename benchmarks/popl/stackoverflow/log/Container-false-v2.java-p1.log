@@ -2,18 +2,18 @@ Property 1
 descartes -p=1 -m=0: 
 Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.053s
-user	0m0.049s
+real	0m0.052s
+user	0m0.048s
 sys	0m0.004s
 descartes -p=1 -m=1: 
 Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.047s
-user	0m0.039s
-sys	0m0.008s
+user	0m0.042s
+sys	0m0.004s
 descartes -p=1 -m=2: 
 Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.022s
-user	0m0.018s
+user	0m0.017s
 sys	0m0.004s

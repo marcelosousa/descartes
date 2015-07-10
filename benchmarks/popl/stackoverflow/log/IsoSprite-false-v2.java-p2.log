@@ -2,18 +2,18 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
 
-real	0m5.839s
-user	0m5.818s
-sys	0m0.020s
+real	0m5.910s
+user	0m5.892s
+sys	0m0.016s
 descartes -p=2 -m=1: 
 Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
 
-real	0m12.641s
-user	0m12.616s
+real	0m12.600s
+user	0m12.576s
 sys	0m0.024s
 descartes -p=2 -m=2: 
 Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
 
-real	0m0.119s
-user	0m0.115s
-sys	0m0.004s
+real	0m0.121s
+user	0m0.109s
+sys	0m0.012s

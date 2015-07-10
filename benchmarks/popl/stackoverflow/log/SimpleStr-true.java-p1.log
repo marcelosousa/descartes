@@ -1,64 +1,19 @@
 Property 1
 descartes -p=1 -m=0: 
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o11!1 of sort SimpleString
-o21!2 of sort SimpleString
-
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o12!3 of sort SimpleString
-o22!4 of sort SimpleString
-
 Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.043s
-user	0m0.038s
-sys	0m0.004s
+real	0m0.042s
+user	0m0.034s
+sys	0m0.008s
 descartes -p=1 -m=1: 
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o12!3 of sort SimpleString
-o22!4 of sort SimpleString
-
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o12!3 of sort SimpleString
-o22!4 of sort SimpleString
-
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o12!3 of sort SimpleString
-o22!4 of sort SimpleString
-
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o11!1 of sort SimpleString
-o21!2 of sort SimpleString
-
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o12!3 of sort SimpleString
-o22!4 of sort SimpleString
-
 Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.051s
-user	0m0.050s
-sys	0m0.004s
+real	0m0.048s
+user	0m0.040s
+sys	0m0.008s
 descartes -p=1 -m=2: 
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o11!1 of sort SimpleString
-o21!2 of sort SimpleString
-
-WARNING: invalid function application for compareIgnoreCaseString!10, sort mismatch on argument at position 1, expected Int but given SimpleString
-WARNING: (declare-fun compareIgnoreCaseString!10 (Int Int) Int) applied to: 
-o12!3 of sort SimpleString
-o22!4 of sort SimpleString
-
 Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.024s
-user	0m0.020s
+real	0m0.023s
+user	0m0.019s
 sys	0m0.004s

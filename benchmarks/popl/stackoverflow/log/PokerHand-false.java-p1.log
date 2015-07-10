@@ -2,18 +2,18 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m1.885s
-user	0m1.880s
-sys	0m0.004s
+real	0m1.939s
+user	0m1.931s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m3.891s
-user	0m3.878s
-sys	0m0.012s
+real	0m3.980s
+user	0m3.969s
+sys	0m0.008s
 descartes -p=1 -m=2: 
 descartes: guessInvariant procedure can't compute valid invariant
 
-real	0m0.027s
-user	0m0.023s
-sys	0m0.004s
+real	0m0.029s
+user	0m0.018s
+sys	0m0.011s
