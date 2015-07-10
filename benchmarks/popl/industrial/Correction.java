@@ -27,77 +27,34 @@ import org.elasticsearch.search.suggest.phrase.DirectCandidateGenerator.Candidat
 import java.util.Arrays;
 
 //TODO public for tests
-public final class Correction implements Comparable<Correction> {
+public final class Correction implements Comparator<Correction> {
 
-    public static final Correction[] EMPTY = new Correction[0];
+    //public static final Correction[] EMPTY = new Correction[0];
     public double score;
-    public final Candidate[] candidates;
-
-    public Correction(double score, Candidate[] candidates) {
-        this.score = score;
-        this.candidates = candidates;
-    }
-
-    @Override
-    public String toString() {
-        return "Correction [score=" + score + ", candidates=" + Arrays.toString(candidates) + "]";
-    }
-
-    public BytesRef join(BytesRef separator) {
-        return join(separator, null, null);
-    }
-
-    public BytesRef join(BytesRef separator, BytesRef preTag, BytesRef postTag) {
-        return join(separator, new BytesRefBuilder(), preTag, postTag);
-    }
-
-    public BytesRef join(BytesRef separator, BytesRefBuilder result, BytesRef preTag, BytesRef postTag) {
-        BytesRef[] toJoin = new BytesRef[this.candidates.length];
-        int len = separator.length * this.candidates.length - 1;
-        for (int i = 0; i < toJoin.length; i++) {
-            Candidate candidate = candidates[i];
-            if (preTag == null || candidate.userInput) {
-                toJoin[i] = candidate.term;
-            } else {
-                final int maxLen = preTag.length + postTag.length + candidate.term.length;
-                final BytesRefBuilder highlighted = new BytesRefBuilder();// just allocate once
-                highlighted.grow(maxLen);
-                if (i == 0 || candidates[i-1].userInput) {
-                    highlighted.append(preTag);
-                }
-                highlighted.append(candidate.term);
-                if (toJoin.length == i + 1 || candidates[i+1].userInput) {
-                    highlighted.append(postTag);
-                }
-                toJoin[i] = highlighted.get();
-            }
-            len += toJoin[i].length;
-        }
-        result.grow(len);
-        return SuggestUtils.join(separator, result, toJoin);
-    }
+    
+    // public final Candidate[] candidates; 
+    int candidatesLength;
+    int getCandidate(int index);
 
     /** Lower scores sorts first; if scores are equal,
      *  than later terms (zzz) sort first .*/
     @Override
-    public int compareTo(Correction other) {
-        return compareTo(other.score, other.candidates);
-    }
-
-    int compareTo(double otherScore, Candidate[] otherCandidates) {
-        if (score == otherScore) {
-            int limit = Math.min(candidates.length, otherCandidates.length);
-            for (int i=0;i<limit;i++) {
-                int cmp = candidates[i].term.compareTo(otherCandidates[i].term);
-                if (cmp != 0) {
-                    // Later (zzz) terms sort before (are weaker than) earlier (aaa) terms:
+    public int compare(Correction o1, Correction o2) {
+        // inlined function
+        if (o1.score == o2.score){
+            int limit = o1.candidatesLength < o2.candidatesLength ? o1.candidatesLength : o2.candidatesLength; 
+            int i=0;
+            int cmp;
+            while(i < limit){
+                cmp = Int.compare(o1.getCandidate(i), o2.getCandidate(i));
+                if (cmp != 0){
                     return -cmp;
                 }
+                i++;
             }
-
-            return candidates.length - otherCandidates.length;
+            return o1.candidatesLength - o2.candidatesLength;
         } else {
-            return Double.compare(score, otherScore);
-        }
+            return Double.compare(o1.score, o2.score);
+        }        
     }
 }
