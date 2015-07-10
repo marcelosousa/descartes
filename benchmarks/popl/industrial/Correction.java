@@ -54,7 +54,7 @@ public final class Correction implements Comparator<Correction> {
             }
             return o1.candidatesLength - o2.candidatesLength;
         } else {
-            return Double.compare(o1.score, o2.score);
+            return o1.score == o2.score ? 0 : o1.score > o2.score ? 1 : -1; //Double.compare(o1.score, o2.score);
         }        
     }
 }
