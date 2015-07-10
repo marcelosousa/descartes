@@ -37,9 +37,23 @@ final class CaseIgnoringComparator implements Comparator<CharSequence>, Serializ
         int o2Length = o2.length();
         int min = o1Length < o2Length ? o1Length : o2Length; 
         int i = 0;
+        char c1;
+        char c2;
+        char c1U;
+        char c2U;
+        char c1L;
+        char c2L;
         while (i < min) {
-            char c1 = o1.charAt(i);
-            char c2 = o2.charAt(i);
+            c1 = o1.charAt(i);
+            c2 = o2.charAt(i);
+            c1U = Character.toUpperCase(c1); 
+            c2U = Character.toUpperCase(c2); 
+            c1L = Character.toLowerCase(c1U); 
+            c2L = Character.toLowerCase(c2U); 
+            if ((c1 != c2) && (c1U != c2U) && (c1L != c2L)){
+              return c1L - c2L;
+            }
+/*
             if (c1 != c2) {
                 c1 = Character.toUpperCase(c1);
                 c2 = Character.toUpperCase(c2);
@@ -51,6 +65,7 @@ final class CaseIgnoringComparator implements Comparator<CharSequence>, Serializ
                     }
                 }
             }
+*/
             i++;
         }
         return o1Length - o2Length;

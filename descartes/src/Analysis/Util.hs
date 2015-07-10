@@ -280,6 +280,8 @@ instance Renamable MethodInvocation where
         MethodCall name@(Name [Ident "assume"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "nondet"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Double",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
+        MethodCall name@(Name [Ident "Character",Ident "toUpperCase"]) args -> MethodCall name $ map (rename idx) args
+        MethodCall name@(Name [Ident "Character",Ident "toLowerCase"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Int",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name args -> MethodCall (rename idx name) $ map (rename idx) args
@@ -392,12 +394,13 @@ trans ((BlockStmt (IfThenElse _cond t@(StmtBlock (Block _then)) _else)):r) =
 -- simple weakest pre-condition
 wp :: Stmt -> Exp -> Exp
 wp stm phi = case stm of 
-    StmtBlock (Block bstm) -> foldl (\phi' (BlockStmt stm) -> wp stm phi') phi bstm
+    StmtBlock (Block bstm) -> foldr (\(BlockStmt stm) phi' -> wp stm phi') phi bstm
     ExpStmt expr -> wpExpr expr phi
     _ -> error $ "wp:" ++ show stm ++ " not supported"
 
 wpExpr :: Exp -> Exp -> Exp
 wpExpr (Assign (NameLhs name) EqualA rhs) phi = replace name rhs phi
+wpExpr (MethodInv (MethodCall (Name [Ident "assume"]) rhs)) phi = Lit $ Boolean $ True
 wpExpr expr phi = error $ "wpExpr: " ++ show expr ++ " not supported"
 
 replace :: Name -> Exp -> Exp -> Exp
@@ -496,11 +499,11 @@ containsBreak stm = case stm of
     StmtBlock (Block bstm) -> any containsBreak' bstm
     IfThen cond _then -> 
         if containsBreak _then
-        then error "containsBreak in nested conditional"
+        then error "containsBreak in nested conditional: can't apply the transform rule!"
         else False
     IfThenElse cond _then _else -> 
-        if containsBreak _then || containsBreak _else
-        then error "containsBreak in nested conditional"
+        if containsBreak _then && containsBreak _else
+        then error "containsBreak in nested conditional: can't apply the transform rule!"
         else False
     Break _ -> True
     Return _ -> True

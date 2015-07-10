@@ -75,7 +75,7 @@ processParam (FormalParam mods ty _ _) = processType ty
 
 verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)
 verify opt classMap _comps prop = do
-    let comps = map rewrite _comps
+    let comps = _comps -- map rewrite _comps
     (objSort, pars, res, fields) <- prelude classMap comps
     (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
     (fields', axioms) <- addAxioms objSort fields
@@ -610,6 +610,8 @@ processExp env@(objSort, pars, res, fields, ssamap) expr =
         _ -> error $  "processExpr: " ++ show expr
 
 processLit :: Literal -> SSAMap -> Z3 AST
+processLit (Boolean True) _ = mkTrue
+processLit (Boolean False) _ = mkFalse
 processLit (Int i) ssamap = mkIntNum i
 processLit Null ssamap = mkIntNum 0 -- case M.lookup (Ident "null") ssamap of
 --    Nothing -> error "processLit: null not found"
@@ -623,8 +625,11 @@ processName env@(objSort, pars, res, fields, ssamap) (Name [obj]) [] = do
             Nothing -> error $ "Can't find " ++ show obj
             Just (ast,_,_) -> return ast
         Just ast -> return ast
-processName env@(objSort, pars, res, fields, ssamap) (Name [Ident "nondet"]) args = do
-    let fn = safeLookup ("processName: nondet")  (Ident "nondet") fields
+processName env@(objSort, pars, res, fields, ssamap) (Name [ident]) args = do
+    let fn = safeLookup ("processName: declared func")  ident fields
+    mkApp fn args
+processName env@(objSort, pars, res, fields, ssamap) (Name [Ident "Character",fnName]) args = do
+    let fn = safeLookup ("processName: Field" ++ show fnName)  fnName fields
     mkApp fn args
 processName env@(objSort, pars, res, fields, ssamap) (Name [Ident "Double",Ident "compare"]) args = do
     let fnName = Ident "compareDouble"

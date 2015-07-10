@@ -15,12 +15,19 @@ import Analysis.Properties
 addAxioms :: Sort -> Fields -> Z3 (Fields, AST)
 addAxioms objSort fields = do
     iSort <- mkIntSort
+    toLowerCase <- mkFreshFuncDecl "toLowerCase" [iSort] iSort
+    toUpperCase <- mkFreshFuncDecl "toUpperCase" [iSort] iSort
     nondet <- mkFreshFuncDecl "nondet" [iSort] iSort
     fnDouble <- mkFreshFuncDecl "compareDouble" [iSort, iSort] iSort
     fnInt <- mkFreshFuncDecl "compareInt" [iSort, iSort] iSort
 --    fnStr <- mkFreshFuncDecl "compareIgnoreCaseString" [objSort, objSort] iSort
     fnStr <- mkFreshFuncDecl "compareIgnoreCaseString" [iSort, iSort] iSort
-    let fields' = M.insert (Ident "nondet") nondet $ M.insert (Ident "compareDouble") fnDouble $ M.insert (Ident "compareInt") fnInt $ M.insert (Ident "compareIgnoreCaseString") fnStr fields
+    let fields' = M.insert (Ident "toLowerCase") toLowerCase $ 
+                  M.insert (Ident "toUpperCase") toUpperCase $
+                  M.insert (Ident "nondet") nondet $ 
+                  M.insert (Ident "compareDouble") fnDouble $ 
+                  M.insert (Ident "compareInt") fnInt $ 
+                  M.insert (Ident "compareIgnoreCaseString") fnStr fields
     -- add prop1 axiom for Double.compare
     p1AxiomDouble <- genP1Axiom iSort fnDouble
     -- add prop1 axiom for Int.compare
