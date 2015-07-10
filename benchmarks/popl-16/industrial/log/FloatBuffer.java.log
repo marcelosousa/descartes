@@ -2,124 +2,20 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.275s
-user	0m0.270s
-sys	0m0.004s
+real	0m0.168s
+user	0m0.167s
+sys	0m0.002s
 Property 2
 descartes -p=2 -m=0: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
-res3!11 -> 0
-otherFloat22!468 -> (- 1)
-compareRemaining31 -> 0
-otherFloat12!149 -> 0
-thisFloat22!467 -> 0
-i11!1075 -> 0
-i31!1073 -> 0
-otherPos31 -> 13
-compareRemaining11 -> (- 1)
-o21!4 -> FloatBuffer!val!2
-i21!1074 -> 0
-o22!6 -> FloatBuffer!val!1
-res1!9 -> 1
-thisPos21 -> 8
-otherPos21 -> 13
-o23!8 -> FloatBuffer!val!1
-compareRemaining21 -> (- 1)
-i31 -> 0
-o13!7 -> FloatBuffer!val!0
-o11!3 -> FloatBuffer!val!0
-res2!10 -> 1
-otherPos11 -> 8
-thisFloat12!148 -> 1
-thisPos31 -> 12
-thisPos11 -> 12
-o12!5 -> FloatBuffer!val!2
-i11 -> 0
-i21 -> 0
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-get!0 -> {
-  FloatBuffer!val!2 8 -> 0
-  FloatBuffer!val!1 13 -> (- 1)
-  else -> 1
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-position!1 -> {
-  FloatBuffer!val!0 -> 12
-  FloatBuffer!val!1 -> 13
-  else -> 8
-}
-remaining!2 -> {
-  FloatBuffer!val!2 -> (- 1)
-  else -> 0
-}
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
 
-
-real	0m1.039s
-user	0m1.026s
-sys	0m0.012s
+real	0m0.353s
+user	0m0.345s
+sys	0m0.008s
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!11 -> (- 1)
-compareRemaining31 -> (- 1)
-otherFloat32!1194 -> 0
-thisFloat22!571 -> 1
-otherPos31 -> 11
-compareRemaining11 -> 0
-o21!4 -> FloatBuffer!val!1
-o22!6 -> FloatBuffer!val!2
-i31!1264 -> 0
-res1!9 -> 0
-thisPos21 -> 6
-otherPos21 -> 11
-o23!8 -> FloatBuffer!val!2
-compareRemaining21 -> (- 1)
-i31 -> 0
-o13!7 -> FloatBuffer!val!1
-i11!1266 -> 0
-i21!1265 -> 0
-thisFloat32!1193 -> (- 1)
-o11!3 -> FloatBuffer!val!0
-res2!10 -> 1
-otherPos11 -> 10
-thisPos31 -> 10
-thisPos11 -> 6
-o12!5 -> FloatBuffer!val!0
-i11 -> 0
-otherFloat22!572 -> 0
-i21 -> 0
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-get!0 -> {
-  FloatBuffer!val!1 10 -> (- 1)
-  FloatBuffer!val!2 11 -> 0
-  else -> 1
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-position!1 -> {
-  FloatBuffer!val!1 -> 10
-  FloatBuffer!val!2 -> 11
-  else -> 6
-}
-remaining!2 -> {
-  FloatBuffer!val!2 -> (- 1)
-  else -> 0
-}
+Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-
-real	0m0.551s
-user	0m0.547s
+real	0m0.345s
+user	0m0.340s
 sys	0m0.004s

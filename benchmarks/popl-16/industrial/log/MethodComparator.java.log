@@ -41,9 +41,9 @@ getName!2 -> {
 }
 
 
-real	0m0.472s
-user	0m0.463s
-sys	0m0.008s
+real	0m0.495s
+user	0m0.478s
+sys	0m0.016s
 Property 2
 descartes -p=2 -m=0: 
 Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
@@ -109,13 +109,13 @@ k!4258 -> {
 }
 
 
-real	0m1.744s
-user	0m1.723s
+real	0m1.731s
+user	0m1.711s
 sys	0m0.020s
 Property 3
 descartes -p=3 -m=0: 
 Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.076s
-user	0m0.061s
-sys	0m0.017s
+real	0m0.074s
+user	0m0.062s
+sys	0m0.012s
