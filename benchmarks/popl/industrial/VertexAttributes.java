@@ -161,10 +161,10 @@ public final class VertexAttributes implements Iterable<VertexAttribute>, Compar
 	}
 
 	@Override
-	public int compareTo (VertexAttributes o) {
-		if (attributes.length != o.attributes.length) return attributes.length - o.attributes.length;
-		final long m1 = getMask();
-		final long m2 = o.getMask();
+	public int compare(VertexAttributes o1, VertexAttributes o2) {
+		if (o1.attributesLength != o2.attributesLength) return o1.attributesLength - o2.attributesLength;
+		final long m1 = o1.getMask();
+		final long m2 = o2.getMask();
 		if (m1 != m2) return m1 < m2 ? -1 : 1;
 		for (int i = attributes.length - 1; i >= 0; --i) {
 			final VertexAttribute va0 = attributes[i];
