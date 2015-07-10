@@ -553,12 +553,7 @@ processType :: Type -> Z3 Sort
 processType (PrimType ty) = do 
     case ty of
         BooleanT -> mkBoolSort
-        IntT -> mkIntSort
-        CharT -> mkIntSort
-        DoubleT -> mkIntSort
-        FloatT -> mkIntSort
-        LongT -> mkIntSort
-        _ -> error $ "processType: " ++ show ty ++ " not supported"
+        _ -> mkIntSort -- error $ "processType: " ++ show ty ++ " not supported"
 processType (RefType (ClassRefType (ClassType [(Ident name,[])]))) = do
     sym <- mkStringSymbol name
     mkUninterpretedSort sym

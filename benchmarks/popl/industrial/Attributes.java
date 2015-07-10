@@ -35,7 +35,7 @@ public class Attributes implements Comparator<Attributes> {
 			return o1.mask < o2.mask ? -1 : 1;
 //		sort();
 //		other.sort();
-        assume(o1.attributesSize == o2.attributesSize);
+//        assume(o1.attributesSize == o2.attributesSize);
         int i = 0;
         int c;
         while (i < o1.attributesSize) {

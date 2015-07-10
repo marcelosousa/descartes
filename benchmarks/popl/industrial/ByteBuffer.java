@@ -33,7 +33,10 @@ import com.google.gwt.corp.compatibility.StringToByteBuffer;
  * @since Android 1.0 */
 public abstract class ByteBuffer extends Buffer implements Comparator<ByteBuffer>, StringToByteBuffer {
 
-
+    int remaining();
+    int position;
+    byte get(int pos);
+    
 	/** Compares the remaining bytes of this buffer to another byte buffer's remaining bytes.
 	 * 
 	 * @param otherBuffer another byte buffer.

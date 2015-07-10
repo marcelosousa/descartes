@@ -35,7 +35,7 @@ public class UTF8SortedAsUnicodeComparator implements Comparator<BytesReference>
     @Override
     public int compare(BytesReference o1, BytesReference o2) {
         if (o1.hasArray() && o2.hasArray()) {
-/*            //final byte[] aBytes = a.array();
+            //final byte[] aBytes = a.array();
             int aUpto = o1.arrayOffset();
             //final byte[] bBytes = b.array();
             int bUpto = o2.arrayOffset();
@@ -47,8 +47,8 @@ public class UTF8SortedAsUnicodeComparator implements Comparator<BytesReference>
             int diff;
 
             while (aUpto < aStop) {
-                aByte = nondet(o1.get(aUpto)); //aBytes[aUpto++] & 0xff;
-                bByte = nondet(o2.get(bUpto)); //bBytes[bUpto++] & 0xff;
+                aByte = nondet(o1.get(aUpto)); 
+                bByte = nondet(o2.get(bUpto)); 
                                                 
                 diff = aByte - bByte;
                 if (diff != 0) {
@@ -58,8 +58,7 @@ public class UTF8SortedAsUnicodeComparator implements Comparator<BytesReference>
                 aUpto++;
                 bUpto++;
             }
-
-            // One is a prefix of the other, or, they are equal:*/
+            // One is a prefix of the other, or, they are equal:
             return o1.length - o2.length;
         } else {
             //final byte[] aBytes = a.array();
@@ -73,8 +72,8 @@ public class UTF8SortedAsUnicodeComparator implements Comparator<BytesReference>
             int diff;
             
             while (aUpto < aStop) {
-                aByte = nondet(o1.get(aUpto)); //aBytes[aUpto++] & 0xff;                
-                bByte = nondet(o2.get(bUpto)); //bBytes[bUpto++] & 0xff;
+                aByte = nondet(o1.get(aUpto));                 
+                bByte = nondet(o2.get(bUpto)); 
                 
                 diff = aByte - bByte;
                 if (diff != 0) {

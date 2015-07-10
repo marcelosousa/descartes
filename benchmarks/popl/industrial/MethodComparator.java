@@ -63,13 +63,13 @@ public class MethodComparator implements Comparator<Method> {
 			i++;
 		}
 
-        return parameterTypes1Length - parameterTypes2Length;
-/*		if (i < (parameterTypes1Length -1)) {
+//        return parameterTypes1Length - parameterTypes2Length;
+		if (i < (parameterTypes1Length -1)) {
 			return -1;
 		}
 		else {
 			return 1;
-		}*/
+		}
 	}
 
 }

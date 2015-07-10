@@ -73,14 +73,14 @@ public class NodeSortRecord implements Comparator<NodeSortRecord> {
 //	        if ((o1.get(level) == 0) && (cmp != 0)) {
 //                return cmp; //o1.sortOrder(level) == 1 ? 0 - cmp : cmp;	    
 //	        }
-	        /*
+	        
 	        our = o1.stringValue(level);
 		    their = o2.stringValue(level);
 		    cmp = our - their; //our.compareTo(their);
 		        
 	        if ((o1.get(level) != 0) && (cmp != 0)) {
                 return o1.sortOrder(level) == 1 ? 0 - cmp : cmp;	    
-	        }*/	
+	        }
 	    
 	        // Return inverse compare value if inverse sort order
 	        level++;
