@@ -23,44 +23,37 @@ import java.util.List;
  */
 public class ColumnsComparator implements Comparator<Object> {
 
-	public ColumnsComparator(List<String> columnNames) {
-		this(columnNames.toArray(new String[columnNames.size()]));
-	}
-
-	public ColumnsComparator(String columnName) {
-		this(new String[] {columnName});
-	}
-
-	public ColumnsComparator(String[] columnNames) {
-		_columnNames = columnNames;
-	}
-
+    int get(int i);
+    
 	@Override
-	public int compare(Object obj1, Object obj2) {
-		Object[] column1 = (Object[])obj1;
-		Object[] column2 = (Object[])obj2;
+	public int compare(Object o1, Object o2) {
+		//Object[] column1 = (Object[])obj1;
+		//Object[] column2 = (Object[])obj2;
 
-		String columnName1 = (String)column1[0];
-		String columnName2 = (String)column2[0];
+		int columnName1 = o1.get(0); //(String)column1[0];
+		int columnName2 = o2.get(0); // (String)column2[0];
 
 		int x = -1;
-
-		for (int i = 0; i < _columnNames.length; i++) {
-			if (_columnNames[i].equals(columnName1)) {
+		
+        int _columnNamesLength = nondet(-1);
+        int i = 0;
+        while (i < _columnNamesLength) {	
+			if (nondet(i) == columnName1) {
 				x = i;
-
 				break;
 			}
+			i++;
 		}
 
 		int y = -1;
-
-		for (int i = 0; i < _columnNames.length; i++) {
-			if (_columnNames[i].equals(columnName2)) {
+        i = 0;
+        while (i < _columnNamesLength) {
+			if (nondet(i) == columnName2) {
 				y = i;
 
 				break;
 			}
+			i++;
 		}
 
 		if ((x == -1) && (y > -1)) {
@@ -80,7 +73,4 @@ public class ColumnsComparator implements Comparator<Object> {
 
 		return 0;
 	}
-
-	private final String[] _columnNames;
-
 }

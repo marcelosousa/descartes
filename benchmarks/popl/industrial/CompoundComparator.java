@@ -169,8 +169,11 @@ public class CompoundComparator<T> implements Comparator<T>, Serializable {
 	@Override
 	@SuppressWarnings("unchecked")
 	public int compare(T o1, T o2) {
-		Assert.state(this.comparators.size() > 0,
-				"No sort definitions have been added to this CompoundComparator to compare");
+	//	Assert.state(this.comparators.size() > 0,
+	//			"No sort definitions have been added to this CompoundComparator to compare");
+	    int compartor
+	    int i = 0;
+	    while (i < comparatorSize) {
 		for (InvertibleComparator comparator : this.comparators) {
 			int result = comparator.compare(o1, o2);
 			if (result != 0) {

@@ -374,7 +374,10 @@ trans [BlockStmt (IfThenElse _cond (StmtBlock _then) _else)] =
         _else' = case _else of
             Break _ -> []
             Return _ -> [BlockStmt _else]
-            StmtBlock (Block bstm) -> bstm -- need to change this: remove break statement if exists
+            StmtBlock (Block bstm) -> 
+                case last bstm of
+                    BlockStmt (Break _) -> init bstm
+                    _ -> bstm -- need to change this: remove break statement if exists
         rest = Block $ (BlockStmt ass):_else'
     in (_cond, _then, rest)
 trans ((BlockStmt (IfThenElse _cond t@(StmtBlock (Block _then)) _else)):r) = 
