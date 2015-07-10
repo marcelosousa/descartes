@@ -1,0 +1,197 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21 -> 0
+property121 -> 12
+o21!2 -> PropertyComparator!val!1
+propertyName12!173 -> 6
+o22!4 -> PropertyComparator!val!0
+o11!1 -> PropertyComparator!val!0
+res1!5 -> (- 1)
+i21!967 -> 0
+_properyNamesSize21 -> 2
+res2!6 -> (- 1)
+o12!3 -> PropertyComparator!val!1
+propertyName11 -> 0
+propertyName22!773 -> 10
+property211 -> 8
+propertyName21 -> 0
+property111 -> 7
+i11!968 -> 0
+_caseSensitive21 -> 0
+_ascending21 -> 3
+_properyNamesSize11 -> 2
+property221 -> 13
+i11 -> 1
+_caseSensitive11 -> 0
+_ascending11 -> 3
+get!0 -> {
+  PropertyComparator!val!1 10 -> 11
+  else -> 0
+}
+nondet!9!1165 -> {
+  (- 2) -> 0
+  (- 1) -> 2
+  1 -> 6
+  0 -> 10
+  else -> 3
+}
+k!1161 -> {
+  8 -> 8
+  12 -> 12
+  7 -> 7
+  else -> 13
+}
+compareInt!11 -> {
+  (compareInt!11!1164 (k!1161 (:var 0)) (k!1161 (:var 1)))
+}
+compareDouble!10 -> {
+  0
+}
+compareInt!11!1164 -> {
+  7 8 -> 1
+  12 13 -> 1
+  7 7 -> 0
+  8 13 -> 1
+  7 12 -> 1
+  7 13 -> 1
+  8 12 -> 1
+  12 12 -> 0
+  8 8 -> 0
+  13 13 -> 0
+  else -> (- 1)
+}
+k!1163 -> {
+  (let ((a!1 (ite (>= (:var 0) (- 1))
+                  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+                  (- 2))))
+    (ite (>= (:var 0) (- 2)) a!1 (- 3)))
+}
+compareIgnoreCaseString!12 -> {
+  0
+}
+nondet!9 -> {
+  (nondet!9!1165 (k!1163 (:var 0)))
+}
+
+
+real	0m0.775s
+user	0m0.770s
+sys	0m0.004s
+Property 2
+descartes -p=2 -m=0: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+_ascending11 -> 2
+propertyName31 -> 0
+_properyNamesSize31 -> 4099
+i11!1971 -> 0
+property121 -> 9
+o13!5 -> PropertyComparator!val!1
+o21!2 -> PropertyComparator!val!2
+property231 -> 14
+o22!4 -> PropertyComparator!val!0
+o11!1 -> PropertyComparator!val!1
+i21!1970 -> 0
+o12!3 -> PropertyComparator!val!2
+propertyName11 -> 0
+res1!7 -> 1
+propertyName21 -> 0
+property111 -> 6
+_ascending31 -> 2
+_caseSensitive21 -> 0
+_ascending21 -> 2
+_properyNamesSize11 -> 4099
+property221 -> 10
+_caseSensitive11 -> 0
+propertyName32!1701 -> 12
+i31 -> 4098
+i31!1969 -> 0
+res2!8 -> 1
+_caseSensitive31 -> 0
+_properyNamesSize21 -> 4099
+o23!6 -> PropertyComparator!val!0
+res3!9 -> (- 1)
+property211 -> 7
+propertyName22!773 -> 12
+property131 -> 13
+propertyName12!177 -> 4
+i11 -> 0
+i21 -> 4098
+compareDouble!13 -> {
+  0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+get!0 -> {
+  PropertyComparator!val!2 17 -> 18
+  PropertyComparator!val!0 17 -> 19
+  PropertyComparator!val!2 4099 -> 21
+  PropertyComparator!val!0 4099 -> 22
+  PropertyComparator!val!0 4 -> 27
+  else -> 0
+}
+k!2239 -> {
+  (let ((a!1 (ite (>= (:var 0) 0)
+                  (ite (>= (:var 0) 4097) (ite (>= (:var 0) 4098) 4098 4097) 0)
+                  (- 1))))
+    (ite (>= (:var 0) (- 2)) (ite (>= (:var 0) (- 1)) a!1 (- 2)) (- 3)))
+}
+nondet!12!2241 -> {
+  (- 2) -> 0
+  (- 1) -> 4099
+  4098 -> 12
+  4097 -> 17
+  0 -> 4
+  else -> 2
+}
+compareInt!14!2240 -> {
+  6 7 -> (- 1)
+  9 10 -> (- 1)
+  14 13 -> (- 1)
+  7 7 -> 0
+  14 10 -> (- 1)
+  9 9 -> 0
+  14 9 -> (- 1)
+  9 7 -> (- 1)
+  10 10 -> 0
+  13 10 -> (- 1)
+  13 9 -> (- 1)
+  9 6 -> (- 1)
+  14 7 -> (- 1)
+  13 7 -> (- 1)
+  13 6 -> (- 1)
+  13 13 -> 0
+  14 6 -> (- 1)
+  10 7 -> (- 1)
+  14 14 -> 0
+  10 6 -> (- 1)
+  6 6 -> 0
+  else -> 1
+}
+compareInt!14 -> {
+  (compareInt!14!2240 (k!2237 (:var 0)) (k!2237 (:var 1)))
+}
+nondet!12 -> {
+  (nondet!12!2241 (k!2239 (:var 0)))
+}
+k!2237 -> {
+  10 -> 10
+  7 -> 7
+  13 -> 13
+  9 -> 9
+  6 -> 6
+  else -> 14
+}
+
+
+real	0m2.258s
+user	0m2.242s
+sys	0m0.016s
+Property 3
+descartes -p=3 -m=0: 
+Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m0.076s
+user	0m0.071s
+sys	0m0.006s

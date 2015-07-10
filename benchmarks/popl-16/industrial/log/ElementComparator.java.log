@@ -1,0 +1,21 @@
+Property 1
+descartes -p=1 -m=0: 
+descartes: trans
+
+real	0m0.012s
+user	0m0.008s
+sys	0m0.004s
+Property 2
+descartes -p=2 -m=0: 
+descartes: trans
+
+real	0m0.014s
+user	0m0.007s
+sys	0m0.007s
+Property 3
+descartes -p=3 -m=0: 
+descartes: trans
+
+real	0m0.013s
+user	0m0.004s
+sys	0m0.008s

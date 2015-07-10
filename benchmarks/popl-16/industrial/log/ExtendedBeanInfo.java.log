@@ -1,0 +1,21 @@
+Property 1
+descartes -p=1 -m=0: 
+descartes: Prelude.head: empty list
+
+real	0m0.049s
+user	0m0.034s
+sys	0m0.004s
+Property 2
+descartes -p=2 -m=0: 
+descartes: Prelude.head: empty list
+
+real	0m0.041s
+user	0m0.036s
+sys	0m0.004s
+Property 3
+descartes -p=3 -m=0: 
+descartes: Prelude.head: empty list
+
+real	0m0.040s
+user	0m0.040s
+sys	0m0.000s

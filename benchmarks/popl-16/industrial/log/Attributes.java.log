@@ -1,0 +1,118 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21!1211 -> 0
+i21 -> 0
+o21!4 -> Attributes!val!1
+res1!7 -> 1
+o22!6 -> Attributes!val!0
+c12!348 -> 1
+res2!8 -> 0
+o12!5 -> Attributes!val!1
+i11 -> 0
+o11!3 -> Attributes!val!0
+i11!1212 -> 0
+k!1279 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 0
+  else -> 1
+}
+attributesGet!1 -> {
+  (attributesGet!1!1280 (:var 0) (k!1279 (:var 1)))
+}
+compareInt!13 -> {
+  (compareInt!13!1281 (k!1277 (:var 0)) (k!1277 (:var 1)))
+}
+compareDouble!12 -> {
+  0
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+attributesGet!1!1280 -> {
+  Attributes!val!1 0 -> 4
+  else -> 3
+}
+mask!2 -> {
+  6
+}
+compareInt!13!1281 -> {
+  3 4 -> 1
+  4 3 -> (- 1)
+  else -> 0
+}
+k!1277 -> {
+  3 -> 3
+  else -> 4
+}
+
+
+real	0m0.474s
+user	0m0.473s
+sys	0m0.000s
+Property 2
+descartes -p=2 -m=0: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m5.592s
+user	0m5.575s
+sys	0m0.016s
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> Attributes!val!0
+i11!2802 -> 0
+i31 -> 0
+o13!7 -> Attributes!val!1
+i31!2801 -> 0
+res3!11 -> (- 1)
+o11!3 -> Attributes!val!0
+res2!10 -> 0
+o21!4 -> Attributes!val!1
+c32!2703 -> (- 1)
+o22!6 -> Attributes!val!0
+o12!5 -> Attributes!val!0
+res1!9 -> 0
+i11 -> 0
+compareInt!16 -> {
+  (compareInt!16!2870 (k!2867 (:var 0)) (k!2867 (:var 1)))
+}
+compareDouble!15 -> {
+  0
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 1
+  else -> 0
+}
+attributesGet!1 -> {
+  (attributesGet!1!2871 (:var 0) (k!2869 (:var 1)))
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+attributesGet!1!2871 -> {
+  Attributes!val!0 0 -> 7
+  else -> 6
+}
+k!2867 -> {
+  6 -> 6
+  else -> 7
+}
+mask!2 -> {
+  3
+}
+compareInt!16!2870 -> {
+  6 7 -> (- 1)
+  7 6 -> 1
+  else -> 0
+}
+k!2869 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+
+
+real	0m5.118s
+user	0m5.098s
+sys	0m0.020s
