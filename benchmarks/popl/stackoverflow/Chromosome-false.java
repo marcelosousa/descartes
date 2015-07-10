@@ -12,11 +12,11 @@ public class Chromosome implements Comparator<Chromosome>{
       if(o2.isNull == 0)
           return(1);
       int comp = 0;
-      comp += Double.compare(o1.getScore(1),o2.getScore(1));
-      comp += Double.compare(o1.getScore(2),o2.getScore(2));
-      comp += Double.compare(o1.getScore(3),o2.getScore(3));
-      comp += Double.compare(o1.getScore(5),o2.getScore(5));
-      comp += Double.compare(o1.getScore(7),o2.getScore(7));
+      comp += o1.getScore(1) == o2.getScore(1) ? 0 : o1.getScore(1) > o2.getScore(1) ? 1 : -1; //Double.compare(o1.getScore(1),o2.getScore(1));
+      comp += o1.getScore(2) == o2.getScore(2) ? 0 : o1.getScore(2) > o2.getScore(2) ? 1 : -1; //Double.compare(o1.getScore(2),o2.getScore(2));
+      comp += o1.getScore(3) == o2.getScore(3) ? 0 : o1.getScore(3) > o2.getScore(3) ? 1 : -1; //Double.compare(o1.getScore(3),o2.getScore(3));
+      comp += o1.getScore(5) == o2.getScore(5) ? 0 : o1.getScore(5) > o2.getScore(5) ? 1 : -1; //Double.compare(o1.getScore(5),o2.getScore(5));
+      comp += o1.getScore(7) == o2.getScore(7) ? 0 : o1.getScore(7) > o2.getScore(7) ? 1 : -1; //Double.compare(o1.getScore(7),o2.getScore(7));
       if(comp == 0)
           return(0);
       if(comp > 0)
