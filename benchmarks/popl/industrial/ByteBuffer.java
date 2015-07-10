@@ -41,7 +41,7 @@ public abstract class ByteBuffer extends Buffer implements Comparator<ByteBuffer
 	 *         greater than {@code other}.
 	 * @exception ClassCastException if {@code other} is not a byte buffer.
 	 * @since Android 1.0 */
-	public int compareTo (ByteBuffer o1, ByteBuffer o2) {
+	public int compare (ByteBuffer o1, ByteBuffer o2) {
 		int compareRemaining = (o1.remaining() < o2.remaining()) ? o1.remaining() : o2.remaining();
 		int thisPos = o1.position;
 		int otherPos = o2.position;
