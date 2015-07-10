@@ -493,7 +493,7 @@ guessInvariant (objSort, pars, res, fields, ssamap) pid cond pre = do
             -- exists i. pre
             iApp <- toApp iAST
             ex1 <- mkExistsConst [] [iApp] pre
-            -- forall j. 0 <= j < i => cond
+            -- forall j. i_0 <= j < i => cond
             gen <- generalizeCond (objSort, pars, res, fields, ssamap) i iAST cond pid
             case gen of
                 Nothing -> error "guessInvariant procedure can't compute valid invariant" -- mkTrue

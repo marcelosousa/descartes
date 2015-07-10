@@ -30,89 +30,39 @@ import org.apache.commons.beanutils.PropertyUtils;
  */
 public class PropertyComparator implements Comparator<Object> {
 
-	public PropertyComparator(String propertyName) {
-		this(new String[] {propertyName}, true, false);
-	}
-
-	public PropertyComparator(
-		String propertyName, boolean ascending, boolean caseSensitive) {
-
-		this(new String[] {propertyName}, ascending, caseSensitive);
-	}
-
-	public PropertyComparator(String[] propertyNames) {
-		this(propertyNames, true, false);
-	}
-
-	public PropertyComparator(
-		String[] propertyNames, boolean ascending, boolean caseSensitive) {
-
-		_propertyNames = propertyNames;
-		_ascending = ascending;
-		_caseSensitive = caseSensitive;
-	}
+    int get(int name);
 
 	@Override
-	public int compare(Object obj1, Object obj2) {
-		try {
-			for (String propertyName : _propertyNames) {
-				Object property1 = PropertyUtils.getProperty(
-					obj1, propertyName);
-				Object property2 = PropertyUtils.getProperty(
-					obj2, propertyName);
-
-				if (!_ascending) {
-					Object temp = property1;
-
-					property1 = property2;
-					property2 = temp;
-				}
-
-				if (property1 instanceof String) {
-					int value = 0;
-
-					if (_caseSensitive) {
-						value = property1.toString().compareTo(
-							property2.toString());
-					}
-					else {
-						value = property1.toString().compareToIgnoreCase(
-							property2.toString());
-					}
-
-					if (value != 0) {
-						return value;
-					}
-				}
-
-				if (property1 instanceof Comparable<?>) {
-					int value = ((Comparable<Object>)property1).compareTo(
-						property2);
-
-					if (value != 0) {
-						return value;
-					}
-				}
-			}
-		}
-		catch (IllegalAccessException iae) {
-			_log.error(iae.getMessage());
-		}
-		catch (InvocationTargetException ite) {
-			_log.error(ite.getMessage());
-		}
-		catch (NoSuchMethodException nsme) {
-			_log.error(nsme.getMessage());
-		}
-
+	public int compare(Object o1, Object o2) {
+	  int propertyName = 0;
+	  int _ascending = nondet(-3);
+	  int _caseSensitive = nondet(-2);
+	  int _properyNamesSize = nondet(-1);
+	  assume(_properyNamesSize >= 0);
+	  
+	  int property1;
+	  int property2;
+	  //int value;
+	  int i=0;
+	  
+	  while (i < _properyNamesSize) {
+	    propertyName = nondet(i);
+	    
+	    //property1 = (_ascending == 0) ? o1.get(propertyName): o2.get(propertyName);
+	    //property2 = (_ascending == 0) ? o2.get(propertyName): o1.get(propertyName);
+      
+        //value = Int.compare(property1, property2);
+        if ((_ascending == 0) && (o1.get(propertyName) == 0) && (_caseSensitive == 0) && (Int.compare(property1, property2) != 0)) {
+            return Int.compare(property1, property2);            
+        }
+        
+        if ((_ascending != 0) && (o2.get(propertyName) == 0) && (_caseSensitive == 0) && (Int.compare(property2, property1) != 0)) {
+            return Int.compare(property2, property1);            
+        }        
+	  	
+      	i++; 	
+	  }
 		return -1;
 	}
-
-	private static final Log _log = LogFactoryUtil.getLog(
-		PropertyComparator.class);
-
-	private final boolean _ascending;
-	private final boolean _caseSensitive;
-	private final String[] _propertyNames;
 
 }

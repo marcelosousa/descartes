@@ -25,46 +25,51 @@ import java.util.Comparator;
  */
 public class MethodComparator implements Comparator<Method> {
 
+    int getName();
+    int getParameterTypesLength();
+    int getParameterTypeName(int index);
+    
 	@Override
-	public int compare(Method method1, Method method2) {
-		String name1 = method1.getName();
-		String name2 = method2.getName();
+	public int compare(Method o1, Method o2) {
+		int name1 = o1.getName();
+		int name2 = o2.getName();
 
-		int value = name1.compareTo(name2);
+		int value = name1 - name2;
 
 		if (value != 0) {
 			return value;
 		}
 
-		Class<?>[] parameterTypes1 = method1.getParameterTypes();
-		Class<?>[] parameterTypes2 = method2.getParameterTypes();
+		int parameterTypes1Length = o1.getParameterTypesLength();
+		int parameterTypes2Length = o2.getParameterTypesLength();
+        assume(parameterTypes1Length > 0);
+        assume(parameterTypes2Length > 0);
+		int i = 0;
+        int parameterTypeName1;
+        int parameterTypeName2;
+        
+		while ((i < parameterTypes1Length) &&
+			   (i < parameterTypes2Length)) {
 
-		int index = 0;
+			parameterTypeName1 = o1.getParameterTypeName(i);
+			parameterTypeName2 = o2.getParameterTypeName(i);
 
-		while ((index < parameterTypes1.length) &&
-			   (index < parameterTypes2.length)) {
-
-			Class<?> parameterType1 = parameterTypes1[index];
-			Class<?> parameterType2 = parameterTypes2[index];
-
-			String parameterTypeName1 = parameterType1.getName();
-			String parameterTypeName2 = parameterType2.getName();
-
-			value = parameterTypeName1.compareTo(parameterTypeName2);
+			value = parameterTypeName1 - parameterTypeName2;
 
 			if (value != 0) {
 				return value;
 			}
 
-			index++;
+			i++;
 		}
 
-		if (index < (parameterTypes1.length -1)) {
+        return parameterTypes1Length - parameterTypes2Length;
+/*		if (i < (parameterTypes1Length -1)) {
 			return -1;
 		}
 		else {
 			return 1;
-		}
+		}*/
 	}
 
 }
