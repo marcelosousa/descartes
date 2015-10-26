@@ -534,4 +534,3 @@ replaceExp i j phi =
         let args' = map (replaceExp i j) args
         in MethodInv $ MethodCall _name args'
     _ -> error $ "replace: " ++ show phi ++ " not supported"
-
