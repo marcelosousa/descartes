@@ -178,7 +178,8 @@ instance HasComparators InterfaceDecl where
   getComparators (InterfaceDecl _ _ _ _ (InterfaceBody body)) = foldr (\d r -> getComparators d ++ r) [] body
   
 compNames :: [String]
-compNames = ["compare","compareTo"]
+--compNames = ["compare","compareTo"]
+compNames = ["equals"]
 
 analyse :: MethodBody -> Statistics
 analyse (MethodBody mbody) = 

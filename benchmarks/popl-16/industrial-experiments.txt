@@ -1,0 +1,54 @@
+Attributes: DONE (IS BUGGY)
+CaseIgnoringComparator: DONE (Start with this one: extend the transform rule for the weakest precondition to go through - more complicated than that, so re-wrote the code)
+Correction: DONE
+ColumnsComparator: DONE
+MethodComparator: DONE (IS BUGGY)
+MimeType: DONE
+IncludeInfo: DONE [DACAPO]
+NodeSort: DONE [DACAPO] (IS BUGGY)
+IntBuffer: DONE
+VertexAttributes: DONE; Need to change the invariant generalization since it's decreasing and now increasing
+ByteBuffer: DONE
+ShortBuffer: DONE
+FloatBuffer: DONE
+CharBuffer: DONE
+DoubleBuffer: Seems doable
+ChannelBuffers: DONE
+PropertyComparator: False positive?
+AsciiString: Needs a more complicated loop invariant template
+
+
+UTF8SortedAsUnicodeComparator: Can't make it work
+LegacyCell: Not sure what this is doing but possibly doable
+NaturalOrderStringComparator: Would be nice to support
+
+UNLIKELY TO MAKE IT WORK
+----
+ByteBufUtil: Seems doable but don't know I won't get a false positive
+ActivateComparator: Seems doable
+
+ElementComparator: (Nested loop - hard to do!)
+NOT WORKING
+----
+
+
+NOT COMPARATOR
+----
+ProducesRequestCondition: Not a real comparator
+PatternsRequestCondition: Not a real comparator
+CompositeRequestCondition: Not a real comparator
+DestinationPatternsMessageCondition: Not a real comparator
+CompoundComparator: Uses the ComparatorChain idiom; doesn't make much sense to verify at this current stage
+MessageListFragment: As the CompoundComparator uses the ComparatorChain idiom
+
+DONE : 
+----
+
+CaseIgnoringComparator: P1 (UNSAT - 0.464s), P2 (UNSAT - 2.089s), P3 (UNSAT - 0.935s)
+Correction: P1 (UNSAT - 0.554s), P2 (UNSAT - 23.273s), P3 (UNSAT - 5.586s)
+ColumnsComparator: P1 (UNSAT - 2.879s), P2 (UNSAT - 3.131s), P3 (UNSAT - 6.503s)
+
+
+
+TOTAL TIME
+2m17.635s
