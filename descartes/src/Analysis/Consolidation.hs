@@ -4,26 +4,26 @@
 -------------------------------------------------------------------------------
 module Analysis.Consolidation where
 
-import Z3.Monad
+import Analysis.Axioms
+import Analysis.Engine
+import Analysis.Invariant
+import Analysis.Properties
+import Analysis.Util
+import Analysis.Types
+
+import Control.Monad.State.Strict
 
 import Data.Map (Map)
 import Data.Maybe
-import qualified Data.Map as M
-import Control.Monad.State.Strict
 
-import Language.Java.Syntax
 import Language.Java.Pretty
-
-import Analysis.Types
-import Analysis.Util
-import Analysis.Properties
-import Analysis.Axioms
+import Language.Java.Syntax
 
 import System.IO.Unsafe
-import qualified Debug.Trace as T
+import Z3.Monad
 
-trace a b = b
---trace = T.trace
+import qualified Data.Map as M
+import qualified Debug.Trace as T
 
 verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)
 verify opt classMap _comps prop = do
@@ -226,8 +226,6 @@ analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,B
 --            let nssamap = foldl (\m (ident,ast, _) -> M.insert ident (ast, sort, 1) m) ssamap idAst
             analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post) ((pid, Block r1):rest)
         _ -> error "analyser: bstmt is not a BlockStmt"
-
-
 
 
     

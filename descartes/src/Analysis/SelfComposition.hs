@@ -4,22 +4,19 @@
 -------------------------------------------------------------------------------
 module Analysis.SelfComposition where
 
-import Z3.Monad
-
-import Data.Map (Map)
-import Data.Maybe
-import qualified Data.Map as M
-import Control.Monad.State.Strict
-
-import Language.Java.Syntax
-import Language.Java.Pretty
-
-import Analysis.Types
-import Analysis.Util
-import Analysis.Properties
 import Analysis.Axioms
 import Analysis.Engine
 import Analysis.Invariant
+import Analysis.Properties
+import Analysis.Util
+import Analysis.Types
+import Control.Monad.State.Strict
+import Data.Map (Map)
+import qualified Data.Map as M
+import Data.Maybe
+import Language.Java.Pretty
+import Language.Java.Syntax
+import Z3.Monad
 
 
 verifyWithSelf :: ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)

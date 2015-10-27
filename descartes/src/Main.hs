@@ -5,26 +5,21 @@
 -------------------------------------------------------------------------------
 module Main where
 
-import Data.Maybe 
-
-import Language.Java.Parser hiding (opt)
-import Language.Java.Syntax
-import Language.Java.Pretty hiding (opt)
-
-import System.Console.CmdArgs hiding (opt)
-import System.FilePath.Posix
---import System.FilePath.Find
-import System.Directory
-import qualified Debug.Trace as T
-
-import Analysis.Util
-import Analysis.Types
 import Analysis.Consolidation
 import Analysis.Properties
-
+import Analysis.SelfComposition
+import Analysis.Types
+import Analysis.Util
+import Data.Maybe
+import Language.Java.Parser hiding (opt)
+import Language.Java.Pretty hiding (opt)
+import Language.Java.Syntax
+import System.Console.CmdArgs hiding (opt)
+import System.Directory
+import System.FilePath.Posix
 import Z3.Monad
 
---trace a b = b
+import qualified Debug.Trace as T
 
 _program, _summary :: String
 _summary = unlines ["descartes - v0.1","Cartersian Hoare Logic Verifier.","Copyright 2015 @ Marcelo Sousa"]
