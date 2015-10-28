@@ -12,3 +12,4 @@ cabal-dev
 cabal.sandbox.config
 cabal.config
 dependencies/z3-4.0.0/dist/
+benchmarks/git_projects/

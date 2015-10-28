@@ -1,0 +1,590 @@
+WorkflowInstanceLinkWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WorkflowInstanceLinkModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "workflowInstanceLink",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WorkflowDefinitionLinkWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WorkflowDefinitionLinkModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "workflowDefinitionLink",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WikiPageWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WikiPageResourceWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WikiPageResourceModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "wikiPageResource",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WikiPageModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "wikiPage",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WikiNodeWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WikiNodeModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "wikiNode",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WebsiteWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WebsiteModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "website",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WebDAVPropsWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WebDAVPropsModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "webDAVProps",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+WallEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+WallEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "wallEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+VirtualHostWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+VirtualHostModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "virtualHost",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserTrackerWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserTrackerPathWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserTrackerPathModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userTrackerPath",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserTrackerModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userTracker",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserNotificationEventWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserNotificationEventModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userNotificationEvent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserNotificationDeliveryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserNotificationDeliveryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userNotificationDelivery",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "user",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserIdMapperWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserIdMapperModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userIdMapper",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserGroupWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserGroupRoleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserGroupRoleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userGroupRole",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "equals")]}
+UserGroupModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userGroup",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+UserGroupGroupRoleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+UserGroupGroupRoleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "userGroupGroupRole",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "equals")]}
+Uri.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "toString"]),N (Name [Ident "other",Ident "toString"]),I (Ident "equals")]}
+TrashVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+TrashVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "trashVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+TrashEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+TrashEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "trashEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+TopologySummary.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+TopologySummary.java: Statistics {nl = 66, conditionals = 28, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals"),I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_status"),N (Name [Ident "that",Ident "is_set_status"]),I (Ident "equals"),I (Ident "is_set_sched_status"),N (Name [Ident "that",Ident "is_set_sched_status"]),I (Ident "equals"),I (Ident "is_set_owner"),N (Name [Ident "that",Ident "is_set_owner"]),I (Ident "equals")]}
+TopologyInfo.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+TopologyInfo.java: Statistics {nl = 59, conditionals = 25, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals"),I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_executors"),N (Name [Ident "that",Ident "is_set_executors"]),I (Ident "equals"),I (Ident "is_set_status"),N (Name [Ident "that",Ident "is_set_status"]),I (Ident "equals"),I (Ident "is_set_errors"),N (Name [Ident "that",Ident "is_set_errors"]),I (Ident "equals"),I (Ident "is_set_sched_status"),N (Name [Ident "that",Ident "is_set_sched_status"]),I (Ident "equals"),I (Ident "is_set_owner"),N (Name [Ident "that",Ident "is_set_owner"]),I (Ident "equals")]}
+TopologyActionOptions.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+TicketWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+TicketModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ticket",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ThriftSerializedObject.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ThriftSerializedObject.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_bits"),N (Name [Ident "that",Ident "is_set_bits"]),I (Ident "equals")]}
+TexturePacker.java: Statistics {nl = 13, conditionals = 6, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"]),N (Name [Ident "name",Ident "equals"])]}
+TestSection.java: Statistics {nl = 8, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),N (Name [Ident "name",Ident "equals"])]}
+TestGrouping.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),I (Ident "equals"),I (Ident "comparator"),N (Name [Ident "other",Ident "testCaseClasses",Ident "comparator"]),I (Ident "equals")]}
+TestClass.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"])]}
+TeamWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+TeamModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "team",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SystemEventWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SystemEventModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "systemEvent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SwappedByteBuf.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ByteBufUtil",Ident "equals"])]}
+SupervisorSummary.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+SupervisorSummary.java: Statistics {nl = 45, conditionals = 19, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_host"),N (Name [Ident "that",Ident "is_set_host"]),I (Ident "equals"),I (Ident "is_set_supervisor_id"),N (Name [Ident "that",Ident "is_set_supervisor_id"]),I (Ident "equals"),I (Ident "is_set_version"),N (Name [Ident "that",Ident "is_set_version"]),I (Ident "equals")]}
+SupervisorInfo.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+SupervisorInfo.java: Statistics {nl = 59, conditionals = 25, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_hostname"),N (Name [Ident "that",Ident "is_set_hostname"]),I (Ident "equals"),I (Ident "is_set_assignment_id"),N (Name [Ident "that",Ident "is_set_assignment_id"]),I (Ident "equals"),I (Ident "is_set_used_ports"),N (Name [Ident "that",Ident "is_set_used_ports"]),I (Ident "equals"),I (Ident "is_set_meta"),N (Name [Ident "that",Ident "is_set_meta"]),I (Ident "equals"),I (Ident "is_set_scheduler_meta"),N (Name [Ident "that",Ident "is_set_scheduler_meta"]),I (Ident "equals"),I (Ident "is_set_uptime_secs"),N (Name [Ident "that",Ident "is_set_uptime_secs"]),I (Ident "is_set_version"),N (Name [Ident "that",Ident "is_set_version"]),I (Ident "equals")]}
+SubscriptionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SubscriptionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "subscription",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SubmitOptions.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+SubmitOptions.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_initial_status"),N (Name [Ident "that",Ident "is_set_initial_status"]),I (Ident "equals"),I (Ident "is_set_creds"),N (Name [Ident "that",Ident "is_set_creds"]),I (Ident "equals")]}
+StringAndBytesText.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bytes"]),I (Ident "bytes"),I (Ident "equals")]}
+StreamInfo.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+StreamInfo.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_output_fields"),N (Name [Ident "that",Ident "is_set_output_fields"]),I (Ident "equals")]}
+StormTopology.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+StormTopology.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_spouts"),N (Name [Ident "that",Ident "is_set_spouts"]),I (Ident "equals"),I (Ident "is_set_bolts"),N (Name [Ident "that",Ident "is_set_bolts"]),I (Ident "equals"),I (Ident "is_set_state_spouts"),N (Name [Ident "that",Ident "is_set_state_spouts"]),I (Ident "equals")]}
+StormBase.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+StormBase.java: Statistics {nl = 59, conditionals = 25, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_status"),N (Name [Ident "that",Ident "is_set_status"]),I (Ident "equals"),I (Ident "is_set_component_executors"),N (Name [Ident "that",Ident "is_set_component_executors"]),I (Ident "equals"),I (Ident "is_set_launch_time_secs"),N (Name [Ident "that",Ident "is_set_launch_time_secs"]),I (Ident "is_set_owner"),N (Name [Ident "that",Ident "is_set_owner"]),I (Ident "equals"),I (Ident "is_set_topology_action_options"),N (Name [Ident "that",Ident "is_set_topology_action_options"]),I (Ident "equals"),I (Ident "is_set_prev_status"),N (Name [Ident "that",Ident "is_set_prev_status"]),I (Ident "equals")]}
+StateSpoutSpec.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+StateSpoutSpec.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_state_spout_object"),N (Name [Ident "that",Ident "is_set_state_spout_object"]),I (Ident "equals"),I (Ident "is_set_common"),N (Name [Ident "that",Ident "is_set_common"]),I (Ident "equals")]}
+State.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getId"]),N (Name [Ident "state",Ident "getId"]),N (Name [Ident "StringUtil",Ident "equalsIgnoreCase"]),N (Name [Ident "getName"]),N (Name [Ident "state",Ident "getName"]),N (Name [Ident "StringUtil",Ident "equalsIgnoreCase"]),N (Name [Ident "getName"]),N (Name [Ident "state",Ident "getName"]),N (Name [Ident "getId"]),N (Name [Ident "state",Ident "getId"])]}
+SpoutStats.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+SpoutStats.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_acked"),N (Name [Ident "that",Ident "is_set_acked"]),I (Ident "equals"),I (Ident "is_set_failed"),N (Name [Ident "that",Ident "is_set_failed"]),I (Ident "equals"),I (Ident "is_set_complete_ms_avg"),N (Name [Ident "that",Ident "is_set_complete_ms_avg"]),I (Ident "equals")]}
+SpoutSpec.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+SpoutSpec.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_spout_object"),N (Name [Ident "that",Ident "is_set_spout_object"]),I (Ident "equals"),I (Ident "is_set_common"),N (Name [Ident "that",Ident "is_set_common"]),I (Ident "equals")]}
+SpdyStreamStatus.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "code"]),I (Ident "code")]}
+SpdySessionStatus.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "code"]),I (Ident "code")]}
+SocialRequestWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialRequestModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialRequest",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialRelationWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialRelationModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialRelation",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialActivityWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialActivitySetWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialActivitySettingWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialActivitySettingModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialActivitySetting",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialActivitySetModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialActivitySet",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialActivityModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialActivity",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialActivityLimitWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialActivityLimitModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialActivityLimit",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialActivityCounterWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialActivityCounterModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialActivityCounter",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SocialActivityAchievementWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SocialActivityAchievementModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "socialActivityAchievement",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Size.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"])]}
+SimpMessageMappingInfo.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals"),I (Ident "equals")]}
+ShoppingOrderWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingOrderModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingOrder",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingOrderItemWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingOrderItemModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingOrderItem",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingItemWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingItemPriceWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingItemPriceModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingItemPrice",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingItemModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingItem",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingItemFieldWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingItemFieldModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingItemField",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingCouponWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingCouponModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingCoupon",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingCategoryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingCategoryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingCategory",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingCartWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShoppingCartModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shoppingCart",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShoppingCartItemImpl.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getItem"]),N (Name [Ident "cartItem",Ident "getItem"]),I (Ident "equals"),N (Name [Ident "getFields"]),N (Name [Ident "cartItem",Ident "getFields"]),I (Ident "equals")]}
+ShellComponent.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ShellComponent.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_execution_command"),N (Name [Ident "that",Ident "is_set_execution_command"]),I (Ident "equals"),I (Ident "is_set_script"),N (Name [Ident "that",Ident "is_set_script"]),I (Ident "equals")]}
+ShardWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ShardModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "shard",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ShardId.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "index",Ident "name"]),N (Name [Ident "shardId1",Ident "index",Ident "name"]),I (Ident "equals")]}
+ServiceComponentWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ServiceComponentModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "serviceComponent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SelectTest.java: Statistics {nl = 8, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Math",Ident "abs"]),N (Name [Ident "Math",Ident "abs"])]}
+SearchShardTarget.java: Statistics {nl = 12, conditionals = 7, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),N (Name [Ident "index",Ident "equals"]),N (Name [Ident "nodeId",Ident "equals"])]}
+SCProductVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SCProductVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "scProductVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SCProductScreenshotWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SCProductScreenshotModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "scProductScreenshot",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SCProductEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SCProductEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "scProductEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SCLicenseWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SCLicenseModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "scLicense",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ScheduleItem.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "sessionId",Ident "equals"])]}
+SCFrameworkVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SCFrameworkVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "scFrameworkVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+SACPEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+SACPEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "sacpEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+RoleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+RoleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "role",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ResourceTypePermissionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ResourceTypePermissionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "resourceTypePermission",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ResourcePermissionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ResourcePermissionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "resourcePermission",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ResourceBlockWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ResourceBlockPermissionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ResourceBlockPermissionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "resourceBlockPermission",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ResourceBlockModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "resourceBlock",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ResourceActionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ResourceActionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "resourceAction",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+RequestMappingInfo.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals"),I (Ident "equals"),I (Ident "equals"),I (Ident "equals"),I (Ident "equals"),I (Ident "equals"),I (Ident "equals")]}
+RepositoryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+RepositoryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "repository",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+RepositoryEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+RepositoryEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "repositoryEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ReleaseWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ReleaseModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "release",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+RegionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+RegionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "region",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ReflectivePropertyAccessor.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals"),I (Ident "equals")]}
+RebalanceOptions.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+RebalanceOptions.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_wait_secs"),N (Name [Ident "that",Ident "is_set_wait_secs"]),I (Ident "is_set_num_workers"),N (Name [Ident "that",Ident "is_set_num_workers"]),I (Ident "is_set_num_executors"),N (Name [Ident "that",Ident "is_set_num_executors"]),I (Ident "equals")]}
+RatingsStatsWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+RatingsStatsModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ratingsStats",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+RatingsEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+RatingsEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ratingsEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+RankableObjectWithFields.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "obj",Ident "equals"])]}
+Priority.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "o",Ident "getClass"])]}
+PortletWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PortletPreferencesWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PortletPreferencesModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "portletPreferences",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PortletModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "portlet",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PortletItemWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PortletItemModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "portletItem",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PortalPreferencesWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PortalPreferencesModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "portalPreferences",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PollsVoteWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PollsVoteModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "pollsVote",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PollsQuestionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PollsQuestionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "pollsQuestion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PollsChoiceWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PollsChoiceModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "pollsChoice",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PluginSettingWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PluginSettingModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "pluginSetting",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PlainShardIterator.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "that",Ident "shardId"]),N (Name [Ident "shardId",Ident "equals"])]}
+PhoneWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PhoneModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "phone",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PermissionDisplay.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "permissionDisplay",Ident "getPortletName"]),N (Name [Ident "_portletName",Ident "equals"]),N (Name [Ident "permissionDisplay",Ident "getModelName"]),N (Name [Ident "_modelName",Ident "equals"]),N (Name [Ident "permissionDisplay",Ident "getActionId"]),N (Name [Ident "_actionId",Ident "equals"])]}
+PathWrapper.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_path",Ident "equals"])]}
+PasswordTrackerWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PasswordTrackerModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "passwordTracker",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PasswordPolicyWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PasswordPolicyRelWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+PasswordPolicyRelModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "passwordPolicyRel",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+PasswordPolicyModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "passwordPolicy",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ParticleSystem.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"])]}
+ParticleShader.java: Statistics {nl = 1, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+OrgLaborWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+OrgLaborModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "orgLabor",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+OrgGroupRoleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+OrgGroupRoleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "orgGroupRole",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "equals")]}
+OrganizationWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+OrganizationModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "organization",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Objects.java: Statistics {nl = 1, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "a",Ident "equals"])]}
+NullStruct.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+NullSafeComparator.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+NotAliveException.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+NotAliveException.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_msg"),N (Name [Ident "that",Ident "is_set_msg"]),I (Ident "equals")]}
+NodeInfo.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+NodeInfo.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_node"),N (Name [Ident "that",Ident "is_set_node"]),I (Ident "equals"),I (Ident "is_set_port"),N (Name [Ident "that",Ident "is_set_port"]),I (Ident "equals")]}
+Node.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "_nodeId",Ident "equals"])]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_uploadedJarLocation"),N (Name [Ident "that",Ident "is_set_uploadedJarLocation"]),I (Ident "equals"),I (Ident "is_set_jsonConf"),N (Name [Ident "that",Ident "is_set_jsonConf"]),I (Ident "equals"),I (Ident "is_set_topology"),N (Name [Ident "that",Ident "is_set_topology"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_ite"),N (Name [Ident "that",Ident "is_set_ite"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 38, conditionals = 16, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_uploadedJarLocation"),N (Name [Ident "that",Ident "is_set_uploadedJarLocation"]),I (Ident "equals"),I (Ident "is_set_jsonConf"),N (Name [Ident "that",Ident "is_set_jsonConf"]),I (Ident "equals"),I (Ident "is_set_topology"),N (Name [Ident "that",Ident "is_set_topology"]),I (Ident "equals"),I (Ident "is_set_options"),N (Name [Ident "that",Ident "is_set_options"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_ite"),N (Name [Ident "that",Ident "is_set_ite"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_options"),N (Name [Ident "that",Ident "is_set_options"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_options"),N (Name [Ident "that",Ident "is_set_options"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_ite"),N (Name [Ident "that",Ident "is_set_ite"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_name"),N (Name [Ident "that",Ident "is_set_name"]),I (Ident "equals"),I (Ident "is_set_creds"),N (Name [Ident "that",Ident "is_set_creds"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_ite"),N (Name [Ident "that",Ident "is_set_ite"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_location"),N (Name [Ident "that",Ident "is_set_location"]),I (Ident "equals"),I (Ident "is_set_chunk"),N (Name [Ident "that",Ident "is_set_chunk"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_location"),N (Name [Ident "that",Ident "is_set_location"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_file"),N (Name [Ident "that",Ident "is_set_file"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals"),I (Ident "is_set_options"),N (Name [Ident "that",Ident "is_set_options"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Nimbus.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+NetworkPolicy.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Objects",Ident "equals"]),N (Name [Ident "Objects",Ident "equals"])]}
+NetworkIdentity.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Objects",Ident "equals"]),N (Name [Ident "Objects",Ident "equals"])]}
+ModuleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ModuleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "module",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MimeType.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equalsIgnoreCase"),I (Ident "equalsIgnoreCase"),I (Ident "equals")]}
+MemoryFileUpload.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "attribute",Ident "getName"]),I (Ident "equalsIgnoreCase")]}
+MemoryAttribute.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "attribute",Ident "getName"]),I (Ident "equalsIgnoreCase")]}
+MemoryAssert.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "o",Ident "className",Ident "equals"])]}
+MembershipRequestWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MembershipRequestModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "membershipRequest",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MeetupsRegistrationWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MeetupsRegistrationModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "meetupsRegistration",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MeetupsEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MeetupsEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "meetupsEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MDRRuleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MDRRuleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mdrRule",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MDRRuleGroupWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MDRRuleGroupModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mdrRuleGroup",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MDRRuleGroupInstanceWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MDRRuleGroupInstanceModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mdrRuleGroupInstance",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MDRActionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MDRActionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mdrAction",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBThreadWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBThreadModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbThread",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBThreadFlagWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBThreadFlagModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbThreadFlag",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBStatsUserWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBStatsUserModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbStatsUser",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBMessageWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBMessageModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbMessage",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBMailingListWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBMailingListModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbMailingList",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBDiscussionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBDiscussionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbDiscussion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBCategoryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBCategoryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbCategory",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+MBBanWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+MBBanModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mbBan",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LSWorkerHeartbeat.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+LSWorkerHeartbeat.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_topology_id"),N (Name [Ident "that",Ident "is_set_topology_id"]),I (Ident "equals"),I (Ident "is_set_executors"),N (Name [Ident "that",Ident "is_set_executors"]),I (Ident "equals")]}
+LSSupervisorId.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+LSSupervisorId.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_supervisor_id"),N (Name [Ident "that",Ident "is_set_supervisor_id"]),I (Ident "equals")]}
+LSSupervisorAssignments.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+LSSupervisorAssignments.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_assignments"),N (Name [Ident "that",Ident "is_set_assignments"]),I (Ident "equals")]}
+LSApprovedWorkers.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+LSApprovedWorkers.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_approved_workers"),N (Name [Ident "that",Ident "is_set_approved_workers"]),I (Ident "equals")]}
+LockWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LockModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "lock",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LocalStateData.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+LocalStateData.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_serialized_parts"),N (Name [Ident "that",Ident "is_set_serialized_parts"]),I (Ident "equals")]}
+LocalAssignment.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+LocalAssignment.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_topology_id"),N (Name [Ident "that",Ident "is_set_topology_id"]),I (Ident "equals"),I (Ident "is_set_executors"),N (Name [Ident "that",Ident "is_set_executors"]),I (Ident "equals")]}
+LocalAddress.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "id",Ident "equals"])]}
+ListTypeWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ListTypeModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "listType",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LegacyCell.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getTokenBytesWithLeaf"]),N (Name [Ident "cell",Ident "getTokenBytesWithLeaf"]),I (Ident "equals")]}
+LayoutWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutSetWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutSetPrototypeWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutSetPrototypeModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutSetPrototype",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutSetModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutSet",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutSetBranchWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutSetBranchModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutSetBranch",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutRevisionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutRevisionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutRevision",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutPrototypeWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutPrototypeModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutPrototype",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layout",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutFriendlyURLWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutFriendlyURLModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutFriendlyURL",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+LayoutBranchWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+LayoutBranchModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "layoutBranch",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Label.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "that",Ident "getClass"]),N (Name [Ident "matches"])]}
+KillOptions.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+KillOptions.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_wait_secs"),N (Name [Ident "that",Ident "is_set_wait_secs"])]}
+KeyValuePair.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JSONWebServiceActionConfig.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalFolderWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalFolderModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "journalFolder",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+JournalFeedWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalFeedModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "journalFeed",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+JournalContentSearchWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalContentSearchModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "journalContentSearch",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+JournalArticleWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalArticleResourceWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalArticleResourceModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "journalArticleResource",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+JournalArticleModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "journalArticle",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+JournalArticleImageWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+JournalArticleImageModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "journalArticleImage",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+JndiName.java: Statistics {nl = 6, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),N (Name [Ident "local",Ident "equals"]),N (Name [Ident "parent",Ident "equals"])]}
+JavaObjectArg.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+JavaObject.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+JavaObject.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_full_class_name"),N (Name [Ident "that",Ident "is_set_full_class_name"]),I (Ident "equals"),I (Ident "is_set_args_list"),N (Name [Ident "that",Ident "is_set_args_list"]),I (Ident "equals")]}
+InvertibleComparator.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+InvalidTopologyException.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+InvalidTopologyException.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_msg"),N (Name [Ident "that",Ident "is_set_msg"]),I (Ident "equals")]}
+InternalAttribute.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "attribute",Ident "getName"]),I (Ident "equalsIgnoreCase")]}
+IndexMetadata.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getTableName"]),N (Name [Ident "indexMetadata",Ident "getTableName"]),N (Name [Ident "Validator",Ident "equals"]),N (Name [Ident "getColumnNames"]),N (Name [Ident "indexMetadata",Ident "getColumnNames"]),N (Name [Ident "Arrays",Ident "equals"])]}
+ImportPackage.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "importPackage",Ident "isStatic"]),N (Name [Ident "importPackage",Ident "getImportString"]),N (Name [Ident "_importString",Ident "equals"])]}
+ImageWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ImageModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "image",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+HttpVersion.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "minorVersion"]),N (Name [Ident "that",Ident "minorVersion"]),N (Name [Ident "majorVersion"]),N (Name [Ident "that",Ident "majorVersion"]),N (Name [Ident "protocolName"]),N (Name [Ident "that",Ident "protocolName"]),I (Ident "equals")]}
+HttpResponseStatus.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "code"]),I (Ident "code")]}
+HttpMethod.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "name"]),N (Name [Ident "that",Ident "name"]),I (Ident "equals")]}
+GroupWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+GroupModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "group",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Grouping.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+GlobalStreamId.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+GlobalStreamId.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_componentId"),N (Name [Ident "that",Ident "is_set_componentId"]),I (Ident "equals"),I (Ident "is_set_streamId"),N (Name [Ident "that",Ident "is_set_streamId"]),I (Ident "equals")]}
+GetInfoOptions.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+GetInfoOptions.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_num_err_choice"),N (Name [Ident "that",Ident "is_set_num_err_choice"]),I (Ident "equals")]}
+FlashMap.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals"),N (Name [Ident "ObjectUtils",Ident "nullSafeEquals"]),I (Ident "equals")]}
+Fingerprint.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"])]}
+Fingerprint.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),N (Name [Ident "ranges",Ident "equals"])]}
+FilePath.java: Statistics {nl = 8, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),N (Name [Ident "channel",Ident "equals"]),N (Name [Ident "remote",Ident "equals"])]}
+File.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getPath"]),I (Ident "getPath"),I (Ident "equals")]}
+ExtendedBeanInfo.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getIndexedReadMethod"]),N (Name [Ident "otherPd",Ident "getIndexedReadMethod"]),N (Name [Ident "ObjectUtils",Ident "nullSafeEquals"]),N (Name [Ident "getIndexedWriteMethod"]),N (Name [Ident "otherPd",Ident "getIndexedWriteMethod"]),N (Name [Ident "ObjectUtils",Ident "nullSafeEquals"]),N (Name [Ident "getIndexedPropertyType"]),N (Name [Ident "otherPd",Ident "getIndexedPropertyType"]),N (Name [Ident "ObjectUtils",Ident "nullSafeEquals"]),N (Name [Ident "PropertyDescriptorUtils",Ident "equals"])]}
+ExportImportConfigurationWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ExportImportConfigurationModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "exportImportConfiguration",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ExpandoValueWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ExpandoValueModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "expandoValue",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ExpandoTableWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ExpandoTableModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "expandoTable",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ExpandoRowWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ExpandoRowModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "expandoRow",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ExpandoColumnWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ExpandoColumnModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "expandoColumn",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ExecutorSummary.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ExecutorSummary.java: Statistics {nl = 45, conditionals = 19, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_executor_info"),N (Name [Ident "that",Ident "is_set_executor_info"]),I (Ident "equals"),I (Ident "is_set_component_id"),N (Name [Ident "that",Ident "is_set_component_id"]),I (Ident "equals"),I (Ident "is_set_host"),N (Name [Ident "that",Ident "is_set_host"]),I (Ident "equals"),I (Ident "is_set_stats"),N (Name [Ident "that",Ident "is_set_stats"]),I (Ident "equals")]}
+ExecutorStats.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ExecutorStats.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_emitted"),N (Name [Ident "that",Ident "is_set_emitted"]),I (Ident "equals"),I (Ident "is_set_transferred"),N (Name [Ident "that",Ident "is_set_transferred"]),I (Ident "equals"),I (Ident "is_set_specific"),N (Name [Ident "that",Ident "is_set_specific"]),I (Ident "equals")]}
+ExecutorSpecificStats.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+ExecutorInfo.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ErrorInfo.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ErrorInfo.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_error"),N (Name [Ident "that",Ident "is_set_error"]),I (Ident "equals"),I (Ident "is_set_host"),N (Name [Ident "that",Ident "is_set_host"]),I (Ident "equals"),I (Ident "is_set_port"),N (Name [Ident "that",Ident "is_set_port"])]}
+EntityColumn.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "col",Ident "getName"]),N (Name [Ident "_name",Ident "equals"])]}
+EmailAddressWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+EmailAddressModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "emailAddress",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Duration.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"])]}
+DRPCRequest.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DRPCRequest.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_func_args"),N (Name [Ident "that",Ident "is_set_func_args"]),I (Ident "equals"),I (Ident "is_set_request_id"),N (Name [Ident "that",Ident "is_set_request_id"]),I (Ident "equals")]}
+DRPCExecutionException.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DRPCExecutionException.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_msg"),N (Name [Ident "that",Ident "is_set_msg"]),I (Ident "equals")]}
+DnsResponseCode.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "intValue"]),I (Ident "intValue")]}
+DLSyncEventWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLSyncEventModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlSyncEvent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFolderWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFolderModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFolder",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFileVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFileVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFileVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFileShortcutWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFileShortcutModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFileShortcut",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFileRankWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFileRankModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFileRank",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFileEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFileEntryTypeWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFileEntryTypeModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFileEntryType",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFileEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFileEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLFileEntryMetadataWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLFileEntryMetadataModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlFileEntryMetadata",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DLDisplayContextFactoryReference.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLContentWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DLContentModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "dlContent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DistributedRPCInvocations.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals"),I (Ident "is_set_result"),N (Name [Ident "that",Ident "is_set_result"]),I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_functionName"),N (Name [Ident "that",Ident "is_set_functionName"]),I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_id"),N (Name [Ident "that",Ident "is_set_id"]),I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPCInvocations.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+DistributedRPC.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPC.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_functionName"),N (Name [Ident "that",Ident "is_set_functionName"]),I (Ident "equals"),I (Ident "is_set_funcArgs"),N (Name [Ident "that",Ident "is_set_funcArgs"]),I (Ident "equals")]}
+DistributedRPC.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+DistributedRPC.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_success"),N (Name [Ident "that",Ident "is_set_success"]),I (Ident "equals"),I (Ident "is_set_e"),N (Name [Ident "that",Ident "is_set_e"]),I (Ident "equals"),I (Ident "is_set_aze"),N (Name [Ident "that",Ident "is_set_aze"]),I (Ident "equals")]}
+DisplayContextFactoryReference.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DiskFileUpload.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "attribute",Ident "getName"]),I (Ident "equalsIgnoreCase")]}
+DiskAttribute.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getName"]),N (Name [Ident "attribute",Ident "getName"]),I (Ident "equalsIgnoreCase")]}
+DependencyGraph.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"])]}
+DefaultShader.java: Statistics {nl = 1, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+DefaultCookie.java: Statistics {nl = 19, conditionals = 9, loops = 0, iterators = 0, fncalls = [N (Name [Ident "name"]),N (Name [Ident "that",Ident "name"]),I (Ident "equalsIgnoreCase"),N (Name [Ident "that",Ident "path"]),N (Name [Ident "path"]),N (Name [Ident "that",Ident "path"]),I (Ident "equals"),N (Name [Ident "that",Ident "path"]),N (Name [Ident "path"]),N (Name [Ident "that",Ident "domain"]),N (Name [Ident "domain"]),N (Name [Ident "that",Ident "domain"]),I (Ident "equalsIgnoreCase"),N (Name [Ident "that",Ident "domain"]),N (Name [Ident "domain"])]}
+DefaultChannelId.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Arrays",Ident "equals"])]}
+DDMTemplateWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMTemplateVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMTemplateVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmTemplateVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMTemplateModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmTemplate",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMStructureWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMStructureVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMStructureVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmStructureVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMStructureModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmStructure",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMStructureLinkWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMStructureLinkModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmStructureLink",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMStructureLayoutWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMStructureLayoutModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmStructureLayout",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMStorageLinkWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMStorageLinkModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmStorageLink",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDMContentWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDMContentModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddmContent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDLRecordWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDLRecordVersionWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDLRecordVersionModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddlRecordVersion",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDLRecordSetWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+DDLRecordSetModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddlRecordSet",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DDLRecordModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ddlRecord",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+DateValueImpl.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [I (Ident "compareTo")]}
+Credentials.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Credentials.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_creds"),N (Name [Ident "that",Ident "is_set_creds"]),I (Ident "equals")]}
+CountryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+CountryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "country",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+CounterWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+CounterModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "counter",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"]),I (Ident "equals")]}
+ContactWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ContactModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "contact",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Configuration.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "compareTo")]}
+CompoundComparator.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ComponentObject.java: Statistics {nl = 3, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "equals"])]}
+ComponentName.java: Statistics {nl = 5, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "mPackage",Ident "equals"]),N (Name [Ident "mClass",Ident "equals"])]}
+ComponentCommon.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ComponentCommon.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_inputs"),N (Name [Ident "that",Ident "is_set_inputs"]),I (Ident "equals"),I (Ident "is_set_streams"),N (Name [Ident "that",Ident "is_set_streams"]),I (Ident "equals"),I (Ident "is_set_parallelism_hint"),N (Name [Ident "that",Ident "is_set_parallelism_hint"]),I (Ident "is_set_json_conf"),N (Name [Ident "that",Ident "is_set_json_conf"]),I (Ident "equals")]}
+CompanyWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+CompanyModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "company",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ColorSchemeImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "colorScheme",Ident "getColorSchemeId"]),N (Name [Ident "getColorSchemeId"]),I (Ident "equals")]}
+ClusterWorkerHeartbeat.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ClusterWorkerHeartbeat.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_storm_id"),N (Name [Ident "that",Ident "is_set_storm_id"]),I (Ident "equals"),I (Ident "is_set_executor_stats"),N (Name [Ident "that",Ident "is_set_executor_stats"]),I (Ident "equals")]}
+ClusterSummary.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+ClusterSummary.java: Statistics {nl = 24, conditionals = 10, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_supervisors"),N (Name [Ident "that",Ident "is_set_supervisors"]),I (Ident "equals"),I (Ident "is_set_topologies"),N (Name [Ident "that",Ident "is_set_topologies"]),I (Ident "equals")]}
+ClusterGroupWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ClusterGroupModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "clusterGroup",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+ClassNameWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+ClassNameModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "className",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+CalEventWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+CalEventModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "calEvent",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+CacheObject.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ObjectUtils",Ident "isEquals"])]}
+ByteString.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "hashCode"]),N (Name [Ident "other",Ident "hashCode"]),N (Name [Ident "array"]),N (Name [Ident "arrayOffset"]),N (Name [Ident "arrayOffset"]),N (Name [Ident "length"]),N (Name [Ident "other",Ident "array"]),N (Name [Ident "other",Ident "arrayOffset"]),N (Name [Ident "other",Ident "arrayOffset"]),N (Name [Ident "other",Ident "length"]),N (Name [Ident "PlatformDependent",Ident "equals"])]}
+ByteBufUtil.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bufferA",Ident "readableBytes"]),N (Name [Ident "bufferB",Ident "readableBytes"]),N (Name [Ident "bufferA",Ident "readerIndex"]),N (Name [Ident "bufferB",Ident "readerIndex"]),N (Name [Ident "equals"])]}
+BrowserTrackerWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+BrowserTrackerModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "browserTracker",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+Broker.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"]),N (Name [Ident "Objects",Ident "equal"]),N (Name [Ident "Objects",Ident "equal"])]}
+BookmarksFolderWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+BookmarksFolderModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bookmarksFolder",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+BookmarksEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+BookmarksEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "bookmarksEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+BoltStats.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+BoltStats.java: Statistics {nl = 38, conditionals = 16, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_acked"),N (Name [Ident "that",Ident "is_set_acked"]),I (Ident "equals"),I (Ident "is_set_failed"),N (Name [Ident "that",Ident "is_set_failed"]),I (Ident "equals"),I (Ident "is_set_process_ms_avg"),N (Name [Ident "that",Ident "is_set_process_ms_avg"]),I (Ident "equals"),I (Ident "is_set_executed"),N (Name [Ident "that",Ident "is_set_executed"]),I (Ident "equals"),I (Ident "is_set_execute_ms_avg"),N (Name [Ident "that",Ident "is_set_execute_ms_avg"]),I (Ident "equals")]}
+Bolt.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Bolt.java: Statistics {nl = 17, conditionals = 7, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_bolt_object"),N (Name [Ident "that",Ident "is_set_bolt_object"]),I (Ident "equals"),I (Ident "is_set_common"),N (Name [Ident "that",Ident "is_set_common"]),I (Ident "equals")]}
+BloomFilter.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Arrays",Ident "equals"])]}
+BlogsStatsUserWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+BlogsStatsUserModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "blogsStatsUser",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+BlogsEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+BlogsEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "blogsEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+BlendedTermQuery.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),I (Ident "equals"),N (Name [Ident "equalsTerms"]),N (Name [Ident "that",Ident "equalsTerms"]),N (Name [Ident "Arrays",Ident "equals"])]}
+BatteryStats.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "o",Ident "getClass"]),N (Name [Ident "string",Ident "equals"])]}
+BackgroundTaskWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+BackgroundTaskModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "backgroundTask",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AuthorizationException.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+AuthorizationException.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_msg"),N (Name [Ident "that",Ident "is_set_msg"]),I (Ident "equals")]}
+Attributes.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "same"])]}
+AStarPathFinder.java: Statistics {nl = 7, conditionals = 3, loops = 0, iterators = 0, fncalls = [I (Ident "getClass"),N (Name [Ident "pOther",Ident "getClass"]),I (Ident "equals")]}
+Assignment.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+Assignment.java: Statistics {nl = 31, conditionals = 13, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_master_code_dir"),N (Name [Ident "that",Ident "is_set_master_code_dir"]),I (Ident "equals"),I (Ident "is_set_node_host"),N (Name [Ident "that",Ident "is_set_node_host"]),I (Ident "equals"),I (Ident "is_set_executor_node_port"),N (Name [Ident "that",Ident "is_set_executor_node_port"]),I (Ident "equals"),I (Ident "is_set_executor_start_time_secs"),N (Name [Ident "that",Ident "is_set_executor_start_time_secs"]),I (Ident "equals")]}
+AssetVocabularyWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetVocabularyModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetVocabulary",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AssetTagWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetTagStatsWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetTagStatsModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetTagStats",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AssetTagModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetTag",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AssetLinkWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetLinkModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetLink",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AssetEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AssetCategoryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetCategoryPropertyWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AssetCategoryPropertyModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetCategoryProperty",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AssetCategoryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "assetCategory",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AsciiString.java: Statistics {nl = 11, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "aa",Ident "equals"]),N (Name [Ident "ab",Ident "equals"]),N (Name [Ident "a",Ident "equals"])]}
+AppWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AppModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "app",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AppInfo.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "label",Ident "equals"])]}
+AnnouncementsFlagWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AnnouncementsFlagModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "announcementsFlag",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AnnouncementsEntryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AnnouncementsEntryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "announcementsEntry",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AnnouncementsDeliveryWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AnnouncementsDeliveryModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "announcementsDelivery",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AlreadyAliveException.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals")]}
+AlreadyAliveException.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [I (Ident "is_set_msg"),N (Name [Ident "that",Ident "is_set_msg"]),I (Ident "equals")]}
+AddressWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AddressModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "address",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AddressableNode.java: Statistics {nl = 4, conditionals = 1, loops = 0, iterators = 0, fncalls = [N (Name [Ident "node",Ident "getAddress"]),I (Ident "equals")]}
+ActivityChooserModel.java: Statistics {nl = 17, conditionals = 8, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"]),N (Name [Ident "activity",Ident "equals"]),N (Name [Ident "Float",Ident "floatToIntBits"]),N (Name [Ident "Float",Ident "floatToIntBits"])]}
+ActivityChooserModel.java: Statistics {nl = 10, conditionals = 4, loops = 0, iterators = 0, fncalls = [N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"]),N (Name [Ident "Float",Ident "floatToIntBits"]),N (Name [Ident "Float",Ident "floatToIntBits"])]}
+AccountWrapper.java: Statistics {nl = 8, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "Validator",Ident "equals"])]}
+AccountModelImpl.java: Statistics {nl = 9, conditionals = 3, loops = 0, iterators = 0, fncalls = [N (Name [Ident "account",Ident "getPrimaryKey"]),N (Name [Ident "getPrimaryKey"])]}
+AbstractMediaTypeExpression.java: Statistics {nl = 6, conditionals = 2, loops = 0, iterators = 0, fncalls = [I (Ident "equals"),N (Name [Ident "getClass"]),N (Name [Ident "obj",Ident "getClass"]),I (Ident "equals")]}
+AbstractByteBuf.java: Statistics {nl = 5, conditionals = 2, loops = 0, iterators = 0, fncalls = [N (Name [Ident "ByteBufUtil",Ident "equals"])]}
