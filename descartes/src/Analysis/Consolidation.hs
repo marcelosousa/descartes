@@ -43,191 +43,161 @@ verify opt classMap _comps prop = do
 -- strongest post condition
 analyser :: Bool -> (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST) -> [(Int, Block)] -> Z3 (Result, Maybe Model)
 analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) [] = do 
-    --preStr  <- astToString pre
-    --postStr <- astToString post
-    --let k = trace ("Analyser Leaf:\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
-    local $ helper axioms pre post
+  preStr  <- astToString pre
+  postStr <- astToString post
+  let k = trace ("Analyser Leaf:\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
+  k `seq` local $ helper axioms pre post
 analyser opt env ((pid,Block []):rest) = analyser opt env rest
 analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,Block (bstmt:r1)):rest) = do
-    preStr  <- astToString pre
-    postStr <- astToString post
-    --let k = T.trace ("\n-----------------\nAnalyser State:\nStatement: " ++ prettyPrint bstmt ++ "\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
-    case bstmt of
-        BlockStmt stmt -> case stmt of
-            StmtBlock (Block block) -> analyser opt env ((pid, Block (block ++ r1)):rest)
-            Assume expr -> do
-                exprEnc <- processExp (objSort, pars, res, fields, ssamap) expr
-                nPre <- mkAnd [pre,exprEnc]
-                analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) ((pid, Block r1):rest)
-            Return Nothing -> error "analyser: return Nothing"
-            Return (Just expr) -> trace ("processing return of pid " ++ show pid ++ " " ++ show stmt) $ do
-                exprPsi <- processExp (objSort, pars, res, fields, ssamap) expr
-                let resPid = res !! pid  
-                r <- mkEq resPid exprPsi
-                nPre <- mkAnd [pre,r]
-                if opt
-                then do
-                  test <- local $ helper axioms nPre post
-                  case fst test of
-                      Unsat -> trace ("Optimizer: Pruned Path") $ return test
-                      _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
-                else analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
-            IfThen cond s1 -> do
-                condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
-                -- then branch
-                preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
-                -- if opt then call solver, else continue
-                resThen <- do
-                    if opt
-                    then do 
-                        push 
-                        assert preThen
-                        cThen <- check
-                        pop 1
-                        case cThen of
-                            Unsat -> trace ("preThen becomes false") $ return (Unsat,Nothing)
-                            _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-                    else analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-                -- else branch
-                ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
-                preElse <- mkAnd [pre, ncondSmt]
-                resElse <- do
-                    if opt 
-                    then do 
-                        push
-                        assert preElse
-                        cElse <- check
-                        pop 1
-                        case cElse of
-                            Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
-                            _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block r1):rest)
-                    else analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block r1):rest)
-                trace ("IfThen " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
-            IfThenElse Nondet s1 s2 -> do 
-                resThen <- analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid, Block (BlockStmt s1:r1)):rest)                
-                resElse <- analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid, Block (BlockStmt s2:r1)):rest)
-                trace ("NonDet IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse                
-            IfThenElse cond s1 s2 -> trace ("processing conditional " ++ show cond) $ do
-                condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
-                -- then branch
-                preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
-                resThen <- do
-                    if opt
-                    then do 
-                        push 
-                        assert preThen
-                        cThen <- check
-                        pop 1
-                        case cThen of
-                            Unsat -> trace ("preThen becomes false") $ return (Unsat,Nothing)
-                            _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-                    else analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-                -- else branch
-                ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
-                preElse <- mkAnd [pre, ncondSmt]
-                resElse <- do
-                    if opt
-                    then do
-                        push
-                        assert preElse
-                        cElse <- check
-                        pop 1
-                        case cElse of
-                            Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
-                            _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
-                        else analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
-                trace ("IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
-            ExpStmt (MethodInv (MethodCall (Name [Ident "assume"]) [expr])) -> do 
-                expAST <- processExp (objSort, pars, res, fields, ssamap) expr
-                npre <- mkAnd [pre,expAST]
-                analyser opt (objSort, pars, res, fields, ssamap, axioms, npre, post) ((pid, Block r1):rest)
-            ExpStmt (Assign lhs aOp rhs) -> do
-                rhsAst <- processExp (objSort, pars, res, fields, ssamap) rhs
-                case lhs of
-                    NameLhs (Name [ident@(Ident str)]) -> do
-                        let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
-                            cstr = str ++ show i
-                            ni = i+1
-                            nstr = str ++ show ni
-                        sym <- mkStringSymbol nstr
-                        var <- mkFreshFuncDecl nstr [] sort
-                        astVar <- mkApp var []
-                        let nssamap = M.insert ident (astVar, sort, ni) ssamap
-                        ass <- processAssign astVar aOp rhsAst plhsAST
-                        npre <- mkAnd [pre, ass]
-                        post' <- replaceVariable cstr var post
-                        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
-                    _ -> error $ "Assign " ++ show stmt ++ " not supported"
-            ExpStmt (PostIncrement lhs) -> do
-                rhsAst <- processExp (objSort, pars, res, fields, ssamap) (BinOp lhs Add (Lit $ Int 1))
-                case lhs of
-                    ExpName (Name [ident@(Ident str)]) -> do
-                        let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
-                            cstr = str ++ show i
-                            ni = i+1
-                            nstr = str ++ show ni
-                        sym <- mkStringSymbol nstr
-                        var <- mkFreshFuncDecl nstr [] sort
-                        astVar <- mkApp var []
-                        let nssamap = M.insert ident (astVar, sort, ni) ssamap
-                        ass <- processAssign astVar EqualA rhsAst plhsAST
-                        npre <- mkAnd [pre, ass]
-                        post' <- replaceVariable cstr var post
-                        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
-                    _ -> error $ "PostIncrement " ++ show stmt ++ " not supported"
-            ExpStmt (PostDecrement lhs) -> do
-                rhsAst <- processExp (objSort, pars, res, fields, ssamap) (BinOp lhs Sub (Lit $ Int 1))
-                case lhs of
-                    ExpName (Name [ident@(Ident str)]) -> do
-                        let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
-                            cstr = str ++ show i
-                            ni = i+1
-                            nstr = str ++ show ni
-                        sym <- mkStringSymbol nstr
-                        var <- mkFreshFuncDecl nstr [] sort
-                        astVar <- mkApp var []
-                        let nssamap = M.insert ident (astVar, sort, ni) ssamap
-                        ass <- processAssign astVar EqualA rhsAst plhsAST
-                        npre <- mkAnd [pre, ass]
-                        post' <- replaceVariable cstr var post
-                        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
-                    _ -> error $ "PostIncrement " ++ show stmt ++ " not supported"
-            While _cond _body -> trace ("\nProcessing While loop from PID" ++ show pid ++"\n") $ do
-                let 
-                --if all isLoop rest
-                --then applyFusion env ((pid,Block (bstmt:r1)):rest)
-                --else analyser env $ (rest ++ [(pid,Block (bstmt:r1))])
-                inv <- guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
-                checkInv <- local $ helper axioms pre inv
-                invStr <- astToString inv
-                preStr <- astToString pre
-                --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
-                case checkInv of
-                    (Unsat,_) -> do
-                        condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
-                        ncondAst <- mkNot condAst
-                        checkInv' <- mkAnd [inv, ncondAst] >>= \npre -> local $ helper axioms npre inv
-                        case checkInv' of
-                            (Unsat,_) -> do
-                                nPre <- mkAnd [inv, condAst]
-                                let s = [(pid, Block [BlockStmt _body])] 
-                                bodyCheck <- local $ analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, inv) s
-                                case bodyCheck of
-                                    (Unsat,_) -> do 
-                                        rPre <- mkAnd [inv, pre]
-                                        analyser opt (objSort, pars, res, fields, ssamap, axioms, inv, post) ((pid, Block r1):rest)
-                                    _ -> error $ "bodyCheck: SAT"
-                            _ -> error $ "lastCheck failed"
-                    _ -> error "precondition does not imply the invariant"
-            _ -> error $ "not supported: " ++ show stmt
-        LocalVars mods ty vars -> do
-            sort <- processType ty
-            (nssamap, npre) <- foldM (\(ssamap', pre') v -> processNewVar (objSort, pars, res, fields, ssamap', pre') sort v 1) (ssamap, pre) vars
---            let nssamap = foldl (\m (ident,ast, _) -> M.insert ident (ast, sort, 1) m) ssamap idAst
-            analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post) ((pid, Block r1):rest)
-        _ -> error "analyser: bstmt is not a BlockStmt"
-
-
+  preStr  <- astToString pre
+  postStr <- astToString post
+  let k = T.trace ("\n-----------------\nAnalyser State:\nStatement: " ++ prettyPrint bstmt ++ "\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
+  k `seq` case bstmt of
+    BlockStmt stmt -> case stmt of
+      StmtBlock (Block block) -> analyser opt env ((pid, Block (block ++ r1)):rest)
+      Assume expr -> do
+        exprEnc <- processExp (objSort, pars, res, fields, ssamap) expr
+        nPre <- mkAnd [pre,exprEnc]
+        analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) ((pid, Block r1):rest)
+      Return Nothing -> error "analyser: return Nothing"
+      Return (Just expr) -> trace ("processing return of pid " ++ show pid ++ " " ++ show stmt) $ do
+        exprPsi <- processExp (objSort, pars, res, fields, ssamap) expr
+        let resPid = res !! pid  
+        r <- mkEq resPid exprPsi
+        nPre <- mkAnd [pre,r]
+        if opt
+        then do
+          test <- local $ helper axioms nPre post
+          case fst test of
+            Unsat -> trace ("Optimizer: Pruned Path") $ return test
+            _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
+        else analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
+      IfThen cond s1 -> do
+        condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
+        -- then branch
+        preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
+        -- if opt then call solver, else continue
+        resThen <- do
+          if opt
+          then do 
+            push 
+            assert preThen
+            cThen <- check
+            pop 1
+            case cThen of
+              Unsat -> trace ("preThen becomes false") $ return (Unsat,Nothing)
+              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
+          else analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
+        -- else branch
+        ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
+        preElse <- mkAnd [pre, ncondSmt]
+        resElse <- do
+          if opt 
+          then do 
+            push
+            assert preElse
+            cElse <- check
+            pop 1
+            case cElse of
+              Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
+              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block r1):rest)
+          else analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block r1):rest)
+        trace ("IfThen " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
+      IfThenElse Nondet s1 s2 -> do 
+        resThen <- analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid, Block (BlockStmt s1:r1)):rest)                
+        resElse <- analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid, Block (BlockStmt s2:r1)):rest)
+        trace ("NonDet IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse                
+      IfThenElse cond s1 s2 -> trace ("processing conditional " ++ show cond) $ do
+        condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
+        -- then branch
+        preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
+        resThen <- do
+          if opt
+          then do 
+            push 
+            assert preThen
+            cThen <- check
+            pop 1
+            case cThen of
+              Unsat -> trace ("preThen becomes false") $ return (Unsat,Nothing)
+              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
+          else analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
+        -- else branch
+        ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
+        preElse <- mkAnd [pre, ncondSmt]
+        resElse <- do
+          if opt
+          then do
+            push
+            assert preElse
+            cElse <- check
+            pop 1
+            case cElse of
+              Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
+              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
+            else analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
+        trace ("IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
+      ExpStmt (MethodInv (MethodCall (Name [Ident "assume"]) [expr])) -> do 
+        expAST <- processExp (objSort, pars, res, fields, ssamap) expr
+        npre <- mkAnd [pre,expAST]
+        analyser opt (objSort, pars, res, fields, ssamap, axioms, npre, post) ((pid, Block r1):rest)
+      ExpStmt (Assign lhs aOp rhs) -> do
+        rhsAst <- processExp (objSort, pars, res, fields, ssamap) rhs
+        case lhs of
+            NameLhs (Name [ident@(Ident str)]) -> do
+              let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
+                  cstr = str ++ show i
+                  ni = i+1
+                  nstr = str ++ show ni
+              sym <- mkStringSymbol nstr
+              var <- mkFreshFuncDecl nstr [] sort
+              astVar <- mkApp var []
+              let nssamap = M.insert ident (astVar, sort, ni) ssamap
+              ass <- processAssign astVar aOp rhsAst plhsAST
+              npre <- mkAnd [pre, ass]
+              post' <- replaceVariable cstr var post
+              analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
+            _ -> error $ "Assign " ++ show stmt ++ " not supported"
+      ExpStmt (PostIncrement lhs) -> do
+        (npre,post',nssamap) <- analysePostOp stmt env lhs Add "PostIncrement"
+        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
+      ExpStmt (PostDecrement lhs) -> do
+        (npre,post',nssamap) <- analysePostOp stmt env lhs Sub "PostDecrement"
+        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
+      While _cond _body -> trace ("\nProcessing While loop from PID" ++ show pid ++"\n") $ do
+          let 
+          --if all isLoop rest
+          --then applyFusion env ((pid,Block (bstmt:r1)):rest)
+          --else analyser env $ (rest ++ [(pid,Block (bstmt:r1))])
+          inv <- guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
+          checkInv <- local $ helper axioms pre inv
+          invStr <- astToString inv
+          preStr <- astToString pre
+          let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
+          case checkInv of
+              (Unsat,_) -> do
+                  condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
+                  ncondAst <- mkNot condAst
+                  checkInv' <- mkAnd [inv, ncondAst] >>= \npre -> local $ helper axioms npre inv
+                  case checkInv' of
+                      (Unsat,_) -> do
+                          nPre <- mkAnd [inv, condAst]
+                          let s = [(pid, Block [BlockStmt _body])] 
+                          bodyCheck <- local $ analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, inv) s
+                          case bodyCheck of
+                              (Unsat,_) -> do 
+                                  rPre <- mkAnd [inv, pre]
+                                  analyser opt (objSort, pars, res, fields, ssamap, axioms, inv, post) ((pid, Block r1):rest)
+                              _ -> error $ "bodyCheck: SAT"
+                      _ -> error $ "lastCheck failed"
+              _ -> error "precondition does not imply the invariant"
+      _ -> error $ "not supported: " ++ show stmt
+    LocalVars mods ty vars -> do
+      sort <- processType ty
+      (nssamap, npre) <- foldM (\(ssamap', pre') v -> processNewVar (objSort, pars, res, fields, ssamap', pre') sort v 1) (ssamap, pre) vars
+      --let nssamap = foldl (\m (ident,ast, _) -> M.insert ident (ast, sort, 1) m) ssamap idAst
+      analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post) ((pid, Block r1):rest)
+    _ -> error "analyser: bstmt is not a BlockStmt"
     
 combine :: (Result, Maybe Model) -> (Result, Maybe Model) -> Z3 (Result, Maybe Model)
 combine (Unsat,_) (Unsat,_) = return (Unsat, Nothing)
@@ -293,3 +263,23 @@ makeApp ssamap pid = do
   iApp <- toApp iAST
   return (iAST,iApp)
 -- End Fusion Utility Functions
+
+-- De/Increment
+analysePostOp :: Stmt -> (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST) -> Exp -> Op -> String -> Z3 (AST,AST,SSAMap)
+analysePostOp stmt (objSort, pars, res, fields, ssamap, axioms, pre, post) lhs op str = do
+  rhsAst <- processExp (objSort, pars, res, fields, ssamap) (BinOp lhs op (Lit $ Int 1))
+  case lhs of
+    ExpName (Name [ident@(Ident str)]) -> do
+      let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
+          cstr = str ++ show i
+          ni = i+1
+          nstr = str ++ show ni
+      sym <- mkStringSymbol nstr
+      var <- mkFreshFuncDecl nstr [] sort
+      astVar <- mkApp var []
+      let nssamap = M.insert ident (astVar, sort, ni) ssamap
+      ass <- processAssign astVar EqualA rhsAst plhsAST
+      npre <- mkAnd [pre, ass]
+      post' <- replaceVariable cstr var post
+      return (npre,post',nssamap)
+    _ -> error $ str ++ show stmt ++ " not supported"
