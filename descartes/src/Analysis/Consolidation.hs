@@ -1,3 +1,4 @@
+{-# LANGUAGE RecordWildCards #-}
 -------------------------------------------------------------------------------
 -- Module    :  Analysis.Consolidation
 -- Copyright :  (c) 2015 Marcelo Sousa
@@ -6,12 +7,14 @@ module Analysis.Consolidation where
 
 import Analysis.Axioms
 import Analysis.Engine
+import Analysis.Hoare
 import Analysis.Invariant
 import Analysis.Properties
 import Analysis.Util
 import Analysis.Types
 
 import Control.Monad.State.Strict
+import Control.Monad.ST.Safe
 
 import Data.Map (Map)
 import Data.Maybe
@@ -25,261 +28,262 @@ import Z3.Monad
 import qualified Data.Map as M
 import qualified Debug.Trace as T
 
-verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)
+verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result,Maybe String)
 verify opt classMap _comps prop = do
-  let comps = _comps -- map rewrite _comps
-  (objSort, pars, res, fields) <- prelude classMap comps
-  (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
-  (fields', axioms) <- addAxioms objSort fields
-  let blocks = zip [0..] $ getBlocks comps
-  iSSAMap <- getInitialSSAMap
-  (res, mmodel) <- analyser opt (objSort, pars, res, fields', iSSAMap, axioms, pre, post) blocks
-  case res of 
-    Unsat -> return (Unsat, Nothing)
-    Sat -> do
-      str <- showModel $ fromJust mmodel
-      return (Sat, Just str)
+ let comps = _comps -- map rewrite _comps
+ (objSort, pars, res, fields) <- prelude classMap comps
+ (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
+ (fields', axioms) <- addAxioms objSort fields
+ let blocks = zip [0..] $ getBlocks comps
+ iSSAMap <- getInitialSSAMap
+ let iEnv = Env objSort pars res fields' iSSAMap axioms pre post opt False False
+ ((res, mmodel),_) <- runStateT (analyser blocks) iEnv
+ case res of 
+  Unsat -> return (Unsat, Nothing)
+  Sat -> do
+   str <- showModel $ fromJust mmodel
+   return (Sat, Just str)
         
 -- strongest post condition
-analyser :: Bool -> (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST) -> [(Int, Block)] -> Z3 (Result, Maybe Model)
-analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) [] = do 
-  preStr  <- astToString pre
-  postStr <- astToString post
-  let k = trace ("Analyser Leaf:\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
-  k `seq` local $ helper axioms pre post
-analyser opt env ((pid,Block []):rest) = analyser opt env rest
-analyser opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid,Block (bstmt:r1)):rest) = do
-  preStr  <- astToString pre
-  postStr <- astToString post
-  let k = T.trace ("\n-----------------\nAnalyser State:\nStatement: " ++ prettyPrint bstmt ++ "\nPrecondition:\n" ++ preStr ++ "\nPostcondition: " ++ postStr) $ unsafePerformIO $ getChar
-  k `seq` case bstmt of
-    BlockStmt stmt -> case stmt of
-      StmtBlock (Block block) -> analyser opt env ((pid, Block (block ++ r1)):rest)
-      Assume expr -> do
-        exprEnc <- processExp (objSort, pars, res, fields, ssamap) expr
-        nPre <- mkAnd [pre,exprEnc]
-        analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) ((pid, Block r1):rest)
-      Return Nothing -> error "analyser: return Nothing"
-      Return (Just expr) -> trace ("processing return of pid " ++ show pid ++ " " ++ show stmt) $ do
-        exprPsi <- processExp (objSort, pars, res, fields, ssamap) expr
-        let resPid = res !! pid  
-        r <- mkEq resPid exprPsi
-        nPre <- mkAnd [pre,r]
-        if opt
-        then do
-          test <- local $ helper axioms nPre post
-          case fst test of
-            Unsat -> trace ("Optimizer: Pruned Path") $ return test
-            _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
-        else analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
-      IfThen cond s1 -> do
-        condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
-        -- then branch
-        preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
-        -- if opt then call solver, else continue
-        resThen <- do
-          if opt
-          then do 
-            push 
-            assert preThen
-            cThen <- check
-            pop 1
-            case cThen of
-              Unsat -> trace ("preThen becomes false") $ return (Unsat,Nothing)
-              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-          else analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-        -- else branch
-        ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
-        preElse <- mkAnd [pre, ncondSmt]
-        resElse <- do
-          if opt 
-          then do 
-            push
-            assert preElse
-            cElse <- check
-            pop 1
-            case cElse of
-              Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
-              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block r1):rest)
-          else analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block r1):rest)
-        trace ("IfThen " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
-      IfThenElse Nondet s1 s2 -> do 
-        resThen <- analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid, Block (BlockStmt s1:r1)):rest)                
-        resElse <- analyser opt (objSort, pars, res, fields, ssamap, axioms, pre, post) ((pid, Block (BlockStmt s2:r1)):rest)
-        trace ("NonDet IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse                
-      IfThenElse cond s1 s2 -> trace ("processing conditional " ++ show cond) $ do
-        condSmt <- processExp (objSort, pars, res, fields, ssamap) cond
-        -- then branch
-        preThen <- trace ("processing THEN branch") $ mkAnd [pre, condSmt]
-        resThen <- do
-          if opt
-          then do 
-            push 
-            assert preThen
-            cThen <- check
-            pop 1
-            case cThen of
-              Unsat -> trace ("preThen becomes false") $ return (Unsat,Nothing)
-              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-          else analyser opt (objSort, pars, res, fields, ssamap, axioms, preThen, post) ((pid, Block (BlockStmt s1:r1)):rest)
-        -- else branch
-        ncondSmt <- trace ("processing ELSE branch") $ mkNot condSmt
-        preElse <- mkAnd [pre, ncondSmt]
-        resElse <- do
-          if opt
-          then do
-            push
-            assert preElse
-            cElse <- check
-            pop 1
-            case cElse of
-              Unsat -> trace ("preElse becomes false") $ return (Unsat,Nothing)
-              _ -> analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
-            else analyser opt (objSort, pars, res, fields, ssamap, axioms, preElse, post) ((pid, Block (BlockStmt s2:r1)):rest)
-        trace ("IfThenElse " ++ show (fst resThen, fst resElse)) $ combine resThen resElse
-      ExpStmt (MethodInv (MethodCall (Name [Ident "assume"]) [expr])) -> do 
-        expAST <- processExp (objSort, pars, res, fields, ssamap) expr
-        npre <- mkAnd [pre,expAST]
-        analyser opt (objSort, pars, res, fields, ssamap, axioms, npre, post) ((pid, Block r1):rest)
-      ExpStmt (Assign lhs aOp rhs) -> do
-        rhsAst <- processExp (objSort, pars, res, fields, ssamap) rhs
-        case lhs of
-            NameLhs (Name [ident@(Ident str)]) -> do
-              let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
-                  cstr = str ++ show i
-                  ni = i+1
-                  nstr = str ++ show ni
-              sym <- mkStringSymbol nstr
-              var <- mkFreshFuncDecl nstr [] sort
-              astVar <- mkApp var []
-              let nssamap = M.insert ident (astVar, sort, ni) ssamap
-              ass <- processAssign astVar aOp rhsAst plhsAST
-              npre <- mkAnd [pre, ass]
-              post' <- replaceVariable cstr var post
-              analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
-            _ -> error $ "Assign " ++ show stmt ++ " not supported"
-      ExpStmt (PostIncrement lhs) -> do
-        (npre,post',nssamap) <- analysePostOp stmt env lhs Add "PostIncrement"
-        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
-      ExpStmt (PostDecrement lhs) -> do
-        (npre,post',nssamap) <- analysePostOp stmt env lhs Sub "PostDecrement"
-        analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post') ((pid, Block r1):rest)
-      While _cond _body -> trace ("\nProcessing While loop from PID" ++ show pid ++"\n") $ do
-          let 
-          --if all isLoop rest
-          --then applyFusion env ((pid,Block (bstmt:r1)):rest)
-          --else analyser env $ (rest ++ [(pid,Block (bstmt:r1))])
-          inv <- guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
-          checkInv <- local $ helper axioms pre inv
-          invStr <- astToString inv
-          preStr <- astToString pre
-          let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr ++ "\npid: " ++ show pid) $ unsafePerformIO $ getChar
-          case checkInv of
-              (Unsat,_) -> do
-                  condAst <- processExp (objSort, pars, res, fields, ssamap) _cond
-                  ncondAst <- mkNot condAst
-                  checkInv' <- mkAnd [inv, ncondAst] >>= \npre -> local $ helper axioms npre inv
-                  case checkInv' of
-                      (Unsat,_) -> do
-                          nPre <- mkAnd [inv, condAst]
-                          let s = [(pid, Block [BlockStmt _body])] 
-                          bodyCheck <- local $ analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, inv) s
-                          case bodyCheck of
-                              (Unsat,_) -> do 
-                                  rPre <- mkAnd [inv, pre]
-                                  analyser opt (objSort, pars, res, fields, ssamap, axioms, inv, post) ((pid, Block r1):rest)
-                              _ -> error $ "bodyCheck: SAT"
-                      _ -> error $ "lastCheck failed"
-              _ -> error "precondition does not imply the invariant"
-      _ -> error $ "not supported: " ++ show stmt
-    LocalVars mods ty vars -> do
-      sort <- processType ty
-      (nssamap, npre) <- foldM (\(ssamap', pre') v -> processNewVar (objSort, pars, res, fields, ssamap', pre') sort v 1) (ssamap, pre) vars
-      --let nssamap = foldl (\m (ident,ast, _) -> M.insert ident (ast, sort, 1) m) ssamap idAst
-      analyser opt (objSort, pars, res, fields, nssamap, axioms, npre, post) ((pid, Block r1):rest)
-    _ -> error "analyser: bstmt is not a BlockStmt"
-    
-combine :: (Result, Maybe Model) -> (Result, Maybe Model) -> Z3 (Result, Maybe Model)
-combine (Unsat,_) (Unsat,_) = return (Unsat, Nothing)
-combine (Unsat,_) res   = return res
-combine res   _     = return res
+_triple :: String -> String -> String -> String
+_triple pre stm post =
+ unlines
+  ["-----------------"
+  ,"Analyser State"
+  ,pre
+  ,stm
+  ,post
+  ,"-----------------"]
 
-applyFusion :: Bool -> (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST) -> [(Int, Block)] -> Z3 (Result, Maybe Model)
-applyFusion opt env@(objSort, pars, res, fields, ssamap, axioms, pre, post) list = trace ("applying Fusion!!") $ do
-    let (loops, rest) = unzip $ map takeHead list
-        (_conds, bodies) = unzip $ map splitLoop loops
-        (pids, conds) = unzip _conds
-    astApps <- mapM (makeApp ssamap) pids
-    let (asts, apps) = unzip astApps
-    inv' <- mkExistsConst [] apps pre
-    -- equality constraints between the loop counter iterations: i1 = i2 and i1 = i3 ...
-    eqs <- mapM (\c -> mkEq (head asts) c) (tail asts)
-    eqInv <- mkAnd eqs
-    -- the candidate invariant
-    inv <- mkAnd [inv',eqInv]
-    checkInv <- local $ helper axioms pre inv
-    invStr <- astToString inv
-    preStr <- astToString pre
-    --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr) $ unsafePerformIO $ getChar
-    case checkInv of
-        (Unsat,_) -> do
-            -- the new precondition inside the loop
-            condsAsts <- mapM (processExp (objSort, pars, res, fields, ssamap)) conds 
-            ncondsAsts <- mapM mkNot condsAsts
-            bodyPre <- mkAnd $ inv:condsAsts
-            bodyCheck <- local $ analyser opt (objSort, pars, res, fields, ssamap, axioms, bodyPre, inv) bodies
-            case bodyCheck of
-                (Unsat,_) -> do
-                    condsNAst <- mkAnd condsAsts >>= mkNot
-                    nPre <- mkAnd [inv,condsNAst]
-                    ncondAst <- mkAnd ncondsAsts
-                    lastCheck <- local $ helper axioms nPre ncondAst
-                    case lastCheck of
-                        (Unsat,_) -> analyser opt (objSort, pars, res, fields, ssamap, axioms, nPre, post) rest
-                        _ -> error "lastCheck failed"
-                _ -> error "couldnt prove the loop bodies with invariant"
-        _ -> error "precondition does not imply the invariant"
+-- @ Analyser main function
+analyser :: [(Int,Block)] -> EnvOp (Result,Maybe Model)
+analyser stmts = do
+ env@Env{..} <- get
+ if _debug
+ then analyser_debug stmts
+ else analyse stmts
 
--- Begin Fusion Utility Functions
-isLoop :: (Int, Block) -> Bool
-isLoop (_, Block ((BlockStmt (While _ _)):rest)) = True
-isLoop _ = False
-        
-takeHead :: (Int, Block) -> ((Int, Stmt), (Int,Block))
-takeHead (pid, Block []) = error "takeHead"
-takeHead (pid, Block ((BlockStmt b):rest)) = ((pid,b), (pid, Block rest))
+analyser_debug :: [(Int,Block)] -> EnvOp (Result,Maybe Model)
+analyser_debug stmts = do
+ env@Env{..} <- get
+ preStr  <- lift $ astToString _pre
+ postStr <- lift $ astToString _post
+ case stmts of
+  [] -> do 
+   let k = T.trace (_triple preStr "end" postStr) $ unsafePerformIO $ getChar
+   k `seq` analyse stmts
+  ((pid,Block []):rest) -> analyser_debug rest
+  ((pid,Block (bstmt:r1)):rest) -> do
+   let k = T.trace (_triple preStr (prettyPrint bstmt) postStr) $ unsafePerformIO $ getChar
+   k `seq` analyse stmts
 
-splitLoop :: (Int, Stmt) -> ((Int, Exp), (Int, Block))
-splitLoop (pid, While cond body) = 
-  case body of
-    StmtBlock block -> ((pid, cond), (pid,block))
-    _ -> error "splitLoop constructing block out of loop body"
-splitLoop _ = error "splitLoop"
+analyse :: [(Int,Block)] -> EnvOp (Result,Maybe Model)   
+analyse stmts = do
+ env@Env{..} <- get
+ case stmts of
+  [] -> lift $ local $ helper _axioms _pre _post
+  ((pid,Block []):rest) -> analyser rest
+  ((pid,Block (bstmt:r1)):rest) -> case bstmt of
+   BlockStmt stmt -> analyser_stmt stmt (pid, Block r1) rest 
+   LocalVars mods ty vars -> do
+    sort <- lift $ processType ty    
+    (nssamap, npre) <- 
+      lift $ foldM (\(ssamap', pre') v -> 
+        processNewVar (_objSort,_params,_res,_fields,ssamap',pre') sort v 1) (_ssamap, _pre) vars
+    updatePre npre
+    updateSSAMap nssamap
+    analyser ((pid, Block r1):rest)
 
-makeApp :: SSAMap -> Int -> Z3 (AST,App)
-makeApp ssamap pid = do
-  let i = Ident $ "i" ++ show (pid+1)
-      (iAST,_,_)  = safeLookup "guessInvariant: i" i ssamap
-  iApp <- toApp iAST
-  return (iAST,iApp)
--- End Fusion Utility Functions
+analyser_stmt :: Stmt -> (Int,Block) -> [(Int,Block)] -> EnvOp (Result,Maybe Model)
+analyser_stmt stmt (pid, Block r1) rest =
+ case stmt of
+  StmtBlock (Block block) -> analyser ((pid, Block (block ++ r1)):rest)
+  Assume expr -> do
+   assume expr
+   analyser ((pid, Block r1):rest)
+  Return mexpr -> do
+   ret pid mexpr
+   env@Env{..} <- get
+   if _opt
+   then do
+    (check,_) <- lift $ local $ helper _axioms _pre _post
+    if check == Unsat
+    then return _default
+    else analyser rest
+   else analyser rest
+  IfThen cond s1 -> do
+   let ifthenelse = IfThenElse cond s1 (StmtBlock (Block []))
+   analyser_stmt ifthenelse (pid, Block r1) rest
+  IfThenElse cond s1 s2 -> analyse_conditional pid r1 rest cond s1 s2 
+  ExpStmt expr -> analyse_exp pid ((pid,Block r1):rest) expr
+  While _cond _body -> analyse_loop pid r1 rest _cond _body
 
--- De/Increment
-analysePostOp :: Stmt -> (Sort, Args, [AST], Fields, SSAMap, AST, AST, AST) -> Exp -> Op -> String -> Z3 (AST,AST,SSAMap)
-analysePostOp stmt (objSort, pars, res, fields, ssamap, axioms, pre, post) lhs op str = do
-  rhsAst <- processExp (objSort, pars, res, fields, ssamap) (BinOp lhs op (Lit $ Int 1))
-  case lhs of
-    ExpName (Name [ident@(Ident str)]) -> do
-      let (plhsAST,sort, i) = safeLookup "Assign" ident ssamap
-          cstr = str ++ show i
-          ni = i+1
-          nstr = str ++ show ni
-      sym <- mkStringSymbol nstr
-      var <- mkFreshFuncDecl nstr [] sort
-      astVar <- mkApp var []
-      let nssamap = M.insert ident (astVar, sort, ni) ssamap
-      ass <- processAssign astVar EqualA rhsAst plhsAST
-      npre <- mkAnd [pre, ass]
-      post' <- replaceVariable cstr var post
-      return (npre,post',nssamap)
-    _ -> error $ str ++ show stmt ++ " not supported"
+-- Analyse Expressions
+analyse_exp :: Int -> [(Int, Block)] -> Exp -> EnvOp (Result, Maybe Model)
+analyse_exp pid rest _exp =
+ case _exp of
+  MethodInv minv -> do 
+   method_call minv
+   analyser rest
+  Assign lhs aOp rhs -> do
+   assign _exp lhs aOp rhs
+   analyser rest 
+  PostIncrement lhs -> do
+   postOp _exp lhs Add "PostIncrement"
+   analyser rest
+  PostDecrement lhs -> do
+   postOp _exp lhs Sub "PostDecrement"
+   analyser rest
+
+-- Analyse If Then Else
+analyse_conditional :: Int -> [BlockStmt] -> [(Int,Block)] -> Exp -> Stmt -> Stmt -> EnvOp (Result,Maybe Model)
+analyse_conditional pid r1 rest cond s1 s2 =
+ if cond == Nondet
+ then do
+  resThen <- analyser ((pid, Block (BlockStmt s1:r1)):rest)                
+  resElse <- analyser ((pid, Block (BlockStmt s2:r1)):rest)
+  combine resThen resElse                
+ else do
+  env@Env{..} <- get
+  condSmt <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) cond
+  -- then branch
+  preThen <- lift $ mkAnd [_pre, condSmt]
+  resThen <- analyse_branch preThen s1
+  -- else branch
+  put env
+  ncondSmt <- lift $ mkNot condSmt
+  preElse <- lift $ mkAnd [_pre, ncondSmt]
+  resElse <- analyse_branch preElse s2
+  combine resThen resElse
+ where
+   analyse_branch phi branch = do
+    env@Env{..} <- get
+    updatePre phi
+    let r = ((pid, Block (BlockStmt branch:r1)):rest)
+    if _opt
+    then do
+      cPhi <- lift $ checkSAT phi
+      if cPhi == Unsat
+      then return _default
+      else analyser r
+    else analyser r
+   combine :: (Result, Maybe Model) -> (Result, Maybe Model) -> EnvOp (Result, Maybe Model)
+   combine (Unsat,_) (Unsat,_) = return _default
+   combine (Unsat,_) res = return res
+   combine res _ = return res
+
+-- Analyse Loops
+analyse_loop :: Int -> [BlockStmt] -> [(Int,Block)] -> Exp -> Stmt -> EnvOp (Result,Maybe Model)
+analyse_loop pid r1 rest _cond _body =  do
+ let bstmt = BlockStmt $ While _cond _body
+ env@Env{..} <- get
+ invs <- guessInvariants (pid+1) _cond
+ if _fuse
+ then if all isLoop rest
+      then do 
+       (checkFusion,cont) <- applyFusion ((pid,Block (bstmt:r1)):rest)
+       if checkFusion
+       then analyse cont
+       else analyse_loop_w_inv invs       
+      else analyse $ rest ++ [(pid,Block (bstmt:r1))] -- apply commutativity
+ else analyse_loop_w_inv invs
+ where
+   isLoop :: (Int, Block) -> Bool
+   isLoop (_, Block ((BlockStmt (While _ _)):rest)) = True
+   isLoop _ = False
+   analyse_loop_w_inv [] = error "analyse_loop failed"
+   analyse_loop_w_inv (inv:is) = do
+    it_res <- _analyse_loop pid _cond _body inv
+    if it_res
+    then do
+     env@Env{..} <- get
+     pre <- lift $ mkAnd [inv,_pre]
+     updatePre pre
+     analyser ((pid,Block r1):rest)
+    else analyse_loop_w_inv is
+   
+--
+_analyse_loop :: Int -> Exp -> Stmt -> AST -> EnvOp Bool
+_analyse_loop pid _cond _body inv = do
+ invStr  <- lift $ astToString inv
+ env@Env{..} <- T.trace ("Invariant:\n" ++ invStr) $ get
+ (checkPre,_) <- lift $ local $ helper _axioms _pre inv
+ case checkPre of
+  Unsat -> do
+   condAst <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) _cond
+   ncondAst <- lift $ mkNot condAst
+   (checkInv,_) <- lift $ mkAnd [inv,ncondAst] >>= \npre -> local $ helper _axioms npre inv
+   case checkInv of
+    Unsat -> do
+     pre <- lift $ mkAnd [inv,condAst]
+     let s = [(pid, Block [BlockStmt _body])]
+     updatePre pre
+     updatePost inv
+     (bodyCheck,m) <- analyser s
+     case bodyCheck of
+      Unsat -> return True
+      Sat -> do
+       put env
+       return False -- {inv && pre} body {inv} failed
+    Sat -> return False -- inv && not_cond =/=> inv
+  Sat -> return False -- pre =/=> inv
+
+applyFusion :: [(Int, Block)] -> EnvOp (Bool,[(Int,Block)])
+applyFusion list = do
+ env@Env{..} <- get
+ let (loops,rest) = unzip $ map takeHead list
+     (_conds,bodies) = unzip $ map splitLoop loops
+     (pids,conds) = unzip _conds
+ astApps <- lift $ mapM (makeApp _ssamap) pids
+ let (asts,apps) = unzip astApps
+ inv' <- lift $ mkExistsConst [] apps _pre
+ -- equality constraints between the loop counter iterations: i1 = i2 and i1 = i3 ...
+ eqs <- lift $ mapM (\c -> mkEq (head asts) c) (tail asts)
+ eqInv <- lift $ mkAnd eqs
+ -- the candidate invariant
+ inv <- lift $ mkAnd [inv',eqInv]
+ (checkInv,_) <- lift $ local $ helper _axioms _pre inv
+ --invStr <- astToString inv
+ --preStr <- astToString pre
+ --let k = T.trace ("\nPrecondition:\n"++ preStr ++ "\nInvariant:\n" ++ invStr) $ unsafePerformIO $ getChar
+ case checkInv of
+  Unsat -> do
+   -- the new precondition inside the loop
+   condsAsts <- lift $ mapM (processExp (_objSort,_params,_res,_fields,_ssamap)) conds 
+   ncondsAsts <- lift $ mapM mkNot condsAsts
+   bodyPre <- lift $ mkAnd $ inv:condsAsts
+   updatePre bodyPre
+   updatePost inv
+   (bodyCheck,_) <- analyser bodies
+   case bodyCheck of
+    Unsat -> do
+     condsNAst <- lift $ mkAnd condsAsts >>= mkNot
+     nPre <- lift $ mkAnd [inv,condsNAst]
+     ncondAst <- lift $ mkAnd ncondsAsts
+     (lastCheck,_) <- lift $ local $ helper _axioms nPre ncondAst
+     case lastCheck of
+      Unsat -> do
+       put env
+       updatePre nPre
+       return (True,rest)
+      Sat -> return (False,[]) -- "lastCheck failed"
+    Sat -> return (False,[]) -- "couldnt prove the loop bodies with invariant"
+  Sat -> return (False,[]) -- "precondition does not imply the invariant"
+ where
+   -- Begin Fusion Utility Functions
+   takeHead :: (Int, Block) -> ((Int, Stmt), (Int,Block))
+   takeHead (pid, Block []) = error "takeHead"
+   takeHead (pid, Block ((BlockStmt b):rest)) = ((pid,b), (pid, Block rest))
+   splitLoop :: (Int, Stmt) -> ((Int, Exp), (Int, Block))
+   splitLoop (pid, While cond body) = 
+    case body of
+     StmtBlock block -> ((pid, cond), (pid,block))
+     _ -> error "splitLoop constructing block out of loop body"
+   splitLoop _ = error "splitLoop"
+   makeApp :: SSAMap -> Int -> Z3 (AST,App)
+   makeApp ssamap pid = do
+    let i = Ident $ "i" ++ show (pid+1)
+        (iAST,_,_)  = safeLookup "guessInvariant: i" i ssamap
+    iApp <- toApp iAST
+    return (iAST,iApp)
+   -- End Fusion Utility Functions

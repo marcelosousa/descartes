@@ -5,12 +5,13 @@
 
 module Analysis.Axioms where
 
-import qualified Data.Map as M
 
-import Language.Java.Syntax
-
-import Z3.Monad
 import Analysis.Properties
+import Analysis.Types
+import Language.Java.Syntax
+import Z3.Monad
+
+import qualified Data.Map as M
 
 addAxioms :: Sort -> Fields -> Z3 (Fields, AST)
 addAxioms objSort fields = do

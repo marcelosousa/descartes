@@ -4,31 +4,35 @@
 -------------------------------------------------------------------------------
 module Analysis.Engine where
 
-import Z3.Monad
+import Analysis.Axioms
+import Analysis.Properties
+import Analysis.Types
+import Analysis.Util
 
+import Control.Monad.State.Strict
 import Data.Map (Map)
 import Data.Maybe
-import qualified Data.Map as M
-import Control.Monad.State.Strict
 
 import Language.Java.Syntax
 import Language.Java.Pretty
 
-import Analysis.Types
-import Analysis.Util
-import Analysis.Properties
-import Analysis.Axioms
-
 import System.IO.Unsafe
+import Z3.Monad hiding (Params)
+
+import qualified Data.Map as M
 import qualified Debug.Trace as T
 
 trace a b = b
 --trace = T.trace
 
-type ConState = AState Comparator
-type SSAMap = Map Ident (AST, Sort, Int)
-
 -- Performs a SAT-query.
+checkSAT phi = do
+  push 
+  assert phi
+  res <- check
+  pop 1
+  return res
+  
 helper axioms pre post = do
   assert axioms    
   formula <- mkImplies pre post >>= \phi -> mkNot phi -- >>= \psi -> mkAnd [axioms, psi]
@@ -44,7 +48,7 @@ getInitialSSAMap = do
   return $ M.singleton (Ident "null") (ast, iSort, 0)
 
 -- result: (ObjectType, Parameters, Results)
-prelude :: ClassMap -> [Comparator] -> Z3 (Sort, Args, [AST], Fields)
+prelude :: ClassMap -> [Comparator] -> Z3 (Sort, Params, [AST], Fields)
 prelude classMap comps = do
   let arity = length comps
   if arity == 0
@@ -113,7 +117,7 @@ processAssign lhs op rhs plhs =
       mkEq lhs rhs'
     _ -> error $ "processAssign: " ++ show op ++ " not supported"
 
-processNewVar :: (Sort, Args, [AST], Fields, SSAMap, AST) -> Sort -> VarDecl -> Int -> Z3 (SSAMap, AST)
+processNewVar :: (Sort, Params, [AST], Fields, SSAMap, AST) -> Sort -> VarDecl -> Int -> Z3 (SSAMap, AST)
 processNewVar (objSort, pars, res, fields, ssamap', pre') sort (VarDecl varid mvarinit) i = do
   (ident, idAst) <-
     case varid of
@@ -133,7 +137,7 @@ processNewVar (objSort, pars, res, fields, ssamap', pre') sort (VarDecl varid mv
       return (nssamap, pre)
     Just _ -> error "processNewVar: not supported"
     
-processExp :: (Sort, Args, [AST], Fields, SSAMap) -> Exp -> Z3 AST
+processExp :: (Sort, Params, [AST], Fields, SSAMap) -> Exp -> Z3 AST
 processExp env@(objSort, pars, res, fields, ssamap) expr =
   case expr of
     Lit lit -> processLit lit
@@ -170,7 +174,7 @@ processLit lit =
 --    Just (ast, _, _) -> return ast
     _ -> error "processLit: not supported"
 
-processName :: (Sort, Args, [AST], Fields, SSAMap) -> Name -> [AST] -> Z3 AST
+processName :: (Sort, Params, [AST], Fields, SSAMap) -> Name -> [AST] -> Z3 AST
 processName env@(objSort, pars, res, fields, ssamap) (Name [obj]) [] =
   case M.lookup obj pars of
     Nothing -> case M.lookup obj ssamap of
@@ -228,13 +232,13 @@ replaceVariable a fnB ast = do
       sym <- getDeclName fn >>= getSymbolString
       if sym == a
       then do
-        nArgs <- getAppNumArgs app
-        args <- mapM (\i -> getAppArg app i) [0..(nArgs-1)]
+        nParams <- getAppNumArgs app
+        args <- mapM (\i -> getAppArg app i) [0..(nParams-1)]
         args' <- mapM (replaceVariable a fnB) args
         mkApp fnB args' --T.trace ("FN " ++ symName) $ mkApp fn args'
       else do 
-        nArgs <- getAppNumArgs app
-        args <- mapM (\i -> getAppArg app i) [0..(nArgs-1)]
+        nParams <- getAppNumArgs app
+        args <- mapM (\i -> getAppArg app i) [0..(nParams-1)]
         args' <- mapM (replaceVariable a fnB) args
         mkApp fn args' --T.trace ("FN " ++ symName) $ mkApp fn args'
     Z3_VAR_AST        -> return ast

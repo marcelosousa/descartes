@@ -16,15 +16,6 @@ import Z3.Monad
 import Analysis.Types
 import Analysis.Util
 
--- receives the parameters and returns to specify the pre and post-condition
--- need to use maps for the parameters, returns, fields
-type Args = Map Ident AST
-type Res  = [AST]
-type Fields = Map Ident FuncDecl
-
-type Prop = (Args, Res, Fields) -> Z3 (AST, AST)
-
-
 prop1 :: Prop
 prop1 (args, [res1,res2], fields) = do
     let o11 = safeLookup "trans" (Ident "o11") args

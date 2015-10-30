@@ -10,14 +10,17 @@ import Analysis.Invariant
 import Analysis.Properties
 import Analysis.Util
 import Analysis.Types
+
 import Control.Monad.State.Strict
 import Data.Map (Map)
-import qualified Data.Map as M
 import Data.Maybe
+
 import Language.Java.Pretty
 import Language.Java.Syntax
-import Z3.Monad
 
+import Z3.Monad hiding (Params)
+
+import qualified Data.Map as M
 
 verifyWithSelf :: ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)
 verifyWithSelf classMap comps prop = do
@@ -37,7 +40,7 @@ verifyWithSelf classMap comps prop = do
       return (Sat, Just str)
             
 -- self-composition
-selfcomposition :: (Sort, Args, [AST], Fields, SSAMap, AST, AST) -> (Int, Block) -> Z3 AST
+selfcomposition :: (Sort, Params, [AST], Fields, SSAMap, AST, AST) -> (Int, Block) -> Z3 AST
 selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block []) = return pre
 selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block (bstmt:r1)) = do
   preStr  <- astToString pre
@@ -136,7 +139,7 @@ selfcomposition env@(objSort, pars, res, fields, ssamap, axioms, pre) (pid,Block
             selfcomposition (objSort, pars, res, fields, nssamap, axioms, npre) (pid, Block r1)
           _ -> error $ "PostIncrement " ++ show stmt ++ " not supported"
       While _cond _body -> trace ("\nProcessing While loop from PID" ++ show pid ++"\n") $ do
-        inv <- guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
+        inv <- undefined --guessInvariant (objSort, pars, res, fields, ssamap) (pid+1) _cond pre
         checkInv <- local $ helper axioms pre inv
         invStr <- astToString inv
         preStr <- astToString pre
