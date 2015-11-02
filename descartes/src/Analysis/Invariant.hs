@@ -18,7 +18,7 @@ guessInvariants :: Int -> Exp -> EnvOp [AST]
 guessInvariants pid cond = do
  env@Env{..} <- get 
  case getCondCounter cond of 
-  Nothing -> error "guessInvariant procedure can't compute valid invariant" -- mkTrue
+  Nothing -> error $ "guessInvariant procedure failed at:" ++ show cond -- mkTrue
   Just i -> do
    let (iAST,_,_)  = safeLookup "guessInvariant: i" i _ssamap
    -- i >= 0
@@ -61,4 +61,29 @@ generalizeCond env@(objSort, pars, res, fields, ssamap) i iAST _cond pid =
       c2 <- processExp (objSort, pars, res, fields, ssamap') cond'
       -- \forall j. c1 => c2
       mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body >>= \inv -> return $ Just inv
-    _ -> return Nothing -- error $ "generalizeCond: " ++ show _cond
+    _ -> do
+      let jIdent = Ident $ "j" ++ show pid
+      sort <- mkIntSort
+      jSym <- mkStringSymbol $ "j" ++ show pid
+      j <- mkConst jSym sort
+      jApp <- toApp j
+      i0 <- mkIntNum 0
+      -- c1: 0 <= j < i
+      c1 <- mkLe i0 j >>= \left -> mkLt j iAST >>= \right -> mkAnd [left, right]
+      -- c2: 
+      let ssamap' = M.insert jIdent (j, sort, pid) ssamap
+      c2 <- buildArtCond (pars,fields) j pid
+      -- \forall j. c1 => c2
+      mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body >>= \inv -> return $ Just inv 
+    
+buildArtCond :: (Params, Fields) -> AST -> Int -> Z3 AST
+buildArtCond (pars,fields) j pid = do
+  let o1 = Ident $ "o1" ++ show pid
+      o2 = Ident $ "o2" ++ show pid
+      getfn = Ident "get"
+      o1z3 = safeLookup "buildArtCond: o1" o1 pars
+      o2z3 = safeLookup "buildArtCond: o2" o2 pars
+      fn = safeLookup "buildArtCond: fn" getfn fields
+  get1 <- mkApp fn [o1z3,j]
+  get2 <- mkApp fn [o2z3,j]
+  mkEq get1 get2

@@ -6,6 +6,7 @@
 module Main where
 
 import Analysis.Consolidation
+import Analysis.Product
 import Analysis.Properties
 import Analysis.SelfComposition
 import Analysis.Types
@@ -88,7 +89,7 @@ descartes_main logLevel mode file arity prop propName = do
     Right cu -> do
       let classMap = getInfo cu
           comps = getComps cu
-          comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1..arity]) comps
+          comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1..arity]) comps -- tenho que mexer aqui!
       if logLevel > 0
       then do 
         mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
@@ -100,6 +101,7 @@ descartes mode classMap comparator prop propName = do
     0 -> evalZ3 $ verify True classMap comparator prop
     1 -> evalZ3 $ verify False classMap comparator prop
     2 -> evalZ3 $ verifyWithSelf classMap comparator prop
+    3 -> evalZ3 $ verifyWithProduct classMap comparator prop
   case vals of
     Unsat -> putStrLn $ "Unsat: Comparator OBEYS " ++ propName
     Sat -> do
