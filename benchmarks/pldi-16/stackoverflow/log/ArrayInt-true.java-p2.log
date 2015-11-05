@@ -1,0 +1,25 @@
+Property 2
+descartes -p=2 -m=0: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.375s
+user	0m0.371s
+sys	0m0.004s
+descartes -p=2 -m=1: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m1.567s
+user	0m1.554s
+sys	0m0.012s
+descartes -p=2 -m=2: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
+
+real	0m0.011s
+user	0m0.011s
+sys	0m0.000s
+descartes -p=2 -m=3: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
+
+real	0m0.010s
+user	0m0.005s
+sys	0m0.006s

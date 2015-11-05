@@ -1,0 +1,181 @@
+Property 2
+descartes -p=2 -m=0: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+o22!9 -> IsoSprite!val!2
+res1!12 -> 1
+o21!7 -> IsoSprite!val!1
+o13!10 -> IsoSprite!val!0
+res3!14 -> (- 1)
+o11!6 -> IsoSprite!val!0
+o12!8 -> IsoSprite!val!1
+o23!11 -> IsoSprite!val!2
+res2!13 -> 1
+maxX!4 -> {
+  0
+}
+compareInt!19 -> {
+  0
+}
+maxY!2 -> {
+  0
+}
+minY!3 -> {
+  (- 1)
+}
+compareDouble!18 -> {
+  0
+}
+minX!5 -> {
+  (- 1)
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+minZ!1 -> {
+  IsoSprite!val!2 -> 0
+  else -> 2
+}
+maxZ!0 -> {
+  IsoSprite!val!0 -> 1
+  else -> (- 1)
+}
+
+
+real	0m1.734s
+user	0m1.726s
+sys	0m0.008s
+descartes -p=2 -m=1: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+o22!9 -> IsoSprite!val!2
+res1!12 -> 1
+o21!7 -> IsoSprite!val!1
+o13!10 -> IsoSprite!val!0
+res3!14 -> (- 1)
+o11!6 -> IsoSprite!val!0
+o12!8 -> IsoSprite!val!1
+o23!11 -> IsoSprite!val!2
+res2!13 -> 1
+maxX!4 -> {
+  0
+}
+compareInt!19 -> {
+  0
+}
+maxY!2 -> {
+  1
+}
+minY!3 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+minX!5 -> {
+  (- 1)
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+minZ!1 -> {
+  IsoSprite!val!2 -> 0
+  else -> 2
+}
+maxZ!0 -> {
+  IsoSprite!val!0 -> 1
+  else -> (- 1)
+}
+
+
+real	0m1.059s
+user	0m1.059s
+sys	0m0.003s
+descartes -p=2 -m=2: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+res2!13 -> 1
+res1!12 -> 1
+o21!7 -> IsoSprite!val!0
+o13!10 -> IsoSprite!val!1
+res3!14 -> (- 1)
+o11!6 -> IsoSprite!val!1
+o12!8 -> IsoSprite!val!0
+o23!11 -> IsoSprite!val!2
+o22!9 -> IsoSprite!val!2
+maxX!4 -> {
+  0
+}
+compareInt!19 -> {
+  0
+}
+maxY!2 -> {
+  1
+}
+minY!3 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+minX!5 -> {
+  (- 1)
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+minZ!1 -> {
+  IsoSprite!val!2 -> 0
+  else -> 2
+}
+maxZ!0 -> {
+  IsoSprite!val!1 -> 1
+  else -> (- 1)
+}
+
+
+real	0m5.054s
+user	0m5.024s
+sys	0m0.028s
+descartes -p=2 -m=3: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+o22!9 -> IsoSprite!val!2
+res1!12 -> 1
+o21!7 -> IsoSprite!val!1
+o13!10 -> IsoSprite!val!0
+res3!14 -> (- 1)
+o11!6 -> IsoSprite!val!0
+o12!8 -> IsoSprite!val!1
+o23!11 -> IsoSprite!val!2
+res2!13 -> 1
+maxX!4 -> {
+  0
+}
+compareInt!19 -> {
+  0
+}
+maxY!2 -> {
+  1
+}
+minY!3 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+minX!5 -> {
+  (- 1)
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+minZ!1 -> {
+  IsoSprite!val!2 -> 0
+  else -> 2
+}
+maxZ!0 -> {
+  IsoSprite!val!0 -> 1
+  else -> (- 1)
+}
+
+
+real	0m1.065s
+user	0m1.060s
+sys	0m0.004s

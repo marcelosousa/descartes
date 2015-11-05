@@ -1,0 +1,101 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!6 -> (- 1)
+o12!3 -> ExportTerm!val!0
+o22!4 -> ExportTerm!val!1
+o11!1 -> ExportTerm!val!1
+res1!5 -> (- 1)
+o21!2 -> ExportTerm!val!0
+compareIgnoreCaseString!12 -> {
+  0
+}
+sortLabel!0 -> {
+  0
+}
+compareInt!11 -> {
+  0
+}
+compareDouble!10 -> {
+  0
+}
+
+
+real	0m0.042s
+user	0m0.029s
+sys	0m0.013s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!6 -> (- 1)
+o12!3 -> ExportTerm!val!0
+o22!4 -> ExportTerm!val!1
+o11!1 -> ExportTerm!val!1
+res1!5 -> (- 1)
+o21!2 -> ExportTerm!val!0
+compareIgnoreCaseString!12 -> {
+  0
+}
+sortLabel!0 -> {
+  0
+}
+compareInt!11 -> {
+  0
+}
+compareDouble!10 -> {
+  0
+}
+
+
+real	0m0.029s
+user	0m0.025s
+sys	0m0.004s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!6 -> (- 1)
+o12!3 -> ExportTerm!val!0
+o22!4 -> ExportTerm!val!1
+o11!1 -> ExportTerm!val!1
+res1!5 -> (- 1)
+o21!2 -> ExportTerm!val!0
+compareIgnoreCaseString!12 -> {
+  0
+}
+sortLabel!0 -> {
+  0
+}
+compareInt!11 -> {
+  0
+}
+compareDouble!10 -> {
+  0
+}
+
+
+real	0m0.033s
+user	0m0.025s
+sys	0m0.008s
+descartes -p=1 -m=3: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!6 -> (- 1)
+o12!3 -> ExportTerm!val!0
+o22!4 -> ExportTerm!val!1
+o11!1 -> ExportTerm!val!1
+res1!5 -> (- 1)
+o21!2 -> ExportTerm!val!0
+compareIgnoreCaseString!12 -> {
+  0
+}
+sortLabel!0 -> {
+  0
+}
+compareInt!11 -> {
+  0
+}
+compareDouble!10 -> {
+  0
+}
+
+
+real	0m0.026s
+user	0m0.019s
+sys	0m0.008s

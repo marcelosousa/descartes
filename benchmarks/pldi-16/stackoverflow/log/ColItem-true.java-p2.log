@@ -1,0 +1,25 @@
+Property 2
+descartes -p=2 -m=0: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.172s
+user	0m0.160s
+sys	0m0.012s
+descartes -p=2 -m=1: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.311s
+user	0m0.294s
+sys	0m0.016s
+descartes -p=2 -m=2: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.791s
+user	0m0.767s
+sys	0m0.024s
+descartes -p=2 -m=3: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m0.314s
+user	0m0.290s
+sys	0m0.024s

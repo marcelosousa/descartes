@@ -1,0 +1,176 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+right21 -> 7
+i221 -> 1
+left11 -> 7
+res2!8 -> 1
+o11!3 -> Word!val!0
+i111!843 -> 0
+left21 -> 7
+o21!4 -> Word!val!1
+res1!7 -> 1
+right11 -> 7
+o22!6 -> Word!val!0
+i221!842 -> 0
+o12!5 -> Word!val!1
+i111 -> 0
+get!1!911 -> {
+  Word!val!1 0 -> 6
+  else -> 4
+}
+compareDouble!12 -> {
+  0
+}
+get!1 -> {
+  (get!1!911 (:var 0) (k!910 (:var 1)))
+}
+compareInt!13 -> {
+  (compareInt!13!912 (k!908 (:var 0)) (k!908 (:var 1)))
+}
+count!2 -> {
+  7
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+length!0 -> {
+  Word!val!0 -> 1
+  else -> 0
+}
+k!908 -> {
+  4 -> 4
+  else -> 6
+}
+k!910 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+compareInt!13!912 -> {
+  4 6 -> (- 1)
+  6 4 -> 1
+  else -> 0
+}
+
+
+real	0m0.793s
+user	0m0.788s
+sys	0m0.004s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+right21 -> 7
+i221 -> 1
+left11 -> 7
+res2!8 -> 1
+i111!627 -> 0
+o11!3 -> Word!val!0
+i221!626 -> 0
+left21 -> 7
+o21!4 -> Word!val!1
+res1!7 -> 1
+right11 -> 7
+o22!6 -> Word!val!0
+o12!5 -> Word!val!1
+i111 -> 0
+compareInt!13!696 -> {
+  4 6 -> (- 1)
+  6 4 -> 1
+  else -> 0
+}
+compareDouble!12 -> {
+  0
+}
+get!1 -> {
+  (get!1!695 (:var 0) (k!694 (:var 1)))
+}
+compareInt!13 -> {
+  (compareInt!13!696 (k!692 (:var 0)) (k!692 (:var 1)))
+}
+count!2 -> {
+  7
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+length!0 -> {
+  Word!val!1 -> 0
+  else -> 1
+}
+k!692 -> {
+  4 -> 4
+  else -> 6
+}
+k!694 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+get!1!695 -> {
+  Word!val!1 0 -> 6
+  else -> 4
+}
+
+
+real	0m0.830s
+user	0m0.821s
+sys	0m0.008s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+right21 -> 6
+i221 -> 8855
+i221!677 -> 0
+left11 -> 6
+res2!8 -> 1
+o11!3 -> Word!val!0
+i111!676 -> 0
+left21 -> 6
+o21!4 -> Word!val!1
+res1!7 -> 1
+o22!6 -> Word!val!0
+i222!609 -> 8856
+right11 -> 6
+o12!5 -> Word!val!1
+i111 -> 8855
+k!775 -> {
+  9 -> 9
+  else -> 8
+}
+compareInt!13!779 -> {
+  8 9 -> 1
+  9 8 -> (- 1)
+  else -> 0
+}
+compareDouble!12 -> {
+  0
+}
+count!2 -> {
+  6
+}
+get!1 -> {
+  (get!1!778 (:var 0) (k!777 (:var 1)))
+}
+compareInt!13 -> {
+  (compareInt!13!779 (k!775 (:var 0)) (k!775 (:var 1)))
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+length!0 -> {
+  Word!val!0 -> 8856
+  else -> 8855
+}
+k!777 -> {
+  (ite (>= (:var 0) 8854) (ite (>= (:var 0) 8855) 8855 8854) 0)
+}
+get!1!778 -> {
+  Word!val!0 8855 -> 9
+  else -> 8
+}
+
+
+real	0m0.189s
+user	0m0.181s
+sys	0m0.008s
+descartes -p=1 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.093s
+user	0m0.089s
+sys	0m0.004s

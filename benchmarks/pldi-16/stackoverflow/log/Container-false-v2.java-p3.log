@@ -1,0 +1,157 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o21!6 -> Container!val!1
+o11!5 -> Container!val!0
+o13!9 -> Container!val!1
+o23!10 -> Container!val!2
+res1!11 -> 0
+res3!13 -> 0
+o22!8 -> Container!val!2
+res2!12 -> (- 1)
+o12!7 -> Container!val!0
+compareDouble!17 -> {
+  0
+}
+departureTime!3 -> {
+  Container!val!2 -> 3
+  else -> 1
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+departureTimeIsBefore!4 -> {
+  Container!val!0 3 -> true
+  else -> false
+}
+departureMaxDuration!2 -> {
+  4
+}
+departureTransportType!0 -> {
+  5
+}
+
+
+real	0m0.045s
+user	0m0.041s
+sys	0m0.004s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o21!6 -> Container!val!1
+o11!5 -> Container!val!0
+o13!9 -> Container!val!1
+o23!10 -> Container!val!2
+res1!11 -> 0
+res3!13 -> 0
+o22!8 -> Container!val!2
+res2!12 -> (- 1)
+o12!7 -> Container!val!0
+compareDouble!17 -> {
+  0
+}
+departureTime!3 -> {
+  Container!val!2 -> 3
+  else -> 1
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+departureTimeIsBefore!4 -> {
+  Container!val!0 3 -> true
+  else -> false
+}
+departureMaxDuration!2 -> {
+  4
+}
+departureTransportType!0 -> {
+  5
+}
+
+
+real	0m0.043s
+user	0m0.039s
+sys	0m0.004s
+descartes -p=3 -m=2: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o21!6 -> Container!val!1
+o11!5 -> Container!val!0
+o13!9 -> Container!val!1
+o23!10 -> Container!val!2
+res1!11 -> 0
+res3!13 -> 0
+o22!8 -> Container!val!2
+res2!12 -> (- 1)
+o12!7 -> Container!val!0
+compareDouble!17 -> {
+  0
+}
+departureTime!3 -> {
+  Container!val!2 -> 3
+  else -> 1
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+departureTimeIsBefore!4 -> {
+  Container!val!0 3 -> true
+  else -> false
+}
+departureMaxDuration!2 -> {
+  4
+}
+departureTransportType!0 -> {
+  5
+}
+
+
+real	0m0.095s
+user	0m0.083s
+sys	0m0.012s
+descartes -p=3 -m=3: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o21!6 -> Container!val!1
+o11!5 -> Container!val!0
+o13!9 -> Container!val!1
+o23!10 -> Container!val!2
+res1!11 -> 0
+res3!13 -> 0
+o22!8 -> Container!val!2
+res2!12 -> (- 1)
+o12!7 -> Container!val!0
+compareDouble!17 -> {
+  0
+}
+departureTime!3 -> {
+  Container!val!2 -> 3
+  else -> 1
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+departureTimeIsBefore!4 -> {
+  Container!val!0 3 -> true
+  else -> false
+}
+departureMaxDuration!2 -> {
+  4
+}
+departureTransportType!0 -> {
+  5
+}
+
+
+real	0m0.062s
+user	0m0.061s
+sys	0m0.000s

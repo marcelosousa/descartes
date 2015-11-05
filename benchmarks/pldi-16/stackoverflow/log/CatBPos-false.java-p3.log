@@ -1,0 +1,223 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res1!14 -> 0
+res2!15 -> 1
+o12!10 -> CatBPos!val!0
+o21!9 -> CatBPos!val!1
+lCompare13!25 -> 0
+lCompare32!1428 -> 0
+lCompare12!24 -> 0
+o23!13 -> CatBPos!val!2
+lCompare23!755 -> 0
+res3!16 -> 0
+o22!11 -> CatBPos!val!2
+lCompare22!80 -> 0
+o13!12 -> CatBPos!val!1
+lCompare33!1513 -> 0
+o11!8 -> CatBPos!val!0
+compareDouble!20 -> {
+  0
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!1 -> 6
+  CatBPos!val!2 -> 7
+  else -> 3
+}
+getBPosIsVacation!3 -> {
+  CatBPos!val!2 -> true
+  else -> false
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!1 -> 8
+  CatBPos!val!2 -> 9
+  else -> 4
+}
+compareInt!21 -> {
+  0
+}
+compareIgnoreCaseString!22 -> {
+  0
+}
+getBPosGetStat!5 -> {
+  CatBPos!val!1 -> 10
+  else -> 2
+}
+getBPosIsDeparture!4 -> {
+  CatBPos!val!1 -> false
+  else -> true
+}
+
+
+real	0m2.142s
+user	0m2.138s
+sys	0m0.004s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res1!14 -> 0
+res2!15 -> 1
+o12!10 -> CatBPos!val!0
+o21!9 -> CatBPos!val!1
+lCompare12!24 -> 0
+lCompare22!206 -> 0
+lCompare23!966 -> 0
+o23!13 -> CatBPos!val!2
+lCompare33!1559 -> 0
+lCompare32!1390 -> 0
+res3!16 -> 0
+o22!11 -> CatBPos!val!2
+o13!12 -> CatBPos!val!1
+lCompare13!61 -> 0
+o11!8 -> CatBPos!val!0
+compareDouble!20 -> {
+  0
+}
+getBPosIsArrival!1 -> {
+  false
+}
+getBPosIsVacation!3 -> {
+  CatBPos!val!1 -> false
+  else -> true
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!1 -> 4
+  CatBPos!val!2 -> 6
+  else -> 2
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!1 -> 7
+  CatBPos!val!2 -> 8
+  else -> 3
+}
+compareInt!21 -> {
+  0
+}
+compareIgnoreCaseString!22 -> {
+  0
+}
+getBPosIsDeparture!4 -> {
+  CatBPos!val!1 -> false
+  else -> true
+}
+
+
+real	0m2.237s
+user	0m2.229s
+sys	0m0.008s
+descartes -p=3 -m=2: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res1!14 -> 0
+res2!15 -> 1
+o21!9 -> CatBPos!val!1
+o12!10 -> CatBPos!val!0
+lCompare23!28 -> 0
+lCompare13!25 -> 0
+lCompare12!24 -> 0
+lCompare33!31 -> 0
+o23!13 -> CatBPos!val!2
+res3!16 -> 0
+o22!11 -> CatBPos!val!2
+lCompare22!27 -> 0
+lCompare32!30 -> 0
+o13!12 -> CatBPos!val!1
+o11!8 -> CatBPos!val!0
+compareDouble!20 -> {
+  0
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!1 -> 6
+  CatBPos!val!2 -> 7
+  else -> 3
+}
+getBPosIsVacation!3 -> {
+  CatBPos!val!2 -> true
+  else -> false
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!1 -> 8
+  CatBPos!val!2 -> 9
+  else -> 4
+}
+compareInt!21 -> {
+  0
+}
+compareIgnoreCaseString!22 -> {
+  0
+}
+getBPosGetStat!5 -> {
+  CatBPos!val!1 -> 10
+  else -> 2
+}
+getBPosIsDeparture!4 -> {
+  CatBPos!val!1 -> false
+  else -> true
+}
+
+
+real	0m3.916s
+user	0m3.900s
+sys	0m0.016s
+descartes -p=3 -m=3: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res1!14 -> 0
+res2!15 -> 1
+o12!10 -> CatBPos!val!0
+o21!9 -> CatBPos!val!1
+lCompare12!24 -> 0
+lCompare22!206 -> 0
+lCompare23!966 -> 0
+o23!13 -> CatBPos!val!2
+lCompare33!1559 -> 0
+lCompare32!1390 -> 0
+res3!16 -> 0
+o22!11 -> CatBPos!val!2
+o13!12 -> CatBPos!val!1
+lCompare13!61 -> 0
+o11!8 -> CatBPos!val!0
+compareDouble!20 -> {
+  0
+}
+getBPosIsArrival!1 -> {
+  false
+}
+getBPosIsVacation!3 -> {
+  CatBPos!val!1 -> false
+  else -> true
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!1 -> 4
+  CatBPos!val!2 -> 6
+  else -> 2
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!1 -> 7
+  CatBPos!val!2 -> 8
+  else -> 3
+}
+compareInt!21 -> {
+  0
+}
+compareIgnoreCaseString!22 -> {
+  0
+}
+getBPosIsDeparture!4 -> {
+  CatBPos!val!1 -> false
+  else -> true
+}
+
+
+real	0m2.258s
+user	0m2.242s
+sys	0m0.016s

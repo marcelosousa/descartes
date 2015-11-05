@@ -1,0 +1,101 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o21!3 -> SimpleString!val!0
+o11!2 -> SimpleString!val!1
+o12!4 -> SimpleString!val!0
+res2!7 -> 1
+res1!6 -> 1
+o22!5 -> SimpleString!val!1
+compareInt!12 -> {
+  0
+}
+compareDouble!11 -> {
+  0
+}
+length!1 -> {
+  0
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.053s
+user	0m0.040s
+sys	0m0.012s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o21!3 -> SimpleString!val!0
+o11!2 -> SimpleString!val!1
+o12!4 -> SimpleString!val!0
+res2!7 -> 1
+res1!6 -> 1
+o22!5 -> SimpleString!val!1
+compareInt!12 -> {
+  0
+}
+compareDouble!11 -> {
+  0
+}
+length!1 -> {
+  0
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.028s
+user	0m0.023s
+sys	0m0.007s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o21!3 -> SimpleString!val!0
+o11!2 -> SimpleString!val!1
+o12!4 -> SimpleString!val!0
+res2!7 -> 1
+res1!6 -> 1
+o22!5 -> SimpleString!val!1
+compareInt!12 -> {
+  0
+}
+compareDouble!11 -> {
+  0
+}
+length!1 -> {
+  0
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.033s
+user	0m0.024s
+sys	0m0.008s
+descartes -p=1 -m=3: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o21!3 -> SimpleString!val!0
+o11!2 -> SimpleString!val!1
+o12!4 -> SimpleString!val!0
+res2!7 -> 1
+res1!6 -> 1
+o22!5 -> SimpleString!val!1
+compareInt!12 -> {
+  0
+}
+compareDouble!11 -> {
+  0
+}
+length!1 -> {
+  0
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.027s
+user	0m0.019s
+sys	0m0.008s

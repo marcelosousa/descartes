@@ -1,0 +1,153 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o22!5 -> Time!val!0
+o21!3 -> Time!val!1
+o12!4 -> Time!val!1
+time121 -> 1
+voltot221 -> 5
+voltot111 -> 5
+res2!7 -> (- 1)
+o11!2 -> Time!val!0
+time221 -> 3
+time111 -> 3
+res1!6 -> (- 1)
+voltot121 -> 4
+voltot211 -> 4
+time211 -> 1
+compareInt!12 -> {
+  0
+}
+ora!1 -> {
+  Time!val!0 -> 3
+  else -> 1
+}
+compareDouble!11 -> {
+  0
+}
+volume_totale!0 -> {
+  Time!val!0 -> 5
+  else -> 4
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.088s
+user	0m0.079s
+sys	0m0.008s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o22!5 -> Time!val!0
+o21!3 -> Time!val!1
+o12!4 -> Time!val!1
+time121 -> 1
+voltot221 -> 5
+voltot111 -> 5
+res2!7 -> (- 1)
+o11!2 -> Time!val!0
+time221 -> 3
+time111 -> 3
+res1!6 -> (- 1)
+voltot121 -> 4
+voltot211 -> 4
+time211 -> 1
+compareInt!12 -> {
+  0
+}
+ora!1 -> {
+  Time!val!0 -> 3
+  else -> 1
+}
+compareDouble!11 -> {
+  0
+}
+volume_totale!0 -> {
+  Time!val!0 -> 5
+  else -> 4
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.046s
+user	0m0.029s
+sys	0m0.017s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o21!3 -> Time!val!1
+o22!5 -> Time!val!0
+o12!4 -> Time!val!1
+time121 -> 1
+voltot221 -> 5
+voltot111 -> 5
+res2!7 -> (- 1)
+o11!2 -> Time!val!0
+time221 -> 3
+time111 -> 3
+res1!6 -> (- 1)
+voltot121 -> 4
+voltot211 -> 4
+time211 -> 1
+compareInt!12 -> {
+  0
+}
+ora!1 -> {
+  Time!val!0 -> 3
+  else -> 1
+}
+compareDouble!11 -> {
+  0
+}
+volume_totale!0 -> {
+  Time!val!0 -> 5
+  else -> 4
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.055s
+user	0m0.050s
+sys	0m0.004s
+descartes -p=1 -m=3: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o22!5 -> Time!val!0
+o21!3 -> Time!val!1
+o12!4 -> Time!val!1
+time121 -> 1
+voltot221 -> 5
+voltot111 -> 5
+res2!7 -> (- 1)
+o11!2 -> Time!val!0
+time221 -> 3
+time111 -> 3
+res1!6 -> (- 1)
+voltot121 -> 4
+voltot211 -> 4
+time211 -> 1
+compareInt!12 -> {
+  0
+}
+ora!1 -> {
+  Time!val!0 -> 3
+  else -> 1
+}
+compareDouble!11 -> {
+  0
+}
+volume_totale!0 -> {
+  Time!val!0 -> 5
+  else -> 4
+}
+compareIgnoreCaseString!13 -> {
+  0
+}
+
+
+real	0m0.045s
+user	0m0.041s
+sys	0m0.004s

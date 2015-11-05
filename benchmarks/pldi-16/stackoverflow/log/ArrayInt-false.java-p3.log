@@ -1,0 +1,107 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res3!10 -> 0
+res2!9 -> 1
+index32!696!1674 -> 0
+o12!4 -> AInt!val!0
+o21!3 -> AInt!val!1
+o22!5 -> AInt!val!2
+index32!696 -> 0
+index12!18!1676 -> 0
+res1!8 -> 0
+o13!6 -> AInt!val!1
+o11!2 -> AInt!val!0
+o23!7 -> AInt!val!2
+index22!239!1675 -> 0
+aentry22!630 -> 1
+index22!239 -> 0
+index12!18 -> 1
+bentry22!631 -> 0
+compareIgnoreCaseString!16 -> {
+  0
+}
+compareDouble!14 -> {
+  0
+}
+get!0 -> {
+  (get!0!1713 (:var 0) (k!1712 (:var 1)))
+}
+k!1712 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+compareInt!15 -> {
+  0
+}
+length!1 -> {
+  AInt!val!1 -> 0
+  else -> 1
+}
+get!0!1713 -> {
+  AInt!val!2 0 -> 0
+  else -> 1
+}
+
+
+real	0m0.230s
+user	0m0.222s
+sys	0m0.008s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res3!10 -> 0
+res2!9 -> 1
+o12!4 -> AInt!val!0
+o21!3 -> AInt!val!1
+o22!5 -> AInt!val!2
+index12!18!7519 -> 0
+index32!6456!7517 -> 0
+index32!6456 -> 0
+res1!8 -> 0
+o13!6 -> AInt!val!1
+bentry22!6455 -> (- 1)
+o11!2 -> AInt!val!0
+o23!7 -> AInt!val!2
+index22!6033!7518 -> 0
+aentry22!6454 -> 0
+index22!6033 -> 0
+index12!18 -> 1
+get!0!7556 -> {
+  AInt!val!2 0 -> (- 1)
+  else -> 0
+}
+compareIgnoreCaseString!16 -> {
+  0
+}
+compareDouble!14 -> {
+  0
+}
+k!7555 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+get!0 -> {
+  (get!0!7556 (:var 0) (k!7555 (:var 1)))
+}
+compareInt!15 -> {
+  0
+}
+length!1 -> {
+  AInt!val!1 -> 0
+  else -> 1
+}
+
+
+real	0m0.629s
+user	0m0.629s
+sys	0m0.000s
+descartes -p=3 -m=2: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
+
+real	0m0.010s
+user	0m0.004s
+sys	0m0.007s
+descartes -p=3 -m=3: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
+
+real	0m0.008s
+user	0m0.004s
+sys	0m0.004s

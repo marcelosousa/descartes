@@ -1,0 +1,173 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+lCompare23!780 -> 0
+res2!13 -> 1
+o21!9 -> CatBPos!val!1
+res1!12 -> 1
+lCompare22!751 -> 0
+lCompare12!21 -> 0
+o22!11 -> CatBPos!val!0
+o12!10 -> CatBPos!val!1
+lCompare13!302 -> 0
+o11!8 -> CatBPos!val!0
+compareDouble!17 -> {
+  0
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!0 -> 4
+  else -> 3
+}
+getBPosIsVacation!3 -> {
+  true
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!0 -> 6
+  else -> 5
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+getBPosIsDeparture!4 -> {
+  true
+}
+
+
+real	0m0.307s
+user	0m0.254s
+sys	0m0.052s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!13 -> 1
+o21!9 -> CatBPos!val!1
+res1!12 -> 1
+lCompare22!504 -> 0
+lCompare12!21 -> 0
+o22!11 -> CatBPos!val!0
+o12!10 -> CatBPos!val!1
+lCompare13!276 -> 0
+lCompare23!533 -> 0
+o11!8 -> CatBPos!val!0
+compareDouble!17 -> {
+  0
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!0 -> 4
+  else -> 3
+}
+getBPosIsVacation!3 -> {
+  true
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!0 -> 6
+  else -> 5
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+getBPosIsDeparture!4 -> {
+  true
+}
+
+
+real	0m0.240s
+user	0m0.219s
+sys	0m0.020s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o11!8 -> CatBPos!val!0
+o21!9 -> CatBPos!val!1
+res1!12 -> 1
+lCompare22!24 -> 0
+lCompare12!21 -> 0
+lCompare23!25 -> 0
+o22!11 -> CatBPos!val!0
+o12!10 -> CatBPos!val!1
+lCompare13!22 -> 0
+res2!13 -> 1
+compareDouble!17 -> {
+  0
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!0 -> 4
+  else -> 3
+}
+getBPosIsVacation!3 -> {
+  true
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!0 -> 6
+  else -> 5
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+getBPosIsDeparture!4 -> {
+  true
+}
+
+
+real	0m0.393s
+user	0m0.381s
+sys	0m0.012s
+descartes -p=1 -m=3: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!13 -> 1
+o21!9 -> CatBPos!val!1
+res1!12 -> 1
+lCompare22!504 -> 0
+lCompare12!21 -> 0
+o22!11 -> CatBPos!val!0
+o12!10 -> CatBPos!val!1
+lCompare13!276 -> 0
+lCompare23!533 -> 0
+o11!8 -> CatBPos!val!0
+compareDouble!17 -> {
+  0
+}
+getHdopBPosGetTime!7 -> {
+  CatBPos!val!0 -> 4
+  else -> 3
+}
+getBPosIsVacation!3 -> {
+  true
+}
+getHdopBPosGetTimeIsNotVoid!0 -> {
+  true
+}
+getBPosGetTime!6 -> {
+  CatBPos!val!0 -> 6
+  else -> 5
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+getBPosIsDeparture!4 -> {
+  true
+}
+
+
+real	0m0.240s
+user	0m0.235s
+sys	0m0.004s

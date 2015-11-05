@@ -24,7 +24,7 @@ import com.badlogic.gdx.utils.Array;
 
 public class Attributes implements Comparator<Attributes> {
     int mask;
-    int attributesGet(int index);
+    int get(int index);
     int attributesSize;
     
 	@Override
@@ -39,7 +39,7 @@ public class Attributes implements Comparator<Attributes> {
         int i = 0;
         int c;
         while (i < o1.attributesSize) {
-            c = Int.compare(o1.attributesGet(i), o2.attributesGet(i));
+            c = Int.compare(o1.get(i), o2.get(i));
             
 			if (c != 0)
 				return c;

@@ -1,0 +1,145 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o12!6 -> CollectionItem!val!1
+res2!9 -> 1
+o11!4 -> CollectionItem!val!0
+o22!7 -> CollectionItem!val!0
+res1!8 -> 1
+o21!5 -> CollectionItem!val!1
+compareDouble!13 -> {
+  0
+}
+cardType!0 -> {
+  CollectionItem!val!1 -> 0
+  else -> (- 1)
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+getCardSet!3 -> {
+  0
+}
+getCardRarity!2 -> {
+  CollectionItem!val!1 -> 0
+  else -> (- 1)
+}
+getCardId!1 -> {
+  7
+}
+
+
+real	0m0.084s
+user	0m0.084s
+sys	0m0.000s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o12!6 -> CollectionItem!val!1
+res2!9 -> 1
+o11!4 -> CollectionItem!val!0
+o22!7 -> CollectionItem!val!0
+res1!8 -> 1
+o21!5 -> CollectionItem!val!1
+compareDouble!13 -> {
+  0
+}
+cardType!0 -> {
+  CollectionItem!val!0 -> (- 1)
+  else -> 0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+getCardSet!3 -> {
+  0
+}
+getCardRarity!2 -> {
+  CollectionItem!val!1 -> 0
+  else -> (- 1)
+}
+getCardId!1 -> {
+  7
+}
+
+
+real	0m0.079s
+user	0m0.067s
+sys	0m0.012s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o12!6 -> CollectionItem!val!1
+res2!9 -> 1
+o11!4 -> CollectionItem!val!0
+o22!7 -> CollectionItem!val!0
+res1!8 -> 1
+o21!5 -> CollectionItem!val!1
+compareDouble!13 -> {
+  0
+}
+cardType!0 -> {
+  CollectionItem!val!0 -> (- 1)
+  else -> 0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+getCardSet!3 -> {
+  0
+}
+getCardRarity!2 -> {
+  CollectionItem!val!0 -> (- 1)
+  else -> 0
+}
+getCardId!1 -> {
+  7
+}
+
+
+real	0m0.133s
+user	0m0.133s
+sys	0m0.000s
+descartes -p=1 -m=3: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o12!6 -> CollectionItem!val!1
+res2!9 -> 1
+o11!4 -> CollectionItem!val!0
+o22!7 -> CollectionItem!val!0
+res1!8 -> 1
+o21!5 -> CollectionItem!val!1
+compareDouble!13 -> {
+  0
+}
+cardType!0 -> {
+  CollectionItem!val!0 -> (- 1)
+  else -> 0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+getCardSet!3 -> {
+  0
+}
+getCardRarity!2 -> {
+  CollectionItem!val!1 -> 0
+  else -> (- 1)
+}
+getCardId!1 -> {
+  7
+}
+
+
+real	0m0.075s
+user	0m0.071s
+sys	0m0.004s
