@@ -38,7 +38,7 @@ helper axioms pre post = do
   formula <- mkImplies pre post >>= \phi -> mkNot phi -- >>= \psi -> mkAnd [axioms, psi]
   assert formula
   (r, m) <- getModel
-  trace ("helper: " ++ show r) $ return (r,m)
+  T.trace ("helper: " ++ show r) $ return (r,m)
 
 getInitialSSAMap :: Z3 SSAMap
 getInitialSSAMap = do

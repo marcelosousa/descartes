@@ -4,10 +4,10 @@ public class Obj implements Comparator<Obj>{
   public int compare(Obj o1, Obj o2){
     int i = 0;
   
-    while(i < 5){
+    while(i < 1){
       if(o1.get(i) > o2.get(i)){return 1;}
      
- //     if(o1.get(i) < o2.get(i)){return -1;}
+      if(o1.get(i) < o2.get(i)){return -1;}
     
       i = i+1;
     }

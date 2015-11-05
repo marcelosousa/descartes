@@ -36,7 +36,7 @@ verifyWithProduct classMap _comps prop = do
  (fields', axioms) <- addAxioms objSort fields
  let blocks = zip [0..] $ getBlocks comps
  iSSAMap <- getInitialSSAMap
- let iEnv = Env objSort pars res fields' iSSAMap axioms pre post False False False
+ let iEnv = Env objSort pars res fields' iSSAMap axioms pre post post False False False 0
  ((res, mmodel),_) <- runStateT (analyser blocks) iEnv
  case res of 
   Unsat -> return (Unsat, Nothing)
@@ -81,7 +81,9 @@ analyse :: [(Int,Block)] -> EnvOp (Result,Maybe Model)
 analyse stmts = do
  env@Env{..} <- get
  case stmts of
-  [] -> lift $ local $ helper _axioms _pre _post
+  [] -> if _numret == length _res
+        then lift $ local $ helper _axioms _pre _post
+        else lift $ local $ helper _axioms _pre _invpost
   ((pid,Block []):rest) -> analyser []
 --    if _embed
 --    then analyser rest -- change here
@@ -106,6 +108,7 @@ analyser_stmt stmt (pid, Block r1) rest =
   Return mexpr -> do
    ret pid mexpr
    env@Env{..} <- get
+   updateNumRet
    analyser rest
   IfThen cond s1 -> do
    let ifthenelse = IfThenElse cond s1 (StmtBlock (Block []))
@@ -136,7 +139,9 @@ analyse_conditional :: Int -> [BlockStmt] -> [(Int,Block)] -> Exp -> Stmt -> Stm
 analyse_conditional pid r1 rest cond s1 s2 =
  if cond == Nondet
  then do
+  env <- get
   resThen <- analyser ((pid, Block (BlockStmt s1:r1)):rest)                
+  put env
   resElse <- analyser ((pid, Block (BlockStmt s2:r1)):rest)
   combine resThen resElse                
  else do
@@ -185,7 +190,7 @@ analyse_loop pid r1 rest _cond _body =  do
 _analyse_loop :: [(Int,Block)] -> Int -> Exp -> Stmt -> AST -> EnvOp Bool
 _analyse_loop rest pid _cond _body inv = do
  invStr  <- lift $ astToString inv
- env@Env{..} <- get --T.trace ("Invariant:\n" ++ invStr) $ get
+ env@Env{..} <- T.trace ("Invariant:\n" ++ invStr) $ get
  (checkPre,_) <- lift $ local $ helper _axioms _pre inv
  case checkPre of
   Unsat -> do
@@ -195,9 +200,10 @@ _analyse_loop rest pid _cond _body inv = do
    case checkInv of
     Unsat -> do
      pre <- lift $ mkAnd [inv,condAst]
+    -- post <- lift $ mkOr [inv,_post]
      let s = (pid, Block [BlockStmt _body])
      updatePre pre
-     updatePost inv
+     updateInvPost inv -- post
      (bodyCheck,m) <- analyser (s:rest)
      case bodyCheck of
       Unsat -> return True

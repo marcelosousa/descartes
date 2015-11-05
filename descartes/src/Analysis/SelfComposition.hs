@@ -26,6 +26,14 @@ import Z3.Monad hiding (Params)
 import qualified Data.Map as M
 import qualified Debug.Trace as T
 
+combinations :: [[a]] -> [[a]]
+combinations [] = []
+combinations [x] = [[a] | a <- x]
+combinations (x:xs) = 
+  let y = combinations xs
+  in concatMap (\a -> map (a:) y) x
+  
+
 verifyWithSelf :: ClassMap -> [Comparator] -> Prop -> Z3 (Result, Maybe String)
 verifyWithSelf classMap comps prop = do
   (objSort, pars, res, fields) <- prelude classMap comps
@@ -33,24 +41,37 @@ verifyWithSelf classMap comps prop = do
   (fields', axioms) <- addAxioms objSort fields
   let blocks = zip [0..] $ getBlocks comps
   iSSAMap <- getInitialSSAMap
-  let iEnv = Env objSort pars res fields' iSSAMap axioms pre post False False False
-  pres <- mapM (\p -> evalStateT (selfcomposition p) iEnv) blocks
+  let iEnv = Env objSort pars res fields' iSSAMap axioms pre post post False False False 0
+  _pres <- mapM (\p -> evalStateT (selfcomposition p) iEnv) blocks
+  let pres = snd $ unzip _pres
 --  pres <- mapM (selfcomposition (objSort, pars, res, fields', iSSAMap, axioms, pre)) blocks
-  pre' <- mkAnd pres
-  preStr  <- astToString pre'
-  (res, mmodel) <- T.trace ("\n-----------------\nFinal Pre:\n" ++ preStr) $ local $ helper axioms pre' post
+  let pres' = T.trace ("Size of pres" ++ (show $ map length pres)) $ combinations pres
+  _pres' <- mapM mkAnd pres'
+  results <- mapM (\_pre -> checkAllPossibilities axioms _pre post) _pres'
+  resolve results
+  
+checkAllPossibilities :: AST -> AST -> AST -> Z3 (Result, Maybe String)
+checkAllPossibilities axioms pre post = do
+  preStr  <- astToString pre
+  (res, mmodel) <- T.trace ("\n-----------------\nFinal Pre:\n" ++ preStr) $ local $ helper axioms pre post
   case res of 
     Unsat -> return (Unsat, Nothing)
     Sat -> do
       str <- showModel $ fromJust mmodel
       return (Sat, Just str)
-            
+
+resolve :: [(Result, Maybe String)] -> Z3 (Result, Maybe String)
+resolve [] = error "resolve"
+resolve [(res,mstring)] = return (res,mstring)
+resolve ((Unsat,mstring):rest) = resolve rest
+resolve ((Sat,mstring):rest) = return (Sat,mstring)
+    
 -- self-composition
-selfcomposition :: (Int, Block) -> EnvOp AST
+selfcomposition :: (Int, Block) -> EnvOp ([AST],[AST])
 selfcomposition (pid,Block l) = do
  env@Env{..} <- get
  case l of
-  [] -> return _pre
+  [] -> return ([_pre],[])
   (bstmt:rest) -> do
    preStr  <- lift $ astToString _pre
    --let k = T.trace ("\n-----------------\nAnalyser State:\nStatement: " ++ prettyPrint bstmt ++ "\nPrecondition:\n" ++ preStr) $ unsafePerformIO $ getChar
@@ -65,7 +86,7 @@ selfcomposition (pid,Block l) = do
      updateSSAMap nssamap
      selfcomposition (pid, Block rest)
 
-analyser_stmt :: Stmt -> (Int,Block) -> EnvOp AST
+analyser_stmt :: Stmt -> (Int,Block) -> EnvOp ([AST],[AST])
 analyser_stmt stmt (pid, Block r1) =
  case stmt of
   StmtBlock (Block block) -> selfcomposition (pid, Block (block ++ r1))
@@ -75,7 +96,7 @@ analyser_stmt stmt (pid, Block r1) =
   Return mexpr -> do
    ret pid mexpr
    env@Env{..} <- get
-   return _pre
+   return ([],[_pre])
 --   selfcomposition (pid, Block r1)
   IfThen cond s1 -> do
    let ifthenelse = IfThenElse cond s1 (StmtBlock (Block []))
@@ -85,7 +106,7 @@ analyser_stmt stmt (pid, Block r1) =
   While _cond _body -> analyse_loop pid r1 _cond _body
 
 -- Analyse Expressions
-analyse_exp :: Int -> (Int, Block) -> Exp -> EnvOp AST
+analyse_exp :: Int -> (Int, Block) -> Exp -> EnvOp ([AST],[AST])
 analyse_exp pid rest _exp =
  case _exp of
   MethodInv minv -> do 
@@ -102,25 +123,27 @@ analyse_exp pid rest _exp =
    selfcomposition rest
 
 -- Analyse If Then Else
-analyse_conditional :: Int -> [BlockStmt] -> Exp -> Stmt -> Stmt -> EnvOp AST
+analyse_conditional :: Int -> [BlockStmt] -> Exp -> Stmt -> Stmt -> EnvOp ([AST],[AST])
 analyse_conditional pid r1 cond s1 s2 =
  if cond == Nondet
  then do
-  resThen <- selfcomposition (pid, Block (BlockStmt s1:r1))
-  resElse <- selfcomposition (pid, Block (BlockStmt s2:r1))
-  lift $ mkOr [resThen, resElse]
+  env <- get
+  (resThen_a,resThen_b) <- selfcomposition (pid, Block (BlockStmt s1:r1))
+  put env
+  (resElse_a,resElse_b) <- selfcomposition (pid, Block (BlockStmt s2:r1))
+  return $ (resThen_a ++ resElse_a, resThen_b ++ resElse_b)
  else do
   env@Env{..} <- get
   condSmt <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) cond
   -- then branch
   preThen <- lift $ mkAnd [_pre, condSmt]
-  resThen <- analyse_branch preThen s1
+  (resThen_a,resThen_b) <- analyse_branch preThen s1
   -- else branch
   put env
   ncondSmt <- lift $ mkNot condSmt
   preElse <- lift $ mkAnd [_pre, ncondSmt]
-  resElse <- analyse_branch preElse s2
-  lift $ mkOr [resThen, resElse]
+  (resElse_a,resElse_b) <- analyse_branch preElse s2
+  return $ (resThen_a ++ resElse_a, resThen_b ++ resElse_b)
  where
    analyse_branch phi branch = do
     env@Env{..} <- get
@@ -129,7 +152,7 @@ analyse_conditional pid r1 cond s1 s2 =
     selfcomposition r
 
 -- Analyse Loops
-analyse_loop :: Int -> [BlockStmt] -> Exp -> Stmt -> EnvOp AST
+analyse_loop :: Int -> [BlockStmt] -> Exp -> Stmt -> EnvOp ([AST],[AST])
 analyse_loop pid r1 _cond _body = do
  let bstmt = BlockStmt $ While _cond _body
  env@Env{..} <- get
@@ -139,16 +162,17 @@ analyse_loop pid r1 _cond _body = do
    analyse_loop_w_inv [] = error "analyse_loop failed"
    analyse_loop_w_inv (inv:is) = do
     it_res <- _analyse_loop pid _cond _body inv
-    if it_res
+    if it_res /= []
     then do
      env@Env{..} <- get
      pre <- lift $ mkAnd [inv,_pre]
      updatePre pre
-     selfcomposition (pid,Block r1)
+     (res_a, res_b) <- selfcomposition (pid,Block r1)
+     return (res_a, it_res++res_b)
     else analyse_loop_w_inv is
    
 --
-_analyse_loop :: Int -> Exp -> Stmt -> AST -> EnvOp Bool
+_analyse_loop :: Int -> Exp -> Stmt -> AST -> EnvOp [AST]
 _analyse_loop pid _cond _body inv = do
  invStr  <- lift $ astToString inv
  env@Env{..} <- get --T.trace ("Invariant:\n" ++ invStr) $ get
@@ -164,15 +188,15 @@ _analyse_loop pid _cond _body inv = do
      let s = (pid, Block [BlockStmt _body])
      updatePre pre
      updatePost inv
-     pre' <- selfcomposition s
-     (bodyCheck,_) <- lift $ local $ helper _axioms pre' inv
-     case bodyCheck of
-      Unsat -> return True
-      Sat -> do
+     (pre',preRes) <- selfcomposition s
+     bodyChecks <- lift $ mapM  (\_pre' -> local $ helper _axioms _pre' inv) pre'
+     if all (\(bodyCheck,_) -> bodyCheck == Unsat) bodyChecks
+     then return preRes
+     else do
        put env
-       return False -- {inv && pre} body {inv} failed
-    Sat -> return False -- inv && not_cond =/=> inv
-  Sat -> return False -- pre =/=> inv
+       return [] -- {inv && pre} body {inv} failed
+    Sat -> return [] -- inv && not_cond =/=> inv
+  Sat -> return [] -- pre =/=> inv
 
 {-
     BlockStmt stmt -> case stmt of

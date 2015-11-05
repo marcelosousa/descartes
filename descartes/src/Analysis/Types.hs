@@ -35,9 +35,11 @@ data Env = Env
   , _axioms  :: AST
   , _pre     :: AST
   , _post    :: AST
+  , _invpost :: AST
   , _opt     :: Bool
   , _debug   :: Bool
   , _fuse    :: Bool
+  , _numret  :: Int
   }
 
 type EnvOp a = StateT Env Z3 a
@@ -56,6 +58,17 @@ updatePost post = do
   s@Env{..} <- get
   put s{ _post = post}
 
+updateInvPost :: AST -> EnvOp ()
+updateInvPost invpost = do
+  s@Env{..} <- get
+  put s{ _invpost = invpost}
+
+updateNumRet :: EnvOp ()
+updateNumRet = do
+  s@Env{..} <- get
+  let numret = _numret + 1
+  put s{ _numret = numret}
+  
 -- @ update the ssa map
 updateSSAMap :: SSAMap -> EnvOp ()
 updateSSAMap ssamap = do

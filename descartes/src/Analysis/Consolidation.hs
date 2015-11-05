@@ -31,12 +31,13 @@ import qualified Debug.Trace as T
 verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result,Maybe String)
 verify opt classMap _comps prop = do
  let comps = map rewrite _comps
- (objSort, pars, res, fields) <- prelude classMap comps
+     a = unsafePerformIO $ mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) comps
+ (objSort, pars, res, fields) <- a `seq` prelude classMap comps
  (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
  (fields', axioms) <- addAxioms objSort fields
  let blocks = zip [0..] $ getBlocks comps
  iSSAMap <- getInitialSSAMap
- let iEnv = Env objSort pars res fields' iSSAMap axioms pre post opt False False
+ let iEnv = Env objSort pars res fields' iSSAMap axioms pre post post opt False False 0
  ((res, mmodel),_) <- runStateT (analyser blocks) iEnv
  case res of 
   Unsat -> return (Unsat, Nothing)
@@ -140,7 +141,9 @@ analyse_conditional :: Int -> [BlockStmt] -> [(Int,Block)] -> Exp -> Stmt -> Stm
 analyse_conditional pid r1 rest cond s1 s2 =
  if cond == Nondet
  then do
-  resThen <- analyser ((pid, Block (BlockStmt s1:r1)):rest)                
+  env@Env{..} <- get
+  resThen <- analyser ((pid, Block (BlockStmt s1:r1)):rest)
+  put env
   resElse <- analyser ((pid, Block (BlockStmt s2:r1)):rest)
   combine resThen resElse                
  else do
@@ -193,12 +196,13 @@ analyse_loop pid r1 rest _cond _body =  do
    isLoop _ = False
    analyse_loop_w_inv [] = error "analyse_loop failed"
    analyse_loop_w_inv (inv:is) = do
+    env@Env{..} <- get
     it_res <- _analyse_loop rest pid _cond _body inv
     if it_res
     then do
-     env@Env{..} <- get
-     pre <- lift $ mkAnd [inv,_pre]
-     updatePre pre
+--     pre <- lift $ mkAnd [inv,_pre]
+     put env
+     updatePre inv -- pre
      analyser ((pid,Block r1):rest)
     else analyse_loop_w_inv is
    
@@ -224,7 +228,7 @@ _analyse_loop rest pid _cond _body inv = do
       Unsat -> return True
       Sat -> do
        put env
-       return False -- {inv && pre} body {inv} failed
+       return False -- {inv && cond} body {inv} failed
     Sat -> return False -- inv && not_cond =/=> inv
   Sat -> return False -- pre =/=> inv
 
