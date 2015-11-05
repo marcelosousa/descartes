@@ -23,7 +23,7 @@ import Z3.Monad
 import qualified Debug.Trace as T
 
 _program, _summary :: String
-_summary = unlines ["descartes - v0.1","Cartersian Hoare Logic Verifier.","Copyright 2015 @ Marcelo Sousa"]
+_summary = unlines ["descartes - v0.2","Cartersian Hoare Logic Verifier.","Copyright 2015 @ Marcelo Sousa"]
 _program = "descartes"
 _help    = "The input parameter is a Java project directory."
 
