@@ -45,7 +45,7 @@ verifyWithSelf classMap comps prop = do
   _pres <- mapM (\p -> evalStateT (selfcomposition p) iEnv) blocks
   let pres = snd $ unzip _pres
 --  pres <- mapM (selfcomposition (objSort, pars, res, fields', iSSAMap, axioms, pre)) blocks
-  let pres' = T.trace ("Size of pres" ++ (show $ map length pres)) $ combinations pres
+  let pres' = combinations pres
   _pres' <- mapM mkAnd pres'
   results <- mapM (\_pre -> checkAllPossibilities axioms _pre post) _pres'
   resolve results
@@ -53,7 +53,7 @@ verifyWithSelf classMap comps prop = do
 checkAllPossibilities :: AST -> AST -> AST -> Z3 (Result, Maybe String)
 checkAllPossibilities axioms pre post = do
   preStr  <- astToString pre
-  (res, mmodel) <- T.trace ("\n-----------------\nFinal Pre:\n" ++ preStr) $ local $ helper axioms pre post
+  (res, mmodel) <- trace ("\n-----------------\nFinal Pre:\n" ++ preStr) $ local $ helper axioms pre post
   case res of 
     Unsat -> return (Unsat, Nothing)
     Sat -> do

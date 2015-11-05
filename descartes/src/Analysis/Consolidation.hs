@@ -31,8 +31,8 @@ import qualified Debug.Trace as T
 verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result,Maybe String)
 verify opt classMap _comps prop = do
  let comps = map rewrite _comps
-     a = unsafePerformIO $ mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) comps
- (objSort, pars, res, fields) <- a `seq` prelude classMap comps
+--     a = unsafePerformIO $ mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) comps
+ (objSort, pars, res, fields) <- prelude classMap comps
  (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
  (fields', axioms) <- addAxioms objSort fields
  let blocks = zip [0..] $ getBlocks comps
