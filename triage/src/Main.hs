@@ -83,7 +83,7 @@ runOption (Collect d) = do
   -- @ start post-processing
   let (errs, res') = partition isLeft res 
       _valid = foldl (\a r -> right r ++ a) [] res'
-      valid = sort _valid    
+      valid = sortBy (\(a,b) (c,d) -> b `compare` d) _valid    
   -- @ simplistic examples without conditionals, loops or method calls
       simple = filter (\(f,stat) -> not (hasCond stat || hasLoops stat || hasMethodCalls stat)) valid
       cNlNm = filter (\(f,stat) -> hasCond stat && not (hasLoops stat || hasMethodCalls stat)) valid
