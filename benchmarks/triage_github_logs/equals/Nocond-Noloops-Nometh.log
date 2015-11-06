@@ -1,0 +1,12 @@
+Signal.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+ShaderTest.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+ReplayingDecoderByteBuf.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+ParticleShader.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+ExponentialBackoffMsgRetryManager.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+ExponentialBackoffMsgRetryManager.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+DnsRecordType.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+DefaultShader.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+DefaultChannelGroup.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+ByteBuf.java: Statistics {nl = 0, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+AStarPathFinder.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
+AbstractChannel.java: Statistics {nl = 1, conditionals = 0, loops = 0, iterators = 0, fncalls = []}
