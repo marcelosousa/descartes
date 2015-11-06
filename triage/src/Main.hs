@@ -23,7 +23,7 @@ data Statistics = Statistics
   ,  fncalls :: [MethodCall]
 --  ,  assertions :: Int    
   }
-  deriving (Show,Eq)
+  deriving Eq
 
 instance Show Statistics where
   show (Statistics nl cond loops iter _) = 
