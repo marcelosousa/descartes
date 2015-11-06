@@ -23,10 +23,17 @@ data Statistics = Statistics
   ,  fncalls :: [MethodCall]
 --  ,  assertions :: Int    
   }
-  deriving Show
+  deriving (Show,Eq)
+
+instance Show Statistics where
+  show (Statistics nl cond loops iter _) = 
+    "Statistics " ++ show (nl,cond,loops,iter)
+    
+instance Ord Statistics where
+  a `compare` b = (nl a) `compare` (nl b)
 
 data MethodCall = N Name | I Ident
-  deriving Show
+  deriving (Show,Eq)
   
 initial :: Statistics
 initial = Statistics 0 0 0 0 []
@@ -75,7 +82,8 @@ runOption (Collect d) = do
   res <- mapM triage files
   -- @ start post-processing
   let (errs, res') = partition isLeft res 
-      valid = foldl (\a r -> right r ++ a) [] res'      
+      _valid = foldl (\a r -> right r ++ a) [] res'
+      valid = sort _valid    
   -- @ simplistic examples without conditionals, loops or method calls
       simple = filter (\(f,stat) -> not (hasCond stat || hasLoops stat || hasMethodCalls stat)) valid
       cNlNm = filter (\(f,stat) -> hasCond stat && not (hasLoops stat || hasMethodCalls stat)) valid

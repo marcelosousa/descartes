@@ -1,12 +1,12 @@
-VertexAttributes.java: Statistics {nl = 11, conditionals = 4, loops = 1, iterators = 0, fncalls = [I (Ident "equals")]}
-ShortBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
-LongBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
-IntBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
-FloatBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
-DoubleBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
-ConcurrentHashMapV8.java: Statistics {nl = 19, conditionals = 5, loops = 1, iterators = 1, fncalls = [N (Name [Ident "m",Ident "get"]),N (Name [Ident "v",Ident "equals"]),N (Name [Ident "e",Ident "getKey"]),N (Name [Ident "e",Ident "getValue"]),N (Name [Ident "get"]),N (Name [Ident "mv",Ident "equals"]),N (Name [Ident "m",Ident "entrySet"])]}
-CharSequences.java: Statistics {nl = 7, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "a",Ident "length"]),N (Name [Ident "b",Ident "length"]),N (Name [Ident "a",Ident "length"]),N (Name [Ident "a",Ident "charAt"]),N (Name [Ident "b",Ident "charAt"])]}
-CharBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
-ChannelBuffers.java: Statistics {nl = 12, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "bufferA",Ident "readableBytes"]),N (Name [Ident "bufferB",Ident "readableBytes"]),N (Name [Ident "bufferA",Ident "readerIndex"]),N (Name [Ident "bufferB",Ident "readerIndex"]),N (Name [Ident "bufferA",Ident "getByte"]),N (Name [Ident "bufferB",Ident "getByte"])]}
-ByteBufUtil.java: Statistics {nl = 23, conditionals = 6, loops = 3, iterators = 0, fncalls = [N (Name [Ident "a",Ident "writerIndex"]),N (Name [Ident "b",Ident "writerIndex"]),N (Name [Ident "a",Ident "getLong"]),N (Name [Ident "b",Ident "getLong"]),N (Name [Ident "a",Ident "getLong"]),N (Name [Ident "b",Ident "getLong"]),N (Name [Ident "swapLong"]),N (Name [Ident "a",Ident "order"]),N (Name [Ident "b",Ident "order"]),N (Name [Ident "a",Ident "getByte"]),N (Name [Ident "b",Ident "getByte"])]}
-ByteBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1, iterators = 0, fncalls = [N (Name [Ident "remaining"]),N (Name [Ident "otherBuffer",Ident "remaining"]),N (Name [Ident "get"]),N (Name [Ident "otherBuffer",Ident "get"])]}
+VertexAttributes.java: Statistics {nl = 11, conditionals = 4, loops = 1}
+ShortBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
+LongBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
+IntBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
+FloatBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
+DoubleBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
+ConcurrentHashMapV8.java: Statistics {nl = 19, conditionals = 5, loops = 1}
+CharSequences.java: Statistics {nl = 7, conditionals = 2, loops = 1}
+CharBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
+ChannelBuffers.java: Statistics {nl = 12, conditionals = 2, loops = 1}
+ByteBufUtil.java: Statistics {nl = 23, conditionals = 6, loops = 3}
+ByteBuffer.java: Statistics {nl = 11, conditionals = 2, loops = 1}
