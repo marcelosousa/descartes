@@ -1,0 +1,180 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21!1211 -> 0
+i21 -> 0
+o21!4 -> Attributes!val!1
+res1!7 -> 1
+o22!6 -> Attributes!val!0
+c12!348 -> 1
+res2!8 -> 0
+o12!5 -> Attributes!val!1
+i11 -> 0
+o11!3 -> Attributes!val!0
+i11!1212 -> 0
+get!1 -> {
+  (get!1!1280 (:var 0) (k!1279 (:var 1)))
+}
+k!1279 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 0
+  else -> 1
+}
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  (compareInt!13!1281 (k!1277 (:var 0)) (k!1277 (:var 1)))
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+get!1!1280 -> {
+  Attributes!val!1 0 -> 4
+  else -> 3
+}
+compareInt!13!1281 -> {
+  3 4 -> 1
+  4 3 -> (- 1)
+  else -> 0
+}
+mask!2 -> {
+  6
+}
+k!1277 -> {
+  3 -> 3
+  else -> 4
+}
+
+
+real	0m0.319s
+user	0m0.314s
+sys	0m0.004s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i11!855 -> 0
+o21!4 -> Attributes!val!1
+res1!7 -> 1
+o22!6 -> Attributes!val!0
+c12!256 -> 1
+res2!8 -> 0
+o12!5 -> Attributes!val!1
+i21!854 -> 0
+i11 -> 0
+o11!3 -> Attributes!val!0
+i21 -> 0
+get!1 -> {
+  (get!1!923 (:var 0) (k!922 (:var 1)))
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 0
+  else -> 1
+}
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  (compareInt!13!924 (k!920 (:var 0)) (k!920 (:var 1)))
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+get!1!923 -> {
+  Attributes!val!1 0 -> 4
+  else -> 3
+}
+mask!2 -> {
+  6
+}
+k!920 -> {
+  3 -> 3
+  else -> 4
+}
+k!922 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+compareInt!13!924 -> {
+  3 4 -> 1
+  4 3 -> (- 1)
+  else -> 0
+}
+
+
+real	0m0.352s
+user	0m0.344s
+sys	0m0.008s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+c22!355 -> 0
+i11!648 -> 0
+i21!649 -> 0
+o21!4 -> Attributes!val!1
+c12!138 -> 1
+o22!6 -> Attributes!val!0
+res1!7 -> 1
+res2!8 -> 0
+o12!5 -> Attributes!val!1
+o11!3 -> Attributes!val!0
+i11 -> 5922
+i21 -> 5920
+get!1 -> {
+  (get!1!846 (:var 0) (k!845 (:var 1)))
+}
+get!1!846 -> {
+  Attributes!val!0 5922 -> 4
+  Attributes!val!1 5922 -> 6
+  Attributes!val!0 5921 -> 11
+  Attributes!val!1 5921 -> 11
+  else -> 9
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 5921
+  else -> 5923
+}
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  (compareInt!13!847 (k!843 (:var 0)) (k!843 (:var 1)))
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+compareInt!13!847 -> {
+  9 6 -> (- 1)
+  9 9 -> 0
+  6 6 -> 0
+  6 4 -> (- 1)
+  9 4 -> (- 1)
+  4 4 -> 0
+  else -> 1
+}
+k!843 -> {
+  6 -> 6
+  4 -> 4
+  else -> 9
+}
+mask!2 -> {
+  7
+}
+k!845 -> {
+  (let ((a!1 (ite (>= (:var 0) 5920)
+                  (ite (>= (:var 0) 5921)
+                       (ite (>= (:var 0) 5922) 5922 5921)
+                       5920)
+                  5919)))
+    (ite (>= (:var 0) 5919) a!1 0))
+}
+
+
+real	0m0.170s
+user	0m0.166s
+sys	0m0.004s
+descartes -p=1 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.139s
+user	0m0.131s
+sys	0m0.008s

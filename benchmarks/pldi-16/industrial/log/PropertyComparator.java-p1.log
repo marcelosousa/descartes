@@ -1,0 +1,246 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21 -> 0
+property121 -> 12
+o21!2 -> PropertyComparator!val!1
+propertyName12!173 -> 6
+o22!4 -> PropertyComparator!val!0
+o11!1 -> PropertyComparator!val!0
+res1!5 -> (- 1)
+i21!967 -> 0
+_properyNamesSize21 -> 2
+res2!6 -> (- 1)
+o12!3 -> PropertyComparator!val!1
+propertyName11 -> 0
+propertyName22!773 -> 10
+property211 -> 8
+propertyName21 -> 0
+property111 -> 7
+i11!968 -> 0
+_caseSensitive21 -> 0
+_ascending21 -> 3
+_properyNamesSize11 -> 2
+property221 -> 13
+i11 -> 1
+_caseSensitive11 -> 0
+_ascending11 -> 3
+compareInt!11!1132 -> {
+  7 8 -> 1
+  12 13 -> 1
+  7 7 -> 0
+  13 13 -> 0
+  7 12 -> 1
+  7 13 -> 1
+  8 13 -> 1
+  12 12 -> 0
+  12 8 -> 1
+  8 8 -> 0
+  else -> (- 1)
+}
+get!0 -> {
+  PropertyComparator!val!1 10 -> 11
+  else -> 0
+}
+k!1129 -> {
+  8 -> 8
+  12 -> 12
+  7 -> 7
+  else -> 13
+}
+compareInt!11 -> {
+  (compareInt!11!1132 (k!1129 (:var 0)) (k!1129 (:var 1)))
+}
+compareDouble!10 -> {
+  0
+}
+k!1131 -> {
+  (let ((a!1 (ite (>= (:var 0) (- 1))
+                  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+                  (- 2))))
+    (ite (>= (:var 0) (- 2)) a!1 (- 3)))
+}
+nondet!9!1133 -> {
+  (- 2) -> 0
+  (- 1) -> 2
+  1 -> 6
+  0 -> 10
+  else -> 3
+}
+compareIgnoreCaseString!12 -> {
+  0
+}
+nondet!9 -> {
+  (nondet!9!1133 (k!1131 (:var 0)))
+}
+
+
+real	0m0.395s
+user	0m0.386s
+sys	0m0.008s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21 -> 8586
+property221 -> 13
+property121 -> 12
+o21!2 -> PropertyComparator!val!1
+propertyName12!173 -> 6
+o22!4 -> PropertyComparator!val!0
+o11!1 -> PropertyComparator!val!0
+res1!5 -> (- 1)
+_properyNamesSize21 -> 8589
+res2!6 -> (- 1)
+o12!3 -> PropertyComparator!val!1
+propertyName11 -> 0
+property211 -> 8
+i11!714 -> 0
+propertyName21 -> 0
+property111 -> 7
+i21!713 -> 0
+_caseSensitive21 -> 0
+propertyName22!712 -> 10
+_properyNamesSize11 -> 8589
+_ascending21 -> 4
+i11 -> 8588
+_caseSensitive11 -> 0
+_ascending11 -> 4
+nondet!9!879 -> {
+  (- 2) -> 0
+  (- 1) -> 8589
+  8588 -> 6
+  8586 -> 10
+  8587 -> 15
+  0 -> 17
+  8585 -> 22
+  else -> 4
+}
+get!0 -> {
+  PropertyComparator!val!1 10 -> 11
+  PropertyComparator!val!1 15 -> 16
+  PropertyComparator!val!1 17 -> 18
+  PropertyComparator!val!0 17 -> 19
+  PropertyComparator!val!0 22 -> 23
+  PropertyComparator!val!1 22 -> 24
+  else -> 0
+}
+compareInt!11 -> {
+  (compareInt!11!878 (k!875 (:var 0)) (k!875 (:var 1)))
+}
+compareDouble!10 -> {
+  0
+}
+k!875 -> {
+  8 -> 8
+  12 -> 12
+  7 -> 7
+  else -> 13
+}
+compareIgnoreCaseString!12 -> {
+  0
+}
+k!877 -> {
+  (let ((a!1 (ite (>= (:var 0) 8586)
+                  (ite (>= (:var 0) 8587)
+                       (ite (>= (:var 0) 8588) 8588 8587)
+                       8586)
+                  8585)))
+  (let ((a!2 (ite (>= (:var 0) (- 1))
+                  (ite (>= (:var 0) 0) (ite (>= (:var 0) 8585) a!1 0) (- 1))
+                  (- 2))))
+    (ite (>= (:var 0) (- 2)) a!2 (- 3))))
+}
+compareInt!11!878 -> {
+  8 7 -> (- 1)
+  13 12 -> (- 1)
+  8 8 -> 0
+  8 13 -> (- 1)
+  7 13 -> (- 1)
+  7 7 -> 0
+  13 13 -> 0
+  12 12 -> 0
+  7 12 -> (- 1)
+  8 12 -> (- 1)
+  else -> 1
+}
+nondet!9 -> {
+  (nondet!9!879 (k!877 (:var 0)))
+}
+
+
+real	0m0.302s
+user	0m0.286s
+sys	0m0.016s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i11 -> 8854
+i21!389 -> 0
+propertyName22!293 -> 9
+i21 -> 8855
+i11!388 -> 0
+property121 -> 10
+o21!2 -> PropertyComparator!val!0
+o22!4 -> PropertyComparator!val!1
+o11!1 -> PropertyComparator!val!1
+res1!5 -> (- 1)
+_properyNamesSize21 -> 8856
+res2!6 -> (- 1)
+o12!3 -> PropertyComparator!val!0
+propertyName11 -> 0
+property211 -> 7
+propertyName21 -> 0
+property111 -> 6
+_caseSensitive21 -> 0
+_ascending21 -> 0
+_properyNamesSize11 -> 8856
+property221 -> 11
+propertyName12!106 -> 4
+_caseSensitive11 -> 0
+_ascending11 -> 0
+get!0 -> {
+  0
+}
+compareInt!11!548 -> {
+  6 7 -> (- 1)
+  10 11 -> (- 1)
+  7 11 -> (- 1)
+  10 7 -> (- 1)
+  10 6 -> (- 1)
+  6 6 -> 0
+  10 10 -> 0
+  6 11 -> (- 1)
+  11 11 -> 0
+  7 7 -> 0
+  else -> 1
+}
+k!545 -> {
+  7 -> 7
+  10 -> 10
+  6 -> 6
+  else -> 11
+}
+compareInt!11 -> {
+  (compareInt!11!548 (k!545 (:var 0)) (k!545 (:var 1)))
+}
+compareDouble!10 -> {
+  0
+}
+compareIgnoreCaseString!12 -> {
+  0
+}
+nondet!9 -> {
+  (- 1) -> 8856
+  8854 -> 4
+  8855 -> 9
+  else -> 0
+}
+
+
+real	0m0.171s
+user	0m0.158s
+sys	0m0.012s
+descartes -p=1 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.085s
+user	0m0.068s
+sys	0m0.016s

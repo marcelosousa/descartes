@@ -1,0 +1,186 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> Attributes!val!0
+i31 -> 0
+o13!7 -> Attributes!val!1
+res3!11 -> (- 1)
+c32!2811 -> (- 1)
+o11!3 -> Attributes!val!0
+res2!10 -> 0
+i31!2909 -> 0
+o21!4 -> Attributes!val!1
+o22!6 -> Attributes!val!0
+i11!2910 -> 0
+o12!5 -> Attributes!val!0
+res1!9 -> 0
+i11 -> 0
+get!1 -> {
+  (get!1!2979 (:var 0) (k!2977 (:var 1)))
+}
+compareInt!16 -> {
+  (compareInt!16!2978 (k!2975 (:var 0)) (k!2975 (:var 1)))
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 1
+  else -> 0
+}
+compareDouble!15 -> {
+  0
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+k!2975 -> {
+  6 -> 6
+  else -> 7
+}
+k!2977 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+compareInt!16!2978 -> {
+  6 7 -> (- 1)
+  7 6 -> 1
+  else -> 0
+}
+mask!2 -> {
+  3
+}
+get!1!2979 -> {
+  Attributes!val!0 0 -> 7
+  else -> 6
+}
+
+
+real	0m5.634s
+user	0m5.613s
+sys	0m0.020s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> Attributes!val!0
+i31 -> 0
+o13!7 -> Attributes!val!1
+res3!11 -> (- 1)
+c32!5409 -> (- 1)
+o11!3 -> Attributes!val!0
+res2!10 -> 0
+i31!5410 -> 0
+o21!4 -> Attributes!val!1
+o22!6 -> Attributes!val!0
+i11!5411 -> 0
+o12!5 -> Attributes!val!0
+res1!9 -> 0
+i11 -> 0
+get!1 -> {
+  (get!1!5480 (:var 0) (k!5478 (:var 1)))
+}
+compareInt!16 -> {
+  (compareInt!16!5479 (k!5476 (:var 0)) (k!5476 (:var 1)))
+}
+attributesSize!0 -> {
+  Attributes!val!1 -> 1
+  else -> 0
+}
+compareDouble!15 -> {
+  0
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+k!5476 -> {
+  6 -> 6
+  else -> 7
+}
+k!5478 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
+}
+compareInt!16!5479 -> {
+  6 7 -> (- 1)
+  7 6 -> 1
+  else -> 0
+}
+get!1!5480 -> {
+  Attributes!val!0 0 -> 7
+  else -> 6
+}
+mask!2 -> {
+  3
+}
+
+
+real	0m4.760s
+user	0m4.750s
+sys	0m0.008s
+descartes -p=3 -m=2: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> Attributes!val!1
+i31 -> 535
+o13!7 -> Attributes!val!0
+res3!11 -> 0
+c32!575 -> 0
+o11!3 -> Attributes!val!0
+res2!10 -> (- 1)
+i21!837 -> 0
+i31!838 -> 0
+o21!4 -> Attributes!val!0
+o22!6 -> Attributes!val!1
+c22!358 -> (- 1)
+o12!5 -> Attributes!val!0
+res1!9 -> 0
+i21 -> 537
+get!1 -> {
+  (get!1!972 (:var 0) (k!970 (:var 1)))
+}
+compareInt!16 -> {
+  (compareInt!16!971 (k!968 (:var 0)) (k!968 (:var 1)))
+}
+attributesSize!0 -> {
+  538
+}
+compareDouble!15 -> {
+  0
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+compareInt!16!971 -> {
+  10 10 -> 0
+  6 10 -> 1
+  7 7 -> 0
+  7 10 -> 1
+  6 6 -> 0
+  7 6 -> 1
+  else -> (- 1)
+}
+mask!2 -> {
+  8
+}
+k!968 -> {
+  10 -> 10
+  7 -> 7
+  else -> 6
+}
+k!970 -> {
+  (let ((a!1 (ite (>= (:var 0) 535)
+                  (ite (>= (:var 0) 536) (ite (>= (:var 0) 537) 537 536) 535)
+                  534)))
+    (ite (>= (:var 0) 534) a!1 0))
+}
+get!1!972 -> {
+  Attributes!val!0 537 -> 6
+  Attributes!val!1 537 -> 7
+  Attributes!val!0 536 -> 12
+  Attributes!val!1 536 -> 12
+  else -> 10
+}
+
+
+real	0m0.659s
+user	0m0.651s
+sys	0m0.009s
+descartes -p=3 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.139s
+user	0m0.127s
+sys	0m0.012s

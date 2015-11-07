@@ -1,0 +1,239 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+level11 -> 1
+res1!12 -> 0
+cmp22!651 -> 0
+levels31 -> 4387
+cmp32!1504 -> 0
+o12!8 -> NodeSortRecord!val!0
+levels21 -> 1
+cmp33!1507 -> 1
+their32!1503 -> 0
+their33!1506 -> (- 1)
+o13!10 -> NodeSortRecord!val!1
+their23!653 -> 1
+o11!6 -> NodeSortRecord!val!0
+o23!11 -> NodeSortRecord!val!2
+res3!14 -> (- 1)
+res2!13 -> 1
+their22!650 -> 0
+o21!7 -> NodeSortRecord!val!1
+level21 -> 0
+our32!1502 -> 0
+our33!1505 -> 0
+cmp23!654 -> (- 1)
+level11!1612 -> 0
+levels11 -> 1
+o22!9 -> NodeSortRecord!val!2
+level31!1610 -> 0
+level21!1611 -> 0
+level31 -> 4386
+our22!649 -> 0
+our23!652 -> 0
+compareInt!19 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+sortOrder!3 -> {
+  1
+}
+stringValue!1 -> {
+  (stringValue!1!1684 (:var 0) (k!1682 (:var 1)))
+}
+get!4 -> {
+  (get!4!1683 (:var 0) (k!1682 (:var 1)))
+}
+node!0 -> {
+  0
+}
+numericValue!2 -> {
+  0
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+settingsGetSortOrdersLength!5 -> {
+  NodeSortRecord!val!1 -> 4387
+  else -> 1
+}
+get!4!1683 -> {
+  NodeSortRecord!val!1 4386 -> 14
+  NodeSortRecord!val!1 0 -> 0
+  else -> 12
+}
+k!1682 -> {
+  (ite (>= (:var 0) 0)
+       (ite (>= (:var 0) 4385) (ite (>= (:var 0) 4386) 4386 4385) 0)
+       (- 1))
+}
+stringValue!1!1684 -> {
+  NodeSortRecord!val!2 0 -> 1
+  NodeSortRecord!val!2 4386 -> (- 1)
+  else -> 0
+}
+
+
+real	0m0.283s
+user	0m0.263s
+sys	0m0.020s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+level11 -> 2
+res1!12 -> 0
+their23!6263 -> 1
+cmp23!6264 -> (- 1)
+levels31 -> 1
+o12!8 -> NodeSortRecord!val!0
+levels21 -> 2
+level11!7093 -> 0
+our33!7088 -> (- 1)
+o13!10 -> NodeSortRecord!val!1
+res3!14 -> (- 1)
+o23!11 -> NodeSortRecord!val!2
+o11!6 -> NodeSortRecord!val!0
+their32!7086 -> 0
+res2!13 -> 1
+their33!7089 -> (- 2)
+o21!7 -> NodeSortRecord!val!1
+level21 -> 1
+our22!6259 -> 1
+cmp33!7090 -> 1
+levels11 -> 2
+their22!6260 -> 1
+o22!9 -> NodeSortRecord!val!2
+level31!7091 -> 0
+cmp22!6261 -> 0
+our32!7085 -> 0
+cmp32!7087 -> 0
+level31 -> 0
+our23!6262 -> 0
+level21!7092 -> 0
+stringValue!1!7199 -> {
+  NodeSortRecord!val!2 1 -> 1
+  NodeSortRecord!val!1 0 -> (- 1)
+  NodeSortRecord!val!2 0 -> (- 2)
+  else -> 0
+}
+k!7196 -> {
+  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+}
+compareInt!19 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+sortOrder!3 -> {
+  1
+}
+stringValue!1 -> {
+  (stringValue!1!7199 (:var 0) (k!7196 (:var 1)))
+}
+get!4 -> {
+  (get!4!7197 (:var 0) (k!7196 (:var 1)))
+}
+node!0 -> {
+  0
+}
+numericValue!2 -> {
+  (numericValue!2!7198 (:var 0) (k!7196 (:var 1)))
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+numericValue!2!7198 -> {
+  NodeSortRecord!val!1 0 -> 0
+  NodeSortRecord!val!2 0 -> 0
+  NodeSortRecord!val!0 0 -> 0
+  else -> 1
+}
+settingsGetSortOrdersLength!5 -> {
+  NodeSortRecord!val!1 -> 1
+  else -> 2
+}
+get!4!7197 -> {
+  NodeSortRecord!val!1 0 -> 15
+  NodeSortRecord!val!0 0 -> 0
+  else -> 13
+}
+
+
+real	0m0.677s
+user	0m0.665s
+sys	0m0.012s
+descartes -p=3 -m=2: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+their13!118 -> 1
+level11!592 -> 0
+level11 -> 2281
+res1!12 -> 0
+level12!120 -> 2282
+levels31 -> 450
+cmp12!116 -> 0
+our22!306 -> 0
+o12!8 -> NodeSortRecord!val!0
+levels21 -> 2283
+their22!307 -> (- 1)
+o13!10 -> NodeSortRecord!val!1
+res3!14 -> (- 1)
+o11!6 -> NodeSortRecord!val!0
+o23!11 -> NodeSortRecord!val!2
+res2!13 -> 1
+cmp13!119 -> (- 1)
+our13!117 -> 0
+o21!7 -> NodeSortRecord!val!1
+cmp22!308 -> 1
+level21 -> 2282
+cmp32!470 -> (- 1)
+our12!114 -> 1
+level21!593 -> 0
+our32!468 -> 0
+levels11 -> 2283
+level31!594 -> 0
+o22!9 -> NodeSortRecord!val!2
+level31 -> 449
+their32!469 -> 1
+their12!115 -> 1
+compareInt!19 -> {
+  0
+}
+node!0 -> {
+  0
+}
+numericValue!2 -> {
+  NodeSortRecord!val!0 2282 -> 0
+  NodeSortRecord!val!2 2282 -> (- 1)
+  NodeSortRecord!val!1 449 -> 0
+  else -> 1
+}
+compareDouble!18 -> {
+  0
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+settingsGetSortOrdersLength!5 -> {
+  NodeSortRecord!val!1 -> 450
+  else -> 2283
+}
+stringValue!1 -> {
+  NodeSortRecord!val!1 2281 -> 1
+  else -> 0
+}
+get!4 -> {
+  0
+}
+
+
+real	0m0.271s
+user	0m0.255s
+sys	0m0.016s
+descartes -p=3 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.416s
+user	0m0.404s
+sys	0m0.012s

@@ -1,0 +1,25 @@
+Property 1
+descartes -p=1 -m=0: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.068s
+user	0m0.060s
+sys	0m0.008s
+descartes -p=1 -m=1: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.065s
+user	0m0.065s
+sys	0m0.000s
+descartes -p=1 -m=2: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.080s
+user	0m0.076s
+sys	0m0.004s
+descartes -p=1 -m=3: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.085s
+user	0m0.073s
+sys	0m0.012s

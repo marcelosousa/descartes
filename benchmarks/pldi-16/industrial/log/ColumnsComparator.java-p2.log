@@ -1,0 +1,27 @@
+Property 2
+descartes -p=2 -m=0: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	0m1.457s
+user	0m1.448s
+sys	0m0.008s
+descartes -p=2 -m=1: 
+Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+
+real	1m16.081s
+user	1m15.976s
+sys	0m0.068s
+descartes -p=2 -m=2: 
+descartes: src/Analysis/SelfComposition.hs:(91,2)-(106,54): Non-exhaustive patterns in case
+
+
+real	0m0.044s
+user	0m0.032s
+sys	0m0.012s
+descartes -p=2 -m=3: 
+descartes: src/Analysis/Product.hs:(103,2)-(118,59): Non-exhaustive patterns in case
+
+
+real	0m0.034s
+user	0m0.019s
+sys	0m0.015s

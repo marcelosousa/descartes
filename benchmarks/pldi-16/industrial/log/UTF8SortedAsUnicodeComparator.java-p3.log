@@ -1,0 +1,244 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+aUpto21!3389 -> 0
+res1!10 -> 0
+o23!9 -> UTF8SortedAsUnicodeComparator!val!2
+bByte32!3255 -> 0
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!2
+aStop31 -> 2744
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto11 -> 2745
+aStop21 -> 2744
+diff32!3256 -> (- 1)
+aByte32!3254 -> (- 1)
+aStop11 -> 2745
+aUpto31 -> 2743
+bUpto31 -> (- 6759)
+aUpto31!3388 -> 0
+res3!12 -> (- 1)
+aUpto21 -> 2744
+bUpto21 -> (- 6759)
+o13!8 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto11!3390 -> 0
+bUpto11 -> 0
+res2!11 -> 1
+o12!6 -> UTF8SortedAsUnicodeComparator!val!0
+nondet!15 -> {
+  15 -> (- 1)
+  else -> 0
+}
+compareDouble!16 -> {
+  0
+}
+hasArray!3 -> {
+  true
+}
+get!0!3491 -> {
+  UTF8SortedAsUnicodeComparator!val!2 (- 6759) -> 16
+  UTF8SortedAsUnicodeComparator!val!0 2743 -> 19
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 22
+  UTF8SortedAsUnicodeComparator!val!0 2744 -> 24
+  UTF8SortedAsUnicodeComparator!val!0 2742 -> 26
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 29
+  UTF8SortedAsUnicodeComparator!val!1 2742 -> 31
+  else -> 15
+}
+compareInt!17 -> {
+  0
+}
+length!1 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> 2744
+  else -> 2745
+}
+arrayOffset!2 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> (- 6759)
+  else -> 0
+}
+get!0 -> {
+  (get!0!3491 (:var 0) (k!3490 (:var 1)))
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+k!3490 -> {
+  (let ((a!1 (ite (>= (:var 0) 2742)
+                  (ite (>= (:var 0) 2743)
+                       (ite (>= (:var 0) 2744) 2744 2743)
+                       2742)
+                  0)))
+    (ite (>= (:var 0) 0) a!1 (- 6759)))
+}
+
+
+real	0m1.091s
+user	0m1.074s
+sys	0m0.016s
+descartes -p=3 -m=1: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+aUpto31!7447 -> 0
+res1!10 -> 0
+bByte32!7445 -> 0
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!2
+o23!9 -> UTF8SortedAsUnicodeComparator!val!2
+aStop31 -> 7529
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+diff32!7446 -> (- 1)
+aUpto11 -> 7530
+aStop11 -> 7530
+aUpto11!7449 -> 0
+aStop21 -> 7529
+aUpto31 -> 7528
+bUpto31 -> (- 3620)
+res3!12 -> (- 1)
+aByte32!7444 -> (- 1)
+aUpto21!7448 -> 0
+aUpto21 -> 7529
+bUpto21 -> (- 3620)
+o13!8 -> UTF8SortedAsUnicodeComparator!val!1
+bUpto11 -> 0
+res2!11 -> 1
+o12!6 -> UTF8SortedAsUnicodeComparator!val!0
+nondet!15 -> {
+  14 -> (- 1)
+  else -> 0
+}
+compareDouble!16 -> {
+  0
+}
+hasArray!3 -> {
+  true
+}
+get!0!7550 -> {
+  UTF8SortedAsUnicodeComparator!val!2 (- 3620) -> 15
+  UTF8SortedAsUnicodeComparator!val!0 7528 -> 18
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 21
+  UTF8SortedAsUnicodeComparator!val!0 7529 -> 23
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 25
+  UTF8SortedAsUnicodeComparator!val!0 7527 -> 28
+  UTF8SortedAsUnicodeComparator!val!1 7527 -> 30
+  else -> 14
+}
+compareInt!17 -> {
+  0
+}
+length!1 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> 7529
+  else -> 7530
+}
+arrayOffset!2 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> (- 3620)
+  else -> 0
+}
+get!0 -> {
+  (get!0!7550 (:var 0) (k!7549 (:var 1)))
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+k!7549 -> {
+  (let ((a!1 (ite (>= (:var 0) 7527)
+                  (ite (>= (:var 0) 7528)
+                       (ite (>= (:var 0) 7529) 7529 7528)
+                       7527)
+                  0)))
+    (ite (>= (:var 0) 0) a!1 (- 3620)))
+}
+
+
+real	0m1.878s
+user	0m1.861s
+sys	0m0.016s
+descartes -p=3 -m=2: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+diff12!174 -> 0
+res1!10 -> 0
+o23!9 -> UTF8SortedAsUnicodeComparator!val!2
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+bByte32!997 -> 0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!2
+bByte12!173 -> 0
+aUpto11 -> 2742
+aByte22!614 -> 1
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aByte12!172 -> 0
+bByte22!615 -> 0
+diff22!616 -> 1
+aStop11 -> 2744
+aStop21 -> 2744
+bUpto31 -> (- 1)
+aUpto31 -> 2743
+bUpto21 -> (- 1)
+res2!11 -> 1
+bUpto11 -> 0
+aByte32!996 -> (- 1)
+aUpto11!1334 -> 0
+aStop31 -> 2744
+aUpto31!1336 -> 0
+bUpto12!176 -> 1
+res3!12 -> (- 1)
+aUpto21 -> 2616
+o13!8 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto21!1335 -> 0
+diff32!998 -> (- 1)
+aUpto12!175 -> 2743
+o12!6 -> UTF8SortedAsUnicodeComparator!val!0
+k!1468 -> {
+  (let ((a!1 (ite (>= (:var 0) 2741)
+                  (ite (>= (:var 0) 2742)
+                       (ite (>= (:var 0) 2743) 2743 2742)
+                       2741)
+                  2616)))
+    (ite (>= (:var 0) 0)
+         (ite (>= (:var 0) 2615) (ite (>= (:var 0) 2616) a!1 2615) 0)
+         (- 1)))
+}
+nondet!15 -> {
+  31 -> 1
+  24 -> (- 1)
+  else -> 0
+}
+compareDouble!16 -> {
+  0
+}
+hasArray!3 -> {
+  true
+}
+compareInt!17 -> {
+  0
+}
+length!1 -> {
+  2744
+}
+arrayOffset!2 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> (- 1)
+  else -> 0
+}
+get!0 -> {
+  (get!0!1469 (:var 0) (k!1468 (:var 1)))
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+get!0!1469 -> {
+  UTF8SortedAsUnicodeComparator!val!0 2742 -> 13
+  UTF8SortedAsUnicodeComparator!val!0 2616 -> 31
+  UTF8SortedAsUnicodeComparator!val!1 2743 -> 24
+  UTF8SortedAsUnicodeComparator!val!2 (- 1) -> 25
+  UTF8SortedAsUnicodeComparator!val!1 2616 -> 31
+  UTF8SortedAsUnicodeComparator!val!2 2616 -> 31
+  else -> 14
+}
+
+
+real	0m0.716s
+user	0m0.692s
+sys	0m0.024s
+descartes -p=3 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.509s
+user	0m0.497s
+sys	0m0.012s

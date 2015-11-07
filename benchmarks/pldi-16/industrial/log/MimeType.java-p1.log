@@ -1,0 +1,88 @@
+Property 1
+descartes -p=1 -m=0: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.311s
+user	0m0.306s
+sys	0m0.004s
+descartes -p=1 -m=1: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.308s
+user	0m0.299s
+sys	0m0.008s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+o2Attribute22!307 -> 1
+o1Attribute22!306 -> 1
+comp24!308 -> 0
+i11!778 -> 0
+comp23!183 -> 0
+i21!779 -> 0
+comp14!114 -> (- 1)
+o2Attribute12!113 -> 0
+o22!8 -> MimeType!val!0
+comp11 -> 0
+comp13!19 -> 0
+comp21 -> 0
+o12!7 -> MimeType!val!1
+o21!6 -> MimeType!val!1
+comp12!18 -> 0
+o1Attribute12!112 -> (- 1)
+o2Value22!310 -> 1
+o1Value22!309 -> 0
+o11!5 -> MimeType!val!0
+res2!10 -> (- 1)
+comp25!311 -> (- 1)
+res1!9 -> (- 1)
+comp22!182 -> 0
+i11 -> 9532
+i21 -> 0
+compareIgnoreCaseString!16 -> {
+  0
+}
+get!1 -> {
+  (get!1!815 (:var 0) (k!814 (:var 1)))
+}
+compareDouble!14 -> {
+  0
+}
+getSubtype!3 -> {
+  MimeType!val!0 -> 14
+  else -> 13
+}
+getValue!0 -> {
+  MimeType!val!0 1 -> 1
+  else -> 0
+}
+get!1!815 -> {
+  MimeType!val!0 9532 -> (- 1)
+  MimeType!val!1 9532 -> 0
+  else -> 1
+}
+k!814 -> {
+  (ite (>= (:var 0) 0)
+       (ite (>= (:var 0) 9531) (ite (>= (:var 0) 9532) 9532 9531) 0)
+       (- 1))
+}
+getParametersSize!2 -> {
+  9533
+}
+getType!4 -> {
+  MimeType!val!0 -> 12
+  else -> 11
+}
+compareInt!15 -> {
+  0
+}
+
+
+real	0m0.273s
+user	0m0.268s
+sys	0m0.004s
+descartes -p=1 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.118s
+user	0m0.106s
+sys	0m0.012s

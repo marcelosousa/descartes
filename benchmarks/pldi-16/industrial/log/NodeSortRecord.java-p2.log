@@ -1,0 +1,248 @@
+Property 2
+descartes -p=2 -m=0: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+level11 -> 4167
+our12!187 -> 0
+res1!12 -> 1
+level31!1858 -> 0
+cmp23!666 -> (- 1)
+their22!662 -> 0
+our23!664 -> 0
+our33!1649 -> (- 2)
+levels31 -> 4168
+o12!8 -> NodeSortRecord!val!1
+their32!1647 -> (- 1)
+our13!190 -> (- 1)
+levels21 -> 4168
+our22!661 -> 0
+o13!10 -> NodeSortRecord!val!0
+res3!14 -> (- 1)
+o23!11 -> NodeSortRecord!val!2
+o11!6 -> NodeSortRecord!val!0
+res2!13 -> 1
+cmp22!663 -> 0
+o21!7 -> NodeSortRecord!val!1
+their12!188 -> 0
+level21 -> 4167
+cmp33!1651 -> 1
+cmp12!189 -> 0
+our32!1646 -> (- 1)
+cmp32!1648 -> 0
+levels11 -> 4168
+their23!665 -> 1
+o22!9 -> NodeSortRecord!val!2
+cmp13!192 -> (- 1)
+their33!1650 -> (- 3)
+their13!191 -> 0
+level11!1860 -> 0
+level21!1859 -> 0
+level31 -> 4166
+compareInt!19 -> {
+  0
+}
+get!4!2000 -> {
+  NodeSortRecord!val!1 4167 -> 13
+  NodeSortRecord!val!0 4166 -> 15
+  NodeSortRecord!val!0 4167 -> 24
+  else -> 0
+}
+compareDouble!18 -> {
+  0
+}
+sortOrder!3 -> {
+  1
+}
+stringValue!1 -> {
+  (stringValue!1!2002 (:var 0) (k!1999 (:var 1)))
+}
+get!4 -> {
+  (get!4!2000 (:var 0) (k!1999 (:var 1)))
+}
+numericValue!2!2001 -> {
+  NodeSortRecord!val!0 4166 -> (- 1)
+  NodeSortRecord!val!2 4166 -> (- 1)
+  NodeSortRecord!val!1 4166 -> (- 1)
+  else -> 0
+}
+k!1999 -> {
+  (ite (>= (:var 0) 4165)
+       (ite (>= (:var 0) 4166) (ite (>= (:var 0) 4167) 4167 4166) 4165)
+       0)
+}
+stringValue!1!2002 -> {
+  NodeSortRecord!val!1 4167 -> 0
+  NodeSortRecord!val!2 4167 -> 1
+  NodeSortRecord!val!2 4166 -> (- 3)
+  NodeSortRecord!val!0 4167 -> (- 1)
+  else -> (- 2)
+}
+numericValue!2 -> {
+  (numericValue!2!2001 (:var 0) (k!1999 (:var 1)))
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+settingsGetSortOrdersLength!5 -> {
+  4168
+}
+
+
+real	0m1.092s
+user	0m1.088s
+sys	0m0.004s
+descartes -p=2 -m=1: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+level11!1443 -> 0
+their33!1439 -> (- 1)
+level11 -> 335
+our12!187 -> 0
+res1!12 -> 1
+levels31 -> 336
+their32!1436 -> 1
+o12!8 -> NodeSortRecord!val!1
+our13!190 -> 1
+levels21 -> 337
+their22!634 -> 0
+our23!636 -> 2
+cmp33!1440 -> 1
+their23!637 -> 3
+cmp23!638 -> (- 1)
+o13!10 -> NodeSortRecord!val!0
+level21!1442 -> 0
+res3!14 -> (- 1)
+o23!11 -> NodeSortRecord!val!2
+o11!6 -> NodeSortRecord!val!0
+res2!13 -> 1
+o21!7 -> NodeSortRecord!val!1
+their12!188 -> 0
+level21 -> 336
+our22!633 -> 0
+cmp12!189 -> 0
+level31!1441 -> 0
+our33!1438 -> 0
+levels11 -> 336
+o22!9 -> NodeSortRecord!val!2
+cmp13!192 -> (- 1)
+cmp22!635 -> 0
+their13!191 -> 2
+level31 -> 334
+cmp32!1437 -> 0
+our32!1435 -> 1
+compareInt!19 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+stringValue!1 -> {
+  (stringValue!1!1517 (:var 0) (k!1514 (:var 1)))
+}
+get!4 -> {
+  (get!4!1515 (:var 0) (k!1514 (:var 1)))
+}
+sortOrder!3 -> {
+  1
+}
+k!1514 -> {
+  (let ((a!1 (ite (>= (:var 0) 334)
+                  (ite (>= (:var 0) 335) (ite (>= (:var 0) 336) 336 335) 334)
+                  333)))
+    (ite (>= (:var 0) 333) a!1 0))
+}
+numericValue!2 -> {
+  (numericValue!2!1516 (:var 0) (k!1514 (:var 1)))
+}
+stringValue!1!1517 -> {
+  NodeSortRecord!val!0 335 -> 1
+  NodeSortRecord!val!2 336 -> 3
+  NodeSortRecord!val!0 334 -> 0
+  NodeSortRecord!val!2 334 -> (- 1)
+  NodeSortRecord!val!1 334 -> 0
+  else -> 2
+}
+get!4!1515 -> {
+  NodeSortRecord!val!0 335 -> 11
+  NodeSortRecord!val!1 336 -> 15
+  NodeSortRecord!val!0 334 -> 17
+  else -> 0
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+settingsGetSortOrdersLength!5 -> {
+  NodeSortRecord!val!0 -> 336
+  else -> 337
+}
+numericValue!2!1516 -> {
+  NodeSortRecord!val!0 334 -> 1
+  NodeSortRecord!val!2 334 -> 1
+  NodeSortRecord!val!1 334 -> 1
+  else -> 0
+}
+
+
+real	0m0.791s
+user	0m0.783s
+sys	0m0.008s
+descartes -p=2 -m=2: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+level11 -> 449
+res1!12 -> 1
+levels31 -> 450
+cmp12!116 -> 1
+our22!306 -> 0
+o12!8 -> NodeSortRecord!val!1
+levels21 -> 2283
+their22!307 -> (- 1)
+level31!540 -> 0
+level21!539 -> 0
+o13!10 -> NodeSortRecord!val!0
+res3!14 -> (- 1)
+o11!6 -> NodeSortRecord!val!0
+o23!11 -> NodeSortRecord!val!2
+res2!13 -> 1
+cmp22!308 -> 1
+o21!7 -> NodeSortRecord!val!1
+level21 -> 2282
+cmp32!470 -> (- 1)
+our12!114 -> 0
+our32!468 -> 0
+levels11 -> 450
+o22!9 -> NodeSortRecord!val!2
+level11!538 -> 0
+level31 -> 449
+their32!469 -> 1
+their12!115 -> (- 1)
+compareInt!19 -> {
+  0
+}
+numericValue!2 -> {
+  NodeSortRecord!val!1 2282 -> 0
+  NodeSortRecord!val!0 449 -> 0
+  NodeSortRecord!val!2 449 -> 1
+  else -> (- 1)
+}
+compareDouble!18 -> {
+  0
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+settingsGetSortOrdersLength!5 -> {
+  NodeSortRecord!val!0 -> 450
+  else -> 2283
+}
+get!4 -> {
+  5
+}
+
+
+real	0m0.338s
+user	0m0.330s
+sys	0m0.008s
+descartes -p=2 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.080s
+user	0m0.068s
+sys	0m0.012s

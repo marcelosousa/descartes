@@ -1,0 +1,326 @@
+Property 2
+descartes -p=2 -m=0: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+_ascending11 -> 3
+propertyName31 -> 0
+_properyNamesSize31 -> 2
+i31!2149 -> 0
+i21!2150 -> 0
+property121 -> 9
+o21!2 -> PropertyComparator!val!2
+o13!5 -> PropertyComparator!val!1
+property231 -> 14
+o22!4 -> PropertyComparator!val!0
+o11!1 -> PropertyComparator!val!1
+o12!3 -> PropertyComparator!val!2
+propertyName11 -> 0
+res1!7 -> 1
+propertyName21 -> 0
+property111 -> 6
+_ascending31 -> 3
+_caseSensitive21 -> 0
+_ascending21 -> 3
+_properyNamesSize11 -> 2
+property221 -> 10
+_caseSensitive11 -> 0
+i31 -> 0
+propertyName32!1881 -> 12
+res2!8 -> 1
+_caseSensitive31 -> 0
+_properyNamesSize21 -> 2
+o23!6 -> PropertyComparator!val!0
+res3!9 -> (- 1)
+property211 -> 7
+property131 -> 13
+propertyName22!805 -> 12
+i11!2151 -> 0
+propertyName12!177 -> 5
+i11 -> 1
+i21 -> 0
+compareDouble!13 -> {
+  0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+get!0 -> {
+  PropertyComparator!val!2 12 -> 18
+  else -> 0
+}
+nondet!12!2388 -> {
+  (- 2) -> 0
+  (- 1) -> 2
+  1 -> 5
+  0 -> 12
+  else -> 3
+}
+compareInt!14 -> {
+  (compareInt!14!2387 (k!2384 (:var 0)) (k!2384 (:var 1)))
+}
+nondet!12 -> {
+  (nondet!12!2388 (k!2386 (:var 0)))
+}
+k!2384 -> {
+  10 -> 10
+  7 -> 7
+  13 -> 13
+  9 -> 9
+  6 -> 6
+  else -> 14
+}
+compareInt!14!2387 -> {
+  7 6 -> 1
+  10 9 -> 1
+  13 14 -> 1
+  7 7 -> 0
+  10 13 -> 1
+  9 14 -> 1
+  10 14 -> 1
+  9 13 -> 0
+  7 9 -> 0
+  9 7 -> 0
+  13 13 -> 0
+  7 14 -> 1
+  6 14 -> 1
+  7 13 -> 0
+  9 9 -> 0
+  10 10 -> 0
+  10 6 -> 1
+  9 6 -> 1
+  13 6 -> 1
+  13 7 -> 0
+  6 6 -> 0
+  13 9 -> 0
+  10 7 -> 1
+  14 14 -> 0
+  else -> (- 1)
+}
+k!2386 -> {
+  (let ((a!1 (ite (>= (:var 0) (- 1))
+                  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+                  (- 2))))
+    (ite (>= (:var 0) (- 2)) a!1 (- 3)))
+}
+
+
+real	0m1.587s
+user	0m1.583s
+sys	0m0.004s
+descartes -p=2 -m=1: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+propertyName32!1641 -> 11
+_ascending11 -> 4
+propertyName31 -> 0
+_properyNamesSize31 -> 4189
+property121 -> 13
+o13!5 -> PropertyComparator!val!1
+o21!2 -> PropertyComparator!val!2
+property231 -> 17
+o22!4 -> PropertyComparator!val!0
+o11!1 -> PropertyComparator!val!1
+o12!3 -> PropertyComparator!val!2
+propertyName22!752 -> 11
+propertyName11 -> 0
+res1!7 -> 1
+i21!1643 -> 0
+property111 -> 8
+propertyName21 -> 0
+_caseSensitive21 -> 0
+_ascending21 -> 4
+_properyNamesSize11 -> 4189
+property221 -> 14
+_ascending31 -> 4
+_caseSensitive11 -> 0
+i31!1642 -> 0
+i31 -> 4186
+res2!8 -> 1
+_caseSensitive31 -> 0
+_properyNamesSize21 -> 4189
+o23!6 -> PropertyComparator!val!0
+res3!9 -> (- 1)
+property211 -> 9
+property131 -> 16
+i11!1644 -> 0
+i11 -> 4188
+propertyName12!177 -> 7
+i21 -> 4186
+compareDouble!13 -> {
+  0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+get!0 -> {
+  PropertyComparator!val!2 11 -> 12
+  PropertyComparator!val!2 20 -> 21
+  PropertyComparator!val!0 20 -> 22
+  PropertyComparator!val!2 24 -> 25
+  PropertyComparator!val!0 24 -> 26
+  PropertyComparator!val!2 30 -> 31
+  PropertyComparator!val!0 30 -> 32
+  else -> 0
+}
+k!1910 -> {
+  14 -> 14
+  9 -> 9
+  16 -> 16
+  13 -> 13
+  8 -> 8
+  else -> 17
+}
+compareInt!14 -> {
+  (compareInt!14!1913 (k!1910 (:var 0)) (k!1910 (:var 1)))
+}
+nondet!12!1914 -> {
+  (- 2) -> 0
+  (- 1) -> 4189
+  4188 -> 7
+  4186 -> 11
+  0 -> 20
+  4185 -> 24
+  4187 -> 30
+  else -> 4
+}
+nondet!12 -> {
+  (nondet!12!1914 (k!1912 (:var 0)))
+}
+k!1912 -> {
+  (let ((a!1 (ite (>= (:var 0) 4186)
+                  (ite (>= (:var 0) 4187)
+                       (ite (>= (:var 0) 4188) 4188 4187)
+                       4186)
+                  4185)))
+  (let ((a!2 (ite (>= (:var 0) (- 1))
+                  (ite (>= (:var 0) 0) (ite (>= (:var 0) 4185) a!1 0) (- 1))
+                  (- 2))))
+    (ite (>= (:var 0) (- 2)) a!2 (- 3))))
+}
+compareInt!14!1913 -> {
+  9 8 -> 1
+  14 13 -> 1
+  16 17 -> 1
+  9 13 -> 1
+  17 13 -> 0
+  9 14 -> 1
+  16 14 -> 1
+  8 13 -> 1
+  13 13 -> 0
+  8 17 -> 1
+  8 8 -> 0
+  14 14 -> 0
+  14 17 -> 1
+  17 17 -> 0
+  13 17 -> 0
+  16 9 -> 1
+  16 13 -> 1
+  8 14 -> 1
+  16 16 -> 0
+  16 8 -> 1
+  9 17 -> 1
+  9 9 -> 0
+  else -> (- 1)
+}
+
+
+real	0m2.174s
+user	0m2.168s
+sys	0m0.004s
+descartes -p=2 -m=2: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+i21 -> 449
+propertyName31 -> 0
+_properyNamesSize31 -> 450
+property121 -> 8
+o13!5 -> PropertyComparator!val!1
+o21!2 -> PropertyComparator!val!0
+i21!611 -> 0
+property231 -> 14
+o22!4 -> PropertyComparator!val!2
+o11!1 -> PropertyComparator!val!1
+o12!3 -> PropertyComparator!val!0
+propertyName12!109 -> 7
+propertyName11 -> 0
+res1!7 -> 1
+propertyName21 -> 0
+_ascending31 -> 0
+property111 -> 3
+_caseSensitive21 -> 0
+_ascending21 -> 0
+_properyNamesSize11 -> 450
+property221 -> 9
+_caseSensitive11 -> 0
+i31!612 -> 0
+i11!610 -> 0
+i31 -> 12
+res2!8 -> 1
+_caseSensitive31 -> 0
+_properyNamesSize21 -> 450
+propertyName32!544 -> 11
+o23!6 -> PropertyComparator!val!2
+propertyName22!327 -> 7
+property211 -> 4
+property131 -> 13
+res3!9 -> (- 1)
+i11 -> 449
+_ascending11 -> 0
+compareDouble!13 -> {
+  0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+get!0 -> {
+  0
+}
+compareInt!14!841 -> {
+  13 14 -> (- 1)
+  9 8 -> (- 1)
+  13 3 -> (- 1)
+  4 3 -> (- 1)
+  3 3 -> 0
+  9 14 -> (- 1)
+  8 14 -> (- 1)
+  13 13 -> 0
+  9 13 -> (- 1)
+  9 4 -> (- 1)
+  14 14 -> 0
+  8 4 -> (- 1)
+  8 8 -> 0
+  8 3 -> (- 1)
+  8 13 -> (- 1)
+  4 13 -> (- 1)
+  4 14 -> (- 1)
+  14 3 -> (- 1)
+  9 9 -> 0
+  9 3 -> (- 1)
+  4 4 -> 0
+  else -> 1
+}
+k!838 -> {
+  9 -> 9
+  4 -> 4
+  13 -> 13
+  8 -> 8
+  3 -> 3
+  else -> 14
+}
+compareInt!14 -> {
+  (compareInt!14!841 (k!838 (:var 0)) (k!838 (:var 1)))
+}
+nondet!12 -> {
+  (- 1) -> 450
+  449 -> 7
+  12 -> 11
+  else -> 0
+}
+
+
+real	0m0.437s
+user	0m0.425s
+sys	0m0.012s
+descartes -p=2 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.274s
+user	0m0.266s
+sys	0m0.008s

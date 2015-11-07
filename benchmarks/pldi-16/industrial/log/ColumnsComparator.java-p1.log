@@ -1,0 +1,27 @@
+Property 1
+descartes -p=1 -m=0: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m1.222s
+user	0m1.222s
+sys	0m0.000s
+descartes -p=1 -m=1: 
+Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m2.898s
+user	0m2.893s
+sys	0m0.004s
+descartes -p=1 -m=2: 
+descartes: src/Analysis/SelfComposition.hs:(91,2)-(106,54): Non-exhaustive patterns in case
+
+
+real	0m0.030s
+user	0m0.025s
+sys	0m0.004s
+descartes -p=1 -m=3: 
+descartes: src/Analysis/Product.hs:(103,2)-(118,59): Non-exhaustive patterns in case
+
+
+real	0m0.023s
+user	0m0.011s
+sys	0m0.011s

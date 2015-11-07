@@ -1,0 +1,207 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!9 -> (- 1)
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!0
+aUpto21!926 -> 0
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto11 -> 4099
+aStop21 -> 4100
+bByte12!301 -> 0
+diff22!830 -> (- 1)
+aStop11 -> 4100
+diff12!302 -> (- 1)
+res1!8 -> (- 1)
+aByte22!828 -> (- 1)
+aUpto21 -> 4097
+aUpto11!927 -> 0
+bByte22!829 -> 0
+aByte12!300 -> (- 1)
+bUpto11 -> 0
+bUpto21 -> 0
+o12!6 -> UTF8SortedAsUnicodeComparator!val!1
+compareDouble!13 -> {
+  0
+}
+hasArray!3 -> {
+  true
+}
+nondet!12 -> {
+  10 -> (- 1)
+  15 -> (- 1)
+  else -> 0
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+k!1055 -> {
+  (let ((a!1 (ite (>= (:var 0) 4097)
+                  (ite (>= (:var 0) 4098)
+                       (ite (>= (:var 0) 4099) 4099 4098)
+                       4097)
+                  4096)))
+    (ite (>= (:var 0) 4096) a!1 0))
+}
+get!0!1056 -> {
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 11
+  UTF8SortedAsUnicodeComparator!val!1 4097 -> 15
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 16
+  UTF8SortedAsUnicodeComparator!val!0 4098 -> 23
+  UTF8SortedAsUnicodeComparator!val!0 4096 -> 28
+  UTF8SortedAsUnicodeComparator!val!1 4096 -> 30
+  UTF8SortedAsUnicodeComparator!val!0 4097 -> 32
+  else -> 10
+}
+length!1 -> {
+  4100
+}
+arrayOffset!2 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+get!0 -> {
+  (get!0!1056 (:var 0) (k!1055 (:var 1)))
+}
+
+
+real	0m0.269s
+user	0m0.257s
+sys	0m0.012s
+descartes -p=1 -m=1: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res2!9 -> (- 1)
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!0
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto11 -> 1
+diff22!803 -> (- 1)
+aStop11 -> 2213
+bByte12!301 -> 1
+aStop21 -> 2213
+diff12!302 -> (- 1)
+res1!8 -> (- 1)
+aByte22!801 -> 0
+aUpto21!804 -> 0
+bByte22!802 -> 1
+aUpto11!805 -> 0
+aUpto21 -> 2212
+aByte12!300 -> 0
+bUpto21 -> 0
+bUpto11 -> 0
+o12!6 -> UTF8SortedAsUnicodeComparator!val!1
+compareDouble!13 -> {
+  0
+}
+k!871 -> {
+  (ite (>= (:var 0) 1)
+       (ite (>= (:var 0) 2211) (ite (>= (:var 0) 2212) 2212 2211) 1)
+       0)
+}
+hasArray!3 -> {
+  true
+}
+nondet!12 -> {
+  8 -> 0
+  15 -> 0
+  else -> 1
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+length!1 -> {
+  2213
+}
+arrayOffset!2 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+get!0 -> {
+  (get!0!872 (:var 0) (k!871 (:var 1)))
+}
+get!0!872 -> {
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 9
+  UTF8SortedAsUnicodeComparator!val!1 2212 -> 15
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 16
+  UTF8SortedAsUnicodeComparator!val!1 1 -> 22
+  UTF8SortedAsUnicodeComparator!val!1 2211 -> 26
+  else -> 8
+}
+
+
+real	0m0.263s
+user	0m0.255s
+sys	0m0.008s
+descartes -p=1 -m=2: 
+Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+aUpto21!902 -> 0
+res2!9 -> (- 1)
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+aByte12!199 -> (- 1)
+o22!7 -> UTF8SortedAsUnicodeComparator!val!0
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+diff12!201 -> (- 1)
+aUpto11!901 -> 0
+aStop11 -> 8881
+aUpto11 -> 1
+aStop21 -> 8881
+bByte22!642 -> 0
+res1!8 -> (- 1)
+bByte12!200 -> 0
+aUpto21 -> 8880
+aByte22!641 -> (- 1)
+bUpto21 -> 0
+bUpto11 -> 0
+diff22!643 -> (- 1)
+o12!6 -> UTF8SortedAsUnicodeComparator!val!1
+compareDouble!13 -> {
+  0
+}
+get!0!969 -> {
+  UTF8SortedAsUnicodeComparator!val!0 1 -> 9
+  UTF8SortedAsUnicodeComparator!val!1 8880 -> 14
+  UTF8SortedAsUnicodeComparator!val!1 1 -> 9
+  else -> 15
+}
+hasArray!3 -> {
+  true
+}
+nondet!12 -> {
+  15 -> 0
+  else -> (- 1)
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+length!1 -> {
+  8881
+}
+arrayOffset!2 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+k!968 -> {
+  (ite (>= (:var 0) 1)
+       (ite (>= (:var 0) 8879) (ite (>= (:var 0) 8880) 8880 8879) 1)
+       0)
+}
+get!0 -> {
+  (get!0!969 (:var 0) (k!968 (:var 1)))
+}
+
+
+real	0m0.215s
+user	0m0.211s
+sys	0m0.007s
+descartes -p=1 -m=3: 
+descartes: analyse_loop failed
+
+real	0m0.064s
+user	0m0.056s
+sys	0m0.008s

@@ -1,0 +1,101 @@
+Property 3
+descartes -p=3 -m=0: 
+Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m0.893s
+user	0m0.877s
+sys	0m0.016s
+descartes -p=3 -m=1: 
+Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m2.457s
+user	0m2.449s
+sys	0m0.008s
+descartes -p=3 -m=2: 
+Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o2Attribute22!340 -> (- 1)
+o1Attribute12!145 -> (- 1)
+o23!10 -> MimeType!val!2
+o1Attribute22!339 -> 0
+comp22!215 -> 0
+comp21 -> 0
+o2Attribute12!146 -> (- 1)
+comp11 -> 0
+comp33!441 -> 0
+comp14!147 -> 0
+comp32!440 -> 0
+o1Attribute32!564 -> (- 2)
+comp13!22 -> 0
+o11!5 -> MimeType!val!0
+o2Value12!149 -> 0
+res2!12 -> 1
+comp24!341 -> 1
+comp31 -> 0
+comp12!21 -> 0
+i31 -> 4684
+o2Attribute32!565 -> (- 1)
+o13!9 -> MimeType!val!1
+res1!11 -> 0
+o22!8 -> MimeType!val!2
+i11!1440 -> 0
+res3!13 -> (- 1)
+o12!7 -> MimeType!val!0
+o21!6 -> MimeType!val!1
+i12!151 -> 4684
+comp34!566 -> (- 1)
+comp15!150 -> 0
+i21!1441 -> 0
+o1Value12!148 -> 0
+i31!1442 -> 0
+i11 -> 4683
+comp23!216 -> 0
+i21 -> 4684
+compareDouble!17 -> {
+  0
+}
+get!1!1479 -> {
+  MimeType!val!1 4684 -> (- 2)
+  MimeType!val!0 4684 -> 0
+  else -> (- 1)
+}
+get!1 -> {
+  (get!1!1479 (:var 0) (k!1478 (:var 1)))
+}
+k!1478 -> {
+  (ite (>= (:var 0) 4682)
+       (ite (>= (:var 0) 4683) (ite (>= (:var 0) 4684) 4684 4683) 4682)
+       0)
+}
+getSubtype!3 -> {
+  MimeType!val!1 -> 18
+  MimeType!val!2 -> 19
+  else -> 12
+}
+getValue!0 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+getParametersSize!2 -> {
+  4685
+}
+getType!4 -> {
+  MimeType!val!1 -> 16
+  MimeType!val!2 -> 17
+  else -> 11
+}
+compareInt!18 -> {
+  0
+}
+
+
+real	0m1.259s
+user	0m1.234s
+sys	0m0.024s
+descartes -p=3 -m=3: 
+descartes: analyse_loop failed
+
+real	0m1.777s
+user	0m1.752s
+sys	0m0.024s

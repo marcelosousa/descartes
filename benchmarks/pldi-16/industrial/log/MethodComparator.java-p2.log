@@ -1,0 +1,147 @@
+Property 2
+descartes -p=2 -m=0: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+res3!11 -> (- 1)
+name211 -> 0
+parameterTypes1Length31 -> 3
+i21!4318 -> 0
+name111 -> 0
+parameterTypes1Length11 -> 3
+o21!4 -> MethodComparator!val!1
+o22!6 -> MethodComparator!val!2
+parameterTypeName212!909 -> 0
+name131 -> 0
+res1!9 -> 1
+value12!910 -> 1
+o23!8 -> MethodComparator!val!2
+i31 -> 1
+o13!7 -> MethodComparator!val!0
+value11 -> 0
+parameterTypeName112!908 -> 1
+parameterTypes1Length21 -> 2
+parameterTypes2Length11 -> 2
+name121 -> 0
+value31 -> 0
+name231 -> 0
+o11!3 -> MethodComparator!val!0
+name221 -> 0
+res2!10 -> 1
+i31!4317 -> 0
+parameterTypes2Length31 -> 1
+value21 -> 0
+i11!4319 -> 0
+o12!5 -> MethodComparator!val!1
+i11 -> 1
+parameterTypes2Length21 -> 1
+i21 -> 3138
+getParameterTypesLength!1 -> {
+  MethodComparator!val!0 -> 3
+  MethodComparator!val!2 -> 1
+  else -> 2
+}
+compareDouble!15 -> {
+  0
+}
+getParameterTypeName!0 -> {
+  (getParameterTypeName!0!4420 (:var 0) (k!4419 (:var 1)))
+}
+compareInt!16 -> {
+  0
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+getParameterTypeName!0!4420 -> {
+  MethodComparator!val!0 1 -> 1
+  else -> 0
+}
+k!4419 -> {
+  (ite (>= (:var 0) 1) (ite (>= (:var 0) 3137) 3137 1) 0)
+}
+getName!2 -> {
+  0
+}
+
+
+real	0m0.571s
+user	0m0.562s
+sys	0m0.008s
+descartes -p=2 -m=1: 
+Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+res3!11 -> (- 1)
+name211 -> 0
+parameterTypes1Length31 -> 3
+i21!4498 -> 0
+i31!4497 -> 0
+parameterTypeName112!722 -> 1
+name111 -> 0
+parameterTypes1Length11 -> 3
+o21!4 -> MethodComparator!val!1
+o22!6 -> MethodComparator!val!2
+value12!724 -> 1
+res1!9 -> 1
+name131 -> 0
+o23!8 -> MethodComparator!val!2
+i31 -> 1
+o13!7 -> MethodComparator!val!0
+value11 -> 0
+i11!4499 -> 0
+parameterTypes1Length21 -> 2
+parameterTypes2Length11 -> 2
+name121 -> 0
+value31 -> 0
+name231 -> 0
+o11!3 -> MethodComparator!val!0
+parameterTypeName212!723 -> 0
+name221 -> 0
+res2!10 -> 1
+parameterTypes2Length31 -> 1
+value21 -> 0
+o12!5 -> MethodComparator!val!1
+i11 -> 1
+parameterTypes2Length21 -> 1
+i21 -> 6979
+getParameterTypesLength!1 -> {
+  MethodComparator!val!0 -> 3
+  MethodComparator!val!2 -> 1
+  else -> 2
+}
+compareDouble!15 -> {
+  0
+}
+getParameterTypeName!0 -> {
+  (getParameterTypeName!0!4568 (:var 0) (k!4567 (:var 1)))
+}
+compareInt!16 -> {
+  0
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+k!4567 -> {
+  (ite (>= (:var 0) 1) (ite (>= (:var 0) 6978) 6978 1) 0)
+}
+getParameterTypeName!0!4568 -> {
+  MethodComparator!val!0 1 -> 1
+  else -> 0
+}
+getName!2 -> {
+  0
+}
+
+
+real	0m0.899s
+user	0m0.887s
+sys	0m0.012s
+descartes -p=2 -m=2: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes1Length1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes2Length1"])))
+
+real	0m0.016s
+user	0m0.016s
+sys	0m0.000s
+descartes -p=2 -m=3: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "parameterTypes1Length3"]))) CAnd (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "parameterTypes2Length3"])))
+
+real	0m0.018s
+user	0m0.009s
+sys	0m0.009s
