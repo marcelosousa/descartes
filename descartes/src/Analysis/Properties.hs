@@ -85,7 +85,38 @@ prop3 (args, [res1,res2,res3], fields) = do
     pos' <- mkAnd [posgt,poseq]
     pos <- mkImplies r1 pos'
     return (pre, pos)
-    
+
+-- [Equals] Symmetry
+prop4 :: Prop 
+prop4 (args, [res1,res2], fields) = do
+    let o11 = safeLookup "symm" (Ident "o11") args
+        o12 = safeLookup "symm" (Ident "o12") args
+        o21 = safeLookup "symm" (Ident "o21") args
+        o22 = safeLookup "symm" (Ident "o22") args
+    eq1 <- mkEq o11 o22
+    eq2 <- mkEq o21 o12
+    pre <- mkAnd [eq1,eq2]
+    i1 <- mkIntNum (1 :: Integer)
+    -- equals(x,y) = 1 iff equals(y,x) = 1
+    r1eq <- mkEq res1 i1
+    r2eq <- mkEq res2 i1
+    pos <- mkIff r1eq r2eq
+    return (pre, pos)
+
+-- [Equals] Consistency
+prop5 :: Prop 
+prop5 (args, [res1,res2], fields) = do
+    let o11 = safeLookup "symm" (Ident "o11") args
+        o12 = safeLookup "symm" (Ident "o12") args
+        o21 = safeLookup "symm" (Ident "o21") args
+        o22 = safeLookup "symm" (Ident "o22") args
+    eq1 <- mkEq o11 o12
+    eq2 <- mkEq o21 o22
+    pre <- mkAnd [eq1,eq2]
+    -- equals(x,y) = equals(x,y)
+    pos <- mkEq res1 res2
+    return (pre, pos)
+
 -- transitivity
 -- forall (o11,o21,o12,o22,o13,o23). 
 --      o11 = o13 and o12 = o21 and o22 = o23
