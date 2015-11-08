@@ -23,12 +23,14 @@ addAxioms objSort fields = do
     fnInt <- mkFreshFuncDecl "compareInt" [iSort, iSort] iSort
 --    fnStr <- mkFreshFuncDecl "compareIgnoreCaseString" [objSort, objSort] iSort
     fnStr <- mkFreshFuncDecl "compareIgnoreCaseString" [iSort, iSort] iSort
+    equals <- mkFreshFuncDecl "equals" [iSort, iSort] iSort
     let fields' = M.insert (Ident "toLowerCase") toLowerCase $ 
                   M.insert (Ident "toUpperCase") toUpperCase $
                   M.insert (Ident "nondet") nondet $ 
                   M.insert (Ident "compareDouble") fnDouble $ 
                   M.insert (Ident "compareInt") fnInt $ 
-                  M.insert (Ident "compareIgnoreCaseString") fnStr fields
+                  M.insert (Ident "compareIgnoreCaseString") fnStr $
+                  M.insert (Ident "equals") equals fields
     -- add prop1 axiom for Double.compare
     p1AxiomDouble <- genP1Axiom iSort fnDouble
     -- add prop1 axiom for Int.compare
@@ -40,8 +42,10 @@ addAxioms objSort fields = do
     p2AxiomDouble <- genP2Axiom iSort fnDouble
     -- add prop2 axiom for Int.compare
     p2AxiomInt <- genP2Axiom iSort fnInt    
-    -- add prop3 axiom for String.compareIgnoreCase
+    -- add prop2 axiom for String.compareIgnoreCase
     p2AxiomStr <- genP2Axiom iSort fnStr
+    -- add prop2 axiom for Equals
+    p2AxiomEquals <- genP2Axiom iSort equals
     
     -- add prop3 axiom for Double.compare
     p3AxiomDouble <- genP3Axiom iSort fnDouble
@@ -50,6 +54,9 @@ addAxioms objSort fields = do
     -- add prop3 axiom for String.compareIgnoreCase
     p3AxiomStr <- genP3Axiom iSort fnStr
 
+    -- add prop4 axiom for equals
+    p4AxiomEquals <- genP4Axiom iSort equals
+    
     -- add prop4 axiom for Double.compare
     --p4AxiomDouble <- genP4Axiom iSort fnDouble
     -- add prop4 axiom for Int.compare
@@ -60,6 +67,7 @@ addAxioms objSort fields = do
     axioms <- mkAnd [ p1AxiomDouble, p2AxiomDouble, p3AxiomDouble
                     , p1AxiomInt, p2AxiomInt, p3AxiomInt
                     , p1AxiomStr, p2AxiomStr, p3AxiomStr
+                    , p2AxiomEquals, p4AxiomEquals
                     ]
     return (fields', axioms)
 
@@ -140,6 +148,22 @@ genP3Axiom sort fn = do
     body <- mkAnd [cond2,cond3] >>= \pos -> mkImplies cond1 pos
     mkForallConst [] [xApp, yApp, zApp] body
 
+-- Generate prop4 axiom
+genP4Axiom :: Sort -> FuncDecl -> Z3 AST
+genP4Axiom sort fn = do    
+    xSym <- mkStringSymbol "x"
+    x <- mkConst xSym sort
+    xApp <- toApp x
+    ySym <- mkStringSymbol "y"
+    y <- mkConst ySym sort
+    yApp <- toApp y
+    i1 <- mkIntNum 1
+    -- cond1: equals(x,y) == 1 iff compare(y,x) == 1
+    fnXYeq1 <- mkApp fn [x,y] >>= \a -> mkEq a i1
+    fnYXeq1 <- mkApp fn [y,x] >>= \a -> mkEq a i1
+    body <- mkIff fnXYeq1 fnYXeq1
+    mkForallConst [] [xApp, yApp] body
+{-
 genP4Axiom :: Sort -> FuncDecl -> Z3 AST
 genP4Axiom sort fn = do    
     xSym <- mkStringSymbol "x"
@@ -154,3 +178,4 @@ genP4Axiom sort fn = do
     cond2 <- mkEq x y
     body <- mkImplies cond1 cond2
     mkForallConst [] [xApp, yApp] body
+-}

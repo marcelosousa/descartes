@@ -49,7 +49,7 @@ getField mdecl = case mdecl of
     MethodDecl mods ty rty ident pars exTy (MethodBody Nothing) -> [mdecl]
     _ -> []
     
-data CompInter = Comparator | Comparable
+data CompInter = Comparator | Comparable | None
   deriving (Show,Eq,Ord)
 
 class GetComps a where
@@ -85,6 +85,7 @@ toCompInter _ = []
 toComparator :: Ident -> Maybe CompInter
 toComparator (Ident "compare")   = Just Comparator
 toComparator (Ident "compareTo") = Just Comparable
+toComparator (Ident "equals") = Just Comparator
 toComparator _ = Nothing
  
 -- The hasComp parameter specifies whether this class implements the 
@@ -100,9 +101,9 @@ getComparator hasComp decl = case decl of
     MethodDecl mods typars mTy ident pars exTy mBody -> 
       case toComparator ident of
           Nothing -> []
-          Just comp -> if comp `elem` hasComp
-                       then [decl]
-                       else []
+          Just comp -> [decl] --if comp `elem` hasComp
+                       -- then [decl]
+                       -- else []
     ConstructorDecl mods typars ident pars exTy cBody -> []
     MemberClassDecl clDecl -> [] -- getComps clDecl
     MemberInterfaceDecl iDecl -> []
@@ -279,6 +280,7 @@ instance Renamable MethodInvocation where
     rename idx mInv = case mInv of
         MethodCall name@(Name [Ident "assume"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "nondet"]) args -> MethodCall name $ map (rename idx) args
+        MethodCall name@(Name [Ident "equals"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Double",Ident "compare"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Character",Ident "toUpperCase"]) args -> MethodCall name $ map (rename idx) args
         MethodCall name@(Name [Ident "Character",Ident "toLowerCase"]) args -> MethodCall name $ map (rename idx) args

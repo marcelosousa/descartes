@@ -74,8 +74,9 @@ toProp 4 = prop4
 toProp 5 = prop5
 
 showProp :: Int -> String
-showProp 1 = "Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))"
-showProp 2 = "Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0."
+showProp 1 = "[Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))"
+showProp 2 = "[Transitivity] (equals/compare): for all x, y and z,"
+           ++ " compare/equals(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0."
 showProp 3 = "Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z))."
 showProp 4 = "[Symmetry] (equals): for any non-null reference values x and y,"
           ++ " x.equals(y) should return true if and only if y.equals(x) returns true."
@@ -99,7 +100,9 @@ descartes_main logLevel mode file arity prop propName = do
           comps = getComps cu
           comparators = map (\c -> map (\idx -> rename idx c) [1..arity]) comps
       if logLevel > 0
-      then do 
+      then do
+--        putStrLn $ show classMap
+--        putStrLn $ show comps
         mapM_ (\cs -> mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) cs) comparators
         descartes mode classMap (head comparators) prop propName
       else descartes mode classMap (head comparators) prop propName
@@ -111,7 +114,7 @@ descartes mode classMap comparator prop propName = do
     2 -> evalZ3 $ verifyWithSelf classMap comparator prop
     3 -> evalZ3 $ verifyWithProduct classMap comparator prop
   case vals of
-    Unsat -> putStrLn $ "Unsat: Comparator OBEYS " ++ propName
+    Unsat -> putStrLn $ "Unsat: OBEYS " ++ propName
     Sat -> do
-      putStrLn $ "Sat: Comparator VIOLATES " ++ propName --is buggy! " ++ propName ++ " fails!\nCounter-example:"
+      putStrLn $ "Sat: VIOLATES " ++ propName --is buggy! " ++ propName ++ " fails!\nCounter-example:"
       putStrLn $ fromJust models
