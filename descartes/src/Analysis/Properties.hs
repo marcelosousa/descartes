@@ -58,7 +58,7 @@ prop2 (args, [res1,res2,res3], fields) = do
     r12gt <- mkAnd [r1gt,r2gt]
     pos <- mkImplies r12gt r3gt
     return (pre, pos)
-
+        
 prop3 :: Prop 
 prop3 (args, [res1,res2,res3], fields) = do
     let o11 = safeLookup "trans" (Ident "o11") args
@@ -86,9 +86,31 @@ prop3 (args, [res1,res2,res3], fields) = do
     pos <- mkImplies r1 pos'
     return (pre, pos)
 
+-- [Equals] Transitivity
+prop4 :: Prop
+prop4 (args, [res1,res2,res3], fields) = do
+    let o11 = safeLookup "trans" (Ident "o11") args
+        o12 = safeLookup "trans" (Ident "o12") args
+        o13 = safeLookup "trans" (Ident "o13") args
+        o21 = safeLookup "trans" (Ident "o21") args
+        o22 = safeLookup "trans" (Ident "o22") args
+        o23 = safeLookup "trans" (Ident "o23") args    
+    eq1 <- mkEq o11 o13
+    eq2 <- mkEq o21 o12
+    eq3 <- mkEq o22 o23
+    pre <- mkAnd [eq1,eq2,eq3]
+    i1 <- mkIntNum (1 :: Integer)
+    -- equals(x,y) == 1 and equals(y,z) == 1 => equals(x,z) == 1
+    r1gt <- mkEq res1 i1
+    r2gt <- mkEq res2 i1
+    r3gt <- mkEq res3 i1
+    r12gt <- mkAnd [r1gt,r2gt]
+    pos <- mkImplies r12gt r3gt
+    return (pre, pos)
+
 -- [Equals] Symmetry
-prop4 :: Prop 
-prop4 (args, [res1,res2], fields) = do
+prop5 :: Prop 
+prop5 (args, [res1,res2], fields) = do
     let o11 = safeLookup "symm" (Ident "o11") args
         o12 = safeLookup "symm" (Ident "o12") args
         o21 = safeLookup "symm" (Ident "o21") args
@@ -104,8 +126,8 @@ prop4 (args, [res1,res2], fields) = do
     return (pre, pos)
 
 -- [Equals] Consistency
-prop5 :: Prop 
-prop5 (args, [res1,res2], fields) = do
+prop6 :: Prop 
+prop6 (args, [res1,res2], fields) = do
     let o11 = safeLookup "symm" (Ident "o11") args
         o12 = safeLookup "symm" (Ident "o12") args
         o21 = safeLookup "symm" (Ident "o21") args

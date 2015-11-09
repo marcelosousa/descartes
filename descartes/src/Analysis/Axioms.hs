@@ -45,7 +45,8 @@ addAxioms objSort fields = do
     -- add prop2 axiom for String.compareIgnoreCase
     p2AxiomStr <- genP2Axiom iSort fnStr
     -- add prop2 axiom for Equals
-    p2AxiomEquals <- genP2Axiom iSort equals
+    p2AxiomEquals0 <- genP2Axiom' 0 iSort equals
+    p2AxiomEquals1 <- genP2Axiom'' 0 iSort equals
     
     -- add prop3 axiom for Double.compare
     p3AxiomDouble <- genP3Axiom iSort fnDouble
@@ -67,7 +68,7 @@ addAxioms objSort fields = do
     axioms <- mkAnd [ p1AxiomDouble, p2AxiomDouble, p3AxiomDouble
                     , p1AxiomInt, p2AxiomInt, p3AxiomInt
                     , p1AxiomStr, p2AxiomStr, p3AxiomStr
-                    , p2AxiomEquals, p4AxiomEquals
+                    , p2AxiomEquals0, p2AxiomEquals1, p4AxiomEquals
                     ]
     return (fields', axioms)
 
@@ -116,6 +117,50 @@ genP2Axiom sort fn = do
     body <- mkAnd [cond1,cond2] >>= \pre -> mkImplies pre cond3
     mkForallConst [] [xApp, yApp, zApp] body
 
+genP2Axiom' :: Int -> Sort -> FuncDecl -> Z3 AST
+genP2Axiom' i sort fn = do    
+    xSym <- mkStringSymbol "x"
+    x <- mkConst xSym sort
+    xApp <- toApp x
+    ySym <- mkStringSymbol "y"
+    y <- mkConst ySym sort
+    yApp <- toApp y
+    zSym <- mkStringSymbol "z"
+    z <- mkConst zSym sort
+    zApp <- toApp z
+    i0 <- mkIntNum i
+    -- cond1: equals(x,y) == 0
+    cond1 <- mkApp fn [x,y] >>= \a -> mkEq a i0
+    -- cond2: equals(y,z) == 0
+    cond2 <- mkApp fn [y,z] >>= \a -> mkEq a i0
+    -- cond3: equals(x,z) == 0
+    cond3 <- mkApp fn [x,z] >>= \a -> mkEq a i0
+    -- cond1 and cond2 implies cond3
+    body <- mkAnd [cond1,cond2] >>= \pre -> mkImplies pre cond3
+    mkForallConst [] [xApp, yApp, zApp] body
+
+genP2Axiom'' :: Int -> Sort -> FuncDecl -> Z3 AST
+genP2Axiom'' i sort fn = do    
+    xSym <- mkStringSymbol "x"
+    x <- mkConst xSym sort
+    xApp <- toApp x
+    ySym <- mkStringSymbol "y"
+    y <- mkConst ySym sort
+    yApp <- toApp y
+    zSym <- mkStringSymbol "z"
+    z <- mkConst zSym sort
+    zApp <- toApp z
+    i0 <- mkIntNum i
+    -- cond1: equals(x,y) == 0
+    cond1 <- mkApp fn [x,y] >>= \a -> mkEq a i0 >>= mkNot
+    -- cond2: equals(y,z) == 0
+    cond2 <- mkApp fn [y,z] >>= \a -> mkEq a i0 >>= mkNot
+    -- cond3: equals(x,z) == 0
+    cond3 <- mkApp fn [x,z] >>= \a -> mkEq a i0 >>= mkNot
+    -- cond1 and cond2 implies cond3
+    body <- mkAnd [cond1,cond2] >>= \pre -> mkImplies pre cond3
+    mkForallConst [] [xApp, yApp, zApp] body
+    
 -- Generate prop3 axiom
 genP3Axiom :: Sort -> FuncDecl -> Z3 AST
 genP3Axiom sort fn = do    
@@ -157,11 +202,10 @@ genP4Axiom sort fn = do
     ySym <- mkStringSymbol "y"
     y <- mkConst ySym sort
     yApp <- toApp y
-    i1 <- mkIntNum 1
-    -- cond1: equals(x,y) == 1 iff compare(y,x) == 1
-    fnXYeq1 <- mkApp fn [x,y] >>= \a -> mkEq a i1
-    fnYXeq1 <- mkApp fn [y,x] >>= \a -> mkEq a i1
-    body <- mkIff fnXYeq1 fnYXeq1
+    -- cond1: equals(x,y) == equals(y,x)
+    fnXYeq1 <- mkApp fn [x,y] 
+    fnYXeq1 <- mkApp fn [y,x] 
+    body <- mkEq fnXYeq1 fnYXeq1
     mkForallConst [] [xApp, yApp] body
 {-
 genP4Axiom :: Sort -> FuncDecl -> Z3 AST

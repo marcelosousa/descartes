@@ -41,7 +41,7 @@ verifyWithSelf classMap comps prop = do
   (fields', axioms) <- addAxioms objSort fields
   let blocks = zip [0..] $ getBlocks comps
   iSSAMap <- getInitialSSAMap
-  let iEnv = Env objSort pars res fields' iSSAMap axioms pre post post False False False 0
+  let iEnv = Env objSort pars res fields' iSSAMap M.empty axioms pre post post False False False 0
   _pres <- mapM (\p -> evalStateT (selfcomposition p) iEnv) blocks
   let pres = snd $ unzip _pres
 --  pres <- mapM (selfcomposition (objSort, pars, res, fields', iSSAMap, axioms, pre)) blocks
@@ -79,11 +79,12 @@ selfcomposition (pid,Block l) = do
     BlockStmt stmt -> analyser_stmt stmt (pid, Block rest)
     LocalVars mods ty vars -> do
      sort <- lift $ processType ty    
-     (nssamap, npre) <- 
-       lift $ foldM (\(ssamap', pre') v -> 
-         processNewVar (_objSort,_params,_res,_fields,ssamap',pre') sort v 1) (_ssamap, _pre) vars
+     (nssamap,nassmap,npre) <- 
+       lift $ foldM (\(ssamap',assmap',pre') v -> 
+         processNewVar (_objSort,_params,_res,_fields,ssamap',assmap',pre') sort v 1) (_ssamap,_assmap,_pre) vars
      updatePre npre
      updateSSAMap nssamap
+     updateAssignMap nassmap
      selfcomposition (pid, Block rest)
 
 analyser_stmt :: Stmt -> (Int,Block) -> EnvOp ([AST],[AST])

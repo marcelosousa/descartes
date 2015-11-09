@@ -12,6 +12,7 @@ import Language.Java.Syntax
 import Z3.Monad hiding (Params)
 
 import qualified Data.Map as M
+import qualified Debug.Trace as T
 
 -- receives the parameters and returns to specify the pre and post-condition
 -- need to use maps for the parameters, returns, fields
@@ -32,6 +33,7 @@ data Env = Env
   , _res     :: Res
   , _fields  :: Fields
   , _ssamap  :: SSAMap
+  , _assmap  :: AssignMap
   , _axioms  :: AST
   , _pre     :: AST
   , _post    :: AST
@@ -74,6 +76,17 @@ updateSSAMap :: SSAMap -> EnvOp ()
 updateSSAMap ssamap = do
   s@Env{..} <- get
   put s{ _ssamap = ssamap}
+
+updateAssignMap :: AssignMap -> EnvOp ()
+updateAssignMap assmap = do
+  s@Env{..} <- get
+  put s{ _assmap = assmap}
+
+incrementAssignMap :: Ident -> Exp -> EnvOp ()
+incrementAssignMap i e = T.trace ("incrementAssignMap") $ do
+  s@Env{..} <- get
+  let assignMap = M.insert i e _assmap
+  put s{ _assmap = assignMap}
   
 -- | ClassMap: Map Identifier ClassDeclaration
 type ClassMap = Map String ClassInfo

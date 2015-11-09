@@ -13,27 +13,37 @@ import qualified Data.Map as M
 import Language.Java.Syntax
 import Z3.Monad hiding (Params)
 
---
+import qualified Debug.Trace as T
+
 guessInvariants :: Int -> Exp -> EnvOp [AST]
 guessInvariants pid cond = do
+  increasing <- guessInvariant mkGe mkLe mkLt pid cond
+  decreasing <- guessInvariant mkLe mkGe mkGt pid cond
+  return [increasing,decreasing]
+  
+type Z3Op = (AST -> AST -> Z3 AST)
+--
+guessInvariant :: Z3Op -> Z3Op -> Z3Op -> Int -> Exp -> EnvOp AST
+guessInvariant op op' op'' pid cond = do
  env@Env{..} <- get 
  case getCondCounter cond of 
   Nothing -> error $ "guessInvariant procedure failed at:" ++ show cond -- mkTrue
   Just i -> do
    let (iAST,_,_)  = safeLookup "guessInvariant: i" i _ssamap
-   -- i >= 0
-   i0 <- lift $ mkIntNum 0
-   c1 <- lift $ mkGe iAST i0
+       e = safeLookup ("getting last condition assignment" ++ show i) i _assmap
+   -- i `op` Init
+   i0 <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) e --T.trace (show e) $ lift $ mkIntNum 0
+   c1 <- lift $ op iAST i0
    -- exists i. pre
    iApp <- lift $ toApp iAST
    ex1 <- lift $ mkExistsConst [] [iApp] _pre
    -- forall j. i_0 <= j < i => cond
-   gen <- lift $ generalizeCond (_objSort,_params,_res,_fields,_ssamap) i iAST cond pid
+   gen <- lift $ generalizeCond op' op'' (_objSort,_params,_res,_fields,_ssamap) i0 i iAST cond pid
    case gen of
     Nothing -> error "guessInvariant procedure can't compute valid invariant" -- mkTrue
     Just genInv -> do
       inv <- lift $ mkAnd [ex1, genInv, c1]
-      return [inv]
+      return inv
     
 getCondCounter :: Exp -> Maybe Ident
 getCondCounter expr = 
@@ -43,8 +53,8 @@ getCondCounter expr =
     BinOp (BinOp (BinOp (ExpName (Name [i])) _ _) _ _) And _ -> Just i
     _ -> Nothing --error $ "getCondCounter: " ++ show expr
 
-generalizeCond :: (Sort, Params, [AST], Fields, SSAMap) -> Ident -> AST -> Exp -> Int -> Z3 (Maybe AST)
-generalizeCond env@(objSort, pars, res, fields, ssamap) i iAST _cond pid =
+generalizeCond :: Z3Op -> Z3Op -> (Sort, Params, [AST], Fields, SSAMap) ->  AST -> Ident -> AST -> Exp -> Int -> Z3 (Maybe AST)
+generalizeCond op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond pid =
   case _cond of 
     BinOp _ And cond -> do
       let jIdent = Ident $ "j" ++ show pid
@@ -53,9 +63,10 @@ generalizeCond env@(objSort, pars, res, fields, ssamap) i iAST _cond pid =
       jSym <- mkStringSymbol $ "j" ++ show pid
       j <- mkConst jSym sort
       jApp <- toApp j
-      i0 <- mkIntNum 0
-      -- c1: 0 <= j < i
-      c1 <- mkLe i0 j >>= \left -> mkLt j iAST >>= \right -> mkAnd [left, right]
+--      let (i0,_,_) = safeLookup "genCond" (Ident $ "myPosition"++show pid) ssamap
+--      i0 <- mkIntNum 0
+      -- c1: Init <= j < i or i < j <= Init
+      c1 <- op i0 j >>= \left -> op' j iAST >>= \right -> mkAnd [left, right]
       -- c2: 
       let ssamap' = M.insert jIdent (j, sort, pid) ssamap
       c2 <- processExp (objSort, pars, res, fields, ssamap') cond'

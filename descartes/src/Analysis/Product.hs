@@ -36,7 +36,7 @@ verifyWithProduct classMap _comps prop = do
  (fields', axioms) <- addAxioms objSort fields
  let blocks = zip [0..] $ getBlocks comps
  iSSAMap <- getInitialSSAMap
- let iEnv = Env objSort pars res fields' iSSAMap axioms pre post post False False False 0
+ let iEnv = Env objSort pars res fields' iSSAMap M.empty axioms pre post post False False False 0
  ((res, mmodel),_) <- runStateT (analyser blocks) iEnv
  case res of 
   Unsat -> return (Unsat, Nothing)
@@ -91,11 +91,12 @@ analyse stmts = do
    BlockStmt stmt -> analyser_stmt stmt (pid, Block r1) rest 
    LocalVars mods ty vars -> do
     sort <- lift $ processType ty    
-    (nssamap, npre) <- 
-      lift $ foldM (\(ssamap', pre') v -> 
-        processNewVar (_objSort,_params,_res,_fields,ssamap',pre') sort v 1) (_ssamap, _pre) vars
+    (nssamap,nassmap,npre) <- 
+      lift $ foldM (\(ssamap',assmap',pre') v -> 
+        processNewVar (_objSort,_params,_res,_fields,ssamap',assmap',pre') sort v 1) (_ssamap,_assmap,_pre) vars
     updatePre npre
     updateSSAMap nssamap
+    updateAssignMap nassmap
     analyser ((pid, Block r1):rest)
 
 analyser_stmt :: Stmt -> (Int,Block) -> [(Int,Block)] -> EnvOp (Result,Maybe Model)

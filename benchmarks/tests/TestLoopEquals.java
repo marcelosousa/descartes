@@ -8,10 +8,10 @@ public class Obj {
     if (o2.isString == 1) {
       int n = o1.valueLength;
       if (n == o2.valueLength) {
-          int i = 0;
+          int i = 1;
           while (i < n) {
               if (o1.get(i) != o2.get(i)) {
-                      return 1;
+                      return 0;
               }
               i++;
           }

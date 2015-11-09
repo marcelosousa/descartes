@@ -117,8 +117,8 @@ processAssign lhs op rhs plhs =
       mkEq lhs rhs'
     _ -> error $ "processAssign: " ++ show op ++ " not supported"
 
-processNewVar :: (Sort, Params, [AST], Fields, SSAMap, AST) -> Sort -> VarDecl -> Int -> Z3 (SSAMap, AST)
-processNewVar (objSort, pars, res, fields, ssamap', pre') sort (VarDecl varid mvarinit) i = do
+processNewVar :: (Sort, Params, [AST], Fields, SSAMap, AssignMap, AST) -> Sort -> VarDecl -> Int -> Z3 (SSAMap, AssignMap, AST)
+processNewVar (objSort, pars, res, fields, ssamap', _assmap, pre') sort (VarDecl varid mvarinit) i = do
   (ident, idAst) <-
     case varid of
       VarId ident@(Ident str) -> do
@@ -129,12 +129,13 @@ processNewVar (objSort, pars, res, fields, ssamap', pre') sort (VarDecl varid mv
       _ -> error $ "processNewVar: not supported " ++ show varid
   let nssamap = M.insert ident (idAst, sort, i) ssamap'
   case mvarinit of
-    Nothing -> return (nssamap, pre')
+    Nothing -> return (nssamap, _assmap, pre')
     Just (InitExp expr) -> do
       expAst <- processExp (objSort, pars, res, fields, nssamap) expr
       eqIdExp <- mkEq idAst expAst
       pre <- mkAnd [pre', eqIdExp]
-      return (nssamap, pre)
+      let assmap = M.insert ident expr _assmap
+      return (nssamap, assmap, pre)
     Just _ -> error "processNewVar: not supported"
     
 processExp :: (Sort, Params, [AST], Fields, SSAMap) -> Exp -> Z3 AST

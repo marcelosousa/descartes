@@ -63,8 +63,9 @@ arity :: Int -> Int
 arity 1 = 2 
 arity 2 = 3
 arity 3 = 3
-arity 4 = 2
+arity 4 = 3
 arity 5 = 2
+arity 6 = 2
 
 toProp :: Int -> Prop
 toProp 1 = prop1
@@ -72,15 +73,18 @@ toProp 2 = prop2
 toProp 3 = prop3
 toProp 4 = prop4
 toProp 5 = prop5
+toProp 6 = prop6
 
 showProp :: Int -> String
 showProp 1 = "[Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))"
 showProp 2 = "[Transitivity] (equals/compare): for all x, y and z,"
            ++ " compare/equals(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0."
 showProp 3 = "Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z))."
-showProp 4 = "[Symmetry] (equals): for any non-null reference values x and y,"
+showProp 4 = "[Transitivity] (equals): for all x, y and z,"
+           ++ " equals(x, y) and equals(y, z) implies equals(x, z)."
+showProp 5 = "[Symmetry] (equals): for any non-null reference values x and y,"
           ++ " x.equals(y) should return true if and only if y.equals(x) returns true."
-showProp 5 = "[Consistency] (equals): for any non-null reference values x and y,"
+showProp 6 = "[Consistency] (equals): for any non-null reference values x and y,"
           ++ " multiple invocations of x.equals(y) consistently return true or consistently return false."
   
 front_end :: FilePath -> IO ()
@@ -98,7 +102,7 @@ descartes_main logLevel mode file arity prop propName = do
     Right cu -> do
       let classMap = getInfo cu
           comps = getComps cu
-          comparators = map (\c -> map (\idx -> rename idx c) [1..arity]) comps
+          comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1..arity]) comps
       if logLevel > 0
       then do
 --        putStrLn $ show classMap

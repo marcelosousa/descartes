@@ -74,6 +74,7 @@ assign _exp lhs aOp rhs = do
    updatePre pre
    updatePost post
    updateSSAMap ssamap
+   incrementAssignMap ident rhs
   _ -> error $ "Assign " ++ show _exp ++ " not supported"
   
 -- Analyse Post De/Increment

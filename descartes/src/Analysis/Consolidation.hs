@@ -30,14 +30,14 @@ import qualified Debug.Trace as T
 
 verify :: Bool -> ClassMap -> [Comparator] -> Prop -> Z3 (Result,Maybe String)
 verify opt classMap _comps prop = do
- let comps = map rewrite _comps
+ let comps = _comps --map rewrite _comps
 --     a = unsafePerformIO $ mapM_ (\(Comp _ f) -> putStrLn $ prettyPrint f) comps
  (objSort, pars, res, fields) <- prelude classMap comps
  (pre, post) <- trace ("after prelude:" ++ show (objSort, pars, res, fields)) $ prop (pars, res, fields)
  (fields', axioms) <- addAxioms objSort fields
  let blocks = zip [0..] $ getBlocks comps
  iSSAMap <- getInitialSSAMap
- let iEnv = Env objSort pars res fields' iSSAMap axioms pre post post opt False False 0
+ let iEnv = Env objSort pars res fields' iSSAMap M.empty axioms pre post post opt False False 0
  ((res, mmodel),_) <- runStateT (analyser blocks) iEnv
  case res of 
   Unsat -> return (Unsat, Nothing)
@@ -88,11 +88,12 @@ analyse stmts = do
    BlockStmt stmt -> analyser_stmt stmt (pid, Block r1) rest 
    LocalVars mods ty vars -> do
     sort <- lift $ processType ty    
-    (nssamap, npre) <- 
-      lift $ foldM (\(ssamap', pre') v -> 
-        processNewVar (_objSort,_params,_res,_fields,ssamap',pre') sort v 1) (_ssamap, _pre) vars
+    (nssamap,nassmap,npre) <- 
+      lift $ foldM (\(ssamap',assmap',pre') v -> 
+        processNewVar (_objSort,_params,_res,_fields,ssamap',assmap',pre') sort v 1) (_ssamap,_assmap,_pre) vars
     updatePre npre
     updateSSAMap nssamap
+    updateAssignMap nassmap
     analyser ((pid, Block r1):rest)
 
 analyser_stmt :: Stmt -> (Int,Block) -> [(Int,Block)] -> EnvOp (Result,Maybe Model)
@@ -210,7 +211,7 @@ analyse_loop pid r1 rest _cond _body =  do
 _analyse_loop :: [(Int,Block)] -> Int -> Exp -> Stmt -> AST -> EnvOp Bool
 _analyse_loop rest pid _cond _body inv = do
  invStr  <- lift $ astToString inv
- env@Env{..} <- get --T.trace ("Invariant:\n" ++ invStr) $ get
+ env@Env{..} <- trace ("Invariant:\n" ++ invStr) $ get
  (checkPre,_) <- lift $ local $ helper _axioms _pre inv
  case checkPre of
   Unsat -> do
@@ -228,7 +229,7 @@ _analyse_loop rest pid _cond _body inv = do
       Unsat -> return True
       Sat -> do
        put env
-       return False -- {inv && cond} body {inv} failed
+       return  False -- {inv && cond} body {inv} failed
     Sat -> return False -- inv && not_cond =/=> inv
   Sat -> return False -- pre =/=> inv
 
