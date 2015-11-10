@@ -39,22 +39,20 @@ public final class Correction implements Comparator<Correction> {
     /** Lower scores sorts first; if scores are equal,
      *  than later terms (zzz) sort first .*/
     @Override
-    public int compare(Correction o1, Correction o2) {
-        // inlined function
-        if (o1.score == o2.score){
-            int limit = o1.candidatesLength < o2.candidatesLength ? o1.candidatesLength : o2.candidatesLength; 
-            int i=0;
-            int cmp;
-            while(i < limit){
-                cmp = Int.compare(o1.getCandidate(i), o2.getCandidate(i));
-                if (cmp != 0){
-                    return -cmp;
-                }
-                i++;
+    public int compare(Correction o1, Correction o2) {      
+      if (o1.score == o2.score) {
+        int limit = o1.candidatesLength < o2.candidatesLength ? o1.candidatesLength : o2.candidatesLength;
+        int cmp;
+        for (int i=0;i<limit;i++) {
+            cmp = Int.compare(o1.getCandidate(i), o2.getCandidate(i));
+            if (cmp != 0) {
+                // Later (zzz) terms sort before (are weaker than) earlier (aaa) terms:
+                return -cmp;
             }
-            return o1.candidatesLength - o2.candidatesLength;
-        } else {
-            return o1.score == o2.score ? 0 : o1.score > o2.score ? 1 : -1; //Double.compare(o1.score, o2.score);
-        }        
+        }
+        return o1.candidatesLength - o2.candidatesLength;
+      } else {
+        return o1.score == o2.score ? 0 : o1.score > o2.score ? 1 : -1; //Double.compare(o1.score, o2.score);
+      }       
     }
 }

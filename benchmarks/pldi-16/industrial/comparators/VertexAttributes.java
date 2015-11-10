@@ -45,17 +45,14 @@ public final class VertexAttributes implements Comparator<VertexAttributes> {
 		int m1 = o1.getMask();
 		int m2 = o2.getMask();
 		if (m1 != m2) return m1 < m2 ? -1 : 1;
-		int i = 0;
-		while (i < o1.attributesLength) {
-//		for (int i = attributes.length - 1; i >= 0; --i) {
-//			final VertexAttribute va0 = attributes[i];
-//			final VertexAttribute va1 = o.attributes[i];
+    int i = o1.attributesLength - 1;
+		while(i >= 0) {
 			if (o1.getUsage(i) != o2.getUsage(i)) return o1.getUsage(i) - o2.getUsage(i);
 			if (o1.getUnit(i) != o2.getUnit(i)) return o1.getUnit(i) - o2.getUnit(i);
 			if (o1.getNumComponents(i) != o2.getNumComponents(i)) return o1.getNumComponents(i) - o2.getNumComponents(i);
 			if (o1.getNormalized(i) != o2.getNormalized(i)) return o1.getNormalized(i) ? 1 : -1;
 			if (o1.getType(i) != o2.getType(i)) return o1.getType(i) - o2.getType(i);			
-			i++;
+			i--;
 		}
 		return 0;
 	}

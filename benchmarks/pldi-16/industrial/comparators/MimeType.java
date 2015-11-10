@@ -58,8 +58,7 @@ public class MimeType implements Comparator<MimeType>, Serializable {
 	 * @see MimeTypeUtils#sortBySpecificity(List)
 	 */
 	@Override
-	public int compare(MimeType o1, MimeType o2) {
-	    int comp = 0;
+	public int compare(MimeType o1, MimeType o2) {	  
 		int comp = String.compareIgnoreCase(o1.getType(), o2.getType()); 
 		if (comp != 0) {
 			return comp;
@@ -83,7 +82,7 @@ public class MimeType implements Comparator<MimeType>, Serializable {
 			o1Attribute = o1.get(i);
 			o2Attribute = o2.get(i);
 			
-			comp = o1Attribute - o2Attribute; // Int.compare(o1Attribute, o2Attribute);
+			comp = o1Attribute - o2Attribute;
 			if (comp != 0) {
 				return comp;
 			}
@@ -91,7 +90,7 @@ public class MimeType implements Comparator<MimeType>, Serializable {
 			o1Value = o1.getValue(o1Attribute);
 			o2Value = o2.getValue(o2Attribute);
 
-			comp = o1Value - o2Value; // Int.compare(o1Value, o2Value);
+			comp = o1Value - o2Value;
 			if (comp != 0) {
 				return comp;
 			}

@@ -42,11 +42,11 @@ public class MethodComparator implements Comparator<Method> {
 
 		int parameterTypes1Length = o1.getParameterTypesLength();
 		int parameterTypes2Length = o2.getParameterTypesLength();
-        assume(parameterTypes1Length > 0);
-        assume(parameterTypes2Length > 0);
+    assume(parameterTypes1Length > 0);
+    assume(parameterTypes2Length > 0);
 		int i = 0;
-        int parameterTypeName1;
-        int parameterTypeName2;
+    int parameterTypeName1;
+    int parameterTypeName2;
         
 		while ((i < parameterTypes1Length) &&
 			   (i < parameterTypes2Length)) {
@@ -63,7 +63,6 @@ public class MethodComparator implements Comparator<Method> {
 			i++;
 		}
 
-//        return parameterTypes1Length - parameterTypes2Length;
 		if (i < (parameterTypes1Length -1)) {
 			return -1;
 		}

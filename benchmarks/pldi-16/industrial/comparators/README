@@ -1,0 +1,64 @@
+Description of the benchmarks
+=============================
+
+CharSequences.java (done - false positive: iterating over two containers on different offsets. need two variables in the quantifier!!)
+LegacyCell.java: Statistics (8,1,1,0) (False positive)
+Correction.java: Statistics (8,2,1,0) (done - later investigate why we need to change the Double.compare for P3)
+ExtendedBeanInfo.java: Statistics (9,2,1,0) (done)
+Attributes.java: Statistics (11,4,1,0) (Buggy: done)
+CompositeRequestCondition.java: Statistics (12,4,1,0) (done)
+DestinationPatternsMessageCondition.java: Statistics (13,3,1,0) : Buggy since both iterators can be empty
+PatternsRequestCondition.java: Statistics (13,3,1,0) : Buggy for the same reason as before
+ProducesRequestCondition.java: Statistics (14,2,0,1) : Buggy
+FloatBuffer.java: Statistics (14,3,1,0) (done)
+ByteBuffer.java: Statistics (14,3,1,0) (done)
+LongBuffer.java: Statistics (14,3,1,0) (done)
+ShortBuffer.java: Statistics (14,3,1,0) (done)
+DoubleBuffer.java: Statistics (14,3,1,0) (done)
+CharBuffer.java: Statistics (14,3,1,0) (done)
+IntBuffer.java: Statistics (14,3,1,0) (done)
+ChannelBuffers.java: Statistics (15,2,1,0) (done)
+CaseIgnoringComparator.java: Statistics (15,3,1,0) (done)
+PropertyComparator.java: Statistics (20,6,0,1) [not sure]
+VertexAttributes.java: Statistics (20,9,1,0) (done)
+MethodComparator.java: Statistics (20,3,1,0) (Buggy: done)
+ColumnsComparator.java: Statistics (24,7,2,0) (done by re-writing)
+UTF8SortedAsUnicodeComparator.java: Statistics (25,3,2,0) (buggy or false positive)
+MimeType.java: Statistics (29,6,1,0) (done by re-writing the iterator)
+ElementComparator.java: Statistics (29,8,0,2) (done)
+ByteBufUtil.java: Statistics (36,7,3,0) (done, it is correct modulo bit arithmetic)
+
+
+Without Loops
+-------------
+StormTopology.java: Statistics (25,10,0,0)
+AnnotationMethodHandlerAdapter.java: Statistics (25,8,0,0)
+SpoutStats.java: Statistics (25,10,0,0)
+ClusterSummary.java: Statistics (25,10,0,0)
+RebalanceOptions.java: Statistics (25,10,0,0)
+FileVersionVersionComparator.java: Statistics (26,10,0,0)
+Nimbus.java: Statistics (32,13,0,0)
+ComponentCommon.java: Statistics (32,13,0,0)
+StandardTypeComparator.java: Statistics (32,13,0,0)
+Assignment.java: Statistics (32,13,0,0)
+LSWorkerHeartbeat.java: Statistics (32,13,0,0)
+ErrorInfo.java: Statistics (32,13,0,0)
+ExecutorStats.java: Statistics (32,13,0,0)
+ClusterWorkerHeartbeat.java: Statistics (32,13,0,0)
+AntPathMatcher.java: Statistics (33,14,0,0)
+BoltStats.java: Statistics (39,16,0,0)
+SupervisorSummary.java: Statistics (46,19,0,0)
+ExecutorSummary.java: Statistics (46,19,0,0)
+StormBase.java: Statistics (60,25,0,0)
+SupervisorInfo.java: Statistics (60,25,0,0)
+TopologyInfo.java: Statistics (60,25,0,0)
+Configuration.java: Statistics (65,22,0,0)
+TopologySummary.java: Statistics (67,28,0,0)
+
+
+Unhandled
+MessageListFragment.java: Statistics (6,1,0,1) : ComparatorChain - Irrelevant
+CompoundComparator.java: Statistics (6,1,0,1) : ComparatorChain - Irrelevant
+AsciiString.java: Statistics (11,2,1,0) : Proper modelling of null, quantified invariants over multiple counters.
+ActivateComparator.java: Statistics (31,14,0,4) : Complex
+NaturalOrderStringComparator.java: Statistics (53,13,1,0) Standard ordering

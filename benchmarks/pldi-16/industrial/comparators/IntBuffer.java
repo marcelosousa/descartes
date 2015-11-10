@@ -48,8 +48,7 @@ public abstract class IntBuffer extends Buffer implements Comparator<IntBuffer> 
 		int otherPos = o2.position;
 		// BEGIN android-changed
 		int thisInt, otherInt;
-		int i = 0;
-		while (i < compareRemaining) {
+		while (compareRemaining > 0) {
 			thisInt = o1.get(thisPos);
 			otherInt = o2.get(otherPos);
 			if (thisInt != otherInt) {
@@ -57,7 +56,7 @@ public abstract class IntBuffer extends Buffer implements Comparator<IntBuffer> 
 			}
 			thisPos++;
 			otherPos++;
-			i++;
+			compareRemaining--;
 		}
 		// END android-changed
 		return o1.remaining() - o2.remaining();

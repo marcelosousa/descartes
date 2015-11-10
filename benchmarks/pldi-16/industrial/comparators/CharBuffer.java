@@ -49,8 +49,7 @@ public abstract class CharBuffer extends Buffer implements Comparator<CharBuffer
 		int thisPos = o1.position;
 		int otherPos = o2.position;
 		char thisByte, otherByte;
-		int i = 0;		
-		while (i < compareRemaining) {
+		while (compareRemaining > 0) {
 			thisByte = o1.get(thisPos);
 			otherByte = o2.get(otherPos);
 			if (thisByte != otherByte) {
@@ -58,7 +57,7 @@ public abstract class CharBuffer extends Buffer implements Comparator<CharBuffer
 			}
 			thisPos++;
 			otherPos++;
-			i++;
+			compareRemaining--;
 		}
 		return o1.remaining() - o2.remaining();
 	}

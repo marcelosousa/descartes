@@ -49,8 +49,7 @@ public abstract class DoubleBuffer extends Buffer implements Comparator<DoubleBu
 		int otherPos = o2.position;
 		// BEGIN android-changed
 		double thisDouble, otherDouble;
-		int i = 0;
-		while (i < compareRemaining) {
+		while (compareRemaining > 0) {
 			thisDouble = o1.get(thisPos);
 			otherDouble = o2.get(otherPos);
 			// checks for double and NaN inequality
@@ -59,7 +58,7 @@ public abstract class DoubleBuffer extends Buffer implements Comparator<DoubleBu
 			}
 			thisPos++;
 			otherPos++;
-			i++;
+			compareRemaining--;
 		}
 		// END android-changed
 		return o1.remaining() - o2.remaining();

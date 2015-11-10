@@ -37,18 +37,17 @@ public final class ChannelBuffers implements Comparator<ChannelBuffers> {
         int i=0;
         byte va, vb;
         
-        while(i < minLength) {
+        for (int i = minLength; i > 0; i--) {
             va = o1.getByte(aIndex);
             vb = o2.getByte(bIndex);
             if (va > vb) {
-                return 1;
+              return 1;
             } 
             if (va < vb) {
-                return -1;
+              return -1;              
             }
             aIndex++;
             bIndex++;
-            i++;
         }
 
         return aLen - bLen;

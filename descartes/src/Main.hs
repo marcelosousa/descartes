@@ -77,8 +77,8 @@ toProp 6 = prop6
 
 showProp :: Int -> String
 showProp 1 = "[Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))"
-showProp 2 = "[Transitivity] (equals/compare): for all x, y and z,"
-           ++ " compare/equals(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0."
+showProp 2 = "[Transitivity] (compare): for all x, y and z,"
+           ++ " compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0."
 showProp 3 = "Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z))."
 showProp 4 = "[Transitivity] (equals): for all x, y and z,"
            ++ " equals(x, y) and equals(y, z) implies equals(x, z)."
@@ -102,7 +102,7 @@ descartes_main logLevel mode file arity prop propName = do
     Right cu -> do
       let classMap = getInfo cu
           comps = getComps cu
-          comparators = map (\c -> map (\idx -> rewrite $ rename idx c) [1..arity]) comps
+          comparators = map (\c -> map (\idx -> rename idx c) [1..arity]) comps
       if logLevel > 0
       then do
 --        putStrLn $ show classMap

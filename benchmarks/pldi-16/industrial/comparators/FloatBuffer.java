@@ -48,9 +48,8 @@ public abstract class FloatBuffer extends Buffer implements Comparator<FloatBuff
 		int otherPos = o2.position;
 		// BEGIN android-changed
 		float thisFloat, otherFloat;
-		int i = 0;
-		assume(compareRemaining >= 0); // needed!
-		while (i > compareRemaining) {
+
+		while (compareRemaining > 0) {
 			thisFloat = o1.get(thisPos);
 			otherFloat = o2.get(otherPos);
 			// checks for float and NaN inequality
@@ -59,7 +58,7 @@ public abstract class FloatBuffer extends Buffer implements Comparator<FloatBuff
 			}
 			thisPos++;
 			otherPos++;
-			i++;
+			compareRemaining--;
 		}
 		// END android-changed
 		return o1.remaining() - o2.remaining();

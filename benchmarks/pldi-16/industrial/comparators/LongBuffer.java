@@ -1,4 +1,4 @@
-/* ./libgdx-libgdx-d0121ac/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/nio/ShortBuffer.java */
+/* ./libgdx-libgdx-d0121ac/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/nio/LongBuffer.java */
 /*
  *  Licensed to the Apache Software Foundation (ASF) under one or more
  *  contributor license agreements.  See the NOTICE file distributed with
@@ -18,45 +18,48 @@
 
 package java.nio;
 
-/** A buffer of shorts.
+/** A buffer of longs.
  * <p>
- * A short buffer can be created in either of the following ways:
+ * A long buffer can be created in either of the following ways:
  * </p>
  * <ul>
- * <li>{@link #allocate(int) Allocate} a new short array and create a buffer based on it;</li>
- * <li>{@link #wrap(short[]) Wrap} an existing short array to create a new buffer;</li>
- * <li>Use {@link java.nio.ByteBuffer#asShortBuffer() ByteBuffer.asShortBuffer} to create a short buffer based on a byte buffer.</li>
+ * <li>{@link #allocate(int) Allocate} a new long array and create a buffer based on it;</li>
+ * <li>{@link #wrap(long[]) Wrap} an existing long array to create a new buffer;</li>
+ * <li>Use {@link java.nio.ByteBuffer#asLongBuffer() ByteBuffer.asLongBuffer} to create a long buffer based on a byte buffer.</li>
  * </ul>
  * 
  * @since Android 1.0 */
-public abstract class ShortBuffer extends Buffer implements Comparator<ShortBuffer> {
+public abstract class LongBuffer extends Buffer implements Comparable<LongBuffer> {
+  
+  int remaining();
+  int position;
+  long get(int pos);
 
-    int remaining();
-    int position;
-    float get(int pos);
-    
-	/** Compare the remaining shorts of this buffer to another short buffer's remaining shorts.
+	/** Compare the remaining longs of this buffer to another long buffer's remaining longs.
 	 * 
-	 * @param otherBuffer another short buffer.
+	 * @param otherBuffer another long buffer.
 	 * @return a negative value if this is less than {@code otherBuffer}; 0 if this equals to {@code otherBuffer}; a positive value
-	 *         if this is greater than {@code otherBuffer}.
-	 * @exception ClassCastException if {@code otherBuffer} is not a short buffer.
+	 *         if this is greater than {@code otherBuffer}
+	 * @exception ClassCastException if {@code otherBuffer} is not a long buffer.
 	 * @since Android 1.0 */
-	public int compare (ShortBuffer o1, ShortBuffer o2) {
+	public int compare (LongBuffer o1, LongBuffer o2) {
 		int compareRemaining = (o1.remaining() < o2.remaining()) ? o1.remaining() : o2.remaining();
 		int thisPos = o1.position;
 		int otherPos = o2.position;
-		short thisByte, otherByte;
+		// BEGIN android-changed
+		long thisLong, otherLong;
 		while (compareRemaining > 0) {
-			thisByte = o1.get(thisPos);
-			otherByte = o2.get(otherPos);
-			if (thisByte != otherByte) {
-				return thisByte < otherByte ? -1 : 1;
+			thisLong = o1.get(thisPos);
+			otherLong = o2.get(otherPos);
+			if (thisLong != otherLong) {
+				return thisLong < otherLong ? -1 : 1;
 			}
 			thisPos++;
 			otherPos++;
 			compareRemaining--;
 		}
+		// END android-changed
 		return o1.remaining() - o2.remaining();
 	}
+
 }

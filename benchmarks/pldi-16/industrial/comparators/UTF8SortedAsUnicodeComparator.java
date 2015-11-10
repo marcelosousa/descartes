@@ -35,11 +35,8 @@ public class UTF8SortedAsUnicodeComparator implements Comparator<BytesReference>
     @Override
     public int compare(BytesReference o1, BytesReference o2) {
         if (o1.hasArray() && o2.hasArray()) {
-            //final byte[] aBytes = a.array();
             int aUpto = o1.arrayOffset();
-            //final byte[] bBytes = b.array();
             int bUpto = o2.arrayOffset();
-//            assume((o1.length >= 0) && (o2.length >=0));
             assume(aUpto == 0);
             int aStop = aUpto + (o1.length < o2.length ? o1.length : o2.length);  
             int aByte;
@@ -61,9 +58,7 @@ public class UTF8SortedAsUnicodeComparator implements Comparator<BytesReference>
             // One is a prefix of the other, or, they are equal:
             return o1.length - o2.length;
         } else {
-            //final byte[] aBytes = a.array();
             int aUpto = 0;
-            //final byte[] bBytes = b.array();
             int bUpto = 0;
 
             int aStop = aUpto + (o1.length < o2.length ? o1.length : o2.length);  

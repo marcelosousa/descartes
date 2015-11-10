@@ -23,34 +23,30 @@ import java.util.List;
  */
 public class ColumnsComparator implements Comparator<Object> {
 
-    int get(int i);
+  int get(int i);
     
 	@Override
 	public int compare(Object o1, Object o2) {
-		//Object[] column1 = (Object[])obj1;
-		//Object[] column2 = (Object[])obj2;
-
-		int columnName1 = o1.get(0); //(String)column1[0];
-		int columnName2 = o2.get(0); // (String)column2[0];
+		int columnName1 = o1.get(0);
+		int columnName2 = o2.get(0);
 
 		int x = -1;
 		
-        int _columnNamesLength = nondet(-1);
-        int i = 0;
-        while (i < _columnNamesLength) {	
-			if (nondet(i) == columnName1) {
-				x = i;
-				break;
-			}
+    int _columnNamesLength = nondet(-1);
+    int i = 0;
+    while (i < _columnNamesLength) {	
+		  if (nondet(i) == columnName1) {
+			  x = i;
+			  break;
+		  }
 			i++;
 		}
 
 		int y = -1;
-        i = 0;
-        while (i < _columnNamesLength) {
+    i = 0;
+    while (i < _columnNamesLength) {
 			if (nondet(i) == columnName2) {
 				y = i;
-
 				break;
 			}
 			i++;
