@@ -1,0 +1,7 @@
+Property 6 (Consistency)
+descartes -p=6 -m=0: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+
+real	0m0.232s
+user	0m0.220s
+sys	0m0.012s

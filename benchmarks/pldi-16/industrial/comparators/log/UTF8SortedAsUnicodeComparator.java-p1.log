@@ -1,25 +1,90 @@
 Property 1
 descartes -p=1 -m=0: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 res2!9 -> (- 1)
 o11!4 -> UTF8SortedAsUnicodeComparator!val!0
 o22!7 -> UTF8SortedAsUnicodeComparator!val!0
-aUpto21!926 -> 0
+aByte22!1008 -> (- 1)
+bByte22!1009 -> 0
 o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 4099
-aStop21 -> 4100
-bByte12!301 -> 0
-diff22!830 -> (- 1)
-aStop11 -> 4100
-diff12!302 -> (- 1)
+aUpto11 -> 1
+aUpto21!1133 -> 0
+aStop11 -> 2
+aStop21 -> 2
+bByte12!345 -> 0
+diff12!346 -> (- 1)
 res1!8 -> (- 1)
-aByte22!828 -> (- 1)
-aUpto21 -> 4097
-aUpto11!927 -> 0
-bByte22!829 -> 0
-aByte12!300 -> (- 1)
-bUpto11 -> 0
+aByte12!344 -> (- 1)
+aUpto21 -> 1
+diff22!1010 -> (- 1)
 bUpto21 -> 0
+bUpto11 -> 0
+aUpto11!1134 -> 0
+o12!6 -> UTF8SortedAsUnicodeComparator!val!1
+compareDouble!13 -> {
+  0
+}
+get!0!1220 -> {
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 12
+  UTF8SortedAsUnicodeComparator!val!1 1 -> 20
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 21
+  else -> 11
+}
+hasArray!3 -> {
+  true
+}
+nondet!12 -> {
+  12 -> 0
+  21 -> 0
+  else -> (- 1)
+}
+compareIgnoreCaseString!15 -> {
+  0
+}
+length!1 -> {
+  2
+}
+arrayOffset!2 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+k!1219 -> {
+  (ite (>= (:var 0) 1) 1 0)
+}
+equals!16 -> {
+  15
+}
+get!0 -> {
+  (get!0!1220 (:var 0) (k!1219 (:var 1)))
+}
+
+
+real	0m0.282s
+user	0m0.270s
+sys	0m0.012s
+descartes -p=1 -m=1: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+aByte22!965 -> (- 1)
+res2!9 -> (- 1)
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!0
+aUpto21!968 -> 0
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto11 -> 1
+aStop21 -> 2
+aStop11 -> 2
+bByte12!345 -> 0
+diff12!346 -> (- 1)
+res1!8 -> (- 1)
+aUpto11!969 -> 0
+bByte22!966 -> 0
+aByte12!344 -> (- 1)
+aUpto21 -> 1
+bUpto21 -> 0
+bUpto11 -> 0
+diff22!967 -> (- 1)
 o12!6 -> UTF8SortedAsUnicodeComparator!val!1
 compareDouble!13 -> {
   0
@@ -29,90 +94,87 @@ hasArray!3 -> {
 }
 nondet!12 -> {
   10 -> (- 1)
-  15 -> (- 1)
+  27 -> (- 1)
   else -> 0
 }
 compareIgnoreCaseString!15 -> {
   0
 }
-k!1055 -> {
-  (let ((a!1 (ite (>= (:var 0) 4097)
-                  (ite (>= (:var 0) 4098)
-                       (ite (>= (:var 0) 4099) 4099 4098)
-                       4097)
-                  4096)))
-    (ite (>= (:var 0) 4096) a!1 0))
+length!1 -> {
+  2
 }
-get!0!1056 -> {
+k!1054 -> {
+  (ite (>= (:var 0) 1) 1 0)
+}
+arrayOffset!2 -> {
+  0
+}
+compareInt!14 -> {
+  0
+}
+get!0!1055 -> {
   UTF8SortedAsUnicodeComparator!val!1 0 -> 11
-  UTF8SortedAsUnicodeComparator!val!1 4097 -> 15
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 16
-  UTF8SortedAsUnicodeComparator!val!0 4098 -> 23
-  UTF8SortedAsUnicodeComparator!val!0 4096 -> 28
-  UTF8SortedAsUnicodeComparator!val!1 4096 -> 30
-  UTF8SortedAsUnicodeComparator!val!0 4097 -> 32
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 18
+  UTF8SortedAsUnicodeComparator!val!1 1 -> 27
   else -> 10
 }
-length!1 -> {
-  4100
-}
-arrayOffset!2 -> {
-  0
-}
-compareInt!14 -> {
-  0
+equals!16 -> {
+  15
 }
 get!0 -> {
-  (get!0!1056 (:var 0) (k!1055 (:var 1)))
+  (get!0!1055 (:var 0) (k!1054 (:var 1)))
 }
 
 
-real	0m0.269s
-user	0m0.257s
-sys	0m0.012s
-descartes -p=1 -m=1: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+real	0m0.276s
+user	0m0.272s
+sys	0m0.004s
+descartes -p=1 -m=2: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+aByte22!783 -> 1
 res2!9 -> (- 1)
 o11!4 -> UTF8SortedAsUnicodeComparator!val!0
 o22!7 -> UTF8SortedAsUnicodeComparator!val!0
+aUpto11!1154 -> 0
 o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 1
-diff22!803 -> (- 1)
-aStop11 -> 2213
-bByte12!301 -> 1
-aStop21 -> 2213
-diff12!302 -> (- 1)
+aUpto11 -> 2
+aStop21 -> 3
+aStop11 -> 3
 res1!8 -> (- 1)
-aByte22!801 -> 0
-aUpto21!804 -> 0
-bByte22!802 -> 1
-aUpto11!805 -> 0
-aUpto21 -> 2212
-aByte12!300 -> 0
+diff22!785 -> (- 1)
+diff12!256 -> (- 1)
+bByte12!255 -> 2
+aUpto21 -> 1
+aUpto21!1155 -> 0
 bUpto21 -> 0
+aByte12!254 -> 1
 bUpto11 -> 0
+bByte22!784 -> 2
 o12!6 -> UTF8SortedAsUnicodeComparator!val!1
 compareDouble!13 -> {
   0
 }
-k!871 -> {
-  (ite (>= (:var 0) 1)
-       (ite (>= (:var 0) 2211) (ite (>= (:var 0) 2212) 2212 2211) 1)
-       0)
+get!0!1281 -> {
+  UTF8SortedAsUnicodeComparator!val!0 2 -> 12
+  UTF8SortedAsUnicodeComparator!val!1 1 -> 18
+  UTF8SortedAsUnicodeComparator!val!0 1 -> 18
+  else -> 13
 }
 hasArray!3 -> {
   true
 }
 nondet!12 -> {
-  8 -> 0
-  15 -> 0
+  13 -> 2
   else -> 1
 }
+k!1280 -> {
+  (ite (>= (:var 0) 1) (ite (>= (:var 0) 2) 2 1) 0)
+}
 compareIgnoreCaseString!15 -> {
   0
 }
 length!1 -> {
-  2213
+  3
 }
 arrayOffset!2 -> {
   0
@@ -120,88 +182,122 @@ arrayOffset!2 -> {
 compareInt!14 -> {
   0
 }
-get!0 -> {
-  (get!0!872 (:var 0) (k!871 (:var 1)))
-}
-get!0!872 -> {
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 9
-  UTF8SortedAsUnicodeComparator!val!1 2212 -> 15
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 16
-  UTF8SortedAsUnicodeComparator!val!1 1 -> 22
-  UTF8SortedAsUnicodeComparator!val!1 2211 -> 26
-  else -> 8
-}
-
-
-real	0m0.263s
-user	0m0.255s
-sys	0m0.008s
-descartes -p=1 -m=2: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-aUpto21!902 -> 0
-res2!9 -> (- 1)
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-aByte12!199 -> (- 1)
-o22!7 -> UTF8SortedAsUnicodeComparator!val!0
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-diff12!201 -> (- 1)
-aUpto11!901 -> 0
-aStop11 -> 8881
-aUpto11 -> 1
-aStop21 -> 8881
-bByte22!642 -> 0
-res1!8 -> (- 1)
-bByte12!200 -> 0
-aUpto21 -> 8880
-aByte22!641 -> (- 1)
-bUpto21 -> 0
-bUpto11 -> 0
-diff22!643 -> (- 1)
-o12!6 -> UTF8SortedAsUnicodeComparator!val!1
-compareDouble!13 -> {
-  0
-}
-get!0!969 -> {
-  UTF8SortedAsUnicodeComparator!val!0 1 -> 9
-  UTF8SortedAsUnicodeComparator!val!1 8880 -> 14
-  UTF8SortedAsUnicodeComparator!val!1 1 -> 9
-  else -> 15
-}
-hasArray!3 -> {
-  true
-}
-nondet!12 -> {
-  15 -> 0
-  else -> (- 1)
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-length!1 -> {
-  8881
-}
-arrayOffset!2 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-k!968 -> {
-  (ite (>= (:var 0) 1)
-       (ite (>= (:var 0) 8879) (ite (>= (:var 0) 8880) 8880 8879) 1)
-       0)
+equals!16 -> {
+  5
 }
 get!0 -> {
-  (get!0!969 (:var 0) (k!968 (:var 1)))
+  (get!0!1281 (:var 0) (k!1280 (:var 1)))
 }
 
 
-real	0m0.215s
-user	0m0.211s
-sys	0m0.007s
+real	0m0.221s
+user	0m0.217s
+sys	0m0.004s
 descartes -p=1 -m=3: 
+Invariant:
+(let ((a!1 (exists ((aUpto11 Int))
+             (let ((a!1 (+ aUpto11
+                           (ite (< (length!1 o11!4) (length!1 o21!5))
+                                (length!1 o11!4)
+                                (length!1 o21!5)))))
+               (and (= o11!4 o22!7)
+                    (= o21!5 o12!6)
+                    (hasArray!3 o11!4)
+                    (hasArray!3 o21!5)
+                    (= aUpto11 (arrayOffset!2 o11!4))
+                    (= bUpto11 (arrayOffset!2 o21!5))
+                    (= aUpto11 0)
+                    (= aStop11 a!1)))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 aUpto11))
+                 (= (get!0 o11!4 j1) (get!0 o21!5 j1))))))
+  (and a!1 a!2 (>= aUpto11 (arrayOffset!2 o11!4))))
+Invariant:
+(let ((a!1 (exists ((aUpto21 Int))
+             (let ((a!1 (exists ((aUpto11 Int))
+                          (let ((a!1 (+ aUpto11
+                                        (ite (< (length!1 o11!4)
+                                                (length!1 o21!5))
+                                             (length!1 o11!4)
+                                             (length!1 o21!5)))))
+                            (and (= o11!4 o22!7)
+                                 (= o21!5 o12!6)
+                                 (hasArray!3 o11!4)
+                                 (hasArray!3 o21!5)
+                                 (= aUpto11 (arrayOffset!2 o11!4))
+                                 (= bUpto11 (arrayOffset!2 o21!5))
+                                 (= aUpto11 0)
+                                 (= aStop11 a!1)))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 aUpto11))
+                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                   (a!3 (+ aUpto21
+                           (ite (< (length!1 o12!6) (length!1 o22!7))
+                                (length!1 o12!6)
+                                (length!1 o22!7)))))
+               (and a!1
+                    a!2
+                    (>= aUpto11 (arrayOffset!2 o11!4))
+                    (< aUpto11 aStop11)
+                    (= aByte12!254 (nondet!12 (get!0 o11!4 aUpto11)))
+                    (= bByte12!255 (nondet!12 (get!0 o21!5 bUpto11)))
+                    (= diff12!256 (- aByte12!254 bByte12!255))
+                    (not (= diff12!256 0))
+                    (= res1!8 diff12!256)
+                    (hasArray!3 o12!6)
+                    (hasArray!3 o22!7)
+                    (= aUpto21 (arrayOffset!2 o12!6))
+                    (= bUpto21 (arrayOffset!2 o22!7))
+                    (= aUpto21 0)
+                    (= aStop21 a!3)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 aUpto21))
+                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
+  (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6))))
+Invariant:
+(let ((a!1 (exists ((aUpto21 Int))
+             (let ((a!1 (exists ((aUpto11 Int))
+                          (let ((a!1 (+ aUpto11
+                                        (ite (< (length!1 o11!4)
+                                                (length!1 o21!5))
+                                             (length!1 o11!4)
+                                             (length!1 o21!5)))))
+                            (and (= o11!4 o22!7)
+                                 (= o21!5 o12!6)
+                                 (hasArray!3 o11!4)
+                                 (hasArray!3 o21!5)
+                                 (= aUpto11 (arrayOffset!2 o11!4))
+                                 (= bUpto11 (arrayOffset!2 o21!5))
+                                 (= aUpto11 0)
+                                 (= aStop11 a!1)))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 aUpto11))
+                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                   (a!3 (+ aUpto21
+                           (ite (< (length!1 o12!6) (length!1 o22!7))
+                                (length!1 o12!6)
+                                (length!1 o22!7)))))
+               (and a!1
+                    a!2
+                    (>= aUpto11 (arrayOffset!2 o11!4))
+                    (< aUpto11 aStop11)
+                    (= aByte12!254 (nondet!12 (get!0 o11!4 aUpto11)))
+                    (= bByte12!255 (nondet!12 (get!0 o21!5 bUpto11)))
+                    (= diff12!256 (- aByte12!254 bByte12!255))
+                    (not (= diff12!256 0))
+                    (= res1!8 diff12!256)
+                    (hasArray!3 o12!6)
+                    (hasArray!3 o22!7)
+                    (= aUpto21 (arrayOffset!2 o12!6))
+                    (= bUpto21 (arrayOffset!2 o22!7))
+                    (= aUpto21 0)
+                    (= aStop21 a!3)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 aUpto21))
+                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
+  (and a!1 a!2 (<= aUpto21 (arrayOffset!2 o12!6))))
 descartes: analyse_loop failed
 
-real	0m0.064s
-user	0m0.056s
+real	0m0.091s
+user	0m0.083s
 sys	0m0.008s

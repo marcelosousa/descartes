@@ -1,25 +1,61 @@
 Property 3
 descartes -p=3 -m=0: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.091s
-user	0m0.079s
-sys	0m0.012s
+real	0m0.249s
+user	0m0.241s
+sys	0m0.008s
 descartes -p=3 -m=1: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.176s
-user	0m0.160s
+real	0m0.325s
+user	0m0.309s
 sys	0m0.016s
 descartes -p=3 -m=2: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+descartes: analyse_loop failed
 
-real	0m0.152s
-user	0m0.144s
-sys	0m0.008s
+real	0m0.024s
+user	0m0.008s
+sys	0m0.016s
 descartes -p=3 -m=3: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Invariant:
+(let ((a!1 (exists ((compareRemaining11 Int))
+             (let ((a!1 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
+                             (remaining!2 o11!3)
+                             (remaining!2 o21!4))))
+               (and (= o11!3 o12!5)
+                    (= o21!4 o13!7)
+                    (= o22!6 o23!8)
+                    (= compareRemaining11 a!1)
+                    (= thisPos11 (position!1 o11!3))
+                    (= otherPos11 (position!1 o21!4))))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 compareRemaining11))
+                 (= (get!0 o11!3 j1) (get!0 o21!4 j1)))))
+      (a!3 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
+                (remaining!2 o11!3)
+                (remaining!2 o21!4))))
+  (and a!1 a!2 (>= compareRemaining11 a!3)))
+Invariant:
+(let ((a!1 (exists ((compareRemaining11 Int))
+             (let ((a!1 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
+                             (remaining!2 o11!3)
+                             (remaining!2 o21!4))))
+               (and (= o11!3 o12!5)
+                    (= o21!4 o13!7)
+                    (= o22!6 o23!8)
+                    (= compareRemaining11 a!1)
+                    (= thisPos11 (position!1 o11!3))
+                    (= otherPos11 (position!1 o21!4))))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 compareRemaining11))
+                 (= (get!0 o11!3 j1) (get!0 o21!4 j1)))))
+      (a!3 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
+                (remaining!2 o11!3)
+                (remaining!2 o21!4))))
+  (and a!1 a!2 (<= compareRemaining11 a!3)))
+descartes: analyse_loop failed
 
-real	0m0.336s
-user	0m0.328s
+real	0m0.023s
+user	0m0.015s
 sys	0m0.008s

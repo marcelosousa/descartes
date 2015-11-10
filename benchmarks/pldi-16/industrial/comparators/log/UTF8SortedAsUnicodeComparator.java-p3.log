@@ -1,204 +1,202 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-aUpto21!3389 -> 0
-res1!10 -> 0
-o23!9 -> UTF8SortedAsUnicodeComparator!val!2
-bByte32!3255 -> 0
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!2
-aStop31 -> 2744
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 2745
-aStop21 -> 2744
-diff32!3256 -> (- 1)
-aByte32!3254 -> (- 1)
-aStop11 -> 2745
-aUpto31 -> 2743
-bUpto31 -> (- 6759)
-aUpto31!3388 -> 0
-res3!12 -> (- 1)
-aUpto21 -> 2744
-bUpto21 -> (- 6759)
-o13!8 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11!3390 -> 0
-bUpto11 -> 0
-res2!11 -> 1
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o12!6 -> UTF8SortedAsUnicodeComparator!val!0
-nondet!15 -> {
-  15 -> (- 1)
-  else -> 0
-}
-compareDouble!16 -> {
-  0
-}
-hasArray!3 -> {
-  true
-}
-get!0!3491 -> {
-  UTF8SortedAsUnicodeComparator!val!2 (- 6759) -> 16
-  UTF8SortedAsUnicodeComparator!val!0 2743 -> 19
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 22
-  UTF8SortedAsUnicodeComparator!val!0 2744 -> 24
-  UTF8SortedAsUnicodeComparator!val!0 2742 -> 26
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 29
-  UTF8SortedAsUnicodeComparator!val!1 2742 -> 31
-  else -> 15
-}
-compareInt!17 -> {
-  0
-}
-length!1 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> 2744
-  else -> 2745
-}
-arrayOffset!2 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> (- 6759)
-  else -> 0
-}
-get!0 -> {
-  (get!0!3491 (:var 0) (k!3490 (:var 1)))
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-k!3490 -> {
-  (let ((a!1 (ite (>= (:var 0) 2742)
-                  (ite (>= (:var 0) 2743)
-                       (ite (>= (:var 0) 2744) 2744 2743)
-                       2742)
-                  0)))
-    (ite (>= (:var 0) 0) a!1 (- 6759)))
-}
-
-
-real	0m1.091s
-user	0m1.074s
-sys	0m0.016s
-descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-aUpto31!7447 -> 0
-res1!10 -> 0
-bByte32!7445 -> 0
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!2
-o23!9 -> UTF8SortedAsUnicodeComparator!val!2
-aStop31 -> 7529
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-diff32!7446 -> (- 1)
-aUpto11 -> 7530
-aStop11 -> 7530
-aUpto11!7449 -> 0
-aStop21 -> 7529
-aUpto31 -> 7528
-bUpto31 -> (- 3620)
-res3!12 -> (- 1)
-aByte32!7444 -> (- 1)
-aUpto21!7448 -> 0
-aUpto21 -> 7529
-bUpto21 -> (- 3620)
-o13!8 -> UTF8SortedAsUnicodeComparator!val!1
-bUpto11 -> 0
-res2!11 -> 1
-o12!6 -> UTF8SortedAsUnicodeComparator!val!0
-nondet!15 -> {
-  14 -> (- 1)
-  else -> 0
-}
-compareDouble!16 -> {
-  0
-}
-hasArray!3 -> {
-  true
-}
-get!0!7550 -> {
-  UTF8SortedAsUnicodeComparator!val!2 (- 3620) -> 15
-  UTF8SortedAsUnicodeComparator!val!0 7528 -> 18
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 21
-  UTF8SortedAsUnicodeComparator!val!0 7529 -> 23
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 25
-  UTF8SortedAsUnicodeComparator!val!0 7527 -> 28
-  UTF8SortedAsUnicodeComparator!val!1 7527 -> 30
-  else -> 14
-}
-compareInt!17 -> {
-  0
-}
-length!1 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> 7529
-  else -> 7530
-}
-arrayOffset!2 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> (- 3620)
-  else -> 0
-}
-get!0 -> {
-  (get!0!7550 (:var 0) (k!7549 (:var 1)))
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-k!7549 -> {
-  (let ((a!1 (ite (>= (:var 0) 7527)
-                  (ite (>= (:var 0) 7528)
-                       (ite (>= (:var 0) 7529) 7529 7528)
-                       7527)
-                  0)))
-    (ite (>= (:var 0) 0) a!1 (- 3620)))
-}
-
-
-real	0m1.878s
-user	0m1.861s
-sys	0m0.016s
-descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-diff12!174 -> 0
 res1!10 -> 0
 o23!9 -> UTF8SortedAsUnicodeComparator!val!2
 o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-bByte32!997 -> 0
 o22!7 -> UTF8SortedAsUnicodeComparator!val!2
-bByte12!173 -> 0
-aUpto11 -> 2742
-aByte22!614 -> 1
+aStop31 -> 9296
 o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aByte12!172 -> 0
-bByte22!615 -> 0
-diff22!616 -> 1
-aStop11 -> 2744
-aStop21 -> 2744
+aUpto11 -> 9297
+aStop21 -> 9296
+aByte32!4057 -> (- 1)
+aStop11 -> 9297
+aUpto31 -> 9295
 bUpto31 -> (- 1)
-aUpto31 -> 2743
+aUpto11!4229 -> 0
+aUpto21!4228 -> 0
+res3!12 -> (- 1)
+aUpto21 -> 9296
+aUpto31!4227 -> 0
+bUpto21 -> (- 1)
+o13!8 -> UTF8SortedAsUnicodeComparator!val!1
+bUpto11 -> 0
+res2!11 -> 1
+diff32!4059 -> (- 1)
+bByte32!4058 -> 0
+nondet!15 -> {
+  18 -> (- 1)
+  else -> 0
+}
+equals!19 -> {
+  15
+}
+compareDouble!16 -> {
+  0
+}
+hasArray!3 -> {
+  true
+}
+k!4357 -> {
+  (let ((a!1 (ite (>= (:var 0) 9294)
+                  (ite (>= (:var 0) 9295)
+                       (ite (>= (:var 0) 9296) 9296 9295)
+                       9294)
+                  0)))
+    (ite (>= (:var 0) 0) a!1 (- 1)))
+}
+compareInt!17 -> {
+  0
+}
+length!1 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> 9296
+  else -> 9297
+}
+arrayOffset!2 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> (- 1)
+  else -> 0
+}
+get!0!4358 -> {
+  UTF8SortedAsUnicodeComparator!val!2 (- 1) -> 19
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 24
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 27
+  UTF8SortedAsUnicodeComparator!val!0 9294 -> 29
+  UTF8SortedAsUnicodeComparator!val!0 9295 -> 31
+  UTF8SortedAsUnicodeComparator!val!0 9296 -> 35
+  UTF8SortedAsUnicodeComparator!val!1 9294 -> 37
+  else -> 18
+}
+get!0 -> {
+  (get!0!4358 (:var 0) (k!4357 (:var 1)))
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+
+
+real	0m1.077s
+user	0m1.069s
+sys	0m0.008s
+descartes -p=3 -m=1: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+aStop31 -> 2
+res1!10 -> 0
+o23!9 -> UTF8SortedAsUnicodeComparator!val!2
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+bByte32!9469 -> 0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!2
+aUpto31!9471 -> 0
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aUpto11 -> 2
+aStop21 -> 2
+aStop11 -> 2
+aByte32!9468 -> 1
+aUpto31 -> 1
+aUpto21!9472 -> 0
+bUpto31 -> 15
+res3!12 -> 1
+diff32!9470 -> 1
+aUpto21 -> 2
+bUpto21 -> 15
+o13!8 -> UTF8SortedAsUnicodeComparator!val!1
+bUpto11 -> 0
+aUpto11!9473 -> 0
+res2!11 -> (- 1)
+o12!6 -> UTF8SortedAsUnicodeComparator!val!0
+nondet!15 -> {
+  20 -> 1
+  else -> 0
+}
+equals!19 -> {
+  15
+}
+compareDouble!16 -> {
+  0
+}
+k!9601 -> {
+  (ite (>= (:var 0) 1) (ite (>= (:var 0) 15) 15 1) 0)
+}
+hasArray!3 -> {
+  true
+}
+compareInt!17 -> {
+  0
+}
+length!1 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> 3
+  else -> 2
+}
+get!0!9602 -> {
+  UTF8SortedAsUnicodeComparator!val!2 15 -> 21
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 26
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 30
+  UTF8SortedAsUnicodeComparator!val!0 1 -> 32
+  else -> 20
+}
+arrayOffset!2 -> {
+  UTF8SortedAsUnicodeComparator!val!2 -> 15
+  else -> 0
+}
+get!0 -> {
+  (get!0!9602 (:var 0) (k!9601 (:var 1)))
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+
+
+real	0m2.015s
+user	0m2.007s
+sys	0m0.008s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+aByte32!1237 -> (- 1)
+aUpto12!260 -> 1
+res1!10 -> 0
+o11!4 -> UTF8SortedAsUnicodeComparator!val!0
+o22!7 -> UTF8SortedAsUnicodeComparator!val!2
+o23!9 -> UTF8SortedAsUnicodeComparator!val!2
+aUpto11!1656 -> 0
+aByte12!257 -> 1
+aUpto11 -> 0
+o21!5 -> UTF8SortedAsUnicodeComparator!val!1
+aByte22!825 -> 1
+diff32!1239 -> (- 1)
+aStop11 -> 5886
+aStop21 -> 3611
+aUpto31!1658 -> 0
+diff22!827 -> 1
+bUpto31 -> (- 1)
+aUpto31 -> 3609
+bUpto12!261 -> 1
 bUpto21 -> (- 1)
 res2!11 -> 1
 bUpto11 -> 0
-aByte32!996 -> (- 1)
-aUpto11!1334 -> 0
-aStop31 -> 2744
-aUpto31!1336 -> 0
-bUpto12!176 -> 1
+aStop31 -> 3611
+aUpto21!1657 -> 0
+diff12!259 -> 0
+bByte22!826 -> 0
+bByte32!1238 -> 0
 res3!12 -> (- 1)
-aUpto21 -> 2616
+aUpto21 -> 0
+bByte12!258 -> 1
 o13!8 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto21!1335 -> 0
-diff32!998 -> (- 1)
-aUpto12!175 -> 2743
 o12!6 -> UTF8SortedAsUnicodeComparator!val!0
-k!1468 -> {
-  (let ((a!1 (ite (>= (:var 0) 2741)
-                  (ite (>= (:var 0) 2742)
-                       (ite (>= (:var 0) 2743) 2743 2742)
-                       2741)
-                  2616)))
-    (ite (>= (:var 0) 0)
-         (ite (>= (:var 0) 2615) (ite (>= (:var 0) 2616) a!1 2615) 0)
-         (- 1)))
+get!0!1787 -> {
+  UTF8SortedAsUnicodeComparator!val!1 0 -> 16
+  UTF8SortedAsUnicodeComparator!val!2 (- 1) -> 28
+  UTF8SortedAsUnicodeComparator!val!0 0 -> 35
+  UTF8SortedAsUnicodeComparator!val!2 0 -> 16
+  else -> 27
 }
 nondet!15 -> {
-  31 -> 1
-  24 -> (- 1)
-  else -> 0
+  27 -> (- 1)
+  28 -> 0
+  else -> 1
+}
+equals!19 -> {
+  15
 }
 compareDouble!16 -> {
   0
@@ -209,36 +207,874 @@ hasArray!3 -> {
 compareInt!17 -> {
   0
 }
+k!1786 -> {
+  (ite (>= (:var 0) 0)
+       (ite (>= (:var 0) 3608) (ite (>= (:var 0) 3609) 3609 3608) 0)
+       (- 1))
+}
 length!1 -> {
-  2744
+  UTF8SortedAsUnicodeComparator!val!2 -> 3611
+  else -> 5886
 }
 arrayOffset!2 -> {
   UTF8SortedAsUnicodeComparator!val!2 -> (- 1)
   else -> 0
 }
 get!0 -> {
-  (get!0!1469 (:var 0) (k!1468 (:var 1)))
+  (get!0!1787 (:var 0) (k!1786 (:var 1)))
 }
 compareIgnoreCaseString!18 -> {
   0
 }
-get!0!1469 -> {
-  UTF8SortedAsUnicodeComparator!val!0 2742 -> 13
-  UTF8SortedAsUnicodeComparator!val!0 2616 -> 31
-  UTF8SortedAsUnicodeComparator!val!1 2743 -> 24
-  UTF8SortedAsUnicodeComparator!val!2 (- 1) -> 25
-  UTF8SortedAsUnicodeComparator!val!1 2616 -> 31
-  UTF8SortedAsUnicodeComparator!val!2 2616 -> 31
-  else -> 14
-}
 
 
-real	0m0.716s
-user	0m0.692s
-sys	0m0.024s
+real	0m0.721s
+user	0m0.709s
+sys	0m0.012s
 descartes -p=3 -m=3: 
+Invariant:
+(let ((a!1 (exists ((aUpto11 Int))
+             (let ((a!1 (+ aUpto11
+                           (ite (< (length!1 o11!4) (length!1 o21!5))
+                                (length!1 o11!4)
+                                (length!1 o21!5)))))
+               (and (= o11!4 o12!6)
+                    (= o21!5 o13!8)
+                    (= o22!7 o23!9)
+                    (hasArray!3 o11!4)
+                    (hasArray!3 o21!5)
+                    (= aUpto11 (arrayOffset!2 o11!4))
+                    (= bUpto11 (arrayOffset!2 o21!5))
+                    (= aUpto11 0)
+                    (= aStop11 a!1)))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 aUpto11))
+                 (= (get!0 o11!4 j1) (get!0 o21!5 j1))))))
+  (and a!1 a!2 (>= aUpto11 (arrayOffset!2 o11!4))))
+Invariant:
+(let ((a!1 (exists ((aUpto21 Int))
+             (let ((a!1 (exists ((aUpto11 Int))
+                          (let ((a!1 (+ aUpto11
+                                        (ite (< (length!1 o11!4)
+                                                (length!1 o21!5))
+                                             (length!1 o11!4)
+                                             (length!1 o21!5)))))
+                            (and (= o11!4 o12!6)
+                                 (= o21!5 o13!8)
+                                 (= o22!7 o23!9)
+                                 (hasArray!3 o11!4)
+                                 (hasArray!3 o21!5)
+                                 (= aUpto11 (arrayOffset!2 o11!4))
+                                 (= bUpto11 (arrayOffset!2 o21!5))
+                                 (= aUpto11 0)
+                                 (= aStop11 a!1)))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 aUpto11))
+                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                   (a!3 (+ aUpto21
+                           (ite (< (length!1 o12!6) (length!1 o22!7))
+                                (length!1 o12!6)
+                                (length!1 o22!7)))))
+               (and a!1
+                    a!2
+                    (>= aUpto11 (arrayOffset!2 o11!4))
+                    (< aUpto11 aStop11)
+                    (= aByte12!257 (nondet!15 (get!0 o11!4 aUpto11)))
+                    (= bByte12!258 (nondet!15 (get!0 o21!5 bUpto11)))
+                    (= diff12!259 (- aByte12!257 bByte12!258))
+                    (not (= diff12!259 0))
+                    (= res1!10 diff12!259)
+                    (hasArray!3 o12!6)
+                    (hasArray!3 o22!7)
+                    (= aUpto21 (arrayOffset!2 o12!6))
+                    (= bUpto21 (arrayOffset!2 o22!7))
+                    (= aUpto21 0)
+                    (= aStop21 a!3)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 aUpto21))
+                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
+  (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (hasArray!3 o12!6)
+                                 (hasArray!3 o22!7)
+                                 (= aUpto21 (arrayOffset!2 o12!6))
+                                 (= bUpto21 (arrayOffset!2 o22!7))
+                                 (= aUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and a!1
+                    a!2
+                    (>= aUpto21 (arrayOffset!2 o12!6))
+                    (< aUpto21 aStop21)
+                    (= aByte22!698 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!699 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!700 (- aByte22!698 bByte22!699))
+                    (not (= diff22!700 0))
+                    (= res2!11 diff22!700)
+                    (hasArray!3 o13!8)
+                    (hasArray!3 o23!9)
+                    (= aUpto31 (arrayOffset!2 o13!8))
+                    (= bUpto31 (arrayOffset!2 o23!9))
+                    (= aUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 (arrayOffset!2 o13!8))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (hasArray!3 o12!6)
+                                 (hasArray!3 o22!7)
+                                 (= aUpto21 (arrayOffset!2 o12!6))
+                                 (= bUpto21 (arrayOffset!2 o22!7))
+                                 (= aUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and a!1
+                    a!2
+                    (>= aUpto21 (arrayOffset!2 o12!6))
+                    (< aUpto21 aStop21)
+                    (= aByte22!698 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!699 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!700 (- aByte22!698 bByte22!699))
+                    (not (= diff22!700 0))
+                    (= res2!11 diff22!700)
+                    (not (and (hasArray!3 o13!8) (hasArray!3 o23!9)))
+                    (= aUpto31 0)
+                    (= bUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 0)))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (hasArray!3 o12!6)
+                                 (hasArray!3 o22!7)
+                                 (= aUpto21 (arrayOffset!2 o12!6))
+                                 (= bUpto21 (arrayOffset!2 o22!7))
+                                 (= aUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6)))
+                    (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6)))
+                    (< aUpto21 aStop21)
+                    (= aByte22!698 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!699 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!700 (- aByte22!698 bByte22!699))
+                    (not (not (= diff22!700 0)))
+                    (= aUpto22!1614 (+ aUpto21 1))
+                    (= bUpto22!1615 (+ bUpto21 1))
+                    (= res2!11 (- (length!1 o12!6) (length!1 o22!7)))
+                    (hasArray!3 o13!8)
+                    (hasArray!3 o23!9)
+                    (= aUpto31 (arrayOffset!2 o13!8))
+                    (= bUpto31 (arrayOffset!2 o23!9))
+                    (= aUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 (arrayOffset!2 o13!8))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (hasArray!3 o12!6)
+                                 (hasArray!3 o22!7)
+                                 (= aUpto21 (arrayOffset!2 o12!6))
+                                 (= bUpto21 (arrayOffset!2 o22!7))
+                                 (= aUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6)))
+                    (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6)))
+                    (< aUpto21 aStop21)
+                    (= aByte22!698 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!699 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!700 (- aByte22!698 bByte22!699))
+                    (not (not (= diff22!700 0)))
+                    (= aUpto22!1614 (+ aUpto21 1))
+                    (= bUpto22!1615 (+ bUpto21 1))
+                    (= res2!11 (- (length!1 o12!6) (length!1 o22!7)))
+                    (not (and (hasArray!3 o13!8) (hasArray!3 o23!9)))
+                    (= aUpto31 0)
+                    (= bUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 0)))
+Invariant:
+(let ((a!1 (exists ((aUpto21 Int))
+             (let ((a!1 (exists ((aUpto11 Int))
+                          (let ((a!1 (+ aUpto11
+                                        (ite (< (length!1 o11!4)
+                                                (length!1 o21!5))
+                                             (length!1 o11!4)
+                                             (length!1 o21!5)))))
+                            (and (= o11!4 o12!6)
+                                 (= o21!5 o13!8)
+                                 (= o22!7 o23!9)
+                                 (hasArray!3 o11!4)
+                                 (hasArray!3 o21!5)
+                                 (= aUpto11 (arrayOffset!2 o11!4))
+                                 (= bUpto11 (arrayOffset!2 o21!5))
+                                 (= aUpto11 0)
+                                 (= aStop11 a!1)))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 aUpto11))
+                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                   (a!3 (+ aUpto21
+                           (ite (< (length!1 o12!6) (length!1 o22!7))
+                                (length!1 o12!6)
+                                (length!1 o22!7)))))
+               (and a!1
+                    a!2
+                    (>= aUpto11 (arrayOffset!2 o11!4))
+                    (< aUpto11 aStop11)
+                    (= aByte12!257 (nondet!15 (get!0 o11!4 aUpto11)))
+                    (= bByte12!258 (nondet!15 (get!0 o21!5 bUpto11)))
+                    (= diff12!259 (- aByte12!257 bByte12!258))
+                    (not (= diff12!259 0))
+                    (= res1!10 diff12!259)
+                    (not (and (hasArray!3 o12!6) (hasArray!3 o22!7)))
+                    (= aUpto21 0)
+                    (= bUpto21 0)
+                    (= aStop21 a!3)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 aUpto21))
+                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
+  (and a!1 a!2 (>= aUpto21 0)))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (not (and (hasArray!3 o12!6)
+                                           (hasArray!3 o22!7)))
+                                 (= aUpto21 0)
+                                 (= bUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and a!1
+                    a!2
+                    (>= aUpto21 0)
+                    (< aUpto21 aStop21)
+                    (= aByte22!3245 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!3246 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!3247 (- aByte22!3245 bByte22!3246))
+                    (not (= diff22!3247 0))
+                    (= res2!11 diff22!3247)
+                    (hasArray!3 o13!8)
+                    (hasArray!3 o23!9)
+                    (= aUpto31 (arrayOffset!2 o13!8))
+                    (= bUpto31 (arrayOffset!2 o23!9))
+                    (= aUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 (arrayOffset!2 o13!8))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (not (and (hasArray!3 o12!6)
+                                           (hasArray!3 o22!7)))
+                                 (= aUpto21 0)
+                                 (= bUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and a!1
+                    a!2
+                    (>= aUpto21 0)
+                    (< aUpto21 aStop21)
+                    (= aByte22!3245 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!3246 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!3247 (- aByte22!3245 bByte22!3246))
+                    (not (= diff22!3247 0))
+                    (= res2!11 diff22!3247)
+                    (not (and (hasArray!3 o13!8) (hasArray!3 o23!9)))
+                    (= aUpto31 0)
+                    (= bUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 0)))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (not (and (hasArray!3 o12!6)
+                                           (hasArray!3 o22!7)))
+                                 (= aUpto21 0)
+                                 (= bUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and (and a!1 a!2 (>= aUpto21 0))
+                    (and a!1 a!2 (>= aUpto21 0))
+                    (< aUpto21 aStop21)
+                    (= aByte22!3245 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!3246 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!3247 (- aByte22!3245 bByte22!3246))
+                    (not (not (= diff22!3247 0)))
+                    (= aUpto22!4202 (+ aUpto21 1))
+                    (= bUpto22!4203 (+ bUpto21 1))
+                    (= res2!11 (- (length!1 o12!6) (length!1 o22!7)))
+                    (hasArray!3 o13!8)
+                    (hasArray!3 o23!9)
+                    (= aUpto31 (arrayOffset!2 o13!8))
+                    (= bUpto31 (arrayOffset!2 o23!9))
+                    (= aUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 (arrayOffset!2 o13!8))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and a!1
+                                 a!2
+                                 (>= aUpto11 (arrayOffset!2 o11!4))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (= diff12!259 0))
+                                 (= res1!10 diff12!259)
+                                 (not (and (hasArray!3 o12!6)
+                                           (hasArray!3 o22!7)))
+                                 (= aUpto21 0)
+                                 (= bUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and (and a!1 a!2 (>= aUpto21 0))
+                    (and a!1 a!2 (>= aUpto21 0))
+                    (< aUpto21 aStop21)
+                    (= aByte22!3245 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!3246 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!3247 (- aByte22!3245 bByte22!3246))
+                    (not (not (= diff22!3247 0)))
+                    (= aUpto22!4202 (+ aUpto21 1))
+                    (= bUpto22!4203 (+ bUpto21 1))
+                    (= res2!11 (- (length!1 o12!6) (length!1 o22!7)))
+                    (not (and (hasArray!3 o13!8) (hasArray!3 o23!9)))
+                    (= aUpto31 0)
+                    (= bUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 0)))
+Invariant:
+(let ((a!1 (exists ((aUpto21 Int))
+             (let ((a!1 (exists ((aUpto11 Int))
+                          (let ((a!1 (+ aUpto11
+                                        (ite (< (length!1 o11!4)
+                                                (length!1 o21!5))
+                                             (length!1 o11!4)
+                                             (length!1 o21!5)))))
+                            (and (= o11!4 o12!6)
+                                 (= o21!5 o13!8)
+                                 (= o22!7 o23!9)
+                                 (hasArray!3 o11!4)
+                                 (hasArray!3 o21!5)
+                                 (= aUpto11 (arrayOffset!2 o11!4))
+                                 (= bUpto11 (arrayOffset!2 o21!5))
+                                 (= aUpto11 0)
+                                 (= aStop11 a!1)))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 aUpto11))
+                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                   (a!3 (+ aUpto21
+                           (ite (< (length!1 o12!6) (length!1 o22!7))
+                                (length!1 o12!6)
+                                (length!1 o22!7)))))
+               (and (and a!1 a!2 (>= aUpto11 (arrayOffset!2 o11!4)))
+                    (and a!1 a!2 (>= aUpto11 (arrayOffset!2 o11!4)))
+                    (< aUpto11 aStop11)
+                    (= aByte12!257 (nondet!15 (get!0 o11!4 aUpto11)))
+                    (= bByte12!258 (nondet!15 (get!0 o21!5 bUpto11)))
+                    (= diff12!259 (- aByte12!257 bByte12!258))
+                    (not (not (= diff12!259 0)))
+                    (= aUpto12!5549 (+ aUpto11 1))
+                    (= bUpto12!5550 (+ bUpto11 1))
+                    (= res1!10 (- (length!1 o11!4) (length!1 o21!5)))
+                    (hasArray!3 o12!6)
+                    (hasArray!3 o22!7)
+                    (= aUpto21 (arrayOffset!2 o12!6))
+                    (= bUpto21 (arrayOffset!2 o22!7))
+                    (= aUpto21 0)
+                    (= aStop21 a!3)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 aUpto21))
+                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
+  (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and (and a!1
+                                      a!2
+                                      (>= aUpto11 (arrayOffset!2 o11!4)))
+                                 (and a!1
+                                      a!2
+                                      (>= aUpto11 (arrayOffset!2 o11!4)))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (not (= diff12!259 0)))
+                                 (= aUpto12!5549 (+ aUpto11 1))
+                                 (= bUpto12!5550 (+ bUpto11 1))
+                                 (= res1!10
+                                    (- (length!1 o11!4) (length!1 o21!5)))
+                                 (hasArray!3 o12!6)
+                                 (hasArray!3 o22!7)
+                                 (= aUpto21 (arrayOffset!2 o12!6))
+                                 (= bUpto21 (arrayOffset!2 o22!7))
+                                 (= aUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and a!1
+                    a!2
+                    (>= aUpto21 (arrayOffset!2 o12!6))
+                    (< aUpto21 aStop21)
+                    (= aByte22!6118 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!6119 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!6120 (- aByte22!6118 bByte22!6119))
+                    (not (= diff22!6120 0))
+                    (= res2!11 diff22!6120)
+                    (hasArray!3 o13!8)
+                    (hasArray!3 o23!9)
+                    (= aUpto31 (arrayOffset!2 o13!8))
+                    (= bUpto31 (arrayOffset!2 o23!9))
+                    (= aUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (>= aUpto31 (arrayOffset!2 o13!8))))
+Invariant:
+(let ((a!1 (exists ((aUpto31 Int))
+             (let ((a!1 (exists ((aUpto21 Int))
+                          (let ((a!1 (exists ((aUpto11 Int))
+                                       (let ((a!1 (+ aUpto11
+                                                     (ite (< (length!1 o11!4)
+                                                             (length!1 o21!5))
+                                                          (length!1 o11!4)
+                                                          (length!1 o21!5)))))
+                                         (and (= o11!4 o12!6)
+                                              (= o21!5 o13!8)
+                                              (= o22!7 o23!9)
+                                              (hasArray!3 o11!4)
+                                              (hasArray!3 o21!5)
+                                              (= aUpto11 (arrayOffset!2 o11!4))
+                                              (= bUpto11 (arrayOffset!2 o21!5))
+                                              (= aUpto11 0)
+                                              (= aStop11 a!1)))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 aUpto11))
+                                           (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
+                                (a!3 (+ aUpto21
+                                        (ite (< (length!1 o12!6)
+                                                (length!1 o22!7))
+                                             (length!1 o12!6)
+                                             (length!1 o22!7)))))
+                            (and (and a!1
+                                      a!2
+                                      (>= aUpto11 (arrayOffset!2 o11!4)))
+                                 (and a!1
+                                      a!2
+                                      (>= aUpto11 (arrayOffset!2 o11!4)))
+                                 (< aUpto11 aStop11)
+                                 (= aByte12!257
+                                    (nondet!15 (get!0 o11!4 aUpto11)))
+                                 (= bByte12!258
+                                    (nondet!15 (get!0 o21!5 bUpto11)))
+                                 (= diff12!259 (- aByte12!257 bByte12!258))
+                                 (not (not (= diff12!259 0)))
+                                 (= aUpto12!5549 (+ aUpto11 1))
+                                 (= bUpto12!5550 (+ bUpto11 1))
+                                 (= res1!10
+                                    (- (length!1 o11!4) (length!1 o21!5)))
+                                 (hasArray!3 o12!6)
+                                 (hasArray!3 o22!7)
+                                 (= aUpto21 (arrayOffset!2 o12!6))
+                                 (= bUpto21 (arrayOffset!2 o22!7))
+                                 (= aUpto21 0)
+                                 (= aStop21 a!3)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 aUpto21))
+                              (= (get!0 o12!6 j2) (get!0 o22!7 j2)))))
+                   (a!3 (+ aUpto31
+                           (ite (< (length!1 o13!8) (length!1 o23!9))
+                                (length!1 o13!8)
+                                (length!1 o23!9)))))
+               (and a!1
+                    a!2
+                    (>= aUpto21 (arrayOffset!2 o12!6))
+                    (< aUpto21 aStop21)
+                    (= aByte22!6118 (nondet!15 (get!0 o12!6 aUpto21)))
+                    (= bByte22!6119 (nondet!15 (get!0 o22!7 bUpto21)))
+                    (= diff22!6120 (- aByte22!6118 bByte22!6119))
+                    (not (= diff22!6120 0))
+                    (= res2!11 diff22!6120)
+                    (hasArray!3 o13!8)
+                    (hasArray!3 o23!9)
+                    (= aUpto31 (arrayOffset!2 o13!8))
+                    (= bUpto31 (arrayOffset!2 o23!9))
+                    (= aUpto31 0)
+                    (= aStop31 a!3)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 aUpto31))
+                 (= (get!0 o13!8 j3) (get!0 o23!9 j3))))))
+  (and a!1 a!2 (<= aUpto31 (arrayOffset!2 o13!8))))
 descartes: analyse_loop failed
 
-real	0m0.509s
-user	0m0.497s
-sys	0m0.012s
+real	0m0.579s
+user	0m0.514s
+sys	0m0.064s

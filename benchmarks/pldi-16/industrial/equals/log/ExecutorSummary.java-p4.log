@@ -1,0 +1,7 @@
+Property 5 (Symmetry)
+descartes -p=5 -m=0: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+
+real	0m1.492s
+user	0m1.476s
+sys	0m0.016s

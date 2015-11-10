@@ -1,0 +1,20 @@
+Property 2 (Transitivity)
+descartes -p=4 -m=0: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+
+real	0m36.444s
+user	0m36.399s
+sys	0m0.036s
+descartes -p=4 -m=2: 
+Stack space overflow: current size 8388608 bytes.
+Use `+RTS -Ksize -RTS' to increase it.
+
+real	0m31.173s
+user	0m30.871s
+sys	0m0.297s
+descartes -p=4 -m=3: 
+./run-descartes.sh: line 6:  2540 Killed                  descartes -p=4 -m=3 $f
+
+real	97m55.453s
+user	97m40.572s
+sys	0m13.473s
