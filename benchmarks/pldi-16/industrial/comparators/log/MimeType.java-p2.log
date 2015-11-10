@@ -1,109 +1,1623 @@
 Property 2
 descartes -p=2 -m=0: 
-Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m3.329s
-user	0m3.316s
-sys	0m0.012s
+real	0m6.232s
+user	0m6.212s
+sys	0m0.020s
 descartes -p=2 -m=1: 
-Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m3.585s
-user	0m3.557s
-sys	0m0.028s
+real	0m5.918s
+user	0m5.901s
+sys	0m0.016s
 descartes -p=2 -m=2: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
-o2Attribute22!340 -> 1
-i31!4343 -> 0
-o1Attribute12!145 -> 1
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
+o2Attribute12!144 -> (- 1)
+i21 -> 6018
 o23!10 -> MimeType!val!2
-o1Attribute22!339 -> 2
-comp22!215 -> 0
+o1Value32!722 -> 0
+comp35!724 -> (- 1)
+comp33!560 -> 0
 comp21 -> 0
-o2Attribute12!146 -> (- 1)
 comp11 -> 0
-i11!4341 -> 0
-comp14!147 -> 2
-comp32!440 -> 0
-o1Attribute32!564 -> 0
-comp33!441 -> 0
-comp13!22 -> 0
+comp23!272 -> 0
+comp32!559 -> 0
 o11!5 -> MimeType!val!0
-i21!4342 -> 0
+o1Attribute12!143 -> 0
 res2!12 -> 1
-comp24!341 -> 1
 comp31 -> 0
-comp12!21 -> 0
-o2Value32!568 -> 0
-i31 -> 8649
-o2Attribute32!565 -> 0
+i31 -> 6017
+comp24!433 -> 1
+o2Value32!723 -> 1
 o13!9 -> MimeType!val!0
-res1!11 -> 2
-o1Value32!567 -> (- 1)
-comp35!569 -> (- 1)
+o1Attribute32!719 -> 1
+comp34!721 -> 0
+comp13!23 -> 0
+comp14!145 -> 1
 o22!8 -> MimeType!val!2
+res1!11 -> 1
 res3!13 -> (- 1)
 o12!7 -> MimeType!val!1
 o21!6 -> MimeType!val!1
-comp34!566 -> 0
-i11 -> 8650
-comp23!216 -> 0
-i21 -> 8652
+o2Attribute22!432 -> 0
+i11!14547 -> 0
+i21!14548 -> 0
+i31!14549 -> 0
+comp12!22 -> 0
+o1Attribute22!431 -> 1
+i11 -> 6019
+o2Attribute32!720 -> 1
+comp22!271 -> 0
 compareDouble!17 -> {
   0
 }
+k!14636 -> {
+  (let ((a!1 (ite (>= (:var 0) 6017)
+                  (ite (>= (:var 0) 6018)
+                       (ite (>= (:var 0) 6019) 6019 6018)
+                       6017)
+                  6016)))
+    (ite (>= (:var 0) 6016) a!1 0))
+}
 get!1 -> {
-  (get!1!4508 (:var 0) (k!4507 (:var 1)))
+  (get!1!14637 (:var 0) (k!14636 (:var 1)))
 }
 getSubtype!3 -> {
-  MimeType!val!0 -> 18
-  MimeType!val!2 -> 19
-  else -> 13
-}
-k!4507 -> {
-  (let ((a!1 (ite (>= (:var 0) 8650)
-                  (ite (>= (:var 0) 8651)
-                       (ite (>= (:var 0) 8652) 8652 8651)
-                       8650)
-                  8649)))
-    (ite (>= (:var 0) 8648) (ite (>= (:var 0) 8649) a!1 8648) 0))
+  MimeType!val!0 -> 21
+  MimeType!val!2 -> 22
+  else -> 14
 }
 getValue!0 -> {
-  MimeType!val!2 0 -> 0
-  else -> (- 1)
+  MimeType!val!2 1 -> 1
+  else -> 0
+}
+equals!20 -> {
+  15
 }
 compareIgnoreCaseString!19 -> {
   0
 }
 getParametersSize!2 -> {
-  8653
-}
-get!1!4508 -> {
-  MimeType!val!0 8650 -> 1
-  MimeType!val!1 8650 -> (- 1)
-  MimeType!val!1 8652 -> 2
-  MimeType!val!2 8652 -> 1
-  MimeType!val!1 8651 -> 27
-  MimeType!val!2 8651 -> 27
-  MimeType!val!2 8650 -> (- 1)
-  else -> 0
+  6020
 }
 getType!4 -> {
-  MimeType!val!0 -> 16
-  MimeType!val!2 -> 17
-  else -> 12
+  MimeType!val!0 -> 19
+  MimeType!val!2 -> 20
+  else -> 13
 }
 compareInt!18 -> {
   0
 }
+get!1!14637 -> {
+  MimeType!val!0 6019 -> 0
+  MimeType!val!1 6019 -> (- 1)
+  MimeType!val!2 6018 -> 0
+  else -> 1
+}
 
 
-real	0m1.965s
-user	0m1.944s
-sys	0m0.020s
+real	0m3.646s
+user	0m3.638s
+sys	0m0.008s
 descartes -p=2 -m=3: 
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (= comp11 0))
+                  (= res1!11 comp11)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (= comp21 0))
+                  (= res2!12 comp21)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!59
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!59 0)))
+                  (= comp33!97
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!97 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (= comp11 0))
+                  (= res1!11 comp11)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!701
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (= comp22!701 0))
+                  (= res2!12 comp22!701)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!887
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!887 0)))
+                  (= comp33!1073
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!1073 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (= comp11 0))
+                  (= res1!11 comp11)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!701
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (not (= comp22!701 0)))
+                  (= comp23!2065
+                     (- (getParametersSize!2 o12!7) (getParametersSize!2 o22!8)))
+                  (not (= comp23!2065 0))
+                  (= res2!12 comp23!2065)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!2251
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!2251 0)))
+                  (= comp33!2363
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!2363 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i21 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (= comp11 0))
+                  (= res1!11 comp11)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!701
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (not (= comp22!701 0)))
+                  (= comp23!2065
+                     (- (getParametersSize!2 o12!7) (getParametersSize!2 o22!8)))
+                  (not (not (= comp23!2065 0)))
+                  (= i21 0))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 i21))
+                 (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+  (and a!1 a!2 (>= i21 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (= comp11 0))
+                               (= res1!11 comp11)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!701
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!701 0)))
+                               (= comp23!2065
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!2065 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!3553 (get!1 o12!7 i21))
+                    (= o2Attribute22!3554 (get!1 o22!8 i21))
+                    (= comp24!3555 (- o1Attribute22!3553 o2Attribute22!3554))
+                    (not (= comp24!3555 0))
+                    (= res2!12 comp24!3555)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!3717
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!3717 0)))
+                    (= comp33!3879
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!3879 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (= comp11 0))
+                               (= res1!11 comp11)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!701
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!701 0)))
+                               (= comp23!2065
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!2065 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!3553 (get!1 o12!7 i21))
+                    (= o2Attribute22!3554 (get!1 o22!8 i21))
+                    (= comp24!3555 (- o1Attribute22!3553 o2Attribute22!3554))
+                    (not (not (= comp24!3555 0)))
+                    (= o1Value22!4965 (getValue!0 o12!7 o1Attribute22!3553))
+                    (= o2Value22!4966 (getValue!0 o22!8 o2Attribute22!3554))
+                    (= comp25!4967 (- o1Value22!4965 o2Value22!4966))
+                    (not (= comp25!4967 0))
+                    (= res2!12 comp25!4967)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!5086
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!5086 0)))
+                    (= comp33!5322
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!5322 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (= comp11 0))
+                               (= res1!11 comp11)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!701
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!701 0)))
+                               (= comp23!2065
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!2065 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and (and a!1 a!2 (>= i21 0))
+                    (and a!1 a!2 (>= i21 0))
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!3553 (get!1 o12!7 i21))
+                    (= o2Attribute22!3554 (get!1 o22!8 i21))
+                    (= comp24!3555 (- o1Attribute22!3553 o2Attribute22!3554))
+                    (not (not (= comp24!3555 0)))
+                    (= o1Value22!4965 (getValue!0 o12!7 o1Attribute22!3553))
+                    (= o2Value22!4966 (getValue!0 o22!8 o2Attribute22!3554))
+                    (= comp25!4967 (- o1Value22!4965 o2Value22!4966))
+                    (not (not (= comp25!4967 0)))
+                    (= i22!6417 (+ i21 1))
+                    (= res2!12 0)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!6542
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!6542 0)))
+                    (= comp33!6543
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!6543 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (= comp12!7052 0))
+                  (= res1!11 comp12!7052)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (= comp21 0))
+                  (= res2!12 comp21)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!7127
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!7127 0)))
+                  (= comp33!7313
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!7313 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (= comp12!7052 0))
+                  (= res1!11 comp12!7052)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!8076
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (= comp22!8076 0))
+                  (= res2!12 comp22!8076)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!8188
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!8188 0)))
+                  (= comp33!8226
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!8226 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (= comp12!7052 0))
+                  (= res1!11 comp12!7052)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!8076
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (not (= comp22!8076 0)))
+                  (= comp23!8637
+                     (- (getParametersSize!2 o12!7) (getParametersSize!2 o22!8)))
+                  (not (= comp23!8637 0))
+                  (= res2!12 comp23!8637)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!8749
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!8749 0)))
+                  (= comp33!8898
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!8898 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i21 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (= comp12!7052 0))
+                  (= res1!11 comp12!7052)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!8076
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (not (= comp22!8076 0)))
+                  (= comp23!8637
+                     (- (getParametersSize!2 o12!7) (getParametersSize!2 o22!8)))
+                  (not (not (= comp23!8637 0)))
+                  (= i21 0))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 i21))
+                 (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+  (and a!1 a!2 (>= i21 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (= comp12!7052 0))
+                               (= res1!11 comp12!7052)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!8076
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!8076 0)))
+                               (= comp23!8637
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!8637 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!9938 (get!1 o12!7 i21))
+                    (= o2Attribute22!9939 (get!1 o22!8 i21))
+                    (= comp24!9940 (- o1Attribute22!9938 o2Attribute22!9939))
+                    (not (= comp24!9940 0))
+                    (= res2!12 comp24!9940)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!10062
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!10062 0)))
+                    (= comp33!10224
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!10224 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (= comp12!7052 0))
+                               (= res1!11 comp12!7052)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!8076
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!8076 0)))
+                               (= comp23!8637
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!8637 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!9938 (get!1 o12!7 i21))
+                    (= o2Attribute22!9939 (get!1 o22!8 i21))
+                    (= comp24!9940 (- o1Attribute22!9938 o2Attribute22!9939))
+                    (not (not (= comp24!9940 0)))
+                    (= o1Value22!11178 (getValue!0 o12!7 o1Attribute22!9938))
+                    (= o2Value22!11179 (getValue!0 o22!8 o2Attribute22!9939))
+                    (= comp25!11180 (- o1Value22!11178 o2Value22!11179))
+                    (not (= comp25!11180 0))
+                    (= res2!12 comp25!11180)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!11299
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!11299 0)))
+                    (= comp33!11418
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!11418 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (= comp12!7052 0))
+                               (= res1!11 comp12!7052)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!8076
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!8076 0)))
+                               (= comp23!8637
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!8637 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and (and a!1 a!2 (>= i21 0))
+                    (and a!1 a!2 (>= i21 0))
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!9938 (get!1 o12!7 i21))
+                    (= o2Attribute22!9939 (get!1 o22!8 i21))
+                    (= comp24!9940 (- o1Attribute22!9938 o2Attribute22!9939))
+                    (not (not (= comp24!9940 0)))
+                    (= o1Value22!11178 (getValue!0 o12!7 o1Attribute22!9938))
+                    (= o2Value22!11179 (getValue!0 o22!8 o2Attribute22!9939))
+                    (= comp25!11180 (- o1Value22!11178 o2Value22!11179))
+                    (not (not (= comp25!11180 0)))
+                    (= i22!12452 (+ i21 1))
+                    (= res2!12 0)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!12577
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!12577 0)))
+                    (= comp33!12578
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!12578 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (not (= comp12!7052 0)))
+                  (= comp13!12997
+                     (- (getParametersSize!2 o11!5) (getParametersSize!2 o21!6)))
+                  (not (= comp13!12997 0))
+                  (= res1!11 comp13!12997)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (= comp21 0))
+                  (= res2!12 comp21)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!13072
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!13072 0)))
+                  (= comp33!13184
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!13184 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (not (= comp12!7052 0)))
+                  (= comp13!12997
+                     (- (getParametersSize!2 o11!5) (getParametersSize!2 o21!6)))
+                  (not (= comp13!12997 0))
+                  (= res1!11 comp13!12997)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!13903
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (= comp22!13903 0))
+                  (= res2!12 comp22!13903)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!14052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!14052 0)))
+                  (= comp33!14127
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!14127 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (not (= comp12!7052 0)))
+                  (= comp13!12997
+                     (- (getParametersSize!2 o11!5) (getParametersSize!2 o21!6)))
+                  (not (= comp13!12997 0))
+                  (= res1!11 comp13!12997)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!13903
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (not (= comp22!13903 0)))
+                  (= comp23!15082
+                     (- (getParametersSize!2 o12!7) (getParametersSize!2 o22!8)))
+                  (not (= comp23!15082 0))
+                  (= res2!12 comp23!15082)
+                  (= comp31
+                     (compareIgnoreCaseString!19
+                       (getType!4 o13!9)
+                       (getType!4 o23!10)))
+                  (not (not (= comp31 0)))
+                  (= comp32!15231
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o13!9)
+                       (getSubtype!3 o23!10)))
+                  (not (not (= comp32!15231 0)))
+                  (= comp33!15380
+                     (- (getParametersSize!2 o13!9)
+                        (getParametersSize!2 o23!10)))
+                  (not (not (= comp33!15380 0)))
+                  (= i31 0))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i21 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (not (= comp12!7052 0)))
+                  (= comp13!12997
+                     (- (getParametersSize!2 o11!5) (getParametersSize!2 o21!6)))
+                  (not (= comp13!12997 0))
+                  (= res1!11 comp13!12997)
+                  (= comp21
+                     (compareIgnoreCaseString!19
+                       (getType!4 o12!7)
+                       (getType!4 o22!8)))
+                  (not (not (= comp21 0)))
+                  (= comp22!13903
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o12!7)
+                       (getSubtype!3 o22!8)))
+                  (not (not (= comp22!13903 0)))
+                  (= comp23!15082
+                     (- (getParametersSize!2 o12!7) (getParametersSize!2 o22!8)))
+                  (not (not (= comp23!15082 0)))
+                  (= i21 0))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 i21))
+                 (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+  (and a!1 a!2 (>= i21 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (= comp13!12997 0))
+                               (= res1!11 comp13!12997)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!13903
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!13903 0)))
+                               (= comp23!15082
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!15082 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!15789 (get!1 o12!7 i21))
+                    (= o2Attribute22!15790 (get!1 o22!8 i21))
+                    (= comp24!15791 (- o1Attribute22!15789 o2Attribute22!15790))
+                    (not (= comp24!15791 0))
+                    (= res2!12 comp24!15791)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!15953
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!15953 0)))
+                    (= comp33!16115
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!16115 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (= comp13!12997 0))
+                               (= res1!11 comp13!12997)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!13903
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!13903 0)))
+                               (= comp23!15082
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!15082 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!15789 (get!1 o12!7 i21))
+                    (= o2Attribute22!15790 (get!1 o22!8 i21))
+                    (= comp24!15791 (- o1Attribute22!15789 o2Attribute22!15790))
+                    (not (not (= comp24!15791 0)))
+                    (= o1Value22!16140 (getValue!0 o12!7 o1Attribute22!15789))
+                    (= o2Value22!16141 (getValue!0 o22!8 o2Attribute22!15790))
+                    (= comp25!16142 (- o1Value22!16140 o2Value22!16141))
+                    (not (= comp25!16142 0))
+                    (= res2!12 comp25!16142)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!16300
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!16300 0)))
+                    (= comp33!16497
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!16497 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (= comp13!12997 0))
+                               (= res1!11 comp13!12997)
+                               (= comp21
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o12!7)
+                                    (getType!4 o22!8)))
+                               (not (not (= comp21 0)))
+                               (= comp22!13903
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o12!7)
+                                    (getSubtype!3 o22!8)))
+                               (not (not (= comp22!13903 0)))
+                               (= comp23!15082
+                                  (- (getParametersSize!2 o12!7)
+                                     (getParametersSize!2 o22!8)))
+                               (not (not (= comp23!15082 0)))
+                               (= i21 0))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and (and a!1 a!2 (>= i21 0))
+                    (and a!1 a!2 (>= i21 0))
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!15789 (get!1 o12!7 i21))
+                    (= o2Attribute22!15790 (get!1 o22!8 i21))
+                    (= comp24!15791 (- o1Attribute22!15789 o2Attribute22!15790))
+                    (not (not (= comp24!15791 0)))
+                    (= o1Value22!16140 (getValue!0 o12!7 o1Attribute22!15789))
+                    (= o2Value22!16141 (getValue!0 o22!8 o2Attribute22!15790))
+                    (= comp25!16142 (- o1Value22!16140 o2Value22!16141))
+                    (not (not (= comp25!16142 0)))
+                    (= i22!16522 (+ i21 1))
+                    (= res2!12 0)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!16644
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!16644 0)))
+                    (= comp33!16645
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!16645 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i11 Int))
+             (and (= o11!5 o13!9)
+                  (= o21!6 o12!7)
+                  (= o22!8 o23!10)
+                  (= comp11
+                     (compareIgnoreCaseString!19
+                       (getType!4 o11!5)
+                       (getType!4 o21!6)))
+                  (not (not (= comp11 0)))
+                  (= comp12!7052
+                     (compareIgnoreCaseString!19
+                       (getSubtype!3 o11!5)
+                       (getSubtype!3 o21!6)))
+                  (not (not (= comp12!7052 0)))
+                  (= comp13!12997
+                     (- (getParametersSize!2 o11!5) (getParametersSize!2 o21!6)))
+                  (not (not (= comp13!12997 0)))
+                  (= i11 0))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 i11))
+                 (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+  (and a!1 a!2 (>= i11 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i11 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (not (= comp13!12997 0)))
+                               (= i11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 i11))
+                              (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+               (and a!1
+                    a!2
+                    (>= i11 0)
+                    (< i11 (getParametersSize!2 o11!5))
+                    (= o1Attribute12!16788 (get!1 o11!5 i11))
+                    (= o2Attribute12!16789 (get!1 o21!6 i11))
+                    (= comp14!16790 (- o1Attribute12!16788 o2Attribute12!16789))
+                    (not (= comp14!16790 0))
+                    (= res1!11 comp14!16790)
+                    (= comp21
+                       (compareIgnoreCaseString!19
+                         (getType!4 o12!7)
+                         (getType!4 o22!8)))
+                    (not (= comp21 0))
+                    (= res2!12 comp21)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!16912
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!16912 0)))
+                    (= comp33!17034
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!17034 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i11 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (not (= comp13!12997 0)))
+                               (= i11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 i11))
+                              (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+               (and a!1
+                    a!2
+                    (>= i11 0)
+                    (< i11 (getParametersSize!2 o11!5))
+                    (= o1Attribute12!16788 (get!1 o11!5 i11))
+                    (= o2Attribute12!16789 (get!1 o21!6 i11))
+                    (= comp14!16790 (- o1Attribute12!16788 o2Attribute12!16789))
+                    (not (= comp14!16790 0))
+                    (= res1!11 comp14!16790)
+                    (= comp21
+                       (compareIgnoreCaseString!19
+                         (getType!4 o12!7)
+                         (getType!4 o22!8)))
+                    (not (not (= comp21 0)))
+                    (= comp22!17975
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o12!7)
+                         (getSubtype!3 o22!8)))
+                    (not (= comp22!17975 0))
+                    (= res2!12 comp22!17975)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!18097
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!18097 0)))
+                    (= comp33!18219
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!18219 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i11 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (not (= comp13!12997 0)))
+                               (= i11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 i11))
+                              (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+               (and a!1
+                    a!2
+                    (>= i11 0)
+                    (< i11 (getParametersSize!2 o11!5))
+                    (= o1Attribute12!16788 (get!1 o11!5 i11))
+                    (= o2Attribute12!16789 (get!1 o21!6 i11))
+                    (= comp14!16790 (- o1Attribute12!16788 o2Attribute12!16789))
+                    (not (= comp14!16790 0))
+                    (= res1!11 comp14!16790)
+                    (= comp21
+                       (compareIgnoreCaseString!19
+                         (getType!4 o12!7)
+                         (getType!4 o22!8)))
+                    (not (not (= comp21 0)))
+                    (= comp22!17975
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o12!7)
+                         (getSubtype!3 o22!8)))
+                    (not (not (= comp22!17975 0)))
+                    (= comp23!19305
+                       (- (getParametersSize!2 o12!7)
+                          (getParametersSize!2 o22!8)))
+                    (not (= comp23!19305 0))
+                    (= res2!12 comp23!19305)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!19427
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!19427 0)))
+                    (= comp33!19469
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!19469 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i21 Int))
+             (let ((a!1 (exists ((i11 Int))
+                          (and (= o11!5 o13!9)
+                               (= o21!6 o12!7)
+                               (= o22!8 o23!10)
+                               (= comp11
+                                  (compareIgnoreCaseString!19
+                                    (getType!4 o11!5)
+                                    (getType!4 o21!6)))
+                               (not (not (= comp11 0)))
+                               (= comp12!7052
+                                  (compareIgnoreCaseString!19
+                                    (getSubtype!3 o11!5)
+                                    (getSubtype!3 o21!6)))
+                               (not (not (= comp12!7052 0)))
+                               (= comp13!12997
+                                  (- (getParametersSize!2 o11!5)
+                                     (getParametersSize!2 o21!6)))
+                               (not (not (= comp13!12997 0)))
+                               (= i11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 i11))
+                              (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+               (and a!1
+                    a!2
+                    (>= i11 0)
+                    (< i11 (getParametersSize!2 o11!5))
+                    (= o1Attribute12!16788 (get!1 o11!5 i11))
+                    (= o2Attribute12!16789 (get!1 o21!6 i11))
+                    (= comp14!16790 (- o1Attribute12!16788 o2Attribute12!16789))
+                    (not (= comp14!16790 0))
+                    (= res1!11 comp14!16790)
+                    (= comp21
+                       (compareIgnoreCaseString!19
+                         (getType!4 o12!7)
+                         (getType!4 o22!8)))
+                    (not (not (= comp21 0)))
+                    (= comp22!17975
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o12!7)
+                         (getSubtype!3 o22!8)))
+                    (not (not (= comp22!17975 0)))
+                    (= comp23!19305
+                       (- (getParametersSize!2 o12!7)
+                          (getParametersSize!2 o22!8)))
+                    (not (not (= comp23!19305 0)))
+                    (= i21 0)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 i21))
+                 (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+  (and a!1 a!2 (>= i21 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (let ((a!1 (exists ((i11 Int))
+                                       (and (= o11!5 o13!9)
+                                            (= o21!6 o12!7)
+                                            (= o22!8 o23!10)
+                                            (= comp11
+                                               (compareIgnoreCaseString!19
+                                                 (getType!4 o11!5)
+                                                 (getType!4 o21!6)))
+                                            (not (not (= comp11 0)))
+                                            (= comp12!7052
+                                               (compareIgnoreCaseString!19
+                                                 (getSubtype!3 o11!5)
+                                                 (getSubtype!3 o21!6)))
+                                            (not (not (= comp12!7052 0)))
+                                            (= comp13!12997
+                                               (- (getParametersSize!2 o11!5)
+                                                  (getParametersSize!2 o21!6)))
+                                            (not (not (= comp13!12997 0)))
+                                            (= i11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 i11))
+                                           (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= i11 0)
+                                 (< i11 (getParametersSize!2 o11!5))
+                                 (= o1Attribute12!16788 (get!1 o11!5 i11))
+                                 (= o2Attribute12!16789 (get!1 o21!6 i11))
+                                 (= comp14!16790
+                                    (- o1Attribute12!16788 o2Attribute12!16789))
+                                 (not (= comp14!16790 0))
+                                 (= res1!11 comp14!16790)
+                                 (= comp21
+                                    (compareIgnoreCaseString!19
+                                      (getType!4 o12!7)
+                                      (getType!4 o22!8)))
+                                 (not (not (= comp21 0)))
+                                 (= comp22!17975
+                                    (compareIgnoreCaseString!19
+                                      (getSubtype!3 o12!7)
+                                      (getSubtype!3 o22!8)))
+                                 (not (not (= comp22!17975 0)))
+                                 (= comp23!19305
+                                    (- (getParametersSize!2 o12!7)
+                                       (getParametersSize!2 o22!8)))
+                                 (not (not (= comp23!19305 0)))
+                                 (= i21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!19888 (get!1 o12!7 i21))
+                    (= o2Attribute22!19889 (get!1 o22!8 i21))
+                    (= comp24!19890 (- o1Attribute22!19888 o2Attribute22!19889))
+                    (not (= comp24!19890 0))
+                    (= res2!12 comp24!19890)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!20098
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!20098 0)))
+                    (= comp33!20224
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!20224 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (>= i31 0)))
+Invariant:
+(let ((a!1 (exists ((i31 Int))
+             (let ((a!1 (exists ((i21 Int))
+                          (let ((a!1 (exists ((i11 Int))
+                                       (and (= o11!5 o13!9)
+                                            (= o21!6 o12!7)
+                                            (= o22!8 o23!10)
+                                            (= comp11
+                                               (compareIgnoreCaseString!19
+                                                 (getType!4 o11!5)
+                                                 (getType!4 o21!6)))
+                                            (not (not (= comp11 0)))
+                                            (= comp12!7052
+                                               (compareIgnoreCaseString!19
+                                                 (getSubtype!3 o11!5)
+                                                 (getSubtype!3 o21!6)))
+                                            (not (not (= comp12!7052 0)))
+                                            (= comp13!12997
+                                               (- (getParametersSize!2 o11!5)
+                                                  (getParametersSize!2 o21!6)))
+                                            (not (not (= comp13!12997 0)))
+                                            (= i11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 i11))
+                                           (= (get!1 o11!5 j1) (get!1 o21!6 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= i11 0)
+                                 (< i11 (getParametersSize!2 o11!5))
+                                 (= o1Attribute12!16788 (get!1 o11!5 i11))
+                                 (= o2Attribute12!16789 (get!1 o21!6 i11))
+                                 (= comp14!16790
+                                    (- o1Attribute12!16788 o2Attribute12!16789))
+                                 (not (= comp14!16790 0))
+                                 (= res1!11 comp14!16790)
+                                 (= comp21
+                                    (compareIgnoreCaseString!19
+                                      (getType!4 o12!7)
+                                      (getType!4 o22!8)))
+                                 (not (not (= comp21 0)))
+                                 (= comp22!17975
+                                    (compareIgnoreCaseString!19
+                                      (getSubtype!3 o12!7)
+                                      (getSubtype!3 o22!8)))
+                                 (not (not (= comp22!17975 0)))
+                                 (= comp23!19305
+                                    (- (getParametersSize!2 o12!7)
+                                       (getParametersSize!2 o22!8)))
+                                 (not (not (= comp23!19305 0)))
+                                 (= i21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i21))
+                              (= (get!1 o12!7 j2) (get!1 o22!8 j2))))))
+               (and a!1
+                    a!2
+                    (>= i21 0)
+                    (< i21 (getParametersSize!2 o12!7))
+                    (= o1Attribute22!19888 (get!1 o12!7 i21))
+                    (= o2Attribute22!19889 (get!1 o22!8 i21))
+                    (= comp24!19890 (- o1Attribute22!19888 o2Attribute22!19889))
+                    (not (= comp24!19890 0))
+                    (= res2!12 comp24!19890)
+                    (= comp31
+                       (compareIgnoreCaseString!19
+                         (getType!4 o13!9)
+                         (getType!4 o23!10)))
+                    (not (not (= comp31 0)))
+                    (= comp32!20098
+                       (compareIgnoreCaseString!19
+                         (getSubtype!3 o13!9)
+                         (getSubtype!3 o23!10)))
+                    (not (not (= comp32!20098 0)))
+                    (= comp33!20224
+                       (- (getParametersSize!2 o13!9)
+                          (getParametersSize!2 o23!10)))
+                    (not (not (= comp33!20224 0)))
+                    (= i31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i31))
+                 (= (get!1 o13!9 j3) (get!1 o23!10 j3))))))
+  (and a!1 a!2 (<= i31 0)))
 descartes: analyse_loop failed
 
-real	0m1.623s
-user	0m1.607s
+real	0m3.470s
+user	0m3.453s
 sys	0m0.016s

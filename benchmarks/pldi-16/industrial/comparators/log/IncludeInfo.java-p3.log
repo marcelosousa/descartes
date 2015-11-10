@@ -1,25 +1,25 @@
 Property 3
 descartes -p=3 -m=0: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m1.662s
-user	0m1.650s
-sys	0m0.012s
+real	0m1.282s
+user	0m1.265s
+sys	0m0.016s
 descartes -p=3 -m=1: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m4.719s
-user	0m4.706s
-sys	0m0.014s
+real	0m4.879s
+user	0m4.869s
+sys	0m0.008s
 descartes -p=3 -m=2: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "length11"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "length21"])))
 
-real	0m0.014s
-user	0m0.007s
-sys	0m0.007s
+real	0m0.018s
+user	0m0.018s
+sys	0m0.001s
 descartes -p=3 -m=3: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "length13"]))) CAnd (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "length23"])))
 
-real	0m0.015s
+real	0m0.018s
 user	0m0.004s
-sys	0m0.011s
+sys	0m0.013s

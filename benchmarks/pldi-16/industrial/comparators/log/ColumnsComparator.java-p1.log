@@ -1,27 +1,40 @@
 Property 1
 descartes -p=1 -m=0: 
-Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m1.222s
-user	0m1.222s
-sys	0m0.000s
+real	0m1.332s
+user	0m1.318s
+sys	0m0.012s
 descartes -p=1 -m=1: 
-Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m2.898s
-user	0m2.893s
-sys	0m0.004s
+real	0m2.970s
+user	0m2.957s
+sys	0m0.012s
 descartes -p=1 -m=2: 
-descartes: src/Analysis/SelfComposition.hs:(91,2)-(106,54): Non-exhaustive patterns in case
+descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
 
-real	0m0.030s
-user	0m0.025s
+real	0m0.028s
+user	0m0.024s
 sys	0m0.004s
 descartes -p=1 -m=3: 
-descartes: src/Analysis/Product.hs:(103,2)-(118,59): Non-exhaustive patterns in case
+Invariant:
+(let ((a!1 (exists ((i11 Int))
+             (and (= o11!1 o22!4)
+                  (= o21!2 o12!3)
+                  (= columnName111 (get!0 o11!1 0))
+                  (= columnName211 (get!0 o21!2 0))
+                  (= x11 (- 1))
+                  (= _columnNamesLength11 (nondet!9 (- 1)))
+                  (= i11 0))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 i11))
+                 (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
+  (and a!1 a!2 (>= i11 0)))
+descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.023s
-user	0m0.011s
-sys	0m0.011s
+real	0m0.022s
+user	0m0.004s
+sys	0m0.018s

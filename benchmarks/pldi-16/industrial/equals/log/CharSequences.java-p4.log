@@ -1,25 +1,7 @@
-Property 4 (Symmetry)
-descartes -p=4 -m=0: 
+Property 5 (Symmetry)
+descartes -p=5 -m=0: 
 Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
 
-real	0m0.089s
-user	0m0.069s
-sys	0m0.020s
-descartes -p=4 -m=1: 
-Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
-
-real	0m0.086s
-user	0m0.085s
-sys	0m0.000s
-descartes -p=4 -m=2: 
-descartes: buildArtCond: fn
-
-real	0m0.011s
-user	0m0.011s
-sys	0m0.000s
-descartes -p=4 -m=3: 
-descartes: buildArtCond: fn
-
-real	0m0.013s
-user	0m0.013s
+real	0m0.093s
+user	0m0.093s
 sys	0m0.000s

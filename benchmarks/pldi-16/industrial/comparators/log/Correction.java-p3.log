@@ -1,25 +1,25 @@
 Property 3
 descartes -p=3 -m=0: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m3.137s
-user	0m3.116s
-sys	0m0.020s
+real	0m3.905s
+user	0m3.897s
+sys	0m0.008s
 descartes -p=3 -m=1: 
-Unsat: Comparator OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m6.743s
-user	0m6.722s
-sys	0m0.020s
+real	0m4.575s
+user	0m4.564s
+sys	0m0.008s
 descartes -p=3 -m=2: 
 descartes: buildArtCond: fn
 
-real	0m0.012s
-user	0m0.008s
-sys	0m0.004s
+real	0m0.014s
+user	0m0.007s
+sys	0m0.007s
 descartes -p=3 -m=3: 
 descartes: buildArtCond: fn
 
 real	0m0.010s
-user	0m0.003s
-sys	0m0.007s
+user	0m0.010s
+sys	0m0.000s

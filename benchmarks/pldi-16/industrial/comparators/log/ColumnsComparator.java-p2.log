@@ -1,27 +1,41 @@
 Property 2
 descartes -p=2 -m=0: 
-Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m1.457s
-user	0m1.448s
+real	0m1.700s
+user	0m1.692s
 sys	0m0.008s
 descartes -p=2 -m=1: 
-Unsat: Comparator OBEYS Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	1m16.081s
-user	1m15.976s
-sys	0m0.068s
+real	1m22.310s
+user	1m22.208s
+sys	0m0.076s
 descartes -p=2 -m=2: 
-descartes: src/Analysis/SelfComposition.hs:(91,2)-(106,54): Non-exhaustive patterns in case
+descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
 
-real	0m0.044s
-user	0m0.032s
-sys	0m0.012s
+real	0m0.029s
+user	0m0.021s
+sys	0m0.009s
 descartes -p=2 -m=3: 
-descartes: src/Analysis/Product.hs:(103,2)-(118,59): Non-exhaustive patterns in case
+Invariant:
+(let ((a!1 (exists ((i11 Int))
+             (and (= o11!1 o13!5)
+                  (= o21!2 o12!3)
+                  (= o22!4 o23!6)
+                  (= columnName111 (get!0 o11!1 0))
+                  (= columnName211 (get!0 o21!2 0))
+                  (= x11 (- 1))
+                  (= _columnNamesLength11 (nondet!12 (- 1)))
+                  (= i11 0))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 i11))
+                 (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
+  (and a!1 a!2 (>= i11 0)))
+descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.034s
-user	0m0.019s
-sys	0m0.015s
+real	0m0.024s
+user	0m0.012s
+sys	0m0.012s

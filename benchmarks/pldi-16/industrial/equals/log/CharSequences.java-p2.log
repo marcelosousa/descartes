@@ -1,25 +1,7 @@
-Property 2 (Transitivity)
-descartes -p=2 -m=0: 
-Unsat: OBEYS [Transitivity] (equals/compare): for all x, y and z, compare/equals(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
+Property 4 (Transitivity)
+descartes -p=4 -m=0: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
 
-real	0m0.099s
-user	0m0.086s
-sys	0m0.012s
-descartes -p=2 -m=1: 
-Unsat: OBEYS [Transitivity] (equals/compare): for all x, y and z, compare/equals(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-
-real	0m0.337s
-user	0m0.333s
-sys	0m0.004s
-descartes -p=2 -m=2: 
-descartes: buildArtCond: fn
-
-real	0m0.011s
-user	0m0.011s
-sys	0m0.000s
-descartes -p=2 -m=3: 
-descartes: buildArtCond: fn
-
-real	0m0.015s
-user	0m0.011s
-sys	0m0.004s
+real	0m0.101s
+user	0m0.093s
+sys	0m0.008s

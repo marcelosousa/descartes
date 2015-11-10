@@ -1,125 +1,36 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-level11 -> 1
-res1!12 -> 0
-cmp22!651 -> 0
-levels31 -> 4387
-cmp32!1504 -> 0
-o12!8 -> NodeSortRecord!val!0
-levels21 -> 1
-cmp33!1507 -> 1
-their32!1503 -> 0
-their33!1506 -> (- 1)
-o13!10 -> NodeSortRecord!val!1
-their23!653 -> 1
-o11!6 -> NodeSortRecord!val!0
-o23!11 -> NodeSortRecord!val!2
-res3!14 -> (- 1)
-res2!13 -> 1
-their22!650 -> 0
-o21!7 -> NodeSortRecord!val!1
-level21 -> 0
-our32!1502 -> 0
-our33!1505 -> 0
-cmp23!654 -> (- 1)
-level11!1612 -> 0
-levels11 -> 1
-o22!9 -> NodeSortRecord!val!2
-level31!1610 -> 0
-level21!1611 -> 0
-level31 -> 4386
-our22!649 -> 0
-our23!652 -> 0
-compareInt!19 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-sortOrder!3 -> {
-  1
-}
-stringValue!1 -> {
-  (stringValue!1!1684 (:var 0) (k!1682 (:var 1)))
-}
-get!4 -> {
-  (get!4!1683 (:var 0) (k!1682 (:var 1)))
-}
-node!0 -> {
-  0
-}
-numericValue!2 -> {
-  0
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 4387
-  else -> 1
-}
-get!4!1683 -> {
-  NodeSortRecord!val!1 4386 -> 14
-  NodeSortRecord!val!1 0 -> 0
-  else -> 12
-}
-k!1682 -> {
-  (ite (>= (:var 0) 0)
-       (ite (>= (:var 0) 4385) (ite (>= (:var 0) 4386) 4386 4385) 0)
-       (- 1))
-}
-stringValue!1!1684 -> {
-  NodeSortRecord!val!2 0 -> 1
-  NodeSortRecord!val!2 4386 -> (- 1)
-  else -> 0
-}
-
-
-real	0m0.283s
-user	0m0.263s
-sys	0m0.020s
-descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 level11 -> 2
 res1!12 -> 0
-their23!6263 -> 1
-cmp23!6264 -> (- 1)
+level21!2032 -> 0
+cmp22!814 -> 0
+cmp33!1815 -> 1
+their32!1811 -> 0
 levels31 -> 1
+their33!1814 -> (- 2)
+their22!813 -> 1
 o12!8 -> NodeSortRecord!val!0
+level11!2033 -> 0
 levels21 -> 2
-level11!7093 -> 0
-our33!7088 -> (- 1)
 o13!10 -> NodeSortRecord!val!1
 res3!14 -> (- 1)
-o23!11 -> NodeSortRecord!val!2
 o11!6 -> NodeSortRecord!val!0
-their32!7086 -> 0
+o23!11 -> NodeSortRecord!val!2
 res2!13 -> 1
-their33!7089 -> (- 2)
+our33!1813 -> (- 1)
+cmp23!817 -> (- 1)
 o21!7 -> NodeSortRecord!val!1
 level21 -> 1
-our22!6259 -> 1
-cmp33!7090 -> 1
+their23!816 -> 1
+our22!812 -> 1
+our23!815 -> 0
 levels11 -> 2
-their22!6260 -> 1
 o22!9 -> NodeSortRecord!val!2
-level31!7091 -> 0
-cmp22!6261 -> 0
-our32!7085 -> 0
-cmp32!7087 -> 0
+cmp32!1812 -> 0
+our32!1810 -> 0
 level31 -> 0
-our23!6262 -> 0
-level21!7092 -> 0
-stringValue!1!7199 -> {
-  NodeSortRecord!val!2 1 -> 1
-  NodeSortRecord!val!1 0 -> (- 1)
-  NodeSortRecord!val!2 0 -> (- 2)
-  else -> 0
-}
-k!7196 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
+level31!2031 -> 0
 compareInt!19 -> {
   0
 }
@@ -130,110 +41,770 @@ sortOrder!3 -> {
   1
 }
 stringValue!1 -> {
-  (stringValue!1!7199 (:var 0) (k!7196 (:var 1)))
+  (stringValue!1!2167 (:var 0) (k!2165 (:var 1)))
 }
 get!4 -> {
-  (get!4!7197 (:var 0) (k!7196 (:var 1)))
+  (get!4!2166 (:var 0) (k!2165 (:var 1)))
+}
+k!2165 -> {
+  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+}
+get!4!2166 -> {
+  NodeSortRecord!val!1 0 -> 15
+  NodeSortRecord!val!0 0 -> 0
+  else -> 13
 }
 node!0 -> {
   0
 }
 numericValue!2 -> {
-  (numericValue!2!7198 (:var 0) (k!7196 (:var 1)))
+  (numericValue!2!2168 (:var 0) (k!2165 (:var 1)))
 }
 compareIgnoreCaseString!20 -> {
   0
-}
-numericValue!2!7198 -> {
-  NodeSortRecord!val!1 0 -> 0
-  NodeSortRecord!val!2 0 -> 0
-  NodeSortRecord!val!0 0 -> 0
-  else -> 1
 }
 settingsGetSortOrdersLength!5 -> {
   NodeSortRecord!val!1 -> 1
   else -> 2
 }
-get!4!7197 -> {
-  NodeSortRecord!val!1 0 -> 15
+equals!21 -> {
+  15
+}
+stringValue!1!2167 -> {
+  NodeSortRecord!val!2 1 -> 1
+  NodeSortRecord!val!1 0 -> (- 1)
+  NodeSortRecord!val!2 0 -> (- 2)
+  else -> 0
+}
+numericValue!2!2168 -> {
+  NodeSortRecord!val!1 0 -> 0
+  NodeSortRecord!val!2 0 -> 0
   NodeSortRecord!val!0 0 -> 0
-  else -> 13
+  else -> 1
 }
 
 
-real	0m0.677s
-user	0m0.665s
-sys	0m0.012s
-descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-their13!118 -> 1
-level11!592 -> 0
-level11 -> 2281
+real	0m0.285s
+user	0m0.277s
+sys	0m0.008s
+descartes -p=3 -m=1: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+level11 -> 2
 res1!12 -> 0
-level12!120 -> 2282
-levels31 -> 450
-cmp12!116 -> 0
-our22!306 -> 0
+their23!7880 -> 0
+levels31 -> 1
+cmp33!8945 -> 1
 o12!8 -> NodeSortRecord!val!0
-levels21 -> 2283
-their22!307 -> (- 1)
+levels21 -> 2
+cmp23!7881 -> (- 1)
 o13!10 -> NodeSortRecord!val!1
 res3!14 -> (- 1)
+o23!11 -> NodeSortRecord!val!2
 o11!6 -> NodeSortRecord!val!0
+our22!7876 -> 0
+their32!8941 -> (- 1)
+cmp32!8942 -> 0
+res2!13 -> 1
+o21!7 -> NodeSortRecord!val!1
+level21 -> 1
+level31!8946 -> 0
+our33!8943 -> 0
+level11!8948 -> 0
+levels11 -> 2
+o22!9 -> NodeSortRecord!val!2
+their33!8944 -> (- 1)
+cmp22!7878 -> 0
+level21!8947 -> 0
+our32!8940 -> (- 1)
+their22!7877 -> 0
+our23!7879 -> (- 1)
+level31 -> 0
+get!4!9081 -> {
+  NodeSortRecord!val!1 0 -> 14
+  NodeSortRecord!val!0 0 -> 0
+  else -> 12
+}
+compareInt!19 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+sortOrder!3 -> {
+  1
+}
+stringValue!1 -> {
+  (stringValue!1!9082 (:var 0) (k!9080 (:var 1)))
+}
+get!4 -> {
+  (get!4!9081 (:var 0) (k!9080 (:var 1)))
+}
+numericValue!2!9083 -> {
+  NodeSortRecord!val!1 0 -> (- 1)
+  NodeSortRecord!val!2 0 -> (- 1)
+  NodeSortRecord!val!0 0 -> (- 1)
+  else -> 0
+}
+node!0 -> {
+  0
+}
+numericValue!2 -> {
+  (numericValue!2!9083 (:var 0) (k!9080 (:var 1)))
+}
+compareIgnoreCaseString!20 -> {
+  0
+}
+equals!21 -> {
+  15
+}
+settingsGetSortOrdersLength!5 -> {
+  NodeSortRecord!val!1 -> 1
+  else -> 2
+}
+k!9080 -> {
+  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+}
+stringValue!1!9082 -> {
+  NodeSortRecord!val!2 1 -> 0
+  NodeSortRecord!val!1 0 -> 0
+  else -> (- 1)
+}
+
+
+real	0m0.722s
+user	0m0.710s
+sys	0m0.012s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+their12!143 -> 0
+level11 -> 448
+res1!12 -> 0
+our22!388 -> 1
+levels31 -> 610
+level12!148 -> 449
+o12!8 -> NodeSortRecord!val!0
+levels21 -> 450
+our32!635 -> 0
+o13!10 -> NodeSortRecord!val!1
+our13!145 -> (- 1)
+res3!14 -> (- 1)
+o11!6 -> NodeSortRecord!val!0
+their22!389 -> 0
 o23!11 -> NodeSortRecord!val!2
 res2!13 -> 1
-cmp13!119 -> (- 1)
-our13!117 -> 0
+level31!779 -> 0
+cmp13!147 -> (- 1)
+their32!636 -> 1
 o21!7 -> NodeSortRecord!val!1
-cmp22!308 -> 1
-level21 -> 2282
-cmp32!470 -> (- 1)
-our12!114 -> 1
-level21!593 -> 0
-our32!468 -> 0
-levels11 -> 2283
-level31!594 -> 0
+level21 -> 449
+cmp22!390 -> 1
+level21!778 -> 0
+cmp32!637 -> (- 1)
+levels11 -> 450
+their13!146 -> 0
 o22!9 -> NodeSortRecord!val!2
-level31 -> 449
-their32!469 -> 1
-their12!115 -> 1
+cmp12!144 -> 0
+our12!142 -> 0
+level31 -> 609
+level11!777 -> 0
 compareInt!19 -> {
+  0
+}
+compareDouble!18 -> {
+  0
+}
+stringValue!1 -> {
+  NodeSortRecord!val!1 448 -> 0
+  else -> (- 1)
+}
+get!4 -> {
   0
 }
 node!0 -> {
   0
 }
 numericValue!2 -> {
-  NodeSortRecord!val!0 2282 -> 0
-  NodeSortRecord!val!2 2282 -> (- 1)
-  NodeSortRecord!val!1 449 -> 0
-  else -> 1
-}
-compareDouble!18 -> {
-  0
+  NodeSortRecord!val!0 449 -> 1
+  NodeSortRecord!val!2 609 -> 1
+  else -> 0
 }
 compareIgnoreCaseString!20 -> {
   0
 }
+equals!21 -> {
+  5
+}
 settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 450
-  else -> 2283
-}
-stringValue!1 -> {
-  NodeSortRecord!val!1 2281 -> 1
-  else -> 0
-}
-get!4 -> {
-  0
+  NodeSortRecord!val!1 -> 610
+  else -> 450
 }
 
 
-real	0m0.271s
-user	0m0.255s
+real	0m0.290s
+user	0m0.274s
 sys	0m0.016s
 descartes -p=3 -m=3: 
+Invariant:
+(let ((a!1 (exists ((level11 Int))
+             (and (= o11!6 o12!8)
+                  (= o21!7 o13!10)
+                  (= o22!9 o23!11)
+                  (= levels11 (settingsGetSortOrdersLength!5 o11!6))
+                  (>= levels11 0)
+                  (= level11 0))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 level11))
+                 (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
+  (and a!1 a!2 (>= level11 0)))
+Invariant:
+(let ((a!1 (exists ((level21 Int))
+             (let ((a!1 (exists ((level11 Int))
+                          (and (= o11!6 o12!8)
+                               (= o21!7 o13!10)
+                               (= o22!9 o23!11)
+                               (= levels11
+                                  (settingsGetSortOrdersLength!5 o11!6))
+                               (>= levels11 0)
+                               (= level11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 level11))
+                              (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
+               (and a!1
+                    a!2
+                    (>= level11 0)
+                    (< level11 levels11)
+                    (= our12!142 (numericValue!2 o11!6 level11))
+                    (= their12!143 (numericValue!2 o21!7 level11))
+                    (= cmp12!144 (- our12!142 their12!143))
+                    (not (= cmp12!144 0))
+                    (= res1!12 cmp12!144)
+                    (= levels21 (settingsGetSortOrdersLength!5 o12!8))
+                    (>= levels21 0)
+                    (= level21 0)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 level21))
+                 (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+  (and a!1 a!2 (>= level21 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= level11 0)
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (= cmp12!144 0))
+                                 (= res1!12 cmp12!144)
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+               (and a!1
+                    a!2
+                    (>= level21 0)
+                    (< level21 levels21)
+                    (= our22!452 (numericValue!2 o12!8 level21))
+                    (= their22!453 (numericValue!2 o22!9 level21))
+                    (= cmp22!454 (- our22!452 their22!453))
+                    (not (= cmp22!454 0))
+                    (= res2!13 cmp22!454)
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= level11 0)
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (= cmp12!144 0))
+                                 (= res1!12 cmp12!144)
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2)))))
+                   (a!3 (= res2!13
+                           (ite (= (sortOrder!3 o12!8 level21) 1)
+                                (- 0 cmp23!1386)
+                                cmp23!1386))))
+               (and a!1
+                    a!2
+                    (>= level21 0)
+                    (< level21 levels21)
+                    (= our22!452 (numericValue!2 o12!8 level21))
+                    (= their22!453 (numericValue!2 o22!9 level21))
+                    (= cmp22!454 (- our22!452 their22!453))
+                    (not (not (= cmp22!454 0)))
+                    (= our23!1384 (stringValue!1 o12!8 level21))
+                    (= their23!1385 (stringValue!1 o22!9 level21))
+                    (= cmp23!1386 (- our23!1384 their23!1385))
+                    (not (= (get!4 o12!8 level21) 0))
+                    (not (= cmp23!1386 0))
+                    a!3
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= level11 0)
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (= cmp12!144 0))
+                                 (= res1!12 cmp12!144)
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2)))))
+                   (a!3 (and (not (= (get!4 o12!8 level21) 0))
+                             (not (= cmp23!1386 0)))))
+               (and (and a!1 a!2 (>= level21 0))
+                    (and a!1 a!2 (>= level21 0))
+                    (< level21 levels21)
+                    (= our22!452 (numericValue!2 o12!8 level21))
+                    (= their22!453 (numericValue!2 o22!9 level21))
+                    (= cmp22!454 (- our22!452 their22!453))
+                    (not (not (= cmp22!454 0)))
+                    (= our23!1384 (stringValue!1 o12!8 level21))
+                    (= their23!1385 (stringValue!1 o22!9 level21))
+                    (= cmp23!1386 (- our23!1384 their23!1385))
+                    (not a!3)
+                    (= level22!2275 (+ level21 1))
+                    (= res2!13 (- (node!0 o12!8) (node!0 o22!9)))
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level21 Int))
+             (let ((a!1 (exists ((level11 Int))
+                          (and (= o11!6 o12!8)
+                               (= o21!7 o13!10)
+                               (= o22!9 o23!11)
+                               (= levels11
+                                  (settingsGetSortOrdersLength!5 o11!6))
+                               (>= levels11 0)
+                               (= level11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 level11))
+                              (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                   (a!3 (= res1!12
+                           (ite (= (sortOrder!3 o11!6 level11) 1)
+                                (- 0 cmp13!3380)
+                                cmp13!3380))))
+               (and a!1
+                    a!2
+                    (>= level11 0)
+                    (< level11 levels11)
+                    (= our12!142 (numericValue!2 o11!6 level11))
+                    (= their12!143 (numericValue!2 o21!7 level11))
+                    (= cmp12!144 (- our12!142 their12!143))
+                    (not (not (= cmp12!144 0)))
+                    (= our13!3378 (stringValue!1 o11!6 level11))
+                    (= their13!3379 (stringValue!1 o21!7 level11))
+                    (= cmp13!3380 (- our13!3378 their13!3379))
+                    (not (= (get!4 o11!6 level11) 0))
+                    (not (= cmp13!3380 0))
+                    a!3
+                    (= levels21 (settingsGetSortOrdersLength!5 o12!8))
+                    (>= levels21 0)
+                    (= level21 0)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 level21))
+                 (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+  (and a!1 a!2 (>= level21 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                                (a!3 (= res1!12
+                                        (ite (= (sortOrder!3 o11!6 level11) 1)
+                                             (- 0 cmp13!3380)
+                                             cmp13!3380))))
+                            (and a!1
+                                 a!2
+                                 (>= level11 0)
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (not (= cmp12!144 0)))
+                                 (= our13!3378 (stringValue!1 o11!6 level11))
+                                 (= their13!3379 (stringValue!1 o21!7 level11))
+                                 (= cmp13!3380 (- our13!3378 their13!3379))
+                                 (not (= (get!4 o11!6 level11) 0))
+                                 (not (= cmp13!3380 0))
+                                 a!3
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+               (and a!1
+                    a!2
+                    (>= level21 0)
+                    (< level21 levels21)
+                    (= our22!3769 (numericValue!2 o12!8 level21))
+                    (= their22!3770 (numericValue!2 o22!9 level21))
+                    (= cmp22!3771 (- our22!3769 their22!3770))
+                    (not (= cmp22!3771 0))
+                    (= res2!13 cmp22!3771)
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                                (a!3 (= res1!12
+                                        (ite (= (sortOrder!3 o11!6 level11) 1)
+                                             (- 0 cmp13!3380)
+                                             cmp13!3380))))
+                            (and a!1
+                                 a!2
+                                 (>= level11 0)
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (not (= cmp12!144 0)))
+                                 (= our13!3378 (stringValue!1 o11!6 level11))
+                                 (= their13!3379 (stringValue!1 o21!7 level11))
+                                 (= cmp13!3380 (- our13!3378 their13!3379))
+                                 (not (= (get!4 o11!6 level11) 0))
+                                 (not (= cmp13!3380 0))
+                                 a!3
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2)))))
+                   (a!3 (= res2!13
+                           (ite (= (sortOrder!3 o12!8 level21) 1)
+                                (- 0 cmp23!4803)
+                                cmp23!4803))))
+               (and a!1
+                    a!2
+                    (>= level21 0)
+                    (< level21 levels21)
+                    (= our22!3769 (numericValue!2 o12!8 level21))
+                    (= their22!3770 (numericValue!2 o22!9 level21))
+                    (= cmp22!3771 (- our22!3769 their22!3770))
+                    (not (not (= cmp22!3771 0)))
+                    (= our23!4801 (stringValue!1 o12!8 level21))
+                    (= their23!4802 (stringValue!1 o22!9 level21))
+                    (= cmp23!4803 (- our23!4801 their23!4802))
+                    (not (= (get!4 o12!8 level21) 0))
+                    (not (= cmp23!4803 0))
+                    a!3
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                                (a!3 (= res1!12
+                                        (ite (= (sortOrder!3 o11!6 level11) 1)
+                                             (- 0 cmp13!3380)
+                                             cmp13!3380))))
+                            (and a!1
+                                 a!2
+                                 (>= level11 0)
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (not (= cmp12!144 0)))
+                                 (= our13!3378 (stringValue!1 o11!6 level11))
+                                 (= their13!3379 (stringValue!1 o21!7 level11))
+                                 (= cmp13!3380 (- our13!3378 their13!3379))
+                                 (not (= (get!4 o11!6 level11) 0))
+                                 (not (= cmp13!3380 0))
+                                 a!3
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2)))))
+                   (a!3 (and (not (= (get!4 o12!8 level21) 0))
+                             (not (= cmp23!4803 0)))))
+               (and (and a!1 a!2 (>= level21 0))
+                    (and a!1 a!2 (>= level21 0))
+                    (< level21 levels21)
+                    (= our22!3769 (numericValue!2 o12!8 level21))
+                    (= their22!3770 (numericValue!2 o22!9 level21))
+                    (= cmp22!3771 (- our22!3769 their22!3770))
+                    (not (not (= cmp22!3771 0)))
+                    (= our23!4801 (stringValue!1 o12!8 level21))
+                    (= their23!4802 (stringValue!1 o22!9 level21))
+                    (= cmp23!4803 (- our23!4801 their23!4802))
+                    (not a!3)
+                    (= level22!5706 (+ level21 1))
+                    (= res2!13 (- (node!0 o12!8) (node!0 o22!9)))
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level21 Int))
+             (let ((a!1 (exists ((level11 Int))
+                          (and (= o11!6 o12!8)
+                               (= o21!7 o13!10)
+                               (= o22!9 o23!11)
+                               (= levels11
+                                  (settingsGetSortOrdersLength!5 o11!6))
+                               (>= levels11 0)
+                               (= level11 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 level11))
+                              (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                   (a!3 (and (not (= (get!4 o11!6 level11) 0))
+                             (not (= cmp13!3380 0)))))
+               (and (and a!1 a!2 (>= level11 0))
+                    (and a!1 a!2 (>= level11 0))
+                    (< level11 levels11)
+                    (= our12!142 (numericValue!2 o11!6 level11))
+                    (= their12!143 (numericValue!2 o21!7 level11))
+                    (= cmp12!144 (- our12!142 their12!143))
+                    (not (not (= cmp12!144 0)))
+                    (= our13!3378 (stringValue!1 o11!6 level11))
+                    (= their13!3379 (stringValue!1 o21!7 level11))
+                    (= cmp13!3380 (- our13!3378 their13!3379))
+                    (not a!3)
+                    (= level12!6788 (+ level11 1))
+                    (= res1!12 (- (node!0 o11!6) (node!0 o21!7)))
+                    (= levels21 (settingsGetSortOrdersLength!5 o12!8))
+                    (>= levels21 0)
+                    (= level21 0)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 level21))
+                 (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+  (and a!1 a!2 (>= level21 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                                (a!3 (and (not (= (get!4 o11!6 level11) 0))
+                                          (not (= cmp13!3380 0)))))
+                            (and (and a!1 a!2 (>= level11 0))
+                                 (and a!1 a!2 (>= level11 0))
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (not (= cmp12!144 0)))
+                                 (= our13!3378 (stringValue!1 o11!6 level11))
+                                 (= their13!3379 (stringValue!1 o21!7 level11))
+                                 (= cmp13!3380 (- our13!3378 their13!3379))
+                                 (not a!3)
+                                 (= level12!6788 (+ level11 1))
+                                 (= res1!12 (- (node!0 o11!6) (node!0 o21!7)))
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+               (and a!1
+                    a!2
+                    (>= level21 0)
+                    (< level21 levels21)
+                    (= our22!7217 (numericValue!2 o12!8 level21))
+                    (= their22!7218 (numericValue!2 o22!9 level21))
+                    (= cmp22!7219 (- our22!7217 their22!7218))
+                    (not (= cmp22!7219 0))
+                    (= res2!13 cmp22!7219)
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (>= level31 0)))
+Invariant:
+(let ((a!1 (exists ((level31 Int))
+             (let ((a!1 (exists ((level21 Int))
+                          (let ((a!1 (exists ((level11 Int))
+                                       (and (= o11!6 o12!8)
+                                            (= o21!7 o13!10)
+                                            (= o22!9 o23!11)
+                                            (= levels11
+                                               (settingsGetSortOrdersLength!5
+                                                 o11!6))
+                                            (>= levels11 0)
+                                            (= level11 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 level11))
+                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1)))))
+                                (a!3 (and (not (= (get!4 o11!6 level11) 0))
+                                          (not (= cmp13!3380 0)))))
+                            (and (and a!1 a!2 (>= level11 0))
+                                 (and a!1 a!2 (>= level11 0))
+                                 (< level11 levels11)
+                                 (= our12!142 (numericValue!2 o11!6 level11))
+                                 (= their12!143 (numericValue!2 o21!7 level11))
+                                 (= cmp12!144 (- our12!142 their12!143))
+                                 (not (not (= cmp12!144 0)))
+                                 (= our13!3378 (stringValue!1 o11!6 level11))
+                                 (= their13!3379 (stringValue!1 o21!7 level11))
+                                 (= cmp13!3380 (- our13!3378 their13!3379))
+                                 (not a!3)
+                                 (= level12!6788 (+ level11 1))
+                                 (= res1!12 (- (node!0 o11!6) (node!0 o21!7)))
+                                 (= levels21
+                                    (settingsGetSortOrdersLength!5 o12!8))
+                                 (>= levels21 0)
+                                 (= level21 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 level21))
+                              (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
+               (and a!1
+                    a!2
+                    (>= level21 0)
+                    (< level21 levels21)
+                    (= our22!7217 (numericValue!2 o12!8 level21))
+                    (= their22!7218 (numericValue!2 o22!9 level21))
+                    (= cmp22!7219 (- our22!7217 their22!7218))
+                    (not (= cmp22!7219 0))
+                    (= res2!13 cmp22!7219)
+                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
+                    (>= levels31 0)
+                    (= level31 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 level31))
+                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
+  (and a!1 a!2 (<= level31 0)))
 descartes: analyse_loop failed
 
-real	0m0.416s
-user	0m0.404s
-sys	0m0.012s
+real	0m0.485s
+user	0m0.476s
+sys	0m0.008s

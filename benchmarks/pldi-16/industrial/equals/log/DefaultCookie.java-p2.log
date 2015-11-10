@@ -1,0 +1,61 @@
+Property 4 (Transitivity)
+descartes -p=4 -m=0: 
+Sat: VIOLATES [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+o23!8 -> DefaultCookie!val!2
+o13!7 -> DefaultCookie!val!1
+res3!11 -> 9
+o21!4 -> DefaultCookie!val!0
+o22!6 -> DefaultCookie!val!2
+o12!5 -> DefaultCookie!val!0
+res1!9 -> 1
+o11!3 -> DefaultCookie!val!1
+res2!10 -> 1
+domain!1 -> {
+  DefaultCookie!val!1 -> 7
+  DefaultCookie!val!2 -> 8
+  else -> 3
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  (equals!18!762 (k!761 (:var 0)) (k!761 (:var 1)))
+}
+compareInt!16 -> {
+  0
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+name!2 -> {
+  DefaultCookie!val!1 -> 4
+  DefaultCookie!val!2 -> 6
+  else -> 2
+}
+k!761 -> {
+  3 -> 3
+  4 -> 4
+  7 -> 7
+  6 -> 6
+  2 -> 2
+  else -> 8
+}
+path!0 -> {
+  0
+}
+equals!18!762 -> {
+  4 2 -> 12
+  2 6 -> 10
+  4 6 -> 11
+  7 8 -> 9
+  6 2 -> 10
+  6 4 -> 11
+  2 4 -> 12
+  8 7 -> 9
+  else -> 1
+}
+
+
+real	0m0.236s
+user	0m0.235s
+sys	0m0.000s
