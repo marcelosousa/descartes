@@ -33,14 +33,16 @@ assume expr = do
 ret :: Int -> Maybe Exp -> EnvOp ()
 ret pid mexpr = do
  env@Env{..} <- get
- case mexpr of
-  Nothing -> error "analyser: return Nothing"
-  Just expr -> do
-   exprPsi <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) expr
-   let resPid = _res !! pid
-   r <- lift $ mkEq resPid exprPsi
-   pre <- lift $ mkAnd [_pre,r]
-   updatePre pre
+ exprPsi <- lift $ 
+   case mexpr of
+     Nothing -> error "analyser: return Nothing"
+     Just (Lit (Boolean True)) -> mkIntNum 1
+     Just (Lit (Boolean False)) -> mkIntNum 0
+     Just expr -> processExp (_objSort,_params,_res,_fields,_ssamap) expr
+ let resPid = _res !! pid
+ r <- lift $ mkEq resPid exprPsi
+ pre <- lift $ mkAnd [_pre,r]
+ updatePre pre
 
 -- Analyse Method Call
 method_call :: MethodInvocation -> EnvOp ()

@@ -83,7 +83,7 @@ updateAssignMap assmap = do
   put s{ _assmap = assmap}
 
 incrementAssignMap :: Ident -> Exp -> EnvOp ()
-incrementAssignMap i e = T.trace ("incrementAssignMap") $ do
+incrementAssignMap i e = do
   s@Env{..} <- get
   let assignMap = M.insert i e _assmap
   put s{ _assmap = assignMap}

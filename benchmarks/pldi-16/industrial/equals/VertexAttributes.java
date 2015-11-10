@@ -33,15 +33,15 @@ public final class VertexAttributes implements Iterable<VertexAttribute>, Compar
 	int reference;
 	int get(int i);
 	
-	public int equals(VertexAttributes o1, VertexAttributes o2) {
+	public boolean equals(VertexAttributes o1, VertexAttributes o2) {
 		if (o1.attributesLength != o2.attributesLength) {
-		  return 0;
+		  return false;
 	  }
 		for (int i = 0; i < o1.attributesLength; i++) {
 		  if (equals(o1.get(i), o2.get(i)) == 0) {
-		    return 0;
+		    return false;
 		  }
 		}
-		return 1;
+		return true;
 	}
 }

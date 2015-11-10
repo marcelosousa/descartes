@@ -27,17 +27,17 @@ public class CharSequence {
     /**
      * Compares two character sequences for equality.
      */
-    public static int equals(CharSequence o1, CharSequence o2) {
+    public static boolean equals(CharSequence o1, CharSequence o2) {
         if (o1.length() != o2.length()) {
-            return 0;
+            return false;
         }
 
         int length = o1.length();
         for (int i = 0; i < length; i++) {
             if (o1.charAt(i) != o2.charAt(i)) {
-                return 0;
+                return false;
             }
         }
-        return 1;
+        return true;
     }
 }

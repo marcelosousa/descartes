@@ -32,6 +32,9 @@ import com.google.gwt.corp.compatibility.StringToByteBuffer;
  * </ul>
  * @since Android 1.0 */
 public abstract class ByteBuffer extends Buffer implements Comparable<ByteBuffer>, StringToByteBuffer {
+  int position;
+  int limit;
+  Byte get(int index);
   
 	/** Checks whether this byte buffer is equal to another object.
 	 * <p>
@@ -42,25 +45,23 @@ public abstract class ByteBuffer extends Buffer implements Comparable<ByteBuffer
 	 * @param other the object to compare with this byte buffer.
 	 * @return {@code true} if this byte buffer is equal to {@code other}, {@code false} otherwise.
 	 * @since Android 1.0 */
-	public boolean equals (Object other) {
-		if (!(other instanceof ByteBuffer)) {
-			return false;
-		}
-		ByteBuffer otherBuffer = (ByteBuffer)other;
-
-		if (remaining() != otherBuffer.remaining()) {
-			return false;
-		}
-
-		int myPosition = position;
-		int otherPosition = otherBuffer.position;
-		boolean equalSoFar = true;
-		while (equalSoFar && (myPosition < limit)) {
-			equalSoFar = get(myPosition++) == otherBuffer.get(otherPosition++);
-		}
-
-		return equalSoFar;
+	public boolean equals (ByteBuffer o1, ByteBuffer o2) {
+    int o1rem = o1.limit - o1.position;
+    int o2rem = o2.limit - o2.position;
+    if (o1rem != o2rem) {
+      return false;
+    }
+    
+    assume(o1.limit >= 0);
+    assume(o1.limit == o2.limit);
+    
+    int i = o1.position;
+    while (i < o1.limit) {
+      if (o1.get(i) != o2.get(i)) {
+        return false;
+      }
+      i++;
+    }
+    return true;
 	}
-
-
 }

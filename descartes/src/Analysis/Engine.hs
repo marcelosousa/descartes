@@ -103,9 +103,10 @@ processType (PrimType ty) =
   case ty of
     BooleanT -> mkBoolSort
     _ -> mkIntSort -- error $ "processType: " ++ show ty ++ " not supported"
-processType (RefType (ClassRefType (ClassType [(Ident name,[])]))) = do
-    sym <- mkStringSymbol name
-    mkUninterpretedSort sym
+processType (RefType (ClassRefType (ClassType [(Ident name,[])]))) = mkIntSort
+--  do
+--    sym <- mkStringSymbol name
+--    mkUninterpretedSort sym
 processType ty@(RefType _) = error $ "processType: not supported " ++ show ty
 
 processAssign :: AST -> AssignOp -> AST -> AST -> Z3 AST
@@ -212,6 +213,7 @@ processBinOp op lhs rhs = do
     NotEq -> mkEq lhs rhs >>= \eq -> mkNot eq
     And -> mkAnd [lhs,rhs]
     Add -> mkAdd [lhs,rhs]
+    Mult -> mkMul [lhs,rhs]
     Sub -> mkSub [lhs,rhs]
     LThan -> mkLt lhs rhs
     LThanE -> mkLe lhs rhs

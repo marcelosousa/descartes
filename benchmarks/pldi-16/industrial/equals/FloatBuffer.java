@@ -31,8 +31,7 @@ package java.nio;
  * @since Android 1.0 */
 public abstract class FloatBuffer extends Buffer implements Comparable<FloatBuffer> {
   int position;
-  int limit();
-  int remaining();
+  int limit;
   float get(int index);
   
 	/** Checks whether this float buffer is equal to another object.
@@ -44,29 +43,24 @@ public abstract class FloatBuffer extends Buffer implements Comparable<FloatBuff
 	 * @param other the object to compare with this float buffer.
 	 * @return {@code true} if this float buffer is equal to {@code other}, {@code false} otherwise.
 	 * @since Android 1.0 */
-	public int equals (FloatBuffer o1, FloatBuffer o2) {
-		if (o1.remaining() != o2.remaining()) {
-			return 0;
-		}
-
-		int myPosition = o1.position;
-		int otherPosition = o2.position;
-		int i = 0;
-		int equalSoFar = 1;
-		float thisFloat, otherFloat;
-		while (myPosition < o1.limit() && o1.get(myPosition) == o2.get(myPosition)) {
-  		thisFloat = o1.get(myPosition);
-  		otherFloat = o2.get(otherPosition);
-		  if (thisFloat != otherFloat) {
-		    equalSoFar = 0;
-		  }
-		  myPosition++;
-		  otherPosition++;
-		  i++;
-			//equalSoFar = o1.get(myPosition++) == o2.get(otherPosition++);
-		}
-
-		return equalSoFar;
+	public boolean equals (FloatBuffer o1, FloatBuffer o2) {
+    int o1rem = o1.limit - o1.position;
+    int o2rem = o2.limit - o2.position;
+    if (o1rem != o2rem) {
+      return false;
+    }
+    
+    assume(o1.limit >= 0);
+    assume(o1.limit == o2.limit);
+    
+    int i = o1.position;
+    while (i < o1.limit) {
+      if (o1.get(i) != o2.get(i)) {
+        return false;
+      }
+      i++;
+    }
+    return true;
 	}
 
 }
