@@ -9,6 +9,7 @@ import Analysis.Engine
 import Analysis.Types
 import Analysis.Util
 import Control.Monad.State.Strict
+import Data.List
 import qualified Data.Map as M
 import Language.Java.Syntax
 import Z3.Monad hiding (Params)
@@ -19,7 +20,8 @@ guessInvariants :: Int -> Exp -> Stmt -> EnvOp [AST]
 guessInvariants pid cond body = do
   env@Env{..} <- get
   let fnCalls = getFnCalls cond ++ getFnCalls body
-  fnNames <- lift $ foldM (search _fields) [] fnCalls 
+  fnNames' <- lift $ foldM (search _fields) [] fnCalls 
+  let fnNames = nub fnNames'
   increasing <- guessInvariant fnNames mkGe mkLe mkLt pid cond
   decreasing <- guessInvariant fnNames mkLe mkGe mkGt pid cond
   return $ increasing ++ decreasing
