@@ -3,23 +3,23 @@ descartes -p=1 -m=0:
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.174s
-user	0m0.169s
-sys	0m0.004s
+user	0m0.172s
+sys	0m0.000s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.153s
-user	0m0.148s
-sys	0m0.004s
+real	0m0.163s
+user	0m0.155s
+sys	0m0.008s
 descartes -p=1 -m=2: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
+descartes: none of the invariants was able to prove the property.
 
 real	0m0.011s
-user	0m0.007s
-sys	0m0.004s
-descartes -p=1 -m=3: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
-
-real	0m0.009s
-user	0m0.010s
+user	0m0.011s
 sys	0m0.000s
+descartes -p=1 -m=3: 
+descartes: none of the invariants was able to prove the property.
+
+real	0m0.008s
+user	0m0.004s
+sys	0m0.004s

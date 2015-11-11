@@ -1,185 +1,25 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-lCompare23!1098 -> 0
-res2!13 -> 1
-o21!9 -> CatBPos!val!1
-lCompare13!467 -> 0
-res1!12 -> 1
-lCompare22!1060 -> 0
-o22!11 -> CatBPos!val!0
-o12!10 -> CatBPos!val!1
-lCompare12!22 -> 0
-o11!8 -> CatBPos!val!0
-compareDouble!17 -> {
-  0
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!0 -> 4
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  true
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!0 -> 6
-  else -> 5
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-equals!20 -> {
-  2
-}
-getBPosIsDeparture!4 -> {
-  true
-}
 
-
-real	0m0.323s
-user	0m0.323s
-sys	0m0.000s
+real	0m0.326s
+user	0m0.317s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o11!8 -> CatBPos!val!0
-lCompare23!696 -> 0
-o21!9 -> CatBPos!val!1
-res1!12 -> 1
-o12!10 -> CatBPos!val!1
-o22!11 -> CatBPos!val!0
-lCompare12!22 -> 0
-lCompare13!358 -> 0
-lCompare22!658 -> 0
-res2!13 -> 1
-compareDouble!17 -> {
-  0
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!0 -> 4
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  true
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!0 -> 6
-  else -> 5
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-equals!20 -> {
-  2
-}
-getBPosIsDeparture!4 -> {
-  true
-}
 
-
-real	0m0.316s
-user	0m0.316s
-sys	0m0.000s
+real	0m0.266s
+user	0m0.254s
+sys	0m0.012s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o11!8 -> CatBPos!val!0
-o21!9 -> CatBPos!val!1
-res1!12 -> 1
-lCompare23!26 -> 0
-o22!11 -> CatBPos!val!0
-o12!10 -> CatBPos!val!1
-lCompare13!23 -> 0
-lCompare12!22 -> 0
-lCompare22!25 -> 0
-res2!13 -> 1
-compareDouble!17 -> {
-  0
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!0 -> 4
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  true
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!0 -> 6
-  else -> 5
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-equals!20 -> {
-  2
-}
-getBPosIsDeparture!4 -> {
-  true
-}
 
-
-real	0m0.413s
-user	0m0.409s
-sys	0m0.004s
+real	0m0.407s
+user	0m0.399s
+sys	0m0.008s
 descartes -p=1 -m=3: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o11!8 -> CatBPos!val!0
-lCompare23!696 -> 0
-o21!9 -> CatBPos!val!1
-res1!12 -> 1
-o12!10 -> CatBPos!val!1
-o22!11 -> CatBPos!val!0
-lCompare12!22 -> 0
-lCompare13!358 -> 0
-lCompare22!658 -> 0
-res2!13 -> 1
-compareDouble!17 -> {
-  0
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!0 -> 4
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  true
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!0 -> 6
-  else -> 5
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-equals!20 -> {
-  2
-}
-getBPosIsDeparture!4 -> {
-  true
-}
 
-
-real	0m0.307s
-user	0m0.291s
-sys	0m0.016s
+real	0m0.274s
+user	0m0.262s
+sys	0m0.012s

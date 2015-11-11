@@ -1,173 +1,25 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o23!8 -> Node!val!2
-o13!7 -> Node!val!1
-res3!11 -> 0
-o21!4 -> Node!val!1
-order121 -> 0
-o22!6 -> Node!val!2
-order221 -> 1
-o12!5 -> Node!val!0
-res1!9 -> 0
-o11!3 -> Node!val!0
-res2!10 -> (- 1)
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-getID!2 -> {
-  Node!val!1 -> 5
-  Node!val!2 -> 6
-  else -> 3
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-containsKey!1 -> {
-  Node!val!1 5 -> false
-  else -> true
-}
-get!0 -> {
-  Node!val!2 6 -> 1
-  else -> 0
-}
 
-
-real	0m0.073s
-user	0m0.053s
-sys	0m0.019s
+real	0m0.072s
+user	0m0.068s
+sys	0m0.004s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o23!8 -> Node!val!2
-o13!7 -> Node!val!1
-res3!11 -> 0
-o21!4 -> Node!val!1
-order121 -> 0
-o22!6 -> Node!val!2
-order221 -> 1
-o12!5 -> Node!val!0
-res1!9 -> 0
-o11!3 -> Node!val!0
-res2!10 -> (- 1)
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-getID!2 -> {
-  Node!val!1 -> 5
-  Node!val!2 -> 6
-  else -> 3
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-containsKey!1 -> {
-  Node!val!1 5 -> false
-  else -> true
-}
-get!0 -> {
-  Node!val!2 6 -> 1
-  else -> 0
-}
 
-
-real	0m0.065s
+real	0m0.064s
 user	0m0.060s
 sys	0m0.004s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o23!8 -> Node!val!2
-res3!11 -> 0
-o13!7 -> Node!val!1
-o21!4 -> Node!val!1
-order121 -> 0
-o22!6 -> Node!val!2
-order221 -> 1
-o12!5 -> Node!val!0
-res1!9 -> 0
-o11!3 -> Node!val!0
-res2!10 -> (- 1)
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-getID!2 -> {
-  Node!val!1 -> 5
-  Node!val!2 -> 6
-  else -> 3
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-containsKey!1 -> {
-  Node!val!1 5 -> false
-  else -> true
-}
-get!0 -> {
-  Node!val!2 6 -> 1
-  else -> 0
-}
 
-
-real	0m0.120s
-user	0m0.112s
+real	0m0.125s
+user	0m0.116s
 sys	0m0.008s
 descartes -p=3 -m=3: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o23!8 -> Node!val!2
-o13!7 -> Node!val!1
-res3!11 -> 0
-o21!4 -> Node!val!1
-order121 -> 0
-o22!6 -> Node!val!2
-order221 -> 1
-o12!5 -> Node!val!0
-res1!9 -> 0
-o11!3 -> Node!val!0
-res2!10 -> (- 1)
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-getID!2 -> {
-  Node!val!1 -> 5
-  Node!val!2 -> 6
-  else -> 3
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-containsKey!1 -> {
-  Node!val!1 5 -> false
-  else -> true
-}
-get!0 -> {
-  Node!val!2 6 -> 1
-  else -> 0
-}
 
-
-real	0m0.068s
-user	0m0.064s
-sys	0m0.004s
+real	0m0.070s
+user	0m0.062s
+sys	0m0.009s

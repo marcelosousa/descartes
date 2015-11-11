@@ -1,174 +1,25 @@
 Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o21!6 -> Container!val!1
-o11!5 -> Container!val!0
-o13!9 -> Container!val!0
-o23!10 -> Container!val!2
-res1!11 -> 1
-res3!13 -> (- 1)
-o22!8 -> Container!val!2
-res2!12 -> 1
-o12!7 -> Container!val!1
-compareDouble!17 -> {
-  0
-}
-equals!20 -> {
-  5
-}
-departureTime!3 -> {
-  Container!val!2 -> 8
-  else -> 3
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  Container!val!0 8 -> true
-  else -> false
-}
-departureMaxDuration!2 -> {
-  Container!val!1 -> 5
-  else -> 4
-}
-departureTransportType!0 -> {
-  Container!val!2 -> 7
-  else -> 6
-}
-
 
 real	0m0.032s
-user	0m0.027s
-sys	0m0.004s
+user	0m0.032s
+sys	0m0.000s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o21!6 -> Container!val!1
-o11!5 -> Container!val!0
-o13!9 -> Container!val!0
-o23!10 -> Container!val!2
-res1!11 -> 1
-res3!13 -> (- 1)
-o22!8 -> Container!val!2
-res2!12 -> 1
-o12!7 -> Container!val!1
-compareDouble!17 -> {
-  0
-}
-equals!20 -> {
-  5
-}
-departureTime!3 -> {
-  Container!val!2 -> 8
-  else -> 2
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  Container!val!0 8 -> true
-  else -> false
-}
-departureMaxDuration!2 -> {
-  Container!val!2 -> 6
-  else -> 4
-}
-departureTransportType!0 -> {
-  Container!val!1 -> 7
-  else -> 3
-}
 
-
-real	0m0.039s
-user	0m0.027s
-sys	0m0.012s
+real	0m0.042s
+user	0m0.038s
+sys	0m0.004s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o21!6 -> Container!val!0
-o11!5 -> Container!val!1
-o13!9 -> Container!val!1
-o23!10 -> Container!val!2
-res1!11 -> 1
-res3!13 -> (- 1)
-o22!8 -> Container!val!2
-res2!12 -> 1
-o12!7 -> Container!val!0
-compareDouble!17 -> {
-  0
-}
-departureTime!3 -> {
-  Container!val!2 -> 7
-  else -> 3
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  Container!val!1 7 -> true
-  else -> false
-}
-equals!20 -> {
-  5
-}
-departureTransportType!0 -> {
-  Container!val!0 -> 5
-  Container!val!2 -> 6
-  else -> 4
-}
 
-
-real	0m0.091s
-user	0m0.091s
-sys	0m0.000s
+real	0m0.093s
+user	0m0.084s
+sys	0m0.008s
 descartes -p=2 -m=3: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o21!6 -> Container!val!1
-o11!5 -> Container!val!0
-o13!9 -> Container!val!0
-o23!10 -> Container!val!2
-res1!11 -> 1
-res3!13 -> (- 1)
-o22!8 -> Container!val!2
-res2!12 -> 1
-o12!7 -> Container!val!1
-compareDouble!17 -> {
-  0
-}
-equals!20 -> {
-  5
-}
-departureTime!3 -> {
-  Container!val!2 -> 8
-  else -> 2
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  Container!val!0 8 -> true
-  else -> false
-}
-departureMaxDuration!2 -> {
-  Container!val!2 -> 6
-  else -> 4
-}
-departureTransportType!0 -> {
-  Container!val!1 -> 7
-  else -> 3
-}
-
 
 real	0m0.040s
-user	0m0.032s
-sys	0m0.008s
+user	0m0.031s
+sys	0m0.010s

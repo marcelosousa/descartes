@@ -1,161 +1,25 @@
 Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o23!8 -> DataPoint!val!2
-res3!11 -> 0
-o13!7 -> DataPoint!val!1
-o21!4 -> DataPoint!val!0
-fiscalResult31 -> 0
-o22!6 -> DataPoint!val!2
-fiscalResult11 -> 0
-o12!5 -> DataPoint!val!0
-res1!9 -> 1
-fiscalResult21 -> 0
-o11!3 -> DataPoint!val!1
-res2!10 -> 1
-compareInt!16 -> {
-  0
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-fiscalQuarter!2 -> {
-  DataPoint!val!1 -> 8
-  DataPoint!val!2 -> 9
-  else -> 7
-}
-sectorCode!1 -> {
-  DataPoint!val!0 -> 1
-  else -> 2
-}
 
-
-real	0m0.854s
-user	0m0.845s
-sys	0m0.008s
+real	0m0.884s
+user	0m0.871s
+sys	0m0.012s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o23!8 -> DataPoint!val!2
-res3!11 -> 0
-o13!7 -> DataPoint!val!1
-o21!4 -> DataPoint!val!0
-fiscalResult31 -> 0
-o22!6 -> DataPoint!val!2
-fiscalResult11 -> 0
-o12!5 -> DataPoint!val!0
-res1!9 -> 1
-fiscalResult21 -> 0
-o11!3 -> DataPoint!val!1
-res2!10 -> 1
-compareInt!16 -> {
-  0
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-fiscalQuarter!2 -> {
-  DataPoint!val!1 -> 8
-  DataPoint!val!2 -> 9
-  else -> 7
-}
-sectorCode!1 -> {
-  DataPoint!val!0 -> 1
-  else -> 2
-}
 
-
-real	0m1.209s
-user	0m1.196s
-sys	0m0.012s
+real	0m1.256s
+user	0m1.261s
+sys	0m0.000s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o23!8 -> DataPoint!val!2
-res3!11 -> 0
-o13!7 -> DataPoint!val!1
-o21!4 -> DataPoint!val!0
-fiscalResult31 -> 0
-o22!6 -> DataPoint!val!2
-fiscalResult11 -> 0
-o12!5 -> DataPoint!val!0
-res1!9 -> 1
-fiscalResult21 -> 0
-o11!3 -> DataPoint!val!1
-res2!10 -> 1
-compareInt!16 -> {
-  0
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-fiscalQuarter!2 -> {
-  DataPoint!val!1 -> 8
-  DataPoint!val!2 -> 9
-  else -> 7
-}
-sectorCode!1 -> {
-  DataPoint!val!0 -> 1
-  else -> 2
-}
 
-
-real	0m2.622s
-user	0m2.606s
-sys	0m0.016s
+real	0m2.763s
+user	0m2.743s
+sys	0m0.020s
 descartes -p=2 -m=3: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o23!8 -> DataPoint!val!2
-res3!11 -> 0
-o13!7 -> DataPoint!val!1
-o21!4 -> DataPoint!val!0
-fiscalResult31 -> 0
-o22!6 -> DataPoint!val!2
-fiscalResult11 -> 0
-o12!5 -> DataPoint!val!0
-res1!9 -> 1
-fiscalResult21 -> 0
-o11!3 -> DataPoint!val!1
-res2!10 -> 1
-compareInt!16 -> {
-  0
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-fiscalQuarter!2 -> {
-  DataPoint!val!1 -> 8
-  DataPoint!val!2 -> 9
-  else -> 7
-}
-sectorCode!1 -> {
-  DataPoint!val!0 -> 1
-  else -> 2
-}
 
-
-real	0m1.243s
-user	0m1.235s
+real	0m1.238s
+user	0m1.229s
 sys	0m0.008s

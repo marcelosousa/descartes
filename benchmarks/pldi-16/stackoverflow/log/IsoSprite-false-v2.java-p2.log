@@ -1,193 +1,25 @@
 Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o22!9 -> IsoSprite!val!2
-res1!12 -> 1
-o21!7 -> IsoSprite!val!1
-o13!10 -> IsoSprite!val!0
-res3!14 -> (- 1)
-o11!6 -> IsoSprite!val!0
-o12!8 -> IsoSprite!val!1
-o23!11 -> IsoSprite!val!2
-res2!13 -> 1
-compareInt!19 -> {
-  0
-}
-minY!3 -> {
-  (- 1)
-}
-compareDouble!18 -> {
-  0
-}
-maxZ!0 -> {
-  IsoSprite!val!0 -> 0
-  else -> (- 2)
-}
-maxX!4 -> {
-  1
-}
-maxY!2 -> {
-  0
-}
-equals!21 -> {
-  5
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-minX!5 -> {
-  0
-}
-minZ!1 -> {
-  IsoSprite!val!2 -> (- 1)
-  else -> 1
-}
 
-
-real	0m1.773s
-user	0m1.765s
+real	0m1.811s
+user	0m1.803s
 sys	0m0.008s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o22!9 -> IsoSprite!val!2
-res1!12 -> 1
-o21!7 -> IsoSprite!val!1
-o13!10 -> IsoSprite!val!0
-res3!14 -> (- 1)
-o11!6 -> IsoSprite!val!0
-o12!8 -> IsoSprite!val!1
-o23!11 -> IsoSprite!val!2
-res2!13 -> 1
-compareInt!19 -> {
-  0
-}
-minY!3 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-maxZ!0 -> {
-  IsoSprite!val!0 -> 1
-  else -> (- 1)
-}
-maxX!4 -> {
-  0
-}
-maxY!2 -> {
-  1
-}
-equals!21 -> {
-  5
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-minX!5 -> {
-  (- 1)
-}
-minZ!1 -> {
-  IsoSprite!val!2 -> 0
-  else -> 2
-}
 
-
-real	0m1.183s
-user	0m1.179s
-sys	0m0.004s
+real	0m1.159s
+user	0m1.159s
+sys	0m0.000s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-res2!13 -> 1
-res1!12 -> 1
-o21!7 -> IsoSprite!val!0
-o13!10 -> IsoSprite!val!1
-res3!14 -> (- 1)
-o11!6 -> IsoSprite!val!1
-o12!8 -> IsoSprite!val!0
-o23!11 -> IsoSprite!val!2
-o22!9 -> IsoSprite!val!2
-compareInt!19 -> {
-  0
-}
-minY!3 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-maxZ!0 -> {
-  IsoSprite!val!1 -> 1
-  else -> (- 1)
-}
-maxX!4 -> {
-  0
-}
-maxY!2 -> {
-  1
-}
-equals!21 -> {
-  5
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-minX!5 -> {
-  (- 1)
-}
-minZ!1 -> {
-  IsoSprite!val!2 -> 0
-  else -> 2
-}
 
-
-real	0m5.172s
-user	0m5.150s
-sys	0m0.020s
+real	0m5.167s
+user	0m5.164s
+sys	0m0.000s
 descartes -p=2 -m=3: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-o22!9 -> IsoSprite!val!2
-res1!12 -> 1
-o21!7 -> IsoSprite!val!1
-o13!10 -> IsoSprite!val!0
-res3!14 -> (- 1)
-o11!6 -> IsoSprite!val!0
-o12!8 -> IsoSprite!val!1
-o23!11 -> IsoSprite!val!2
-res2!13 -> 1
-compareInt!19 -> {
-  0
-}
-minY!3 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-maxZ!0 -> {
-  IsoSprite!val!0 -> 1
-  else -> (- 1)
-}
-maxX!4 -> {
-  0
-}
-maxY!2 -> {
-  1
-}
-equals!21 -> {
-  5
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-minX!5 -> {
-  (- 1)
-}
-minZ!1 -> {
-  IsoSprite!val!2 -> 0
-  else -> 2
-}
 
-
-real	0m1.158s
-user	0m1.150s
-sys	0m0.008s
+real	0m1.162s
+user	0m1.158s
+sys	0m0.004s

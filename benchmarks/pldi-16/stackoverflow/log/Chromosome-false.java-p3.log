@@ -1,234 +1,25 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 1
-o21!3 -> Chromosome!val!1
-o12!4 -> Chromosome!val!0
-comp25!171 -> 1
-comp15!22 -> 1
-comp21 -> 0
-comp11 -> 0
-comp26!172 -> 0
-comp24!170 -> 1
-comp35!248 -> 1
-o13!6 -> Chromosome!val!1
-o11!2 -> Chromosome!val!0
-o23!7 -> Chromosome!val!2
-comp32!245 -> 1
-comp22!168 -> 1
-comp31 -> 0
-res2!9 -> 0
-comp33!246 -> 1
-o22!5 -> Chromosome!val!2
-comp12!19 -> 1
-comp14!21 -> 1
-res1!8 -> 0
-comp34!247 -> 1
-comp23!169 -> 1
-comp13!20 -> 1
-comp16!23 -> 0
-comp36!249 -> 1
-getScore!1 -> {
-  Chromosome!val!0 7 -> (- 1)
-  Chromosome!val!1 1 -> (- 1)
-  Chromosome!val!2 1 -> (- 2)
-  else -> 0
-}
-isNull!0 -> {
-  Chromosome!val!1 -> 43
-  Chromosome!val!2 -> 44
-  else -> 42
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  15
-}
-compareInt!15 -> {
-  0
-}
 
-
-real	0m0.318s
-user	0m0.314s
-sys	0m0.005s
+real	0m0.339s
+user	0m0.327s
+sys	0m0.012s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 1
-o21!3 -> Chromosome!val!1
-o12!4 -> Chromosome!val!0
-comp21 -> 0
-comp11 -> 0
-comp22!54 -> 1
-o13!6 -> Chromosome!val!1
-comp36!63 -> 1
-o11!2 -> Chromosome!val!0
-o23!7 -> Chromosome!val!2
-comp16!48 -> 0
-comp24!56 -> 0
-comp26!58 -> 0
-comp31 -> 0
-comp14!46 -> 0
-res2!9 -> 0
-o22!5 -> Chromosome!val!2
-comp32!59 -> 1
-res1!8 -> 0
-comp23!55 -> 0
-comp13!45 -> 0
-comp33!60 -> 1
-comp25!57 -> 0
-comp34!61 -> 1
-comp35!62 -> 1
-comp15!47 -> 0
-comp12!44 -> 1
-getScore!1 -> {
-  Chromosome!val!0 1 -> 2
-  Chromosome!val!1 1 -> 1
-  Chromosome!val!1 2 -> 1
-  Chromosome!val!2 2 -> 1
-  else -> 0
-}
-isNull!0 -> {
-  Chromosome!val!1 -> 42
-  Chromosome!val!2 -> 43
-  else -> 41
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  15
-}
-compareInt!15 -> {
-  0
-}
 
-
-real	0m0.165s
-user	0m0.157s
-sys	0m0.008s
+real	0m0.154s
+user	0m0.150s
+sys	0m0.005s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 1
-o21!3 -> Chromosome!val!1
-o12!4 -> Chromosome!val!0
-comp15!22 -> 0
-comp21 -> 0
-comp11 -> 0
-o13!6 -> Chromosome!val!1
-o11!2 -> Chromosome!val!0
-comp25!27 -> 0
-o23!7 -> Chromosome!val!2
-comp34!31 -> 1
-comp35!32 -> 1
-comp24!26 -> 1
-comp31 -> 0
-res2!9 -> 0
-o22!5 -> Chromosome!val!2
-comp12!19 -> 1
-comp33!30 -> 1
-comp23!25 -> 2
-comp22!24 -> 1
-comp14!21 -> 1
-comp36!33 -> 1
-res1!8 -> 0
-comp32!29 -> 1
-comp13!20 -> 2
-comp16!23 -> 0
-comp26!28 -> 0
-getScore!1 -> {
-  Chromosome!val!0 1 -> 1
-  Chromosome!val!0 3 -> (- 1)
-  Chromosome!val!0 5 -> (- 1)
-  Chromosome!val!2 1 -> (- 1)
-  Chromosome!val!1 2 -> (- 1)
-  Chromosome!val!2 2 -> (- 1)
-  else -> 0
-}
-isNull!0 -> {
-  Chromosome!val!1 -> 38
-  Chromosome!val!2 -> 39
-  else -> 37
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  15
-}
-compareInt!15 -> {
-  0
-}
 
-
-real	0m0.398s
-user	0m0.390s
-sys	0m0.008s
+real	0m0.392s
+user	0m0.375s
+sys	0m0.016s
 descartes -p=3 -m=3: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 1
-o21!3 -> Chromosome!val!1
-o12!4 -> Chromosome!val!0
-comp21 -> 0
-comp11 -> 0
-comp22!54 -> 1
-o13!6 -> Chromosome!val!1
-comp36!63 -> 1
-o11!2 -> Chromosome!val!0
-o23!7 -> Chromosome!val!2
-comp16!48 -> 0
-comp24!56 -> 0
-comp26!58 -> 0
-comp31 -> 0
-comp14!46 -> 0
-res2!9 -> 0
-o22!5 -> Chromosome!val!2
-comp32!59 -> 1
-res1!8 -> 0
-comp23!55 -> 0
-comp13!45 -> 0
-comp33!60 -> 1
-comp25!57 -> 0
-comp34!61 -> 1
-comp35!62 -> 1
-comp15!47 -> 0
-comp12!44 -> 1
-getScore!1 -> {
-  Chromosome!val!0 1 -> 2
-  Chromosome!val!1 1 -> 1
-  Chromosome!val!1 2 -> 1
-  Chromosome!val!2 2 -> 1
-  else -> 0
-}
-isNull!0 -> {
-  Chromosome!val!1 -> 42
-  Chromosome!val!2 -> 43
-  else -> 41
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  15
-}
-compareInt!15 -> {
-  0
-}
 
-
-real	0m0.159s
-user	0m0.146s
-sys	0m0.012s
+real	0m0.166s
+user	0m0.149s
+sys	0m0.016s

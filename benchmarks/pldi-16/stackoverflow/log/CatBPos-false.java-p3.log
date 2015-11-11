@@ -1,237 +1,25 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res1!14 -> 0
-res2!15 -> 1
-lCompare12!25 -> 0
-o12!10 -> CatBPos!val!0
-o21!9 -> CatBPos!val!1
-lCompare23!1027 -> 0
-lCompare22!99 -> 0
-lCompare13!26 -> 0
-o23!13 -> CatBPos!val!2
-res3!16 -> 0
-o22!11 -> CatBPos!val!2
-lCompare32!2138 -> 0
-lCompare33!2287 -> 0
-o13!12 -> CatBPos!val!1
-o11!8 -> CatBPos!val!0
-compareDouble!20 -> {
-  0
-}
-equals!23 -> {
-  5
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!1 -> 8
-  CatBPos!val!2 -> 9
-  else -> 4
-}
-getBPosIsDeparture!4 -> {
-  CatBPos!val!1 -> false
-  else -> true
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!1 -> 6
-  CatBPos!val!2 -> 7
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  CatBPos!val!2 -> true
-  else -> false
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-compareInt!21 -> {
-  0
-}
-compareIgnoreCaseString!22 -> {
-  0
-}
-getBPosGetStat!5 -> {
-  CatBPos!val!1 -> 10
-  else -> 2
-}
 
-
-real	0m2.404s
-user	0m2.400s
-sys	0m0.004s
+real	0m2.388s
+user	0m2.379s
+sys	0m0.008s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o11!8 -> CatBPos!val!0
-res2!15 -> 1
-lCompare12!25 -> 0
-o12!10 -> CatBPos!val!0
-o21!9 -> CatBPos!val!1
-o23!13 -> CatBPos!val!2
-lCompare33!1955 -> 0
-lCompare23!1173 -> 0
-lCompare13!62 -> 0
-res3!16 -> 0
-o22!11 -> CatBPos!val!2
-lCompare32!1806 -> 0
-lCompare22!207 -> 0
-o13!12 -> CatBPos!val!1
-res1!14 -> 0
-compareDouble!20 -> {
-  0
-}
-equals!23 -> {
-  5
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!1 -> 8
-  CatBPos!val!2 -> 9
-  else -> 4
-}
-getBPosIsDeparture!4 -> {
-  CatBPos!val!1 -> false
-  else -> true
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!1 -> 6
-  CatBPos!val!2 -> 7
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  CatBPos!val!2 -> true
-  else -> false
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-compareInt!21 -> {
-  0
-}
-compareIgnoreCaseString!22 -> {
-  0
-}
-getBPosGetStat!5 -> {
-  CatBPos!val!1 -> 10
-  else -> 2
-}
 
-
-real	0m2.402s
-user	0m2.386s
-sys	0m0.016s
+real	0m2.331s
+user	0m2.327s
+sys	0m0.004s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res1!14 -> 0
-res2!15 -> 1
-lCompare12!25 -> 0
-o21!9 -> CatBPos!val!1
-o12!10 -> CatBPos!val!0
-lCompare33!32 -> 0
-lCompare13!26 -> 0
-o23!13 -> CatBPos!val!2
-lCompare22!28 -> 0
-res3!16 -> 0
-o22!11 -> CatBPos!val!2
-lCompare23!29 -> 0
-o13!12 -> CatBPos!val!1
-lCompare32!31 -> 0
-o11!8 -> CatBPos!val!0
-compareDouble!20 -> {
-  0
-}
-equals!23 -> {
-  5
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!1 -> 8
-  CatBPos!val!2 -> 9
-  else -> 4
-}
-getBPosIsDeparture!4 -> {
-  CatBPos!val!1 -> false
-  else -> true
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!1 -> 6
-  CatBPos!val!2 -> 7
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  CatBPos!val!2 -> true
-  else -> false
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-compareInt!21 -> {
-  0
-}
-compareIgnoreCaseString!22 -> {
-  0
-}
-getBPosGetStat!5 -> {
-  CatBPos!val!1 -> 10
-  else -> 2
-}
 
-
-real	0m3.960s
-user	0m3.945s
-sys	0m0.012s
+real	0m3.944s
+user	0m3.922s
+sys	0m0.020s
 descartes -p=3 -m=3: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o11!8 -> CatBPos!val!0
-res2!15 -> 1
-lCompare12!25 -> 0
-o12!10 -> CatBPos!val!0
-o21!9 -> CatBPos!val!1
-o23!13 -> CatBPos!val!2
-lCompare33!1955 -> 0
-lCompare23!1173 -> 0
-lCompare13!62 -> 0
-res3!16 -> 0
-o22!11 -> CatBPos!val!2
-lCompare32!1806 -> 0
-lCompare22!207 -> 0
-o13!12 -> CatBPos!val!1
-res1!14 -> 0
-compareDouble!20 -> {
-  0
-}
-equals!23 -> {
-  5
-}
-getBPosGetTime!6 -> {
-  CatBPos!val!1 -> 8
-  CatBPos!val!2 -> 9
-  else -> 4
-}
-getBPosIsDeparture!4 -> {
-  CatBPos!val!1 -> false
-  else -> true
-}
-getHdopBPosGetTime!7 -> {
-  CatBPos!val!1 -> 6
-  CatBPos!val!2 -> 7
-  else -> 3
-}
-getBPosIsVacation!3 -> {
-  CatBPos!val!2 -> true
-  else -> false
-}
-getHdopBPosGetTimeIsNotVoid!0 -> {
-  true
-}
-compareInt!21 -> {
-  0
-}
-compareIgnoreCaseString!22 -> {
-  0
-}
-getBPosGetStat!5 -> {
-  CatBPos!val!1 -> 10
-  else -> 2
-}
 
-
-real	0m2.358s
-user	0m2.341s
+real	0m2.372s
+user	0m2.356s
 sys	0m0.016s

@@ -2,24 +2,24 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.363s
-user	0m0.359s
+real	0m0.372s
+user	0m0.368s
 sys	0m0.004s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m1.536s
-user	0m1.524s
-sys	0m0.012s
+real	0m1.519s
+user	0m1.518s
+sys	0m0.000s
 descartes -p=3 -m=2: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.010s
-user	0m0.005s
-sys	0m0.005s
-descartes -p=3 -m=3: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
-
-real	0m0.008s
+real	0m0.012s
 user	0m0.004s
-sys	0m0.004s
+sys	0m0.008s
+descartes -p=3 -m=3: 
+descartes: none of the invariants was able to prove the property.
+
+real	0m0.011s
+user	0m0.007s
+sys	0m0.003s

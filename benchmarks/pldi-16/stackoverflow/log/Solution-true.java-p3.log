@@ -2,24 +2,24 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m1.223s
-user	0m1.203s
-sys	0m0.020s
+real	0m1.213s
+user	0m1.213s
+sys	0m0.000s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m47.972s
-user	0m47.883s
-sys	0m0.080s
+real	0m47.789s
+user	0m47.707s
+sys	0m0.068s
 descartes -p=3 -m=2: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	2m45.800s
-user	2m35.912s
-sys	0m9.861s
+real	2m43.327s
+user	2m43.054s
+sys	0m0.256s
 descartes -p=3 -m=3: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m48.635s
-user	0m48.545s
-sys	0m0.080s
+real	0m46.932s
+user	0m46.861s
+sys	0m0.060s

@@ -1,129 +1,25 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!6 -> Container!val!1
-o12!7 -> Container!val!1
-o11!5 -> Container!val!0
-res1!9 -> (- 1)
-o22!8 -> Container!val!0
-res2!10 -> (- 1)
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  2
-}
-departureTime!3 -> {
-  Container!val!0 -> 2
-  else -> 1
-}
-compareInt!15 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  true
-}
-
 
 real	0m0.044s
-user	0m0.031s
-sys	0m0.012s
+user	0m0.044s
+sys	0m0.000s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!6 -> Container!val!1
-o12!7 -> Container!val!1
-o11!5 -> Container!val!0
-res1!9 -> (- 1)
-o22!8 -> Container!val!0
-res2!10 -> (- 1)
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  2
-}
-departureTime!3 -> {
-  Container!val!0 -> 2
-  else -> 1
-}
-compareInt!15 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  true
-}
 
-
-real	0m0.026s
-user	0m0.018s
-sys	0m0.007s
+real	0m0.029s
+user	0m0.029s
+sys	0m0.000s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!6 -> Container!val!1
-o12!7 -> Container!val!1
-o11!5 -> Container!val!0
-res1!9 -> (- 1)
-o22!8 -> Container!val!0
-res2!10 -> (- 1)
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  2
-}
-departureTime!3 -> {
-  Container!val!0 -> 2
-  else -> 1
-}
-compareInt!15 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  true
-}
 
-
-real	0m0.034s
-user	0m0.025s
-sys	0m0.008s
+real	0m0.038s
+user	0m0.038s
+sys	0m0.000s
 descartes -p=1 -m=3: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!6 -> Container!val!1
-o12!7 -> Container!val!1
-o11!5 -> Container!val!0
-res1!9 -> (- 1)
-o22!8 -> Container!val!0
-res2!10 -> (- 1)
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-equals!17 -> {
-  2
-}
-departureTime!3 -> {
-  Container!val!0 -> 2
-  else -> 1
-}
-compareInt!15 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  true
-}
 
-
-real	0m0.025s
-user	0m0.017s
-sys	0m0.007s
+real	0m0.029s
+user	0m0.029s
+sys	0m0.000s

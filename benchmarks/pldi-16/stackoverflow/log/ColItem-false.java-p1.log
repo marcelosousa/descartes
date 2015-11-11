@@ -1,157 +1,25 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o12!6 -> CollectionItem!val!1
-res2!9 -> 1
-o11!4 -> CollectionItem!val!0
-o22!7 -> CollectionItem!val!0
-res1!8 -> 1
-o21!5 -> CollectionItem!val!1
-compareDouble!13 -> {
-  0
-}
-cardType!0 -> {
-  CollectionItem!val!1 -> 0
-  else -> (- 1)
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!1 -> 0
-  else -> (- 1)
-}
-equals!16 -> {
-  5
-}
-getCardId!1 -> {
-  7
-}
 
-
-real	0m0.090s
-user	0m0.074s
-sys	0m0.015s
+real	0m0.092s
+user	0m0.088s
+sys	0m0.004s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o12!6 -> CollectionItem!val!1
-res2!9 -> 1
-o11!4 -> CollectionItem!val!0
-o22!7 -> CollectionItem!val!0
-res1!8 -> 1
-o21!5 -> CollectionItem!val!1
-compareDouble!13 -> {
-  0
-}
-cardType!0 -> {
-  CollectionItem!val!0 -> (- 1)
-  else -> 0
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!1 -> 0
-  else -> (- 1)
-}
-equals!16 -> {
-  5
-}
-getCardId!1 -> {
-  7
-}
 
-
-real	0m0.093s
-user	0m0.093s
-sys	0m0.000s
+real	0m0.085s
+user	0m0.081s
+sys	0m0.004s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o12!6 -> CollectionItem!val!1
-res2!9 -> 1
-o11!4 -> CollectionItem!val!0
-o22!7 -> CollectionItem!val!0
-res1!8 -> 1
-o21!5 -> CollectionItem!val!1
-compareDouble!13 -> {
-  0
-}
-cardType!0 -> {
-  CollectionItem!val!0 -> (- 1)
-  else -> 0
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!0 -> (- 1)
-  else -> 0
-}
-equals!16 -> {
-  5
-}
-getCardId!1 -> {
-  7
-}
 
-
-real	0m0.132s
-user	0m0.120s
-sys	0m0.012s
+real	0m0.141s
+user	0m0.125s
+sys	0m0.016s
 descartes -p=1 -m=3: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o12!6 -> CollectionItem!val!1
-res2!9 -> 1
-o11!4 -> CollectionItem!val!0
-o22!7 -> CollectionItem!val!0
-res1!8 -> 1
-o21!5 -> CollectionItem!val!1
-compareDouble!13 -> {
-  0
-}
-cardType!0 -> {
-  CollectionItem!val!0 -> (- 1)
-  else -> 0
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!1 -> 0
-  else -> (- 1)
-}
-equals!16 -> {
-  5
-}
-getCardId!1 -> {
-  7
-}
 
-
-real	0m0.082s
-user	0m0.074s
+real	0m0.084s
+user	0m0.076s
 sys	0m0.008s

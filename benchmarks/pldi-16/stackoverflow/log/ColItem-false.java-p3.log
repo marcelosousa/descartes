@@ -1,165 +1,25 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res1!10 -> 0
-o23!9 -> CollectionItem!val!1
-res3!12 -> 1
-o11!4 -> CollectionItem!val!1
-o22!7 -> CollectionItem!val!1
-o21!5 -> CollectionItem!val!0
-res2!11 -> 0
-o13!8 -> CollectionItem!val!0
-o12!6 -> CollectionItem!val!1
-cardType!0 -> {
-  0
-}
-equals!19 -> {
-  5
-}
-compareDouble!16 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!0 -> (- 1)
-  else -> 0
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-compareInt!17 -> {
-  0
-}
-getCardId!1 -> {
-  4
-}
-
 
 real	0m0.169s
 user	0m0.165s
 sys	0m0.004s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res1!10 -> 0
-o23!9 -> CollectionItem!val!1
-res3!12 -> 1
-o11!4 -> CollectionItem!val!1
-o22!7 -> CollectionItem!val!1
-o21!5 -> CollectionItem!val!0
-res2!11 -> 0
-o13!8 -> CollectionItem!val!0
-o12!6 -> CollectionItem!val!1
-cardType!0 -> {
-  0
-}
-equals!19 -> {
-  5
-}
-compareDouble!16 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!0 -> 0
-  else -> 1
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-compareInt!17 -> {
-  0
-}
-getCardId!1 -> {
-  4
-}
 
-
-real	0m0.347s
+real	0m0.343s
 user	0m0.331s
-sys	0m0.016s
+sys	0m0.012s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res1!10 -> 0
-o23!9 -> CollectionItem!val!0
-res3!12 -> 1
-o11!4 -> CollectionItem!val!0
-o22!7 -> CollectionItem!val!0
-o21!5 -> CollectionItem!val!1
-res2!11 -> 0
-o13!8 -> CollectionItem!val!1
-o12!6 -> CollectionItem!val!0
-cardType!0 -> {
-  0
-}
-equals!19 -> {
-  5
-}
-compareDouble!16 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!1 -> (- 1)
-  else -> 0
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-compareInt!17 -> {
-  0
-}
-getCardId!1 -> {
-  4
-}
 
-
-real	0m0.817s
-user	0m0.809s
+real	0m0.814s
+user	0m0.806s
 sys	0m0.008s
 descartes -p=3 -m=3: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res1!10 -> 0
-o23!9 -> CollectionItem!val!1
-res3!12 -> 1
-o11!4 -> CollectionItem!val!1
-o22!7 -> CollectionItem!val!1
-o21!5 -> CollectionItem!val!0
-res2!11 -> 0
-o13!8 -> CollectionItem!val!0
-o12!6 -> CollectionItem!val!1
-cardType!0 -> {
-  0
-}
-equals!19 -> {
-  5
-}
-compareDouble!16 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!0 -> 0
-  else -> 1
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-compareInt!17 -> {
-  0
-}
-getCardId!1 -> {
-  4
-}
 
-
-real	0m0.338s
-user	0m0.331s
+real	0m0.344s
+user	0m0.336s
 sys	0m0.008s

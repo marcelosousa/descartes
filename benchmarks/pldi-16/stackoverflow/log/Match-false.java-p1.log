@@ -1,145 +1,25 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!4 -> Match!val!1
-res2!8 -> 0
-o12!5 -> Match!val!1
-res1!7 -> (- 1)
-o11!3 -> Match!val!0
-o22!6 -> Match!val!0
-compareDouble!12 -> {
-  0
-}
-score!2 -> {
-  0
-}
-compareInt!13 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-seq1start!1 -> {
-  Match!val!1 -> 0
-  else -> (- 1)
-}
-seq2start!0 -> {
-  Match!val!1 -> 0
-  else -> (- 1)
-}
-equals!15 -> {
-  5
-}
 
-
-real	0m0.050s
-user	0m0.046s
-sys	0m0.004s
+real	0m0.043s
+user	0m0.031s
+sys	0m0.012s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!4 -> Match!val!1
-res2!8 -> 0
-o12!5 -> Match!val!1
-res1!7 -> (- 1)
-o11!3 -> Match!val!0
-o22!6 -> Match!val!0
-compareDouble!12 -> {
-  0
-}
-score!2 -> {
-  0
-}
-compareInt!13 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-seq1start!1 -> {
-  Match!val!1 -> 1
-  else -> 0
-}
-seq2start!0 -> {
-  Match!val!0 -> (- 1)
-  else -> 0
-}
-equals!15 -> {
-  5
-}
 
-
-real	0m0.036s
-user	0m0.036s
-sys	0m0.000s
+real	0m0.032s
+user	0m0.024s
+sys	0m0.008s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o22!6 -> Match!val!0
-res2!8 -> 0
-o12!5 -> Match!val!1
-res1!7 -> (- 1)
-o11!3 -> Match!val!0
-o21!4 -> Match!val!1
-compareDouble!12 -> {
-  0
-}
-score!2 -> {
-  0
-}
-compareInt!13 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-seq1start!1 -> {
-  Match!val!0 -> (- 1)
-  else -> 0
-}
-seq2start!0 -> {
-  Match!val!0 -> (- 1)
-  else -> 0
-}
-equals!15 -> {
-  5
-}
 
-
-real	0m0.054s
-user	0m0.054s
-sys	0m0.000s
+real	0m0.050s
+user	0m0.037s
+sys	0m0.012s
 descartes -p=1 -m=3: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-o21!4 -> Match!val!1
-res2!8 -> 0
-o12!5 -> Match!val!1
-res1!7 -> (- 1)
-o11!3 -> Match!val!0
-o22!6 -> Match!val!0
-compareDouble!12 -> {
-  0
-}
-score!2 -> {
-  0
-}
-compareInt!13 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-seq1start!1 -> {
-  Match!val!1 -> 1
-  else -> 0
-}
-seq2start!0 -> {
-  Match!val!0 -> (- 1)
-  else -> 0
-}
-equals!15 -> {
-  5
-}
 
-
-real	0m0.035s
-user	0m0.027s
-sys	0m0.008s
+real	0m0.033s
+user	0m0.022s
+sys	0m0.011s

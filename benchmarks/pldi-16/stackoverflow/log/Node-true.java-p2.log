@@ -3,23 +3,23 @@ descartes -p=2 -m=0:
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
 real	0m0.052s
-user	0m0.044s
-sys	0m0.008s
+user	0m0.043s
+sys	0m0.009s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
 real	0m0.056s
-user	0m0.052s
-sys	0m0.004s
+user	0m0.047s
+sys	0m0.009s
 descartes -p=2 -m=2: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.117s
-user	0m0.113s
-sys	0m0.004s
+real	0m0.115s
+user	0m0.115s
+sys	0m0.000s
 descartes -p=2 -m=3: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.057s
-user	0m0.049s
-sys	0m0.008s
+real	0m0.055s
+user	0m0.051s
+sys	0m0.004s
