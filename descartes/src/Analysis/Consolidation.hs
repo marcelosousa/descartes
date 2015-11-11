@@ -195,7 +195,7 @@ analyse_loop pid r1 rest _cond _body =  do
    isLoop :: (Int, Block) -> Bool
    isLoop (_, Block ((BlockStmt (While _ _)):rest)) = True
    isLoop _ = False
-   analyse_loop_w_inv [] = error "analyse_loop failed"
+   analyse_loop_w_inv [] = error "none of the invariants was able to prove the property."
    analyse_loop_w_inv (inv:is) = do
     env@Env{..} <- get
     it_res <- _analyse_loop rest pid _cond _body inv
@@ -211,7 +211,7 @@ analyse_loop pid r1 rest _cond _body =  do
 _analyse_loop :: [(Int,Block)] -> Int -> Exp -> Stmt -> AST -> EnvOp Bool
 _analyse_loop rest pid _cond _body inv = do
  invStr  <- lift $ astToString inv
- env@Env{..} <- trace ("Invariant:\n" ++ invStr) $ get
+ env@Env{..} <- get
  (checkPre,_) <- lift $ local $ helper _axioms _pre inv
  case checkPre of
   Unsat -> do

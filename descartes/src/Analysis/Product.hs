@@ -176,7 +176,7 @@ analyse_loop pid r1 rest _cond _body =  do
  invs <- guessInvariants (pid+1) _cond
  analyse_loop_w_inv invs
  where
-   analyse_loop_w_inv [] = error "analyse_loop failed"
+   analyse_loop_w_inv [] = error "none of the invariants was able to prove the property." 
    analyse_loop_w_inv (inv:is) = do
     it_res <- _analyse_loop rest pid _cond _body inv
     if it_res

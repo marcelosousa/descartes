@@ -27,7 +27,7 @@ guessInvariant :: Z3Op -> Z3Op -> Z3Op -> Int -> Exp -> EnvOp AST
 guessInvariant op op' op'' pid cond = do
  env@Env{..} <- get 
  case getCondCounter cond of 
-  Nothing -> error $ "guessInvariant procedure failed at:" ++ show cond -- mkTrue
+  Nothing -> error "none of the invariants was able to prove the property." -- at:" ++ show cond -- mkTrue
   Just i -> do
    let (iAST,_,_)  = safeLookup "guessInvariant: i" i _ssamap
        e = safeLookup ("getting last condition assignment" ++ show i) i _assmap
@@ -40,7 +40,7 @@ guessInvariant op op' op'' pid cond = do
    -- forall j. i_0 <= j < i => cond
    gen <- lift $ generalizeCond op' op'' (_objSort,_params,_res,_fields,_ssamap) i0 i iAST cond pid
    case gen of
-    Nothing -> error "guessInvariant procedure can't compute valid invariant" -- mkTrue
+    Nothing -> error "none of the invariants was able to prove the property." -- can't compute valid invariant" -- mkTrue
     Just genInv -> do
       inv <- lift $ mkAnd [ex1, genInv, c1]
       return inv
