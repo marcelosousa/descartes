@@ -15,16 +15,50 @@ import Z3.Monad hiding (Params)
 
 import qualified Debug.Trace as T
 
-guessInvariants :: Int -> Exp -> EnvOp [AST]
-guessInvariants pid cond = do
-  increasing <- guessInvariant mkGe mkLe mkLt pid cond
-  decreasing <- guessInvariant mkLe mkGe mkGt pid cond
-  return [increasing,decreasing]
-  
+guessInvariants :: Int -> Exp -> Stmt -> EnvOp [AST]
+guessInvariants pid cond body = do
+  env@Env{..} <- get
+  let fnCalls = getFnCalls cond ++ getFnCalls body
+  fnNames <- lift $ foldM (search _fields) [] fnCalls 
+  increasing <- guessInvariant fnNames mkGe mkLe mkLt pid cond
+  decreasing <- guessInvariant fnNames mkLe mkGe mkGt pid cond
+  return $ increasing ++ decreasing
+
+search fields list (Name n) =
+  case n of 
+    [ident] ->
+      case M.lookup ident fields of
+        Nothing -> return list
+        Just fn -> return $ fn:list
+    [Ident "Character",fnName] ->
+      case M.lookup fnName fields of
+        Nothing -> return list
+        Just fn -> return $ fn:list
+    [Ident "Double",Ident "compare"] -> 
+      let fnName = Ident "compareDouble"
+      in case M.lookup fnName fields of
+        Nothing -> return list
+        Just fn -> return $ fn:list
+    [Ident "Int",Ident "compare"] -> 
+      let fnName = Ident "compareInt"
+      in case M.lookup fnName fields of
+        Nothing -> return list
+        Just fn -> return $ fn:list
+    [Ident "String",Ident "compareIgnoreCase"] -> 
+      let fnName = Ident "compareIgnoreCaseString"
+      in case M.lookup fnName fields of
+        Nothing -> return list
+        Just fn -> return $ fn:list
+    [obj,field] ->
+      case M.lookup field fields of
+        Nothing -> return list
+        Just fn -> return $ fn:list
+    _ -> return list
+        
 type Z3Op = (AST -> AST -> Z3 AST)
 --
-guessInvariant :: Z3Op -> Z3Op -> Z3Op -> Int -> Exp -> EnvOp AST
-guessInvariant op op' op'' pid cond = do
+guessInvariant :: [FuncDecl] -> Z3Op -> Z3Op -> Z3Op -> Int -> Exp -> EnvOp [AST]
+guessInvariant fnNames op op' op'' pid cond = do
  env@Env{..} <- get 
  case getCondCounter cond of 
   Nothing -> error "none of the invariants was able to prove the property." -- at:" ++ show cond -- mkTrue
@@ -38,12 +72,8 @@ guessInvariant op op' op'' pid cond = do
    iApp <- lift $ toApp iAST
    ex1 <- lift $ mkExistsConst [] [iApp] _pre
    -- forall j. i_0 <= j < i => cond
-   gen <- lift $ generalizeCond op' op'' (_objSort,_params,_res,_fields,_ssamap) i0 i iAST cond pid
-   case gen of
-    Nothing -> error "none of the invariants was able to prove the property." -- can't compute valid invariant" -- mkTrue
-    Just genInv -> do
-      inv <- lift $ mkAnd [ex1, genInv, c1]
-      return inv
+   gen <- lift $ generalizeCond fnNames op' op'' (_objSort,_params,_res,_fields,_ssamap) i0 i iAST cond pid
+   lift $ mapM (\genInv -> mkAnd [ex1, genInv, c1]) gen
     
 getCondCounter :: Exp -> Maybe Ident
 getCondCounter expr = 
@@ -53,8 +83,8 @@ getCondCounter expr =
     BinOp (BinOp (BinOp (ExpName (Name [i])) _ _) _ _) And _ -> Just i
     _ -> Nothing --error $ "getCondCounter: " ++ show expr
 
-generalizeCond :: Z3Op -> Z3Op -> (Sort, Params, [AST], Fields, SSAMap) ->  AST -> Ident -> AST -> Exp -> Int -> Z3 (Maybe AST)
-generalizeCond op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond pid =
+generalizeCond :: [FuncDecl] -> Z3Op -> Z3Op -> (Sort, Params, [AST], Fields, SSAMap) ->  AST -> Ident -> AST -> Exp -> Int -> Z3 [AST]
+generalizeCond fnNames op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond pid =
   case _cond of 
     BinOp _ And cond -> do
       let jIdent = Ident $ "j" ++ show pid
@@ -71,7 +101,7 @@ generalizeCond op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond p
       let ssamap' = M.insert jIdent (j, sort, pid) ssamap
       c2 <- processExp (objSort, pars, res, fields, ssamap') cond'
       -- \forall j. c1 => c2
-      mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body >>= \inv -> return $ Just inv
+      mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body >>= \inv -> return [inv]
     _ -> do
       let jIdent = Ident $ "j" ++ show pid
       sort <- mkIntSort
@@ -83,18 +113,16 @@ generalizeCond op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond p
       c1 <- op i0 j >>= \left -> op' j iAST >>= \right -> mkAnd [left, right]
       -- c2: 
       let ssamap' = M.insert jIdent (j, sort, pid) ssamap
-      c2 <- buildArtCond (pars,fields) j pid
+      c2s <- mapM (\fnName -> buildArtCond fnName (pars,fields) j pid) fnNames
       -- \forall j. c1 => c2
-      mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body >>= \inv -> return $ Just inv 
+      mapM (\c2 -> mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body) c2s
     
-buildArtCond :: (Params, Fields) -> AST -> Int -> Z3 AST
-buildArtCond (pars,fields) j pid = do
+buildArtCond :: FuncDecl -> (Params, Fields) -> AST -> Int -> Z3 AST
+buildArtCond fn (pars,fields) j pid = do
   let o1 = Ident $ "o1" ++ show pid
       o2 = Ident $ "o2" ++ show pid
-      getfn = Ident "get"
       o1z3 = safeLookup "buildArtCond: o1" o1 pars
       o2z3 = safeLookup "buildArtCond: o2" o2 pars
-      fn = safeLookup "buildArtCond: fn" getfn fields
   get1 <- mkApp fn [o1z3,j]
   get2 <- mkApp fn [o2z3,j]
   mkEq get1 get2

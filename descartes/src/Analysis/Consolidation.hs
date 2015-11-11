@@ -181,7 +181,7 @@ analyse_loop :: Int -> [BlockStmt] -> [(Int,Block)] -> Exp -> Stmt -> EnvOp (Res
 analyse_loop pid r1 rest _cond _body =  do
  let bstmt = BlockStmt $ While _cond _body
  env@Env{..} <- get
- invs <- guessInvariants (pid+1) _cond
+ invs <- guessInvariants (pid+1) _cond _body
  if _fuse
  then if all isLoop rest
       then do 

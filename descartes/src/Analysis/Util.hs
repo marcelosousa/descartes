@@ -143,6 +143,63 @@ getBlocks comps = map getBlock comps
     where getBlock (Comp _ (MethodDecl _ _ _ _ _ _ (MethodBody Nothing))) = error "getBlock"
           getBlock (Comp _ (MethodDecl _ _ _ _ _ _ (MethodBody (Just b)))) = b
 
+class RetrieveFnCalls a where
+  getFnCalls :: a -> [Name]
+
+instance RetrieveFnCalls Block where
+  getFnCalls (Block block) = concatMap getFnCalls block
+
+instance RetrieveFnCalls BlockStmt where
+  getFnCalls stm = case stm of
+    BlockStmt st -> getFnCalls st
+    LocalVars mods ty vardecls -> concatMap getFnCalls vardecls
+    LocalClass classdecl -> []
+
+instance RetrieveFnCalls VarDecl where
+  getFnCalls (VarDecl vardeclid Nothing) = []
+  getFnCalls (VarDecl vardeclid (Just i)) = getFnCalls i
+    
+instance RetrieveFnCalls VarInit where
+  getFnCalls (InitExp expr) = getFnCalls expr
+  getFnCalls (InitArray _) = []
+
+instance RetrieveFnCalls Stmt where
+  getFnCalls stm = case stm of 
+    StmtBlock block -> getFnCalls block
+    IfThen cond _then -> getFnCalls cond ++ getFnCalls _then
+    IfThenElse cond _then _else -> getFnCalls cond ++ getFnCalls _then ++ getFnCalls _else
+    While cond _body -> getFnCalls cond ++ getFnCalls _body
+    BasicFor mForInit mExp mLExp _body -> getFnCalls mLExp ++ getFnCalls _body
+    ExpStmt expr -> getFnCalls expr
+    Return mexpr -> getFnCalls mexpr
+    _ -> []
+
+instance RetrieveFnCalls (Maybe [Exp]) where
+  getFnCalls Nothing = []
+  getFnCalls (Just exprs) = concatMap getFnCalls exprs
+  
+instance RetrieveFnCalls (Maybe Exp) where
+  getFnCalls Nothing = []
+  getFnCalls (Just expr) = getFnCalls expr
+
+instance RetrieveFnCalls Exp where
+  getFnCalls _exp = case _exp of 
+    FieldAccess fieldAccess -> getFnCalls fieldAccess
+    MethodInv methodInvocation -> getFnCalls methodInvocation
+    BinOp lhs op rhs -> getFnCalls lhs ++ getFnCalls rhs
+    Cond _cond _then _else -> getFnCalls _cond ++ getFnCalls _then ++ getFnCalls _else
+    Assign lhs aOp expr -> getFnCalls expr
+    _ -> []
+
+instance RetrieveFnCalls FieldAccess where
+  getFnCalls fAccess = case fAccess of
+    PrimaryFieldAccess obj fIdent -> error "getFnCalls"
+    SuperFieldAccess fIdent -> []
+    ClassFieldAccess cName fIdent -> [cName]
+
+instance RetrieveFnCalls MethodInvocation where
+  getFnCalls mInv = case mInv of
+      MethodCall name args -> [name]
 {-
 Alfa-renaming:
   - I need to substitute the object parameters
@@ -223,7 +280,6 @@ instance Renamable Stmt where
                     in rename idx $ StmtBlock (Block [b1,l])
                 Just _ -> undefined
                 Nothing -> error $ "rename: BasicFor not supported" -- ++ show (mForInit, mExp, mLExp)
-
         EnhancedFor mods ty ident expr _body -> error "rename: EnhancedFor not supported"
         Empty -> Empty
         ExpStmt expr -> ExpStmt $ rename idx expr

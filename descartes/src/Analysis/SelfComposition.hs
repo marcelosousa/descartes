@@ -157,7 +157,7 @@ analyse_loop :: Int -> [BlockStmt] -> Exp -> Stmt -> EnvOp ([AST],[AST])
 analyse_loop pid r1 _cond _body = do
  let bstmt = BlockStmt $ While _cond _body
  env@Env{..} <- get
- invs <- guessInvariants (pid+1) _cond
+ invs <- guessInvariants (pid+1) _cond _body
  analyse_loop_w_inv invs
  where
    analyse_loop_w_inv [] = error "none of the invariants was able to prove the property." 
