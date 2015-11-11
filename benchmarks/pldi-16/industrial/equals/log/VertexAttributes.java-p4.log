@@ -1,7 +1,19 @@
-Property 5 (Symmetry)
-descartes -p=5 -m=0: 
-Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
-
-real	0m0.268s
-user	0m0.263s
-sys	0m0.004s
+Property 4 (Transitivity)
+descartes -p=4 -m=0: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+0.49user 0.00system 0:00.50elapsed 99%CPU (0avgtext+0avgdata 12932maxresident)k
+0inputs+0outputs (0major+3380minor)pagefaults 0swaps
+descartes -p=4 -m=1: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+1.98user 0.00system 0:01.99elapsed 99%CPU (0avgtext+0avgdata 13620maxresident)k
+0inputs+0outputs (0major+3552minor)pagefaults 0swaps
+descartes -p=4 -m=2: 
+descartes: none of the invariants was able to prove the property.
+Command exited with non-zero status 1
+0.00user 0.00system 0:00.01elapsed 100%CPU (0avgtext+0avgdata 7984maxresident)k
+0inputs+0outputs (0major+2143minor)pagefaults 0swaps
+descartes -p=4 -m=3: 
+descartes: none of the invariants was able to prove the property.
+Command exited with non-zero status 1
+0.00user 0.00system 0:00.01elapsed 100%CPU (0avgtext+0avgdata 10388maxresident)k
+0inputs+0outputs (0major+2745minor)pagefaults 0swaps

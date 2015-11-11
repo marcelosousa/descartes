@@ -1,0 +1,17 @@
+Property 6 (Consistency)
+descartes -p=6 -m=0: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+0.24user 0.00system 0:00.25elapsed 99%CPU (0avgtext+0avgdata 12064maxresident)k
+0inputs+0outputs (0major+3163minor)pagefaults 0swaps
+descartes -p=6 -m=1: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+0.42user 0.00system 0:00.43elapsed 100%CPU (0avgtext+0avgdata 12016maxresident)k
+0inputs+0outputs (0major+3152minor)pagefaults 0swaps
+descartes -p=6 -m=2: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+1.16user 0.01system 0:01.17elapsed 99%CPU (0avgtext+0avgdata 12280maxresident)k
+0inputs+0outputs (0major+3217minor)pagefaults 0swaps
+descartes -p=6 -m=3: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+0.42user 0.00system 0:00.42elapsed 99%CPU (0avgtext+0avgdata 12044maxresident)k
+0inputs+0outputs (0major+3158minor)pagefaults 0swaps

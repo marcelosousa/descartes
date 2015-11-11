@@ -1,7 +1,18 @@
-Property 6 (Consistency)
-descartes -p=6 -m=0: 
-Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
-
-real	0m0.113s
-user	0m0.109s
-sys	0m0.004s
+Property 5 (Symmetry)
+descartes -p=5 -m=0: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+0.10user 0.00system 0:00.10elapsed 100%CPU (0avgtext+0avgdata 12052maxresident)k
+0inputs+0outputs (0major+3160minor)pagefaults 0swaps
+descartes -p=5 -m=1: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+0.09user 0.01system 0:00.10elapsed 99%CPU (0avgtext+0avgdata 12180maxresident)k
+0inputs+0outputs (0major+3192minor)pagefaults 0swaps
+descartes -p=5 -m=2: 
+Sat: VIOLATES [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+0.08user 0.00system 0:00.08elapsed 100%CPU (0avgtext+0avgdata 12044maxresident)k
+0inputs+0outputs (0major+3158minor)pagefaults 0swaps
+descartes -p=5 -m=3: 
+descartes: none of the invariants was able to prove the property.
+Command exited with non-zero status 1
+0.10user 0.00system 0:00.11elapsed 99%CPU (0avgtext+0avgdata 11920maxresident)k
+0inputs+0outputs (0major+3128minor)pagefaults 0swaps

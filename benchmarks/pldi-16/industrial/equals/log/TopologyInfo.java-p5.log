@@ -1,7 +1,19 @@
-Property 6 (Consistency)
-descartes -p=6 -m=0: 
-Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
-
-real	0m23.344s
-user	0m23.317s
-sys	0m0.024s
+Property 5 (Symmetry)
+descartes -p=5 -m=0: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+27.79user 0.02system 0:27.83elapsed 99%CPU (0avgtext+0avgdata 18484maxresident)k
+0inputs+0outputs (0major+4879minor)pagefaults 0swaps
+descartes -p=5 -m=1: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+703.32user 0.53system 11:43.95elapsed 99%CPU (0avgtext+0avgdata 456988maxresident)k
+0inputs+8outputs (0major+36726minor)pagefaults 0swaps
+descartes -p=5 -m=2: 
+Stack space overflow: current size 8388608 bytes.
+Use `+RTS -Ksize -RTS' to increase it.
+Command exited with non-zero status 2
+23.29user 0.25system 0:23.55elapsed 99%CPU (0avgtext+0avgdata 286716maxresident)k
+0inputs+0outputs (0major+67711minor)pagefaults 0swaps
+descartes -p=5 -m=3: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+664.24user 0.43system 11:04.75elapsed 99%CPU (0avgtext+0avgdata 456380maxresident)k
+0inputs+8outputs (0major+34648minor)pagefaults 0swaps

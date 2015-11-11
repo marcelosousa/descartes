@@ -1,0 +1,19 @@
+Property 6 (Consistency)
+descartes -p=6 -m=0: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+24.06user 0.00system 0:24.07elapsed 99%CPU (0avgtext+0avgdata 17108maxresident)k
+0inputs+0outputs (0major+4500minor)pagefaults 0swaps
+descartes -p=6 -m=1: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+659.62user 0.77system 11:00.58elapsed 99%CPU (0avgtext+0avgdata 410976maxresident)k
+0inputs+8outputs (0major+50813minor)pagefaults 0swaps
+descartes -p=6 -m=2: 
+Stack space overflow: current size 8388608 bytes.
+Use `+RTS -Ksize -RTS' to increase it.
+Command exited with non-zero status 2
+23.45user 0.30system 0:23.78elapsed 99%CPU (0avgtext+0avgdata 283652maxresident)k
+0inputs+0outputs (0major+67977minor)pagefaults 0swaps
+descartes -p=6 -m=3: 
+Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
+669.48user 5.99system 11:15.64elapsed 99%CPU (0avgtext+0avgdata 410372maxresident)k
+0inputs+8outputs (0major+50307minor)pagefaults 0swaps

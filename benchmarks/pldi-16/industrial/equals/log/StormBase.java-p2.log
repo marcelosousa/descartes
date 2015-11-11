@@ -1,7 +1,0 @@
-Property 4 (Transitivity)
-descartes -p=4 -m=0: 
-Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
-
-real	0m32.048s
-user	0m32.019s
-sys	0m0.024s

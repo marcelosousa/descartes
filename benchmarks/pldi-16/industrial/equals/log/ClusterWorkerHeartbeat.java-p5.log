@@ -1,7 +1,17 @@
-Property 6 (Consistency)
-descartes -p=6 -m=0: 
-Unsat: OBEYS [Consistency] (equals): for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false.
-
-real	0m0.180s
-user	0m0.176s
-sys	0m0.004s
+Property 5 (Symmetry)
+descartes -p=5 -m=0: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+0.26user 0.00system 0:00.26elapsed 100%CPU (0avgtext+0avgdata 11976maxresident)k
+0inputs+0outputs (0major+3141minor)pagefaults 0swaps
+descartes -p=5 -m=1: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+1.83user 0.01system 0:01.84elapsed 99%CPU (0avgtext+0avgdata 14216maxresident)k
+0inputs+0outputs (0major+3817minor)pagefaults 0swaps
+descartes -p=5 -m=2: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+5.36user 0.00system 0:05.37elapsed 99%CPU (0avgtext+0avgdata 14360maxresident)k
+0inputs+0outputs (0major+3778minor)pagefaults 0swaps
+descartes -p=5 -m=3: 
+Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+1.84user 0.01system 0:01.85elapsed 100%CPU (0avgtext+0avgdata 14436maxresident)k
+0inputs+0outputs (0major+3878minor)pagefaults 0swaps

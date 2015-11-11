@@ -1,7 +1,13 @@
-Property 5 (Symmetry)
-descartes -p=5 -m=0: 
-Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
-
-real	0m22.120s
-user	0m22.096s
-sys	0m0.020s
+Property 4 (Transitivity)
+descartes -p=4 -m=0: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+32.70user 0.04system 0:32.74elapsed 99%CPU (0avgtext+0avgdata 20668maxresident)k
+0inputs+8outputs (0major+8025minor)pagefaults 0swaps
+descartes -p=4 -m=1: 
+descartes -p=4 -m=2: 
+Stack space overflow: current size 8388608 bytes.
+Use `+RTS -Ksize -RTS' to increase it.
+Command exited with non-zero status 2
+30.62user 0.24system 0:30.88elapsed 99%CPU (0avgtext+0avgdata 304872maxresident)k
+0inputs+8outputs (0major+67661minor)pagefaults 0swaps
+descartes -p=4 -m=3: 

@@ -1,7 +1,17 @@
-Property 5 (Symmetry)
-descartes -p=5 -m=0: 
-Unsat: OBEYS [Symmetry] (equals): for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
-
-real	0m1.101s
-user	0m1.091s
-sys	0m0.008s
+Property 4 (Transitivity)
+descartes -p=4 -m=0: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+0.87user 0.02system 0:00.89elapsed 99%CPU (0avgtext+0avgdata 12316maxresident)k
+0inputs+0outputs (0major+3226minor)pagefaults 0swaps
+descartes -p=4 -m=1: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+67.34user 0.12system 1:07.49elapsed 99%CPU (0avgtext+0avgdata 82916maxresident)k
+0inputs+8outputs (0major+15887minor)pagefaults 0swaps
+descartes -p=4 -m=2: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+548.39user 0.74system 9:09.17elapsed 99%CPU (0avgtext+0avgdata 111368maxresident)k
+0inputs+8outputs (0major+27436minor)pagefaults 0swaps
+descartes -p=4 -m=3: 
+Unsat: OBEYS [Transitivity] (equals): for all x, y and z, equals(x, y) and equals(y, z) implies equals(x, z).
+67.53user 0.09system 1:07.65elapsed 99%CPU (0avgtext+0avgdata 82268maxresident)k
+0inputs+8outputs (0major+15290minor)pagefaults 0swaps
