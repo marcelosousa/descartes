@@ -1,0 +1,25 @@
+Property 3
+descartes -p=3 -m=0: 
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m1.173s
+user	0m1.168s
+sys	0m0.004s
+descartes -p=3 -m=1: 
+Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m3.125s
+user	0m3.117s
+sys	0m0.008s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m1.559s
+user	0m1.547s
+sys	0m0.012s
+descartes -p=3 -m=3: 
+descartes: none of the invariants was able to prove the property.
+
+real	0m2.667s
+user	0m2.658s
+sys	0m0.008s

@@ -2,24 +2,24 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m22.043s
-user	0m22.032s
-sys	0m0.008s
+real	0m22.310s
+user	0m22.290s
+sys	0m0.016s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m10.914s
-user	0m10.904s
-sys	0m0.008s
+real	0m11.275s
+user	0m11.266s
+sys	0m0.004s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m13.753s
-user	0m13.731s
-sys	0m0.020s
+real	0m14.012s
+user	0m13.968s
+sys	0m0.040s
 descartes -p=2 -m=3: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m10.966s
-user	0m10.947s
-sys	0m0.016s
+real	0m10.941s
+user	0m10.920s
+sys	0m0.020s
