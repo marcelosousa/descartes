@@ -2,159 +2,24 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m1.025s
-user	0m1.012s
-sys	0m0.012s
+real	0m1.060s
+user	0m1.051s
+sys	0m0.008s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.891s
-user	0m0.871s
-sys	0m0.021s
+real	0m0.903s
+user	0m0.892s
+sys	0m0.008s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.356s
-user	0m0.347s
-sys	0m0.008s
+real	0m0.336s
+user	0m0.324s
+sys	0m0.012s
 descartes -p=2 -m=3: 
-Invariant:
-(let ((a!1 (exists ((level11 Int))
-             (and (= o11!6 o13!10)
-                  (= o21!7 o12!8)
-                  (= o22!9 o23!11)
-                  (= levels11 (settingsGetSortOrdersLength!5 o11!6))
-                  (>= levels11 0)
-                  (= level11 0))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 level11))
-                 (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-  (and a!1 a!2 (>= level11 0)))
-Invariant:
-(let ((a!1 (exists ((level21 Int))
-             (let ((a!1 (exists ((level11 Int))
-                          (and (= o11!6 o13!10)
-                               (= o21!7 o12!8)
-                               (= o22!9 o23!11)
-                               (= levels11
-                                  (settingsGetSortOrdersLength!5 o11!6))
-                               (>= levels11 0)
-                               (= level11 0))))
-                   (a!2 (forall ((j1 Int))
-                          (=> (and (<= 0 j1) (< j1 level11))
-                              (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-               (and a!1
-                    a!2
-                    (>= level11 0)
-                    (< level11 levels11)
-                    (= our12!142 (numericValue!2 o11!6 level11))
-                    (= their12!143 (numericValue!2 o21!7 level11))
-                    (= cmp12!144 (- our12!142 their12!143))
-                    (not (= cmp12!144 0))
-                    (= res1!12 cmp12!144)
-                    (= levels21 (settingsGetSortOrdersLength!5 o12!8))
-                    (>= levels21 0)
-                    (= level21 0)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 level21))
-                 (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
-  (and a!1 a!2 (>= level21 0)))
-Invariant:
-(let ((a!1 (exists ((level31 Int))
-             (let ((a!1 (exists ((level21 Int))
-                          (let ((a!1 (exists ((level11 Int))
-                                       (and (= o11!6 o13!10)
-                                            (= o21!7 o12!8)
-                                            (= o22!9 o23!11)
-                                            (= levels11
-                                               (settingsGetSortOrdersLength!5
-                                                 o11!6))
-                                            (>= levels11 0)
-                                            (= level11 0))))
-                                (a!2 (forall ((j1 Int))
-                                       (=> (and (<= 0 j1) (< j1 level11))
-                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-                            (and a!1
-                                 a!2
-                                 (>= level11 0)
-                                 (< level11 levels11)
-                                 (= our12!142 (numericValue!2 o11!6 level11))
-                                 (= their12!143 (numericValue!2 o21!7 level11))
-                                 (= cmp12!144 (- our12!142 their12!143))
-                                 (not (= cmp12!144 0))
-                                 (= res1!12 cmp12!144)
-                                 (= levels21
-                                    (settingsGetSortOrdersLength!5 o12!8))
-                                 (>= levels21 0)
-                                 (= level21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 level21))
-                              (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
-               (and a!1
-                    a!2
-                    (>= level21 0)
-                    (< level21 levels21)
-                    (= our22!452 (numericValue!2 o12!8 level21))
-                    (= their22!453 (numericValue!2 o22!9 level21))
-                    (= cmp22!454 (- our22!452 their22!453))
-                    (not (= cmp22!454 0))
-                    (= res2!13 cmp22!454)
-                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
-                    (>= levels31 0)
-                    (= level31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 level31))
-                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
-  (and a!1 a!2 (>= level31 0)))
-Invariant:
-(let ((a!1 (exists ((level31 Int))
-             (let ((a!1 (exists ((level21 Int))
-                          (let ((a!1 (exists ((level11 Int))
-                                       (and (= o11!6 o13!10)
-                                            (= o21!7 o12!8)
-                                            (= o22!9 o23!11)
-                                            (= levels11
-                                               (settingsGetSortOrdersLength!5
-                                                 o11!6))
-                                            (>= levels11 0)
-                                            (= level11 0))))
-                                (a!2 (forall ((j1 Int))
-                                       (=> (and (<= 0 j1) (< j1 level11))
-                                           (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-                            (and a!1
-                                 a!2
-                                 (>= level11 0)
-                                 (< level11 levels11)
-                                 (= our12!142 (numericValue!2 o11!6 level11))
-                                 (= their12!143 (numericValue!2 o21!7 level11))
-                                 (= cmp12!144 (- our12!142 their12!143))
-                                 (not (= cmp12!144 0))
-                                 (= res1!12 cmp12!144)
-                                 (= levels21
-                                    (settingsGetSortOrdersLength!5 o12!8))
-                                 (>= levels21 0)
-                                 (= level21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 level21))
-                              (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
-               (and a!1
-                    a!2
-                    (>= level21 0)
-                    (< level21 levels21)
-                    (= our22!452 (numericValue!2 o12!8 level21))
-                    (= their22!453 (numericValue!2 o22!9 level21))
-                    (= cmp22!454 (- our22!452 their22!453))
-                    (not (= cmp22!454 0))
-                    (= res2!13 cmp22!454)
-                    (= levels31 (settingsGetSortOrdersLength!5 o13!10))
-                    (>= levels31 0)
-                    (= level31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 level31))
-                 (= (get!4 o13!10 j3) (get!4 o23!11 j3))))))
-  (and a!1 a!2 (<= level31 0)))
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.108s
-user	0m0.103s
-sys	0m0.004s
+real	0m0.105s
+user	0m0.097s
+sys	0m0.008s

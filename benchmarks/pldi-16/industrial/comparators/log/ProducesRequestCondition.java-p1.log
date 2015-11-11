@@ -2,24 +2,24 @@ Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.595s
-user	0m0.582s
-sys	0m0.012s
+real	0m0.614s
+user	0m0.606s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.771s
-user	0m0.763s
-sys	0m0.008s
+real	0m0.793s
+user	0m0.777s
+sys	0m0.016s
 descartes -p=1 -m=2: 
 descartes: buildArtCond: fn
 
-real	0m0.013s
-user	0m0.004s
-sys	0m0.009s
+real	0m0.012s
+user	0m0.012s
+sys	0m0.000s
 descartes -p=1 -m=3: 
 descartes: buildArtCond: fn
 
-real	0m0.009s
-user	0m0.006s
-sys	0m0.003s
+real	0m0.011s
+user	0m0.004s
+sys	0m0.007s

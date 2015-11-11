@@ -2,40 +2,26 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m2.721s
-user	0m2.704s
-sys	0m0.016s
+real	0m2.736s
+user	0m2.709s
+sys	0m0.024s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	1m10.204s
-user	1m10.122s
-sys	0m0.064s
+real	1m10.333s
+user	1m10.268s
+sys	0m0.040s
 descartes -p=3 -m=2: 
 descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
 
-real	0m0.037s
-user	0m0.028s
-sys	0m0.009s
+real	0m0.029s
+user	0m0.024s
+sys	0m0.004s
 descartes -p=3 -m=3: 
-Invariant:
-(let ((a!1 (exists ((i11 Int))
-             (and (= o11!1 o12!3)
-                  (= o21!2 o13!5)
-                  (= o22!4 o23!6)
-                  (= columnName111 (get!0 o11!1 0))
-                  (= columnName211 (get!0 o21!2 0))
-                  (= x11 (- 1))
-                  (= _columnNamesLength11 (nondet!12 (- 1)))
-                  (= i11 0))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 i11))
-                 (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-  (and a!1 a!2 (>= i11 0)))
 descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.024s
-user	0m0.020s
+real	0m0.023s
+user	0m0.019s
 sys	0m0.004s

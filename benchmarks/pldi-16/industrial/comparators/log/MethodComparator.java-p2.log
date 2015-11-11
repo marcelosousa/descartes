@@ -2,24 +2,24 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.586s
-user	0m0.578s
-sys	0m0.008s
+real	0m0.595s
+user	0m0.583s
+sys	0m0.012s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.877s
-user	0m0.877s
-sys	0m0.000s
+real	0m0.882s
+user	0m0.878s
+sys	0m0.004s
 descartes -p=2 -m=2: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes1Length1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes2Length1"])))
+descartes: none of the invariants was able to prove the property.
 
 real	0m0.016s
-user	0m0.012s
-sys	0m0.004s
+user	0m0.010s
+sys	0m0.005s
 descartes -p=2 -m=3: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "parameterTypes1Length3"]))) CAnd (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "parameterTypes2Length3"])))
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.018s
-user	0m0.014s
-sys	0m0.004s
+real	0m0.017s
+user	0m0.010s
+sys	0m0.007s

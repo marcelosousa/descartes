@@ -2,62 +2,24 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.177s
-user	0m0.173s
-sys	0m0.004s
+real	0m0.193s
+user	0m0.189s
+sys	0m0.005s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.339s
-user	0m0.327s
-sys	0m0.012s
+real	0m0.349s
+user	0m0.325s
+sys	0m0.024s
 descartes -p=2 -m=2: 
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.034s
-user	0m0.029s
-sys	0m0.004s
+real	0m0.027s
+user	0m0.022s
+sys	0m0.006s
 descartes -p=2 -m=3: 
-Invariant:
-(let ((a!1 (exists ((i11 Int))
-             (and (= o11!3 o13!7)
-                  (= o21!4 o12!5)
-                  (= o22!6 o23!8)
-                  (= o1_Upto11 (b_off!1 o11!3))
-                  (= o1_length11 (b_len!0 o11!3))
-                  (= o2_Upto11 (b_off!1 o21!4))
-                  (= o2_length11 (b_len!0 o21!4))
-                  (= o1_length11 o2_length11)
-                  (= min11 o1_length11)
-                  (= o1_Stop11 min11)
-                  (= o1Byte11 0)
-                  (= o2Byte11 0)
-                  (= i11 o1_Upto11))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 i11))
-                 (= (get!2 o11!3 j1) (get!2 o21!4 j1))))))
-  (and a!1 a!2 (>= i11 o1_Upto11)))
-Invariant:
-(let ((a!1 (exists ((i11 Int))
-             (and (= o11!3 o13!7)
-                  (= o21!4 o12!5)
-                  (= o22!6 o23!8)
-                  (= o1_Upto11 (b_off!1 o11!3))
-                  (= o1_length11 (b_len!0 o11!3))
-                  (= o2_Upto11 (b_off!1 o21!4))
-                  (= o2_length11 (b_len!0 o21!4))
-                  (= o1_length11 o2_length11)
-                  (= min11 o1_length11)
-                  (= o1_Stop11 min11)
-                  (= o1Byte11 0)
-                  (= o2Byte11 0)
-                  (= i11 o1_Upto11))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 i11))
-                 (= (get!2 o11!3 j1) (get!2 o21!4 j1))))))
-  (and a!1 a!2 (<= i11 o1_Upto11)))
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.025s
-user	0m0.016s
-sys	0m0.008s
+real	0m0.023s
+user	0m0.015s
+sys	0m0.007s

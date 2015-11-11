@@ -2,91 +2,24 @@ Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.185s
-user	0m0.177s
-sys	0m0.008s
+real	0m0.180s
+user	0m0.168s
+sys	0m0.012s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.147s
-user	0m0.143s
+real	0m0.142s
+user	0m0.138s
 sys	0m0.004s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.126s
-user	0m0.117s
-sys	0m0.009s
+real	0m0.117s
+user	0m0.101s
+sys	0m0.016s
 descartes -p=1 -m=3: 
-Invariant:
-(let ((a!1 (exists ((level11 Int))
-             (and (= o11!6 o22!9)
-                  (= o21!7 o12!8)
-                  (= levels11 (settingsGetSortOrdersLength!5 o11!6))
-                  (>= levels11 0)
-                  (= level11 0))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 level11))
-                 (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-  (and a!1 a!2 (>= level11 0)))
-Invariant:
-(let ((a!1 (exists ((level21 Int))
-             (let ((a!1 (exists ((level11 Int))
-                          (and (= o11!6 o22!9)
-                               (= o21!7 o12!8)
-                               (= levels11
-                                  (settingsGetSortOrdersLength!5 o11!6))
-                               (>= levels11 0)
-                               (= level11 0))))
-                   (a!2 (forall ((j1 Int))
-                          (=> (and (<= 0 j1) (< j1 level11))
-                              (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-               (and a!1
-                    a!2
-                    (>= level11 0)
-                    (< level11 levels11)
-                    (= our12!139 (numericValue!2 o11!6 level11))
-                    (= their12!140 (numericValue!2 o21!7 level11))
-                    (= cmp12!141 (- our12!139 their12!140))
-                    (not (= cmp12!141 0))
-                    (= res1!10 cmp12!141)
-                    (= levels21 (settingsGetSortOrdersLength!5 o12!8))
-                    (>= levels21 0)
-                    (= level21 0)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 level21))
-                 (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
-  (and a!1 a!2 (>= level21 0)))
-Invariant:
-(let ((a!1 (exists ((level21 Int))
-             (let ((a!1 (exists ((level11 Int))
-                          (and (= o11!6 o22!9)
-                               (= o21!7 o12!8)
-                               (= levels11
-                                  (settingsGetSortOrdersLength!5 o11!6))
-                               (>= levels11 0)
-                               (= level11 0))))
-                   (a!2 (forall ((j1 Int))
-                          (=> (and (<= 0 j1) (< j1 level11))
-                              (= (get!4 o11!6 j1) (get!4 o21!7 j1))))))
-               (and a!1
-                    a!2
-                    (>= level11 0)
-                    (< level11 levels11)
-                    (= our12!139 (numericValue!2 o11!6 level11))
-                    (= their12!140 (numericValue!2 o21!7 level11))
-                    (= cmp12!141 (- our12!139 their12!140))
-                    (not (= cmp12!141 0))
-                    (= res1!10 cmp12!141)
-                    (= levels21 (settingsGetSortOrdersLength!5 o12!8))
-                    (>= levels21 0)
-                    (= level21 0)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 level21))
-                 (= (get!4 o12!8 j2) (get!4 o22!9 j2))))))
-  (and a!1 a!2 (<= level21 0)))
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
 
 real	0m0.068s
-user	0m0.060s
-sys	0m0.008s
+user	0m0.056s
+sys	0m0.012s

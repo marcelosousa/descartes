@@ -2,40 +2,26 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m1.423s
-user	0m1.419s
+real	0m1.419s
+user	0m1.414s
 sys	0m0.004s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	1m18.857s
-user	1m18.748s
-sys	0m0.092s
+real	1m17.571s
+user	1m17.450s
+sys	0m0.097s
 descartes -p=2 -m=2: 
 descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
 
-real	0m0.033s
-user	0m0.024s
+real	0m0.028s
+user	0m0.020s
 sys	0m0.008s
 descartes -p=2 -m=3: 
-Invariant:
-(let ((a!1 (exists ((i11 Int))
-             (and (= o11!1 o13!5)
-                  (= o21!2 o12!3)
-                  (= o22!4 o23!6)
-                  (= columnName111 (get!0 o11!1 0))
-                  (= columnName211 (get!0 o21!2 0))
-                  (= x11 (- 1))
-                  (= _columnNamesLength11 (nondet!12 (- 1)))
-                  (= i11 0))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 i11))
-                 (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-  (and a!1 a!2 (>= i11 0)))
 descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.025s
-user	0m0.018s
-sys	0m0.007s
+real	0m0.022s
+user	0m0.011s
+sys	0m0.011s

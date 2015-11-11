@@ -2,24 +2,24 @@ Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.177s
-user	0m0.173s
+real	0m0.165s
+user	0m0.161s
 sys	0m0.004s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.177s
-user	0m0.171s
-sys	0m0.004s
+real	0m0.168s
+user	0m0.168s
+sys	0m0.000s
 descartes -p=1 -m=2: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes1Length1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes2Length1"])))
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.020s
-user	0m0.012s
-sys	0m0.008s
+real	0m0.014s
+user	0m0.009s
+sys	0m0.006s
 descartes -p=1 -m=3: 
-descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i2"])) LThan (ExpName (Name [Ident "parameterTypes1Length2"]))) CAnd (BinOp (ExpName (Name [Ident "i2"])) LThan (ExpName (Name [Ident "parameterTypes2Length2"])))
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.018s
-user	0m0.014s
-sys	0m0.003s
+real	0m0.015s
+user	0m0.015s
+sys	0m0.000s

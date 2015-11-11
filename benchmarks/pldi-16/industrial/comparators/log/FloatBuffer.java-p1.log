@@ -2,58 +2,24 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.101s
-user	0m0.093s
-sys	0m0.008s
+real	0m0.107s
+user	0m0.095s
+sys	0m0.013s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.098s
-user	0m0.086s
-sys	0m0.012s
+real	0m0.100s
+user	0m0.095s
+sys	0m0.004s
 descartes -p=1 -m=2: 
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
+
+real	0m0.024s
+user	0m0.012s
+sys	0m0.012s
+descartes -p=1 -m=3: 
+descartes: none of the invariants was able to prove the property.
 
 real	0m0.023s
-user	0m0.019s
-sys	0m0.004s
-descartes -p=1 -m=3: 
-Invariant:
-(let ((a!1 (exists ((compareRemaining11 Int))
-             (let ((a!1 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
-                             (remaining!2 o11!3)
-                             (remaining!2 o21!4))))
-               (and (= o11!3 o22!6)
-                    (= o21!4 o12!5)
-                    (= compareRemaining11 a!1)
-                    (= thisPos11 (position!1 o11!3))
-                    (= otherPos11 (position!1 o21!4))))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 compareRemaining11))
-                 (= (get!0 o11!3 j1) (get!0 o21!4 j1)))))
-      (a!3 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
-                (remaining!2 o11!3)
-                (remaining!2 o21!4))))
-  (and a!1 a!2 (>= compareRemaining11 a!3)))
-Invariant:
-(let ((a!1 (exists ((compareRemaining11 Int))
-             (let ((a!1 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
-                             (remaining!2 o11!3)
-                             (remaining!2 o21!4))))
-               (and (= o11!3 o22!6)
-                    (= o21!4 o12!5)
-                    (= compareRemaining11 a!1)
-                    (= thisPos11 (position!1 o11!3))
-                    (= otherPos11 (position!1 o21!4))))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 compareRemaining11))
-                 (= (get!0 o11!3 j1) (get!0 o21!4 j1)))))
-      (a!3 (ite (< (remaining!2 o11!3) (remaining!2 o21!4))
-                (remaining!2 o11!3)
-                (remaining!2 o21!4))))
-  (and a!1 a!2 (<= compareRemaining11 a!3)))
-descartes: analyse_loop failed
-
-real	0m0.022s
-user	0m0.017s
-sys	0m0.005s
+user	0m0.013s
+sys	0m0.010s

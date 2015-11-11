@@ -2,15 +2,15 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m1.270s
-user	0m1.260s
-sys	0m0.008s
+real	0m1.307s
+user	0m1.294s
+sys	0m0.012s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m3.125s
-user	0m3.098s
-sys	0m0.024s
+real	0m2.962s
+user	0m2.943s
+sys	0m0.016s
 descartes -p=1 -m=2: 
 descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
@@ -19,22 +19,9 @@ real	0m0.031s
 user	0m0.027s
 sys	0m0.004s
 descartes -p=1 -m=3: 
-Invariant:
-(let ((a!1 (exists ((i11 Int))
-             (and (= o11!1 o22!4)
-                  (= o21!2 o12!3)
-                  (= columnName111 (get!0 o11!1 0))
-                  (= columnName211 (get!0 o21!2 0))
-                  (= x11 (- 1))
-                  (= _columnNamesLength11 (nondet!9 (- 1)))
-                  (= i11 0))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 i11))
-                 (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-  (and a!1 a!2 (>= i11 0)))
 descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.025s
-user	0m0.020s
+real	0m0.029s
+user	0m0.025s
 sys	0m0.004s

@@ -2,184 +2,24 @@ Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m9.335s
-user	0m9.313s
-sys	0m0.016s
+real	0m3.684s
+user	0m3.671s
+sys	0m0.012s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m5.608s
-user	0m5.587s
-sys	0m0.020s
+real	0m5.690s
+user	0m5.673s
+sys	0m0.012s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.753s
-user	0m0.745s
-sys	0m0.008s
+real	0m0.738s
+user	0m0.725s
+sys	0m0.012s
 descartes -p=3 -m=3: 
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (not (not (= (mask!2 o13!7) (mask!2 o23!8))))))
-               (and (= o11!3 o12!5)
-                    (= o21!4 o13!7)
-                    (= o22!6 o23!8)
-                    (= o21!4 o11!3)
-                    (= res1!9 0)
-                    (= o22!6 o12!5)
-                    (= res2!10 0)
-                    (not (= o23!8 o13!7))
-                    a!1
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
-  (and a!1 a!2 (>= i31 0)))
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (= res2!10
-                           (ite (< (mask!2 o12!5) (mask!2 o22!6)) (- 1) 1)))
-                   (a!2 (not (not (= (mask!2 o13!7) (mask!2 o23!8))))))
-               (and (= o11!3 o12!5)
-                    (= o21!4 o13!7)
-                    (= o22!6 o23!8)
-                    (= o21!4 o11!3)
-                    (= res1!9 0)
-                    (not (= o22!6 o12!5))
-                    (not (= (mask!2 o12!5) (mask!2 o22!6)))
-                    a!1
-                    (not (= o23!8 o13!7))
-                    a!2
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
-  (and a!1 a!2 (>= i31 0)))
-Invariant:
-(let ((a!1 (exists ((i21 Int))
-             (let ((a!1 (not (not (= (mask!2 o12!5) (mask!2 o22!6))))))
-               (and (= o11!3 o12!5)
-                    (= o21!4 o13!7)
-                    (= o22!6 o23!8)
-                    (= o21!4 o11!3)
-                    (= res1!9 0)
-                    (not (= o22!6 o12!5))
-                    a!1
-                    (= i21 0)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 i21))
-                 (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
-  (and a!1 a!2 (>= i21 0)))
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (exists ((i21 Int))
-                          (let ((a!1 (not (not (= (mask!2 o12!5) (mask!2 o22!6))))))
-                            (and (= o11!3 o12!5)
-                                 (= o21!4 o13!7)
-                                 (= o22!6 o23!8)
-                                 (= o21!4 o11!3)
-                                 (= res1!9 0)
-                                 (not (= o22!6 o12!5))
-                                 a!1
-                                 (= i21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 i21))
-                              (= (get!1 o12!5 j2) (get!1 o22!6 j2)))))
-                   (a!3 (not (not (= (mask!2 o13!7) (mask!2 o23!8))))))
-               (and a!1
-                    a!2
-                    (>= i21 0)
-                    (< i21 (attributesSize!0 o12!5))
-                    (= c22!194
-                       (compareInt!16 (get!1 o12!5 i21) (get!1 o22!6 i21)))
-                    (not (= c22!194 0))
-                    (= res2!10 c22!194)
-                    (not (= o23!8 o13!7))
-                    a!3
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
-  (and a!1 a!2 (>= i31 0)))
-Invariant:
-(let ((a!1 (exists ((i21 Int))
-             (let ((a!1 (not (not (= (mask!2 o12!5) (mask!2 o22!6))))))
-               (and (= o11!3 o12!5)
-                    (= o21!4 o13!7)
-                    (= o22!6 o23!8)
-                    (= o21!4 o11!3)
-                    (= res1!9 0)
-                    (not (= o22!6 o12!5))
-                    a!1
-                    (= i21 0)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 i21))
-                 (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
-  (and a!1 a!2 (<= i21 0)))
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (exists ((i21 Int))
-                          (let ((a!1 (not (not (= (mask!2 o12!5) (mask!2 o22!6))))))
-                            (and (= o11!3 o12!5)
-                                 (= o21!4 o13!7)
-                                 (= o22!6 o23!8)
-                                 (= o21!4 o11!3)
-                                 (= res1!9 0)
-                                 (not (= o22!6 o12!5))
-                                 a!1
-                                 (= i21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 i21))
-                              (= (get!1 o12!5 j2) (get!1 o22!6 j2)))))
-                   (a!3 (not (not (= (mask!2 o13!7) (mask!2 o23!8))))))
-               (and a!1
-                    a!2
-                    (<= i21 0)
-                    (< i21 (attributesSize!0 o12!5))
-                    (= c22!1261
-                       (compareInt!16 (get!1 o12!5 i21) (get!1 o22!6 i21)))
-                    (not (= c22!1261 0))
-                    (= res2!10 c22!1261)
-                    (not (= o23!8 o13!7))
-                    a!3
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
-  (and a!1 a!2 (>= i31 0)))
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (exists ((i21 Int))
-                          (let ((a!1 (not (not (= (mask!2 o12!5) (mask!2 o22!6))))))
-                            (and (= o11!3 o12!5)
-                                 (= o21!4 o13!7)
-                                 (= o22!6 o23!8)
-                                 (= o21!4 o11!3)
-                                 (= res1!9 0)
-                                 (not (= o22!6 o12!5))
-                                 a!1
-                                 (= i21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 i21))
-                              (= (get!1 o12!5 j2) (get!1 o22!6 j2)))))
-                   (a!3 (not (not (= (mask!2 o13!7) (mask!2 o23!8))))))
-               (and a!1
-                    a!2
-                    (<= i21 0)
-                    (< i21 (attributesSize!0 o12!5))
-                    (= c22!1261
-                       (compareInt!16 (get!1 o12!5 i21) (get!1 o22!6 i21)))
-                    (not (= c22!1261 0))
-                    (= res2!10 c22!1261)
-                    (not (= o23!8 o13!7))
-                    a!3
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
-  (and a!1 a!2 (<= i31 0)))
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.279s
-user	0m0.279s
-sys	0m0.000s
+real	0m0.269s
+user	0m0.256s
+sys	0m0.012s

@@ -2,126 +2,24 @@ Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.298s
-user	0m0.286s
+real	0m0.283s
+user	0m0.271s
 sys	0m0.012s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.269s
-user	0m0.269s
-sys	0m0.000s
+real	0m0.278s
+user	0m0.264s
+sys	0m0.016s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.229s
-user	0m0.225s
+real	0m0.232s
+user	0m0.228s
 sys	0m0.004s
 descartes -p=1 -m=3: 
-Invariant:
-(let ((a!1 (exists ((aUpto11 Int))
-             (let ((a!1 (+ aUpto11
-                           (ite (< (length!1 o11!4) (length!1 o21!5))
-                                (length!1 o11!4)
-                                (length!1 o21!5)))))
-               (and (= o11!4 o22!7)
-                    (= o21!5 o12!6)
-                    (hasArray!3 o11!4)
-                    (hasArray!3 o21!5)
-                    (= aUpto11 (arrayOffset!2 o11!4))
-                    (= bUpto11 (arrayOffset!2 o21!5))
-                    (= aUpto11 0)
-                    (= aStop11 a!1)))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 aUpto11))
-                 (= (get!0 o11!4 j1) (get!0 o21!5 j1))))))
-  (and a!1 a!2 (>= aUpto11 (arrayOffset!2 o11!4))))
-Invariant:
-(let ((a!1 (exists ((aUpto21 Int))
-             (let ((a!1 (exists ((aUpto11 Int))
-                          (let ((a!1 (+ aUpto11
-                                        (ite (< (length!1 o11!4)
-                                                (length!1 o21!5))
-                                             (length!1 o11!4)
-                                             (length!1 o21!5)))))
-                            (and (= o11!4 o22!7)
-                                 (= o21!5 o12!6)
-                                 (hasArray!3 o11!4)
-                                 (hasArray!3 o21!5)
-                                 (= aUpto11 (arrayOffset!2 o11!4))
-                                 (= bUpto11 (arrayOffset!2 o21!5))
-                                 (= aUpto11 0)
-                                 (= aStop11 a!1)))))
-                   (a!2 (forall ((j1 Int))
-                          (=> (and (<= 0 j1) (< j1 aUpto11))
-                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
-                   (a!3 (+ aUpto21
-                           (ite (< (length!1 o12!6) (length!1 o22!7))
-                                (length!1 o12!6)
-                                (length!1 o22!7)))))
-               (and a!1
-                    a!2
-                    (>= aUpto11 (arrayOffset!2 o11!4))
-                    (< aUpto11 aStop11)
-                    (= aByte12!254 (nondet!12 (get!0 o11!4 aUpto11)))
-                    (= bByte12!255 (nondet!12 (get!0 o21!5 bUpto11)))
-                    (= diff12!256 (- aByte12!254 bByte12!255))
-                    (not (= diff12!256 0))
-                    (= res1!8 diff12!256)
-                    (hasArray!3 o12!6)
-                    (hasArray!3 o22!7)
-                    (= aUpto21 (arrayOffset!2 o12!6))
-                    (= bUpto21 (arrayOffset!2 o22!7))
-                    (= aUpto21 0)
-                    (= aStop21 a!3)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 aUpto21))
-                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
-  (and a!1 a!2 (>= aUpto21 (arrayOffset!2 o12!6))))
-Invariant:
-(let ((a!1 (exists ((aUpto21 Int))
-             (let ((a!1 (exists ((aUpto11 Int))
-                          (let ((a!1 (+ aUpto11
-                                        (ite (< (length!1 o11!4)
-                                                (length!1 o21!5))
-                                             (length!1 o11!4)
-                                             (length!1 o21!5)))))
-                            (and (= o11!4 o22!7)
-                                 (= o21!5 o12!6)
-                                 (hasArray!3 o11!4)
-                                 (hasArray!3 o21!5)
-                                 (= aUpto11 (arrayOffset!2 o11!4))
-                                 (= bUpto11 (arrayOffset!2 o21!5))
-                                 (= aUpto11 0)
-                                 (= aStop11 a!1)))))
-                   (a!2 (forall ((j1 Int))
-                          (=> (and (<= 0 j1) (< j1 aUpto11))
-                              (= (get!0 o11!4 j1) (get!0 o21!5 j1)))))
-                   (a!3 (+ aUpto21
-                           (ite (< (length!1 o12!6) (length!1 o22!7))
-                                (length!1 o12!6)
-                                (length!1 o22!7)))))
-               (and a!1
-                    a!2
-                    (>= aUpto11 (arrayOffset!2 o11!4))
-                    (< aUpto11 aStop11)
-                    (= aByte12!254 (nondet!12 (get!0 o11!4 aUpto11)))
-                    (= bByte12!255 (nondet!12 (get!0 o21!5 bUpto11)))
-                    (= diff12!256 (- aByte12!254 bByte12!255))
-                    (not (= diff12!256 0))
-                    (= res1!8 diff12!256)
-                    (hasArray!3 o12!6)
-                    (hasArray!3 o22!7)
-                    (= aUpto21 (arrayOffset!2 o12!6))
-                    (= bUpto21 (arrayOffset!2 o22!7))
-                    (= aUpto21 0)
-                    (= aStop21 a!3)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 aUpto21))
-                 (= (get!0 o12!6 j2) (get!0 o22!7 j2))))))
-  (and a!1 a!2 (<= aUpto21 (arrayOffset!2 o12!6))))
-descartes: analyse_loop failed
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.091s
-user	0m0.083s
-sys	0m0.008s
+real	0m0.098s
+user	0m0.086s
+sys	0m0.012s

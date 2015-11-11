@@ -2,192 +2,24 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m1.463s
-user	0m1.453s
+real	0m1.464s
+user	0m1.456s
 sys	0m0.008s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m2.158s
-user	0m2.162s
-sys	0m0.000s
+real	0m2.046s
+user	0m2.033s
+sys	0m0.012s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.491s
-user	0m0.486s
-sys	0m0.004s
-descartes -p=2 -m=3: 
-Invariant:
-(let ((a!1 (exists ((i11 Int))
-             (and (= o11!1 o13!5)
-                  (= o21!2 o12!3)
-                  (= o22!4 o23!6)
-                  (= propertyName11 0)
-                  (= _ascending11 (nondet!12 (- 3)))
-                  (= _caseSensitive11 (nondet!12 (- 2)))
-                  (= _properyNamesSize11 (nondet!12 (- 1)))
-                  (>= _properyNamesSize11 0)
-                  (= i11 0))))
-      (a!2 (forall ((j1 Int))
-             (=> (and (<= 0 j1) (< j1 i11))
-                 (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-  (and a!1 a!2 (>= i11 0)))
-Invariant:
-(let ((a!1 (exists ((i21 Int))
-             (let ((a!1 (exists ((i11 Int))
-                          (and (= o11!1 o13!5)
-                               (= o21!2 o12!3)
-                               (= o22!4 o23!6)
-                               (= propertyName11 0)
-                               (= _ascending11 (nondet!12 (- 3)))
-                               (= _caseSensitive11 (nondet!12 (- 2)))
-                               (= _properyNamesSize11 (nondet!12 (- 1)))
-                               (>= _properyNamesSize11 0)
-                               (= i11 0))))
-                   (a!2 (forall ((j1 Int))
-                          (=> (and (<= 0 j1) (< j1 i11))
-                              (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-               (and a!1
-                    a!2
-                    (>= i11 0)
-                    (< i11 _properyNamesSize11)
-                    (= propertyName12!176 (nondet!12 i11))
-                    (= _ascending11 0)
-                    (= (get!0 o11!1 propertyName12!176) 0)
-                    (= _caseSensitive11 0)
-                    (not (= (compareInt!14 property111 property211) 0))
-                    (= res1!7 (compareInt!14 property111 property211))
-                    (= propertyName21 0)
-                    (= _ascending21 (nondet!12 (- 3)))
-                    (= _caseSensitive21 (nondet!12 (- 2)))
-                    (= _properyNamesSize21 (nondet!12 (- 1)))
-                    (>= _properyNamesSize21 0)
-                    (= i21 0)))))
-      (a!2 (forall ((j2 Int))
-             (=> (and (<= 0 j2) (< j2 i21))
-                 (= (get!0 o12!3 j2) (get!0 o22!4 j2))))))
-  (and a!1 a!2 (>= i21 0)))
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (exists ((i21 Int))
-                          (let ((a!1 (exists ((i11 Int))
-                                       (and (= o11!1 o13!5)
-                                            (= o21!2 o12!3)
-                                            (= o22!4 o23!6)
-                                            (= propertyName11 0)
-                                            (= _ascending11 (nondet!12 (- 3)))
-                                            (= _caseSensitive11
-                                               (nondet!12 (- 2)))
-                                            (= _properyNamesSize11
-                                               (nondet!12 (- 1)))
-                                            (>= _properyNamesSize11 0)
-                                            (= i11 0))))
-                                (a!2 (forall ((j1 Int))
-                                       (=> (and (<= 0 j1) (< j1 i11))
-                                           (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-                            (and a!1
-                                 a!2
-                                 (>= i11 0)
-                                 (< i11 _properyNamesSize11)
-                                 (= propertyName12!176 (nondet!12 i11))
-                                 (= _ascending11 0)
-                                 (= (get!0 o11!1 propertyName12!176) 0)
-                                 (= _caseSensitive11 0)
-                                 (not (= (compareInt!14 property111 property211)
-                                         0))
-                                 (= res1!7
-                                    (compareInt!14 property111 property211))
-                                 (= propertyName21 0)
-                                 (= _ascending21 (nondet!12 (- 3)))
-                                 (= _caseSensitive21 (nondet!12 (- 2)))
-                                 (= _properyNamesSize21 (nondet!12 (- 1)))
-                                 (>= _properyNamesSize21 0)
-                                 (= i21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 i21))
-                              (= (get!0 o12!3 j2) (get!0 o22!4 j2))))))
-               (and a!1
-                    a!2
-                    (>= i21 0)
-                    (< i21 _properyNamesSize21)
-                    (= propertyName22!489 (nondet!12 i21))
-                    (= _ascending21 0)
-                    (= (get!0 o12!3 propertyName22!489) 0)
-                    (= _caseSensitive21 0)
-                    (not (= (compareInt!14 property121 property221) 0))
-                    (= res2!8 (compareInt!14 property121 property221))
-                    (= propertyName31 0)
-                    (= _ascending31 (nondet!12 (- 3)))
-                    (= _caseSensitive31 (nondet!12 (- 2)))
-                    (= _properyNamesSize31 (nondet!12 (- 1)))
-                    (>= _properyNamesSize31 0)
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!0 o13!5 j3) (get!0 o23!6 j3))))))
-  (and a!1 a!2 (>= i31 0)))
-Invariant:
-(let ((a!1 (exists ((i31 Int))
-             (let ((a!1 (exists ((i21 Int))
-                          (let ((a!1 (exists ((i11 Int))
-                                       (and (= o11!1 o13!5)
-                                            (= o21!2 o12!3)
-                                            (= o22!4 o23!6)
-                                            (= propertyName11 0)
-                                            (= _ascending11 (nondet!12 (- 3)))
-                                            (= _caseSensitive11
-                                               (nondet!12 (- 2)))
-                                            (= _properyNamesSize11
-                                               (nondet!12 (- 1)))
-                                            (>= _properyNamesSize11 0)
-                                            (= i11 0))))
-                                (a!2 (forall ((j1 Int))
-                                       (=> (and (<= 0 j1) (< j1 i11))
-                                           (= (get!0 o11!1 j1) (get!0 o21!2 j1))))))
-                            (and a!1
-                                 a!2
-                                 (>= i11 0)
-                                 (< i11 _properyNamesSize11)
-                                 (= propertyName12!176 (nondet!12 i11))
-                                 (= _ascending11 0)
-                                 (= (get!0 o11!1 propertyName12!176) 0)
-                                 (= _caseSensitive11 0)
-                                 (not (= (compareInt!14 property111 property211)
-                                         0))
-                                 (= res1!7
-                                    (compareInt!14 property111 property211))
-                                 (= propertyName21 0)
-                                 (= _ascending21 (nondet!12 (- 3)))
-                                 (= _caseSensitive21 (nondet!12 (- 2)))
-                                 (= _properyNamesSize21 (nondet!12 (- 1)))
-                                 (>= _properyNamesSize21 0)
-                                 (= i21 0)))))
-                   (a!2 (forall ((j2 Int))
-                          (=> (and (<= 0 j2) (< j2 i21))
-                              (= (get!0 o12!3 j2) (get!0 o22!4 j2))))))
-               (and a!1
-                    a!2
-                    (>= i21 0)
-                    (< i21 _properyNamesSize21)
-                    (= propertyName22!489 (nondet!12 i21))
-                    (= _ascending21 0)
-                    (= (get!0 o12!3 propertyName22!489) 0)
-                    (= _caseSensitive21 0)
-                    (not (= (compareInt!14 property121 property221) 0))
-                    (= res2!8 (compareInt!14 property121 property221))
-                    (= propertyName31 0)
-                    (= _ascending31 (nondet!12 (- 3)))
-                    (= _caseSensitive31 (nondet!12 (- 2)))
-                    (= _properyNamesSize31 (nondet!12 (- 1)))
-                    (>= _properyNamesSize31 0)
-                    (= i31 0)))))
-      (a!2 (forall ((j3 Int))
-             (=> (and (<= 0 j3) (< j3 i31))
-                 (= (get!0 o13!5 j3) (get!0 o23!6 j3))))))
-  (and a!1 a!2 (<= i31 0)))
-descartes: analyse_loop failed
-
-real	0m0.436s
-user	0m0.423s
+real	0m0.485s
+user	0m0.472s
 sys	0m0.012s
+descartes -p=2 -m=3: 
+descartes: none of the invariants was able to prove the property.
+
+real	0m0.400s
+user	0m0.402s
+sys	0m0.000s

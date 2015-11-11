@@ -78,9 +78,9 @@ generalizeCond op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond p
       jSym <- mkStringSymbol $ "j" ++ show pid
       j <- mkConst jSym sort
       jApp <- toApp j
-      i0 <- mkIntNum 0
+--      i0 <- mkIntNum 0
       -- c1: 0 <= j < i
-      c1 <- mkLe i0 j >>= \left -> mkLt j iAST >>= \right -> mkAnd [left, right]
+      c1 <- op i0 j >>= \left -> op' j iAST >>= \right -> mkAnd [left, right]
       -- c2: 
       let ssamap' = M.insert jIdent (j, sort, pid) ssamap
       c2 <- buildArtCond (pars,fields) j pid
