@@ -2,24 +2,24 @@ Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.073s
-user	0m0.073s
-sys	0m0.000s
+real	0m0.072s
+user	0m0.068s
+sys	0m0.004s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.046s
-user	0m0.042s
-sys	0m0.004s
+real	0m0.044s
+user	0m0.036s
+sys	0m0.008s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.087s
-user	0m0.071s
-sys	0m0.017s
+real	0m0.086s
+user	0m0.078s
+sys	0m0.008s
 descartes -p=3 -m=3: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.050s
-user	0m0.033s
-sys	0m0.016s
+real	0m0.043s
+user	0m0.043s
+sys	0m0.000s

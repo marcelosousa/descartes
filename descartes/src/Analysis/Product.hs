@@ -177,7 +177,7 @@ analyse_loop pid r1 rest _cond _body =  do
  analyse_loop_w_inv invs
  where
    analyse_loop_w_inv [] = error "none of the invariants was able to prove the property." 
-   analyse_loop_w_inv (inv:is) = do
+   analyse_loop_w_inv (inv:is) = T.trace "trying invariant" $ do
     it_res <- _analyse_loop rest pid _cond _body inv
     if it_res
     then do

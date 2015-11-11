@@ -2,24 +2,107 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.352s
-user	0m0.344s
-sys	0m0.008s
+real	0m0.364s
+user	0m0.360s
+sys	0m0.004s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.859s
-user	0m0.859s
-sys	0m0.000s
+real	0m0.829s
+user	0m0.821s
+sys	0m0.008s
 descartes -p=2 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o11!1 of sort NameComparator
+j1 of sort Int
 
-real	0m0.011s
-user	0m0.004s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o21!2 of sort NameComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o11!1 of sort NameComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o21!2 of sort NameComparator
+j1 of sort Int
+
+./run-descartes.sh: line 17:  6725 Segmentation fault      (core dumped) descartes -p=2 -m=2 $f
+
+real	0m0.182s
+user	0m0.025s
 sys	0m0.008s
 descartes -p=2 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o13!5 of sort NameComparator
+j3 of sort Int
 
-real	0m0.014s
-user	0m0.014s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o23!6 of sort NameComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o13!5 of sort NameComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o23!6 of sort NameComparator
+j3 of sort Int
+
+trying invariant
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o12!3 of sort NameComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o22!4 of sort NameComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o12!3 of sort NameComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o22!4 of sort NameComparator
+j2 of sort Int
+
+trying invariant
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o13!5 of sort NameComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o23!6 of sort NameComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o13!5 of sort NameComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun nondet!12 (Int) Int) applied to: 
+o23!6 of sort NameComparator
+j3 of sort Int
+
+trying invariant
+./run-descartes.sh: line 17:  6727 Segmentation fault      (core dumped) descartes -p=2 -m=3 $f
+
+real	0m0.190s
+user	0m0.042s
 sys	0m0.000s

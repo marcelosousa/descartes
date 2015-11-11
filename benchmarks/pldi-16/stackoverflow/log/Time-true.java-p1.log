@@ -2,9 +2,9 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.066s
-user	0m0.054s
-sys	0m0.014s
+real	0m0.067s
+user	0m0.059s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
@@ -15,11 +15,11 @@ descartes -p=1 -m=2:
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.035s
-user	0m0.031s
-sys	0m0.004s
+user	0m0.019s
+sys	0m0.015s
 descartes -p=1 -m=3: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.029s
-user	0m0.025s
-sys	0m0.004s
+user	0m0.021s
+sys	0m0.008s

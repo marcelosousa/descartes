@@ -32,9 +32,8 @@ search fields list (Name n) =
       case M.lookup ident fields of
         Nothing -> return list
         Just fn -> return $ fn:list
-    [Ident "Character",fnName] ->
-      case M.lookup fnName fields of
-        Nothing -> return list
+{-
+    [Ident "Character",fnName] -> return list
         Just fn -> return $ fn:list
     [Ident "Double",Ident "compare"] -> 
       let fnName = Ident "compareDouble"
@@ -54,7 +53,7 @@ search fields list (Name n) =
     [obj,field] ->
       case M.lookup field fields of
         Nothing -> return list
-        Just fn -> return $ fn:list
+        Just fn -> return $ fn:list -}
     _ -> return list
         
 type Z3Op = (AST -> AST -> Z3 AST)

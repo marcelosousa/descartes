@@ -2,24 +2,24 @@ Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.695s
-user	0m0.685s
+real	0m0.753s
+user	0m0.744s
 sys	0m0.008s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m8.945s
-user	0m8.932s
+real	0m9.320s
+user	0m9.304s
 sys	0m0.012s
 descartes -p=2 -m=2: 
-descartes: buildArtCond: fn
+descartes: none of the invariants was able to prove the property.
 
 real	0m0.028s
-user	0m0.021s
-sys	0m0.008s
+user	0m0.024s
+sys	0m0.004s
 descartes -p=2 -m=3: 
-descartes: buildArtCond: fn
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.025s
-user	0m0.025s
-sys	0m0.000s
+real	0m0.030s
+user	0m0.026s
+sys	0m0.005s

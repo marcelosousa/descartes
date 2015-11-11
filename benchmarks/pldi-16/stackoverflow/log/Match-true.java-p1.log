@@ -3,23 +3,23 @@ descartes -p=1 -m=0:
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.037s
-user	0m0.028s
+user	0m0.029s
 sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.036s
-user	0m0.032s
-sys	0m0.004s
+real	0m0.037s
+user	0m0.037s
+sys	0m0.000s
 descartes -p=1 -m=2: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.061s
-user	0m0.061s
-sys	0m0.000s
+real	0m0.064s
+user	0m0.052s
+sys	0m0.012s
 descartes -p=1 -m=3: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.038s
-user	0m0.030s
-sys	0m0.008s
+real	0m0.040s
+user	0m0.036s
+sys	0m0.005s
