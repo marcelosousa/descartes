@@ -1,6 +1,6 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o21!6 -> Container!val!1
 o11!5 -> Container!val!0
 o13!9 -> Container!val!1
@@ -16,6 +16,9 @@ compareDouble!17 -> {
 departureTransportCompany!1 -> {
   Container!val!2 -> 8
   else -> 4
+}
+equals!20 -> {
+  5
 }
 departureTime!3 -> {
   Container!val!2 -> 7
@@ -39,54 +42,11 @@ departureTransportType!0 -> {
 }
 
 
-real	0m0.047s
-user	0m0.039s
-sys	0m0.008s
-descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o21!6 -> Container!val!1
-o11!5 -> Container!val!0
-o13!9 -> Container!val!1
-o23!10 -> Container!val!2
-res1!11 -> 0
-res3!13 -> 1
-o22!8 -> Container!val!2
-res2!12 -> (- 1)
-o12!7 -> Container!val!0
-compareDouble!17 -> {
-  0
-}
-departureTransportCompany!1 -> {
-  Container!val!2 -> 8
-  else -> 4
-}
-departureTime!3 -> {
-  Container!val!2 -> 7
-  else -> 2
-}
-compareInt!18 -> {
-  0
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-departureTimeIsBefore!4 -> {
-  Container!val!0 7 -> true
-  else -> false
-}
-departureMaxDuration!2 -> {
-  3
-}
-departureTransportType!0 -> {
-  6
-}
-
-
-real	0m0.034s
-user	0m0.030s
+real	0m0.045s
+user	0m0.041s
 sys	0m0.004s
-descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+descartes -p=3 -m=1: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o21!6 -> Container!val!1
 o11!5 -> Container!val!0
 o13!9 -> Container!val!1
@@ -100,8 +60,10 @@ compareDouble!17 -> {
   0
 }
 departureTransportCompany!1 -> {
-  Container!val!2 -> 8
-  else -> 4
+  4
+}
+equals!20 -> {
+  5
 }
 departureTime!3 -> {
   Container!val!2 -> 7
@@ -118,7 +80,54 @@ departureTimeIsBefore!4 -> {
   else -> false
 }
 departureMaxDuration!2 -> {
-  3
+  Container!val!2 -> 8
+  else -> 3
+}
+departureTransportType!0 -> {
+  6
+}
+
+
+real	0m0.035s
+user	0m0.023s
+sys	0m0.011s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o21!6 -> Container!val!1
+o11!5 -> Container!val!0
+o13!9 -> Container!val!1
+o23!10 -> Container!val!2
+res1!11 -> 0
+res3!13 -> 1
+o22!8 -> Container!val!2
+res2!12 -> (- 1)
+o12!7 -> Container!val!0
+compareDouble!17 -> {
+  0
+}
+departureTransportCompany!1 -> {
+  4
+}
+equals!20 -> {
+  5
+}
+departureTime!3 -> {
+  Container!val!2 -> 7
+  else -> 2
+}
+compareInt!18 -> {
+  0
+}
+compareIgnoreCaseString!19 -> {
+  0
+}
+departureTimeIsBefore!4 -> {
+  Container!val!0 7 -> true
+  else -> false
+}
+departureMaxDuration!2 -> {
+  Container!val!2 -> 8
+  else -> 3
 }
 departureTransportType!0 -> {
   6
@@ -126,10 +135,10 @@ departureTransportType!0 -> {
 
 
 real	0m0.060s
-user	0m0.051s
-sys	0m0.009s
+user	0m0.052s
+sys	0m0.008s
 descartes -p=3 -m=3: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o21!6 -> Container!val!1
 o11!5 -> Container!val!0
 o13!9 -> Container!val!1
@@ -143,8 +152,10 @@ compareDouble!17 -> {
   0
 }
 departureTransportCompany!1 -> {
-  Container!val!2 -> 8
-  else -> 4
+  4
+}
+equals!20 -> {
+  5
 }
 departureTime!3 -> {
   Container!val!2 -> 7
@@ -161,7 +172,8 @@ departureTimeIsBefore!4 -> {
   else -> false
 }
 departureMaxDuration!2 -> {
-  3
+  Container!val!2 -> 8
+  else -> 3
 }
 departureTransportType!0 -> {
   6
@@ -169,5 +181,5 @@ departureTransportType!0 -> {
 
 
 real	0m0.033s
-user	0m0.021s
-sys	0m0.012s
+user	0m0.028s
+sys	0m0.004s

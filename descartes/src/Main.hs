@@ -121,4 +121,4 @@ descartes mode classMap comparator prop propName = do
     Unsat -> putStrLn $ "Unsat: OBEYS " ++ propName
     Sat -> do
       putStrLn $ "Sat: VIOLATES " ++ propName --is buggy! " ++ propName ++ " fails!\nCounter-example:"
-      putStrLn $ fromJust models
+  --    putStrLn $ fromJust models

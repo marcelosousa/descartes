@@ -37,32 +37,32 @@ public abstract class CharBuffer extends Buffer implements Comparable<CharBuffer
   int limit;
   char get(int index);
 
-	/** Checks whether this char buffer is equal to another object.
-	 * <p>
-	 * If {@code other} is not a char buffer then {@code false} is returned. Two char buffers are equal if and only if their
-	 * remaining chars are exactly the same. Position, limit, capacity and mark are not considered.
-	 * </p>
-	 * 
-	 * @param other the object to compare with this char buffer.
-	 * @return {@code true} if this char buffer is equal to {@code other}, {@code false} otherwise.
-	 * @since Android 1.0 */
- 	public boolean equals (CharBuffer o1, CharBuffer o2) {
-      int o1rem = o1.limit - o1.position;
-      int o2rem = o2.limit - o2.position;
-      if (o1rem != o2rem) {
+  /** Checks whether this char buffer is equal to another object.
+   * <p>
+   * If {@code other} is not a char buffer then {@code false} is returned. Two char buffers are equal if and only if their
+   * remaining chars are exactly the same. Position, limit, capacity and mark are not considered.
+   * </p>
+   * 
+   * @param other the object to compare with this char buffer.
+   * @return {@code true} if this char buffer is equal to {@code other}, {@code false} otherwise.
+   * @since Android 1.0 */
+  public boolean equals (CharBuffer o1, CharBuffer o2) {
+    int o1rem = o1.limit - o1.position;
+    int o2rem = o2.limit - o2.position;
+    if (o1rem != o2rem) {
+      return false;
+    }
+
+    assume(o1.limit >= 0);
+    assume(o1.limit == o2.limit);
+
+    int i = o1.position;
+    while (i < o1.limit) {
+      if (o1.get(i) != o2.get(i)) {
         return false;
       }
-
-      assume(o1.limit >= 0);
-      assume(o1.limit == o2.limit);
-
-      int i = o1.position;
-      while (i < o1.limit) {
-        if (o1.get(i) != o2.get(i)) {
-          return false;
-        }
-        i++;
-      }
-      return true;
-   	}
- }
+      i++;
+    }
+    return true;
+  }
+}

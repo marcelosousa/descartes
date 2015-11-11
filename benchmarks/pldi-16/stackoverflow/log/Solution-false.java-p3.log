@@ -1,37 +1,37 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-abscomp232!1182 -> 1
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 comp311 -> 0
 o12!4 -> SolutionComparator!val!0
-o21!3 -> SolutionComparator!val!1
+abscomp232!1561 -> 1
 comp131 -> (- 1)
 abscomp211 -> 0
 v131 -> (- 2)
 comp21 -> 1
-abscomp132!1181 -> 1
 comp231 -> 1
+o21!3 -> SolutionComparator!val!1
 comp111 -> 1
 comp211 -> (- 1)
 abscomp111 -> 0
 target31 -> (- 3)
+abscomp132!1560 -> 1
 o13!6 -> SolutionComparator!val!1
 v221 -> (- 4)
 o11!2 -> SolutionComparator!val!0
 o23!7 -> SolutionComparator!val!2
 v231 -> (- 4)
 target11 -> (- 3)
-abscomp212!1018 -> 1
 comp331 -> 0
 res2!9 -> 1
-abscomp112!1016 -> 1
 v211 -> (- 2)
 o22!5 -> SolutionComparator!val!2
 v121 -> (- 4)
+abscomp112!1341 -> 1
 abscomp231 -> 0
 res1!8 -> 0
 abscomp131 -> 0
+abscomp212!1343 -> 1
 v111 -> (- 4)
 solutionCost!0 -> {
   SolutionComparator!val!2 -> (- 1)
@@ -46,6 +46,9 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
+equals!17 -> {
+  5
+}
 getValue!1 -> {
   SolutionComparator!val!1 -> (- 2)
   else -> (- 4)
@@ -55,11 +58,11 @@ compareInt!15 -> {
 }
 
 
-real	0m0.658s
-user	0m0.650s
-sys	0m0.008s
+real	0m0.664s
+user	0m0.651s
+sys	0m0.012s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 comp311 -> 0
 o12!4 -> SolutionComparator!val!0
@@ -79,21 +82,21 @@ o11!2 -> SolutionComparator!val!0
 o23!7 -> SolutionComparator!val!2
 v231 -> (- 4)
 target11 -> (- 3)
+abscomp112!703 -> 1
+abscomp212!1047 -> 1
 comp331 -> 0
 res2!9 -> 1
 v211 -> (- 2)
 o22!5 -> SolutionComparator!val!2
-abscomp112!702 -> 1
 v121 -> (- 4)
-abscomp232!1297 -> 1
-abscomp132!1296 -> 1
-res1!8 -> 0
 abscomp231 -> 0
+res1!8 -> 0
+abscomp132!1297 -> 1
 abscomp131 -> 0
+abscomp232!1298 -> 1
 v111 -> (- 4)
-abscomp212!1046 -> 1
 solutionCost!0 -> {
-  SolutionComparator!val!2 -> (- 1)
+  SolutionComparator!val!0 -> 1
   else -> 0
 }
 nondet!13 -> {
@@ -105,64 +108,8 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
-getValue!1 -> {
-  SolutionComparator!val!1 -> (- 2)
-  else -> (- 4)
-}
-compareInt!15 -> {
-  0
-}
-
-
-real	0m5.482s
-user	0m5.438s
-sys	0m0.044s
-descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 0
-abscomp112!18 -> 1
-comp311 -> 0
-o12!4 -> SolutionComparator!val!0
-comp131 -> (- 1)
-abscomp211 -> 0
-v131 -> (- 2)
-comp21 -> 1
-comp231 -> 1
-abscomp232!34 -> 1
-comp111 -> 1
-comp211 -> (- 1)
-abscomp111 -> 0
-target31 -> (- 3)
-o21!3 -> SolutionComparator!val!1
-v221 -> (- 4)
-o13!6 -> SolutionComparator!val!1
-o11!2 -> SolutionComparator!val!0
-o23!7 -> SolutionComparator!val!2
-v231 -> (- 4)
-target11 -> (- 3)
-abscomp132!33 -> 1
-comp331 -> 0
-res2!9 -> 1
-v211 -> (- 2)
-o22!5 -> SolutionComparator!val!2
-abscomp212!20 -> 1
-v121 -> (- 4)
-abscomp231 -> 0
-res1!8 -> 0
-abscomp131 -> 0
-v111 -> (- 4)
-solutionCost!0 -> {
-  SolutionComparator!val!2 -> (- 1)
-  else -> 0
-}
-nondet!13 -> {
-  (- 3)
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
+equals!17 -> {
+  5
 }
 getValue!1 -> {
   SolutionComparator!val!1 -> (- 2)
@@ -173,65 +120,130 @@ compareInt!15 -> {
 }
 
 
-real	0m16.301s
-user	0m16.248s
-sys	0m0.052s
-descartes -p=3 -m=3: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 0
-comp311 -> 0
-o12!4 -> SolutionComparator!val!0
-o21!3 -> SolutionComparator!val!1
-comp131 -> (- 1)
-abscomp211 -> 0
-v131 -> (- 2)
-comp21 -> 1
-comp231 -> 1
-comp111 -> 1
-comp211 -> (- 1)
-abscomp111 -> 0
-target31 -> (- 3)
-o13!6 -> SolutionComparator!val!1
-v221 -> (- 4)
-o11!2 -> SolutionComparator!val!0
-o23!7 -> SolutionComparator!val!2
-v231 -> (- 4)
-target11 -> (- 3)
-comp331 -> 0
-res2!9 -> 1
-v211 -> (- 2)
-o22!5 -> SolutionComparator!val!2
-abscomp112!702 -> 1
-v121 -> (- 4)
-abscomp232!1297 -> 1
-abscomp132!1296 -> 1
-res1!8 -> 0
-abscomp231 -> 0
-abscomp131 -> 0
-v111 -> (- 4)
-abscomp212!1046 -> 1
-solutionCost!0 -> {
-  SolutionComparator!val!2 -> (- 1)
-  else -> 0
-}
-nondet!13 -> {
-  (- 3)
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
-getValue!1 -> {
-  SolutionComparator!val!1 -> (- 2)
-  else -> (- 4)
-}
-compareInt!15 -> {
-  0
-}
-
-
-real	0m5.524s
-user	0m5.503s
+real	0m5.836s
+user	0m5.814s
 sys	0m0.020s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res3!10 -> 0
+abscomp112!19 -> 1
+comp311 -> 0
+o12!4 -> SolutionComparator!val!0
+comp131 -> (- 1)
+abscomp211 -> 0
+v131 -> (- 2)
+comp21 -> 1
+comp231 -> 1
+o21!3 -> SolutionComparator!val!1
+comp111 -> 1
+comp211 -> (- 1)
+abscomp111 -> 0
+target31 -> (- 3)
+abscomp132!34 -> 1
+v221 -> (- 4)
+o13!6 -> SolutionComparator!val!1
+o11!2 -> SolutionComparator!val!0
+o23!7 -> SolutionComparator!val!2
+v231 -> (- 4)
+target11 -> (- 3)
+abscomp232!35 -> 1
+comp331 -> 0
+res2!9 -> 1
+abscomp212!21 -> 1
+v211 -> (- 2)
+o22!5 -> SolutionComparator!val!2
+v121 -> (- 4)
+abscomp231 -> 0
+res1!8 -> 0
+abscomp131 -> 0
+v111 -> (- 4)
+solutionCost!0 -> {
+  SolutionComparator!val!2 -> (- 1)
+  else -> 0
+}
+nondet!13 -> {
+  (- 3)
+}
+compareIgnoreCaseString!16 -> {
+  0
+}
+compareDouble!14 -> {
+  0
+}
+equals!17 -> {
+  5
+}
+getValue!1 -> {
+  SolutionComparator!val!1 -> (- 2)
+  else -> (- 4)
+}
+compareInt!15 -> {
+  0
+}
+
+
+real	0m16.404s
+user	0m16.318s
+sys	0m0.080s
+descartes -p=3 -m=3: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res3!10 -> 0
+comp311 -> 0
+o12!4 -> SolutionComparator!val!0
+o21!3 -> SolutionComparator!val!1
+comp131 -> (- 1)
+abscomp211 -> 0
+v131 -> (- 2)
+comp21 -> 1
+comp231 -> 1
+comp111 -> 1
+comp211 -> (- 1)
+abscomp111 -> 0
+target31 -> (- 3)
+o13!6 -> SolutionComparator!val!1
+v221 -> (- 4)
+o11!2 -> SolutionComparator!val!0
+o23!7 -> SolutionComparator!val!2
+v231 -> (- 4)
+target11 -> (- 3)
+abscomp112!703 -> 1
+abscomp212!1047 -> 1
+comp331 -> 0
+res2!9 -> 1
+v211 -> (- 2)
+o22!5 -> SolutionComparator!val!2
+v121 -> (- 4)
+abscomp231 -> 0
+res1!8 -> 0
+abscomp132!1297 -> 1
+abscomp131 -> 0
+abscomp232!1298 -> 1
+v111 -> (- 4)
+solutionCost!0 -> {
+  SolutionComparator!val!0 -> 1
+  else -> 0
+}
+nondet!13 -> {
+  (- 3)
+}
+compareIgnoreCaseString!16 -> {
+  0
+}
+compareDouble!14 -> {
+  0
+}
+equals!17 -> {
+  5
+}
+getValue!1 -> {
+  SolutionComparator!val!1 -> (- 2)
+  else -> (- 4)
+}
+compareInt!15 -> {
+  0
+}
+
+
+real	0m5.804s
+user	0m5.735s
+sys	0m0.068s

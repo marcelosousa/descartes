@@ -1,254 +1,21 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-_ascending11 -> 2
-i21 -> 2616
-property221 -> 12
-propertyName22!1009 -> 10
-property121 -> 11
-o21!2 -> PropertyComparator!val!1
-o22!4 -> PropertyComparator!val!0
-o11!1 -> PropertyComparator!val!0
-res1!5 -> (- 1)
-_properyNamesSize21 -> 2617
-i21!1257 -> 0
-o12!3 -> PropertyComparator!val!1
-propertyName11 -> 0
-property211 -> 8
-propertyName21 -> 0
-res2!6 -> (- 1)
-property111 -> 7
-_caseSensitive21 -> 0
-propertyName12!219 -> 4
-_properyNamesSize11 -> 2617
-_ascending21 -> 2
-i11 -> 0
-_caseSensitive11 -> 0
-i11!1258 -> 0
-equals!13 -> {
-  (- 2616)
-}
-k!1467 -> {
-  (let ((a!1 (ite (>= (:var 0) 0)
-                  (ite (>= (:var 0) 2615) (ite (>= (:var 0) 2616) 2616 2615) 0)
-                  (- 1))))
-    (ite (>= (:var 0) (- 2)) (ite (>= (:var 0) (- 1)) a!1 (- 2)) (- 3)))
-}
-compareIgnoreCaseString!12 -> {
-  0
-}
-nondet!9!1469 -> {
-  (- 2) -> 0
-  (- 1) -> 2617
-  2616 -> 10
-  2615 -> 16
-  0 -> 4
-  else -> 2
-}
-nondet!9 -> {
-  (nondet!9!1469 (k!1467 (:var 0)))
-}
-get!0 -> {
-  PropertyComparator!val!0 4 -> 6
-  PropertyComparator!val!1 2617 -> 14
-  PropertyComparator!val!0 16 -> 17
-  else -> 0
-}
-compareInt!11 -> {
-  (compareInt!11!1468 (k!1464 (:var 0)) (k!1464 (:var 1)))
-}
-compareDouble!10 -> {
-  0
-}
-compareInt!11!1468 -> {
-  8 7 -> (- 1)
-  12 11 -> (- 1)
-  8 8 -> 0
-  8 12 -> (- 1)
-  12 7 -> (- 1)
-  7 7 -> 0
-  7 11 -> (- 1)
-  12 12 -> 0
-  11 11 -> 0
-  8 11 -> (- 1)
-  else -> 1
-}
-k!1464 -> {
-  8 -> 8
-  11 -> 11
-  7 -> 7
-  else -> 12
-}
 
-
-real	0m0.423s
-user	0m0.410s
-sys	0m0.013s
+real	0m0.409s
+user	0m0.408s
+sys	0m0.000s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i21!853 -> 0
-i21 -> 1889
-property221 -> 13
-propertyName22!852 -> 11
-property121 -> 12
-o21!2 -> PropertyComparator!val!1
-o22!4 -> PropertyComparator!val!0
-o11!1 -> PropertyComparator!val!0
-res1!5 -> (- 1)
-_properyNamesSize21 -> 1890
-res2!6 -> (- 1)
-o12!3 -> PropertyComparator!val!1
-propertyName11 -> 0
-property211 -> 9
-propertyName21 -> 0
-i11!854 -> 0
-property111 -> 8
-_caseSensitive21 -> 0
-propertyName12!219 -> 6
-_properyNamesSize11 -> 1890
-_ascending21 -> 2
-i11 -> 1887
-_caseSensitive11 -> 0
-_ascending11 -> 2
-equals!13 -> {
-  15
-}
-k!1063 -> {
-  (let ((a!1 (ite (>= (:var 0) 1887)
-                  (ite (>= (:var 0) 1888)
-                       (ite (>= (:var 0) 1889) 1889 1888)
-                       1887)
-                  1886)))
-  (let ((a!2 (ite (>= (:var 0) (- 1))
-                  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1886) a!1 0) (- 1))
-                  (- 2))))
-    (ite (>= (:var 0) (- 2)) a!2 (- 3))))
-}
-compareInt!11!1064 -> {
-  8 9 -> 1
-  12 13 -> 1
-  13 8 -> 1
-  12 9 -> 1
-  8 8 -> 0
-  9 9 -> 0
-  12 8 -> 1
-  12 12 -> 0
-  13 13 -> 0
-  13 9 -> 1
-  else -> (- 1)
-}
-compareIgnoreCaseString!12 -> {
-  0
-}
-nondet!9 -> {
-  (nondet!9!1065 (k!1063 (:var 0)))
-}
-get!0 -> {
-  PropertyComparator!val!0 6 -> 7
-  PropertyComparator!val!0 15 -> 16
-  PropertyComparator!val!1 15 -> 17
-  PropertyComparator!val!0 18 -> 19
-  PropertyComparator!val!0 21 -> 22
-  PropertyComparator!val!1 21 -> 23
-  else -> 0
-}
-k!1060 -> {
-  9 -> 9
-  12 -> 12
-  8 -> 8
-  else -> 13
-}
-compareInt!11 -> {
-  (compareInt!11!1064 (k!1060 (:var 0)) (k!1060 (:var 1)))
-}
-compareDouble!10 -> {
-  0
-}
-nondet!9!1065 -> {
-  (- 2) -> 0
-  (- 1) -> 1890
-  1887 -> 6
-  1889 -> 11
-  0 -> 15
-  1888 -> 18
-  1886 -> 21
-  else -> 2
-}
 
-
-real	0m0.318s
-user	0m0.314s
-sys	0m0.004s
+real	0m0.319s
+user	0m0.309s
+sys	0m0.008s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i21 -> 8365
-propertyName22!414 -> 8
-i21!537 -> 0
-property121 -> 9
-propertyName12!173 -> 3
-o21!2 -> PropertyComparator!val!0
-o22!4 -> PropertyComparator!val!1
-i11!536 -> 0
-o11!1 -> PropertyComparator!val!1
-res1!5 -> (- 1)
-_properyNamesSize21 -> 8367
-res2!6 -> (- 1)
-o12!3 -> PropertyComparator!val!0
-propertyName11 -> 0
-property211 -> 6
-propertyName21 -> 0
-property111 -> 4
-_caseSensitive21 -> 0
-_ascending21 -> 0
-_properyNamesSize11 -> 8367
-property221 -> 10
-i11 -> 8366
-_caseSensitive11 -> 0
-_ascending11 -> 0
-equals!13 -> {
-  5
-}
-get!0 -> {
-  0
-}
-compareInt!11 -> {
-  (compareInt!11!742 (k!738 (:var 0)) (k!738 (:var 1)))
-}
-compareDouble!10 -> {
-  0
-}
-compareInt!11!742 -> {
-  10 6 -> 1
-  6 4 -> 1
-  10 4 -> 1
-  9 9 -> 0
-  9 4 -> 1
-  9 6 -> 1
-  10 9 -> 1
-  10 10 -> 0
-  6 6 -> 0
-  4 4 -> 0
-  else -> (- 1)
-}
-compareIgnoreCaseString!12 -> {
-  0
-}
-nondet!9 -> {
-  (- 1) -> 8367
-  8366 -> 3
-  8365 -> 8
-  else -> 0
-}
-k!738 -> {
-  6 -> 6
-  9 -> 9
-  4 -> 4
-  else -> 10
-}
 
-
-real	0m0.173s
-user	0m0.164s
+real	0m0.229s
+user	0m0.221s
 sys	0m0.008s
 descartes -p=1 -m=3: 
 Invariant:
@@ -335,6 +102,6 @@ Invariant:
   (and a!1 a!2 (<= i21 0)))
 descartes: analyse_loop failed
 
-real	0m0.120s
-user	0m0.111s
-sys	0m0.009s
+real	0m0.125s
+user	0m0.109s
+sys	0m0.016s

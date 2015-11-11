@@ -1,6 +1,6 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 n211 -> 0
 res2!9 -> 1
@@ -17,9 +17,9 @@ res1!8 -> 0
 o13!6 -> FileItem!val!1
 o11!2 -> FileItem!val!0
 o23!7 -> FileItem!val!2
-n131 -> 0
+result22!382 -> 1
 n121 -> (- 1)
-result22!291 -> 1
+n131 -> 0
 compareIgnoreCaseString!16 -> {
   0
 }
@@ -30,6 +30,9 @@ getFileName!1 -> {
   FileItem!val!1 -> 0
   FileItem!val!2 -> (- 2)
   else -> (- 1)
+}
+equals!17 -> {
+  5
 }
 toInt!0 -> {
   FileItem!val!1 -> 4
@@ -41,11 +44,11 @@ compareInt!15 -> {
 }
 
 
-real	0m0.083s
-user	0m0.071s
-sys	0m0.012s
+real	0m0.090s
+user	0m0.086s
+sys	0m0.004s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 n211 -> 0
 res2!9 -> 1
@@ -57,7 +60,6 @@ o22!5 -> FileItem!val!2
 n111 -> (- 1)
 result11 -> 0
 result21 -> 0
-result22!23 -> 1
 n231 -> (- 2)
 res1!8 -> 0
 o13!6 -> FileItem!val!1
@@ -65,89 +67,47 @@ o11!2 -> FileItem!val!0
 o23!7 -> FileItem!val!2
 n131 -> 0
 n121 -> (- 1)
+result22!24 -> 1
 compareIgnoreCaseString!16 -> {
   0
 }
 compareDouble!14 -> {
   0
 }
-getFileName!1 -> {
-  FileItem!val!1 -> 0
-  FileItem!val!2 -> (- 2)
-  else -> (- 1)
+equals!17 -> {
+  5
 }
 toInt!0 -> {
   FileItem!val!1 -> 6
   FileItem!val!2 -> 7
   else -> 4
 }
-compareInt!15 -> {
-  0
-}
-
-
-real	0m0.054s
-user	0m0.054s
-sys	0m0.000s
-descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-res3!10 -> 0
-n211 -> 0
-res2!9 -> 1
-o21!3 -> FileItem!val!1
-o12!4 -> FileItem!val!0
-n221 -> (- 2)
-result31 -> 0
-n111 -> (- 1)
-o22!5 -> FileItem!val!2
-result11 -> 0
-result21 -> 0
-n231 -> (- 2)
-res1!8 -> 0
-o13!6 -> FileItem!val!1
-o11!2 -> FileItem!val!0
-o23!7 -> FileItem!val!2
-n131 -> 0
-n121 -> (- 1)
-result22!19 -> 1
-compareIgnoreCaseString!16 -> {
-  0
-}
-compareDouble!14 -> {
-  0
-}
 getFileName!1 -> {
   FileItem!val!1 -> 0
   FileItem!val!2 -> (- 2)
   else -> (- 1)
 }
-toInt!0 -> {
-  FileItem!val!1 -> 6
-  FileItem!val!2 -> 7
-  else -> 4
-}
 compareInt!15 -> {
   0
 }
 
 
-real	0m0.093s
-user	0m0.074s
+real	0m0.060s
+user	0m0.040s
 sys	0m0.020s
-descartes -p=3 -m=3: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 n211 -> 0
 res2!9 -> 1
-o12!4 -> FileItem!val!0
 o21!3 -> FileItem!val!1
+o12!4 -> FileItem!val!0
 n221 -> (- 2)
 result31 -> 0
-o22!5 -> FileItem!val!2
 n111 -> (- 1)
+o22!5 -> FileItem!val!2
 result11 -> 0
 result21 -> 0
-result22!23 -> 1
 n231 -> (- 2)
 res1!8 -> 0
 o13!6 -> FileItem!val!1
@@ -155,6 +115,7 @@ o11!2 -> FileItem!val!0
 o23!7 -> FileItem!val!2
 n131 -> 0
 n121 -> (- 1)
+result22!20 -> 1
 compareIgnoreCaseString!16 -> {
   0
 }
@@ -166,6 +127,9 @@ getFileName!1 -> {
   FileItem!val!2 -> (- 2)
   else -> (- 1)
 }
+equals!17 -> {
+  5
+}
 toInt!0 -> {
   FileItem!val!1 -> 6
   FileItem!val!2 -> 7
@@ -176,6 +140,54 @@ compareInt!15 -> {
 }
 
 
-real	0m0.056s
-user	0m0.056s
-sys	0m0.000s
+real	0m0.095s
+user	0m0.094s
+sys	0m0.001s
+descartes -p=3 -m=3: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+res3!10 -> 0
+n211 -> 0
+res2!9 -> 1
+o12!4 -> FileItem!val!0
+o21!3 -> FileItem!val!1
+n221 -> (- 2)
+result31 -> 0
+o22!5 -> FileItem!val!2
+n111 -> (- 1)
+result11 -> 0
+result21 -> 0
+n231 -> (- 2)
+res1!8 -> 0
+o13!6 -> FileItem!val!1
+o11!2 -> FileItem!val!0
+o23!7 -> FileItem!val!2
+n131 -> 0
+n121 -> (- 1)
+result22!24 -> 1
+compareIgnoreCaseString!16 -> {
+  0
+}
+compareDouble!14 -> {
+  0
+}
+equals!17 -> {
+  5
+}
+toInt!0 -> {
+  FileItem!val!1 -> 6
+  FileItem!val!2 -> 7
+  else -> 4
+}
+getFileName!1 -> {
+  FileItem!val!1 -> 0
+  FileItem!val!2 -> (- 2)
+  else -> (- 1)
+}
+compareInt!15 -> {
+  0
+}
+
+
+real	0m0.058s
+user	0m0.050s
+sys	0m0.008s

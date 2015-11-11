@@ -1,13 +1,13 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o23!8 -> Node!val!2
 o13!7 -> Node!val!1
 res3!11 -> 0
 o21!4 -> Node!val!1
-order121 -> (- 1)
+order121 -> 0
 o22!6 -> Node!val!2
-order221 -> 0
+order221 -> 1
 o12!5 -> Node!val!0
 res1!9 -> 0
 o11!3 -> Node!val!0
@@ -17,6 +17,9 @@ compareDouble!15 -> {
 }
 compareInt!16 -> {
   0
+}
+equals!18 -> {
+  5
 }
 getID!2 -> {
   Node!val!1 -> 5
@@ -31,16 +34,16 @@ containsKey!1 -> {
   else -> true
 }
 get!0 -> {
-  Node!val!2 6 -> 0
-  else -> (- 1)
+  Node!val!2 6 -> 1
+  else -> 0
 }
 
 
-real	0m0.067s
-user	0m0.062s
-sys	0m0.004s
+real	0m0.073s
+user	0m0.053s
+sys	0m0.019s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o23!8 -> Node!val!2
 o13!7 -> Node!val!1
 res3!11 -> 0
@@ -57,6 +60,9 @@ compareDouble!15 -> {
 }
 compareInt!16 -> {
   0
+}
+equals!18 -> {
+  5
 }
 getID!2 -> {
   Node!val!1 -> 5
@@ -76,11 +82,11 @@ get!0 -> {
 }
 
 
-real	0m0.060s
-user	0m0.052s
-sys	0m0.008s
+real	0m0.065s
+user	0m0.060s
+sys	0m0.004s
 descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o23!8 -> Node!val!2
 res3!11 -> 0
 o13!7 -> Node!val!1
@@ -97,6 +103,9 @@ compareDouble!15 -> {
 }
 compareInt!16 -> {
   0
+}
+equals!18 -> {
+  5
 }
 getID!2 -> {
   Node!val!1 -> 5
@@ -116,11 +125,11 @@ get!0 -> {
 }
 
 
-real	0m0.121s
-user	0m0.106s
-sys	0m0.016s
+real	0m0.120s
+user	0m0.112s
+sys	0m0.008s
 descartes -p=3 -m=3: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o23!8 -> Node!val!2
 o13!7 -> Node!val!1
 res3!11 -> 0
@@ -137,6 +146,9 @@ compareDouble!15 -> {
 }
 compareInt!16 -> {
   0
+}
+equals!18 -> {
+  5
 }
 getID!2 -> {
   Node!val!1 -> 5
@@ -156,6 +168,6 @@ get!0 -> {
 }
 
 
-real	0m0.066s
-user	0m0.061s
+real	0m0.068s
+user	0m0.064s
 sys	0m0.004s

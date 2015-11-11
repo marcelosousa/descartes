@@ -1,6 +1,6 @@
 Property 1
 descartes -p=1 -m=0: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!6 -> Container!val!1
 o12!7 -> Container!val!1
 o11!5 -> Container!val!0
@@ -12,6 +12,9 @@ compareIgnoreCaseString!16 -> {
 }
 compareDouble!14 -> {
   0
+}
+equals!17 -> {
+  2
 }
 departureTime!3 -> {
   Container!val!0 -> 2
@@ -25,11 +28,11 @@ departureTimeIsBefore!4 -> {
 }
 
 
-real	0m0.039s
-user	0m0.027s
+real	0m0.044s
+user	0m0.031s
 sys	0m0.012s
 descartes -p=1 -m=1: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!6 -> Container!val!1
 o12!7 -> Container!val!1
 o11!5 -> Container!val!0
@@ -41,6 +44,9 @@ compareIgnoreCaseString!16 -> {
 }
 compareDouble!14 -> {
   0
+}
+equals!17 -> {
+  2
 }
 departureTime!3 -> {
   Container!val!0 -> 2
@@ -54,11 +60,11 @@ departureTimeIsBefore!4 -> {
 }
 
 
-real	0m0.025s
-user	0m0.021s
-sys	0m0.004s
+real	0m0.026s
+user	0m0.018s
+sys	0m0.007s
 descartes -p=1 -m=2: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!6 -> Container!val!1
 o12!7 -> Container!val!1
 o11!5 -> Container!val!0
@@ -70,6 +76,9 @@ compareIgnoreCaseString!16 -> {
 }
 compareDouble!14 -> {
   0
+}
+equals!17 -> {
+  2
 }
 departureTime!3 -> {
   Container!val!0 -> 2
@@ -84,10 +93,10 @@ departureTimeIsBefore!4 -> {
 
 
 real	0m0.034s
-user	0m0.024s
-sys	0m0.011s
+user	0m0.025s
+sys	0m0.008s
 descartes -p=1 -m=3: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!6 -> Container!val!1
 o12!7 -> Container!val!1
 o11!5 -> Container!val!0
@@ -99,6 +108,9 @@ compareIgnoreCaseString!16 -> {
 }
 compareDouble!14 -> {
   0
+}
+equals!17 -> {
+  2
 }
 departureTime!3 -> {
   Container!val!0 -> 2
@@ -113,5 +125,5 @@ departureTimeIsBefore!4 -> {
 
 
 real	0m0.025s
-user	0m0.013s
-sys	0m0.013s
+user	0m0.017s
+sys	0m0.007s

@@ -2,21 +2,21 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.353s
+real	0m0.352s
 user	0m0.347s
 sys	0m0.004s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.333s
-user	0m0.328s
-sys	0m0.004s
+real	0m0.321s
+user	0m0.305s
+sys	0m0.016s
 descartes -p=2 -m=2: 
 descartes: analyse_loop failed
 
-real	0m0.024s
-user	0m0.012s
-sys	0m0.012s
+real	0m0.027s
+user	0m0.023s
+sys	0m0.004s
 descartes -p=2 -m=3: 
 Invariant:
 (let ((a!1 (exists ((compareRemaining11 Int))
@@ -57,5 +57,5 @@ Invariant:
 descartes: analyse_loop failed
 
 real	0m0.023s
-user	0m0.015s
-sys	0m0.008s
+user	0m0.019s
+sys	0m0.005s

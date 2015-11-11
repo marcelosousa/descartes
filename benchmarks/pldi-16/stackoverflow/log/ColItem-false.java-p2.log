@@ -1,6 +1,6 @@
 Property 2
 descartes -p=2 -m=0: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res1!10 -> 1
 o23!9 -> CollectionItem!val!1
 res3!12 -> 0
@@ -11,8 +11,11 @@ res2!11 -> 1
 o13!8 -> CollectionItem!val!1
 o12!6 -> CollectionItem!val!0
 cardType!0 -> {
-  CollectionItem!val!1 -> 0
-  else -> 1
+  CollectionItem!val!0 -> 0
+  else -> (- 1)
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -21,8 +24,8 @@ getCardSet!3 -> {
   0
 }
 getCardRarity!2 -> {
-  CollectionItem!val!0 -> 1
-  else -> 0
+  CollectionItem!val!1 -> 0
+  else -> 1
 }
 compareIgnoreCaseString!18 -> {
   0
@@ -35,50 +38,53 @@ getCardId!1 -> {
 }
 
 
-real	0m0.152s
-user	0m0.148s
-sys	0m0.004s
-descartes -p=2 -m=1: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
-res1!10 -> 1
-o23!9 -> CollectionItem!val!1
-res3!12 -> 0
-o11!4 -> CollectionItem!val!1
-o22!7 -> CollectionItem!val!1
-o21!5 -> CollectionItem!val!0
-res2!11 -> 1
-o13!8 -> CollectionItem!val!1
-o12!6 -> CollectionItem!val!0
-cardType!0 -> {
-  CollectionItem!val!1 -> 0
-  else -> 1
-}
-compareDouble!16 -> {
-  0
-}
-getCardSet!3 -> {
-  0
-}
-getCardRarity!2 -> {
-  CollectionItem!val!0 -> 1
-  else -> 0
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-compareInt!17 -> {
-  0
-}
-getCardId!1 -> {
-  7
-}
-
-
-real	0m0.282s
-user	0m0.274s
+real	0m0.158s
+user	0m0.150s
 sys	0m0.008s
+descartes -p=2 -m=1: 
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
+res1!10 -> 1
+o23!9 -> CollectionItem!val!1
+res3!12 -> 0
+o11!4 -> CollectionItem!val!1
+o22!7 -> CollectionItem!val!1
+o21!5 -> CollectionItem!val!0
+res2!11 -> 1
+o13!8 -> CollectionItem!val!1
+o12!6 -> CollectionItem!val!0
+cardType!0 -> {
+  CollectionItem!val!0 -> 0
+  else -> (- 1)
+}
+equals!19 -> {
+  5
+}
+compareDouble!16 -> {
+  0
+}
+getCardSet!3 -> {
+  0
+}
+getCardRarity!2 -> {
+  CollectionItem!val!0 -> 1
+  else -> 0
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+compareInt!17 -> {
+  0
+}
+getCardId!1 -> {
+  7
+}
+
+
+real	0m0.311s
+user	0m0.294s
+sys	0m0.016s
 descartes -p=2 -m=2: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res1!10 -> 1
 o23!9 -> CollectionItem!val!1
 res3!12 -> 0
@@ -91,6 +97,9 @@ o12!6 -> CollectionItem!val!0
 cardType!0 -> {
   CollectionItem!val!1 -> 0
   else -> 1
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -113,11 +122,11 @@ getCardId!1 -> {
 }
 
 
-real	0m0.927s
-user	0m0.920s
+real	0m0.742s
+user	0m0.733s
 sys	0m0.008s
 descartes -p=2 -m=3: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res1!10 -> 1
 o23!9 -> CollectionItem!val!1
 res3!12 -> 0
@@ -128,8 +137,11 @@ res2!11 -> 1
 o13!8 -> CollectionItem!val!1
 o12!6 -> CollectionItem!val!0
 cardType!0 -> {
-  CollectionItem!val!1 -> 0
-  else -> 1
+  CollectionItem!val!0 -> 0
+  else -> (- 1)
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -152,6 +164,6 @@ getCardId!1 -> {
 }
 
 
-real	0m0.298s
-user	0m0.286s
-sys	0m0.012s
+real	0m0.307s
+user	0m0.303s
+sys	0m0.007s

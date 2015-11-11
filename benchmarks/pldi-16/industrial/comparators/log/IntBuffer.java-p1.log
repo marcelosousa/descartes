@@ -2,15 +2,15 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.098s
-user	0m0.089s
-sys	0m0.009s
+real	0m0.109s
+user	0m0.100s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.112s
-user	0m0.103s
-sys	0m0.008s
+real	0m0.104s
+user	0m0.100s
+sys	0m0.004s
 descartes -p=1 -m=2: 
 descartes: analyse_loop failed
 
@@ -54,6 +54,6 @@ Invariant:
   (and a!1 a!2 (<= compareRemaining11 a!3)))
 descartes: analyse_loop failed
 
-real	0m0.020s
-user	0m0.016s
-sys	0m0.004s
+real	0m0.024s
+user	0m0.024s
+sys	0m0.000s

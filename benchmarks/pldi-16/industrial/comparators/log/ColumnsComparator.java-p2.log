@@ -2,22 +2,22 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m1.700s
-user	0m1.692s
-sys	0m0.008s
+real	0m1.423s
+user	0m1.419s
+sys	0m0.004s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	1m22.310s
-user	1m22.208s
-sys	0m0.076s
+real	1m18.857s
+user	1m18.748s
+sys	0m0.092s
 descartes -p=2 -m=2: 
 descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
 
-real	0m0.029s
-user	0m0.021s
-sys	0m0.009s
+real	0m0.033s
+user	0m0.024s
+sys	0m0.008s
 descartes -p=2 -m=3: 
 Invariant:
 (let ((a!1 (exists ((i11 Int))
@@ -36,6 +36,6 @@ Invariant:
 descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.024s
-user	0m0.012s
-sys	0m0.012s
+real	0m0.025s
+user	0m0.018s
+sys	0m0.007s

@@ -1,190 +1,22 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o23!8 -> Attributes!val!0
-i31 -> 0
-o13!7 -> Attributes!val!1
-res3!11 -> (- 1)
-i31!3593 -> 0
-o11!3 -> Attributes!val!0
-res2!10 -> 0
-c32!3468 -> (- 1)
-o21!4 -> Attributes!val!1
-o22!6 -> Attributes!val!0
-o12!5 -> Attributes!val!0
-res1!9 -> 0
-i11!3594 -> 0
-i11 -> 0
-attributesSize!0 -> {
-  Attributes!val!1 -> 1
-  else -> 0
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-compareInt!16!3681 -> {
-  6 7 -> (- 1)
-  7 6 -> 1
-  else -> 0
-}
-k!3680 -> {
-  (ite (>= (:var 0) 0) 0 (- 1))
-}
-get!1 -> {
-  (get!1!3682 (:var 0) (k!3680 (:var 1)))
-}
-compareInt!16 -> {
-  (compareInt!16!3681 (k!3677 (:var 0)) (k!3677 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-mask!2 -> {
-  3
-}
-k!3677 -> {
-  6 -> 6
-  else -> 7
-}
-get!1!3682 -> {
-  Attributes!val!0 0 -> 7
-  else -> 6
-}
 
-
-real	0m9.203s
-user	0m9.182s
-sys	0m0.020s
+real	0m9.335s
+user	0m9.313s
+sys	0m0.016s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o23!8 -> Attributes!val!0
-i31 -> 0
-o13!7 -> Attributes!val!1
-res3!11 -> (- 1)
-i11!6726 -> 0
-o11!3 -> Attributes!val!0
-res2!10 -> 0
-c32!6724 -> (- 1)
-o21!4 -> Attributes!val!1
-o22!6 -> Attributes!val!0
-i31!6725 -> 0
-o12!5 -> Attributes!val!0
-res1!9 -> 0
-i11 -> 0
-attributesSize!0 -> {
-  Attributes!val!1 -> 1
-  else -> 0
-}
-k!6812 -> {
-  (ite (>= (:var 0) 0) 0 (- 1))
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-get!1 -> {
-  (get!1!6814 (:var 0) (k!6812 (:var 1)))
-}
-compareInt!16 -> {
-  (compareInt!16!6813 (k!6809 (:var 0)) (k!6809 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-k!6809 -> {
-  6 -> 6
-  else -> 7
-}
-get!1!6814 -> {
-  Attributes!val!0 0 -> 7
-  else -> 6
-}
-mask!2 -> {
-  3
-}
-compareInt!16!6813 -> {
-  6 7 -> (- 1)
-  7 6 -> 1
-  else -> 0
-}
 
-
-real	0m5.667s
-user	0m5.650s
-sys	0m0.016s
+real	0m5.608s
+user	0m5.587s
+sys	0m0.020s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-i32!741 -> 1
-i31 -> 0
-o23!8 -> Attributes!val!1
-res3!11 -> 0
-o13!7 -> Attributes!val!0
-c22!459 -> (- 1)
-i31!1117 -> 0
-o11!3 -> Attributes!val!0
-res2!10 -> (- 1)
-o21!4 -> Attributes!val!0
-o22!6 -> Attributes!val!1
-i21!1116 -> 0
-o12!5 -> Attributes!val!0
-res1!9 -> 0
-c32!740 -> 0
-i21 -> 5921
-attributesSize!0 -> {
-  5922
-}
-k!1324 -> {
-  13 -> 13
-  6 -> 6
-  else -> 4
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-compareInt!16!1328 -> {
-  4 6 -> (- 1)
-  4 13 -> (- 1)
-  13 4 -> 1
-  6 4 -> 1
-  else -> 0
-}
-get!1 -> {
-  (get!1!1329 (:var 0) (k!1327 (:var 1)))
-}
-compareInt!16 -> {
-  (compareInt!16!1328 (k!1324 (:var 0)) (k!1324 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-k!1327 -> {
-  (ite (>= (:var 0) 0)
-       (ite (>= (:var 0) 5920) (ite (>= (:var 0) 5921) 5921 5920) 0)
-       (- 1))
-}
-mask!2 -> {
-  7
-}
-get!1!1329 -> {
-  Attributes!val!0 5921 -> 4
-  Attributes!val!1 5921 -> 6
-  Attributes!val!0 5920 -> 12
-  Attributes!val!1 5920 -> 12
-  else -> 13
-}
 
-
-real	0m0.722s
-user	0m0.706s
-sys	0m0.016s
+real	0m0.753s
+user	0m0.745s
+sys	0m0.008s
 descartes -p=3 -m=3: 
 Invariant:
 (let ((a!1 (exists ((i31 Int))
@@ -348,6 +180,6 @@ Invariant:
   (and a!1 a!2 (<= i31 0)))
 descartes: analyse_loop failed
 
-real	0m0.260s
-user	0m0.248s
-sys	0m0.012s
+real	0m0.279s
+user	0m0.279s
+sys	0m0.000s

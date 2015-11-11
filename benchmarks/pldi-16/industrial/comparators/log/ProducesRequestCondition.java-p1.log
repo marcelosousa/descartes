@@ -1,0 +1,25 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.595s
+user	0m0.582s
+sys	0m0.012s
+descartes -p=1 -m=1: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.771s
+user	0m0.763s
+sys	0m0.008s
+descartes -p=1 -m=2: 
+descartes: buildArtCond: fn
+
+real	0m0.013s
+user	0m0.004s
+sys	0m0.009s
+descartes -p=1 -m=3: 
+descartes: buildArtCond: fn
+
+real	0m0.009s
+user	0m0.006s
+sys	0m0.003s

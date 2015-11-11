@@ -1,211 +1,22 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-res1!10 -> (- 1)
-level11 -> 1
-cmp12!232 -> 0
-o21!7 -> NodeSortRecord!val!1
-cmp13!235 -> (- 1)
-level21 -> 0
-their22!908 -> 0
-o12!8 -> NodeSortRecord!val!1
-levels11 -> 2
-level11!1040 -> 0
-cmp23!912 -> (- 1)
-o22!9 -> NodeSortRecord!val!0
-cmp22!909 -> 0
-their23!911 -> 0
-levels21 -> 1
-our23!910 -> (- 1)
-level21!1039 -> 0
-our22!907 -> 0
-their12!231 -> (- 1)
-our13!233 -> (- 3)
-their13!234 -> (- 2)
-res2!11 -> (- 1)
-o11!6 -> NodeSortRecord!val!0
-our12!230 -> (- 1)
-k!1127 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-get!4!1128 -> {
-  NodeSortRecord!val!1 0 -> 13
-  NodeSortRecord!val!0 0 -> 0
-  else -> 10
-}
-stringValue!1!1130 -> {
-  NodeSortRecord!val!1 1 -> (- 2)
-  NodeSortRecord!val!1 0 -> (- 1)
-  NodeSortRecord!val!0 0 -> 0
-  else -> (- 3)
-}
-stringValue!1 -> {
-  (stringValue!1!1130 (:var 0) (k!1127 (:var 1)))
-}
-get!4 -> {
-  (get!4!1128 (:var 0) (k!1127 (:var 1)))
-}
-sortOrder!3 -> {
-  NodeSortRecord!val!1 0 -> 14
-  else -> 11
-}
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  15
-}
-numericValue!2 -> {
-  (numericValue!2!1129 (:var 0) (k!1127 (:var 1)))
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 1
-  else -> 2
-}
-numericValue!2!1129 -> {
-  NodeSortRecord!val!1 0 -> 0
-  NodeSortRecord!val!0 0 -> 0
-  else -> (- 1)
-}
 
-
-real	0m0.944s
-user	0m0.163s
-sys	0m0.005s
+real	0m0.185s
+user	0m0.177s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-level21!833 -> 0
-res1!10 -> (- 1)
-level11 -> 1
-cmp12!232 -> 0
-o21!7 -> NodeSortRecord!val!1
-cmp13!235 -> (- 1)
-our23!830 -> 0
-level11!834 -> 0
-level21 -> 0
-res2!11 -> (- 1)
-their23!831 -> 1
-o12!8 -> NodeSortRecord!val!1
-levels11 -> 2
-o22!9 -> NodeSortRecord!val!0
-levels21 -> 1
-cmp22!829 -> 0
-our22!827 -> 0
-their12!231 -> 1
-our13!233 -> 2
-their22!828 -> 0
-o11!6 -> NodeSortRecord!val!0
-cmp23!832 -> (- 1)
-their13!234 -> 3
-our12!230 -> 1
-numericValue!2!923 -> {
-  NodeSortRecord!val!1 0 -> 0
-  NodeSortRecord!val!0 0 -> 0
-  else -> 1
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-stringValue!1 -> {
-  (stringValue!1!924 (:var 0) (k!921 (:var 1)))
-}
-get!4 -> {
-  (get!4!922 (:var 0) (k!921 (:var 1)))
-}
-sortOrder!3 -> {
-  NodeSortRecord!val!1 0 -> 14
-  else -> 11
-}
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  15
-}
-get!4!922 -> {
-  NodeSortRecord!val!1 0 -> 13
-  NodeSortRecord!val!0 0 -> 0
-  else -> 10
-}
-k!921 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
-stringValue!1!924 -> {
-  NodeSortRecord!val!1 1 -> 3
-  NodeSortRecord!val!1 0 -> 0
-  NodeSortRecord!val!0 0 -> 1
-  else -> 2
-}
-numericValue!2 -> {
-  (numericValue!2!923 (:var 0) (k!921 (:var 1)))
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 1
-  else -> 2
-}
 
-
-real	0m0.132s
-user	0m0.124s
-sys	0m0.008s
+real	0m0.147s
+user	0m0.143s
+sys	0m0.004s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-res1!10 -> (- 1)
-level11 -> 0
-our12!139 -> 0
-o21!7 -> NodeSortRecord!val!1
-level21 -> 8365
-cmp12!141 -> (- 1)
-level11!473 -> 0
-o12!8 -> NodeSortRecord!val!1
-levels11 -> 1
-cmp22!387 -> (- 1)
-o22!9 -> NodeSortRecord!val!0
-our22!385 -> (- 1)
-their22!386 -> 0
-levels21 -> 8366
-level21!474 -> 0
-res2!11 -> (- 1)
-o11!6 -> NodeSortRecord!val!0
-their12!140 -> 1
-compareDouble!15 -> {
-  0
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  5
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-numericValue!2 -> {
-  NodeSortRecord!val!1 0 -> 1
-  NodeSortRecord!val!1 8365 -> (- 1)
-  else -> 0
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 8366
-  else -> 1
-}
-get!4 -> {
-  5
-}
 
-
-real	0m0.109s
-user	0m0.093s
-sys	0m0.015s
+real	0m0.126s
+user	0m0.117s
+sys	0m0.009s
 descartes -p=1 -m=3: 
 Invariant:
 (let ((a!1 (exists ((level11 Int))
@@ -276,6 +87,6 @@ Invariant:
   (and a!1 a!2 (<= level21 0)))
 descartes: analyse_loop failed
 
-real	0m0.062s
-user	0m0.050s
-sys	0m0.013s
+real	0m0.068s
+user	0m0.060s
+sys	0m0.008s

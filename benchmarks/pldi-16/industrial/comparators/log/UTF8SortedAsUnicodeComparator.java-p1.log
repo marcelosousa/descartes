@@ -1,197 +1,21 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-res2!9 -> (- 1)
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!0
-aByte22!1008 -> (- 1)
-bByte22!1009 -> 0
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 1
-aUpto21!1133 -> 0
-aStop11 -> 2
-aStop21 -> 2
-bByte12!345 -> 0
-diff12!346 -> (- 1)
-res1!8 -> (- 1)
-aByte12!344 -> (- 1)
-aUpto21 -> 1
-diff22!1010 -> (- 1)
-bUpto21 -> 0
-bUpto11 -> 0
-aUpto11!1134 -> 0
-o12!6 -> UTF8SortedAsUnicodeComparator!val!1
-compareDouble!13 -> {
-  0
-}
-get!0!1220 -> {
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 12
-  UTF8SortedAsUnicodeComparator!val!1 1 -> 20
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 21
-  else -> 11
-}
-hasArray!3 -> {
-  true
-}
-nondet!12 -> {
-  12 -> 0
-  21 -> 0
-  else -> (- 1)
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-length!1 -> {
-  2
-}
-arrayOffset!2 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-k!1219 -> {
-  (ite (>= (:var 0) 1) 1 0)
-}
-equals!16 -> {
-  15
-}
-get!0 -> {
-  (get!0!1220 (:var 0) (k!1219 (:var 1)))
-}
 
-
-real	0m0.282s
-user	0m0.270s
+real	0m0.298s
+user	0m0.286s
 sys	0m0.012s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-aByte22!965 -> (- 1)
-res2!9 -> (- 1)
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!0
-aUpto21!968 -> 0
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 1
-aStop21 -> 2
-aStop11 -> 2
-bByte12!345 -> 0
-diff12!346 -> (- 1)
-res1!8 -> (- 1)
-aUpto11!969 -> 0
-bByte22!966 -> 0
-aByte12!344 -> (- 1)
-aUpto21 -> 1
-bUpto21 -> 0
-bUpto11 -> 0
-diff22!967 -> (- 1)
-o12!6 -> UTF8SortedAsUnicodeComparator!val!1
-compareDouble!13 -> {
-  0
-}
-hasArray!3 -> {
-  true
-}
-nondet!12 -> {
-  10 -> (- 1)
-  27 -> (- 1)
-  else -> 0
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-length!1 -> {
-  2
-}
-k!1054 -> {
-  (ite (>= (:var 0) 1) 1 0)
-}
-arrayOffset!2 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-get!0!1055 -> {
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 11
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 18
-  UTF8SortedAsUnicodeComparator!val!1 1 -> 27
-  else -> 10
-}
-equals!16 -> {
-  15
-}
-get!0 -> {
-  (get!0!1055 (:var 0) (k!1054 (:var 1)))
-}
 
-
-real	0m0.276s
-user	0m0.272s
-sys	0m0.004s
+real	0m0.269s
+user	0m0.269s
+sys	0m0.000s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-aByte22!783 -> 1
-res2!9 -> (- 1)
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!0
-aUpto11!1154 -> 0
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 2
-aStop21 -> 3
-aStop11 -> 3
-res1!8 -> (- 1)
-diff22!785 -> (- 1)
-diff12!256 -> (- 1)
-bByte12!255 -> 2
-aUpto21 -> 1
-aUpto21!1155 -> 0
-bUpto21 -> 0
-aByte12!254 -> 1
-bUpto11 -> 0
-bByte22!784 -> 2
-o12!6 -> UTF8SortedAsUnicodeComparator!val!1
-compareDouble!13 -> {
-  0
-}
-get!0!1281 -> {
-  UTF8SortedAsUnicodeComparator!val!0 2 -> 12
-  UTF8SortedAsUnicodeComparator!val!1 1 -> 18
-  UTF8SortedAsUnicodeComparator!val!0 1 -> 18
-  else -> 13
-}
-hasArray!3 -> {
-  true
-}
-nondet!12 -> {
-  13 -> 2
-  else -> 1
-}
-k!1280 -> {
-  (ite (>= (:var 0) 1) (ite (>= (:var 0) 2) 2 1) 0)
-}
-compareIgnoreCaseString!15 -> {
-  0
-}
-length!1 -> {
-  3
-}
-arrayOffset!2 -> {
-  0
-}
-compareInt!14 -> {
-  0
-}
-equals!16 -> {
-  5
-}
-get!0 -> {
-  (get!0!1281 (:var 0) (k!1280 (:var 1)))
-}
 
-
-real	0m0.221s
-user	0m0.217s
+real	0m0.229s
+user	0m0.225s
 sys	0m0.004s
 descartes -p=1 -m=3: 
 Invariant:

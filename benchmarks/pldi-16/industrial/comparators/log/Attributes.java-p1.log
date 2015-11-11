@@ -1,189 +1,22 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i21 -> 0
-i21!1418 -> 0
-o21!4 -> Attributes!val!1
-c12!369 -> 1
-o22!6 -> Attributes!val!0
-res1!7 -> 1
-res2!8 -> 0
-o12!5 -> Attributes!val!1
-i11 -> 0
-i11!1419 -> 0
-o11!3 -> Attributes!val!0
-attributesSize!0 -> {
-  Attributes!val!1 -> 0
-  else -> 1
-}
-compareDouble!12 -> {
-  0
-}
-k!1505 -> {
-  (ite (>= (:var 0) 0) 0 (- 1))
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-get!1!1506 -> {
-  Attributes!val!1 0 -> 4
-  else -> 3
-}
-equals!15 -> {
-  5
-}
-compareInt!13!1507 -> {
-  3 4 -> 1
-  4 3 -> (- 1)
-  else -> 0
-}
-get!1 -> {
-  (get!1!1506 (:var 0) (k!1505 (:var 1)))
-}
-compareInt!13 -> {
-  (compareInt!13!1507 (k!1502 (:var 0)) (k!1502 (:var 1)))
-}
-k!1502 -> {
-  3 -> 3
-  else -> 4
-}
-mask!2 -> {
-  6
-}
 
-
-real	0m0.390s
-user	0m0.342s
-sys	0m0.017s
+real	0m0.348s
+user	0m0.327s
+sys	0m0.020s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-c12!283 -> 1
-i21!1244 -> 0
-o21!4 -> Attributes!val!1
-i11!1245 -> 0
-o22!6 -> Attributes!val!0
-res1!7 -> 1
-res2!8 -> 0
-o12!5 -> Attributes!val!1
-i11 -> 0
-o11!3 -> Attributes!val!0
-i21 -> 0
-attributesSize!0 -> {
-  Attributes!val!1 -> 0
-  else -> 1
-}
-compareDouble!12 -> {
-  0
-}
-get!1!1332 -> {
-  Attributes!val!1 0 -> 4
-  else -> 3
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-k!1328 -> {
-  3 -> 3
-  else -> 4
-}
-equals!15 -> {
-  5
-}
-get!1 -> {
-  (get!1!1332 (:var 0) (k!1331 (:var 1)))
-}
-compareInt!13 -> {
-  (compareInt!13!1333 (k!1328 (:var 0)) (k!1328 (:var 1)))
-}
-compareInt!13!1333 -> {
-  3 4 -> 1
-  4 3 -> (- 1)
-  else -> 0
-}
-k!1331 -> {
-  (ite (>= (:var 0) 0) 0 (- 1))
-}
-mask!2 -> {
-  6
-}
 
-
-real	0m0.507s
-user	0m0.490s
+real	0m0.504s
+user	0m0.487s
 sys	0m0.016s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i11!710 -> 0
-i11 -> 8101
-c12!175 -> 1
-i21!711 -> 0
-o21!4 -> Attributes!val!1
-res1!7 -> 1
-o22!6 -> Attributes!val!0
-c22!417 -> 0
-res2!8 -> 0
-i22!418 -> 8100
-o11!3 -> Attributes!val!0
-o12!5 -> Attributes!val!1
-i21 -> 8099
-attributesSize!0 -> {
-  Attributes!val!1 -> 8100
-  else -> 8102
-}
-compareDouble!12 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-k!880 -> {
-  (let ((a!1 (ite (>= (:var 0) 8099)
-                  (ite (>= (:var 0) 8100)
-                       (ite (>= (:var 0) 8101) 8101 8100)
-                       8099)
-                  8098)))
-    (ite (>= (:var 0) 8098) a!1 0))
-}
-equals!15 -> {
-  5
-}
-compareInt!13!882 -> {
-  7 12 -> (- 1)
-  12 12 -> 0
-  7 6 -> (- 1)
-  12 6 -> (- 1)
-  6 6 -> 0
-  7 7 -> 0
-  else -> 1
-}
-get!1!881 -> {
-  Attributes!val!0 8101 -> 6
-  Attributes!val!1 8101 -> 7
-  Attributes!val!0 0 -> 9
-  Attributes!val!1 0 -> 9
-  Attributes!val!0 8100 -> 11
-  Attributes!val!1 8100 -> 11
-  else -> 12
-}
-get!1 -> {
-  (get!1!881 (:var 0) (k!880 (:var 1)))
-}
-compareInt!13 -> {
-  (compareInt!13!882 (k!877 (:var 0)) (k!877 (:var 1)))
-}
-mask!2 -> {
-  8
-}
-k!877 -> {
-  7 -> 7
-  6 -> 6
-  else -> 12
-}
 
-
-real	0m0.154s
-user	0m0.150s
-sys	0m0.004s
+real	0m0.162s
+user	0m0.162s
+sys	0m0.000s
 descartes -p=1 -m=3: 
 Invariant:
 (let ((a!1 (exists ((i21 Int))
@@ -326,6 +159,6 @@ Invariant:
   (and a!1 a!2 (<= i21 0)))
 descartes: analyse_loop failed
 
-real	0m0.270s
-user	0m0.261s
+real	0m0.284s
+user	0m0.275s
 sys	0m0.008s

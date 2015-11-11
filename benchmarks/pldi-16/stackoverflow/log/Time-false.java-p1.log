@@ -1,6 +1,6 @@
 Property 1
 descartes -p=1 -m=0: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o22!5 -> Time!val!0
 o21!3 -> Time!val!1
 o12!4 -> Time!val!1
@@ -25,6 +25,9 @@ ora!1 -> {
 compareDouble!11 -> {
   0
 }
+equals!14 -> {
+  2
+}
 volume_totale!0 -> {
   Time!val!0 -> 5
   else -> 4
@@ -34,11 +37,11 @@ compareIgnoreCaseString!13 -> {
 }
 
 
-real	0m0.088s
-user	0m0.079s
-sys	0m0.008s
+real	0m0.092s
+user	0m0.092s
+sys	0m0.000s
 descartes -p=1 -m=1: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o22!5 -> Time!val!0
 o21!3 -> Time!val!1
 o12!4 -> Time!val!1
@@ -63,6 +66,9 @@ ora!1 -> {
 compareDouble!11 -> {
   0
 }
+equals!14 -> {
+  2
+}
 volume_totale!0 -> {
   Time!val!0 -> 5
   else -> 4
@@ -72,11 +78,11 @@ compareIgnoreCaseString!13 -> {
 }
 
 
-real	0m0.046s
-user	0m0.029s
-sys	0m0.017s
+real	0m0.044s
+user	0m0.044s
+sys	0m0.000s
 descartes -p=1 -m=2: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!3 -> Time!val!1
 o22!5 -> Time!val!0
 o12!4 -> Time!val!1
@@ -101,6 +107,9 @@ ora!1 -> {
 compareDouble!11 -> {
   0
 }
+equals!14 -> {
+  2
+}
 volume_totale!0 -> {
   Time!val!0 -> 5
   else -> 4
@@ -110,11 +119,11 @@ compareIgnoreCaseString!13 -> {
 }
 
 
-real	0m0.055s
-user	0m0.050s
-sys	0m0.004s
+real	0m0.053s
+user	0m0.052s
+sys	0m0.000s
 descartes -p=1 -m=3: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o22!5 -> Time!val!0
 o21!3 -> Time!val!1
 o12!4 -> Time!val!1
@@ -139,6 +148,9 @@ ora!1 -> {
 compareDouble!11 -> {
   0
 }
+equals!14 -> {
+  2
+}
 volume_totale!0 -> {
   Time!val!0 -> 5
   else -> 4
@@ -148,6 +160,6 @@ compareIgnoreCaseString!13 -> {
 }
 
 
-real	0m0.045s
-user	0m0.041s
-sys	0m0.004s
+real	0m0.044s
+user	0m0.043s
+sys	0m0.000s

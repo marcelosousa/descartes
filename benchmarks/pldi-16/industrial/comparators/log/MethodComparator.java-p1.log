@@ -1,109 +1,25 @@
 Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-name211 -> 0
-value11 -> 0
-parameterTypes1Length21 -> 1
-i21!2882 -> 0
-parameterTypes2Length11 -> 1
-name121 -> 0
-res2!8 -> 1
-name111 -> 0
-i11!2883 -> 0
-o11!3 -> MethodComparator!val!0
-name221 -> 0
-parameterTypes1Length11 -> 1
-o21!4 -> MethodComparator!val!1
-res1!7 -> 1
-o22!6 -> MethodComparator!val!0
-value21 -> 0
-o12!5 -> MethodComparator!val!1
-i11 -> 1
-parameterTypes2Length21 -> 1
-i21 -> 1
-getParameterTypesLength!1 -> {
-  1
-}
-compareDouble!12 -> {
-  0
-}
-getParameterTypeName!0 -> {
-  5
-}
-compareInt!13 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-getName!2 -> {
-  0
-}
-equals!15 -> {
-  5
-}
 
-
-real	0m0.165s
-user	0m0.157s
-sys	0m0.008s
+real	0m0.177s
+user	0m0.173s
+sys	0m0.004s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i21 -> 1
-name211 -> 0
-value11 -> 0
-parameterTypes1Length21 -> 1
-parameterTypes2Length11 -> 1
-name121 -> 0
-res2!8 -> 1
-name111 -> 0
-o11!3 -> MethodComparator!val!0
-i21!2711 -> 0
-name221 -> 0
-parameterTypes1Length11 -> 1
-o21!4 -> MethodComparator!val!1
-res1!7 -> 1
-o22!6 -> MethodComparator!val!0
-value21 -> 0
-o12!5 -> MethodComparator!val!1
-i11 -> 1
-parameterTypes2Length21 -> 1
-i11!2712 -> 0
-getParameterTypesLength!1 -> {
-  1
-}
-compareDouble!12 -> {
-  0
-}
-getParameterTypeName!0 -> {
-  5
-}
-compareInt!13 -> {
-  0
-}
-compareIgnoreCaseString!14 -> {
-  0
-}
-getName!2 -> {
-  0
-}
-equals!15 -> {
-  5
-}
 
-
-real	0m0.714s
-user	0m0.162s
-sys	0m0.008s
+real	0m0.177s
+user	0m0.171s
+sys	0m0.004s
 descartes -p=1 -m=2: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes1Length1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes2Length1"])))
 
-real	0m0.014s
-user	0m0.009s
-sys	0m0.005s
+real	0m0.020s
+user	0m0.012s
+sys	0m0.008s
 descartes -p=1 -m=3: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i2"])) LThan (ExpName (Name [Ident "parameterTypes1Length2"]))) CAnd (BinOp (ExpName (Name [Ident "i2"])) LThan (ExpName (Name [Ident "parameterTypes2Length2"])))
 
-real	0m0.015s
-user	0m0.007s
-sys	0m0.008s
+real	0m0.018s
+user	0m0.014s
+sys	0m0.003s

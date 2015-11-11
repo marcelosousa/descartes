@@ -8,8 +8,8 @@ sys	0m0.016s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.537s
-user	0m0.528s
+real	0m0.499s
+user	0m0.491s
 sys	0m0.008s
 descartes -p=1 -m=2: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "length11"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "length21"])))
@@ -20,6 +20,6 @@ sys	0m0.000s
 descartes -p=1 -m=3: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i2"])) LThan (ExpName (Name [Ident "length12"]))) CAnd (BinOp (ExpName (Name [Ident "i2"])) LThan (ExpName (Name [Ident "length22"])))
 
-real	0m0.014s
+real	0m0.016s
 user	0m0.011s
 sys	0m0.004s

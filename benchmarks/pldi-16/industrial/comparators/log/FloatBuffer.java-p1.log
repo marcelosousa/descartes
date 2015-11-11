@@ -9,13 +9,13 @@ descartes -p=1 -m=1:
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.098s
-user	0m0.097s
-sys	0m0.000s
+user	0m0.086s
+sys	0m0.012s
 descartes -p=1 -m=2: 
 descartes: analyse_loop failed
 
-real	0m0.024s
-user	0m0.020s
+real	0m0.023s
+user	0m0.019s
 sys	0m0.004s
 descartes -p=1 -m=3: 
 Invariant:
@@ -55,5 +55,5 @@ Invariant:
 descartes: analyse_loop failed
 
 real	0m0.022s
-user	0m0.022s
-sys	0m0.000s
+user	0m0.017s
+sys	0m0.005s

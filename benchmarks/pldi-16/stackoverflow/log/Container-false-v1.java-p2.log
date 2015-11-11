@@ -1,6 +1,6 @@
 Property 2
 descartes -p=2 -m=0: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 o21!6 -> Container!val!1
 o11!5 -> Container!val!0
 o13!9 -> Container!val!0
@@ -31,13 +31,16 @@ departureMaxDuration!2 -> {
   Container!val!1 -> 5
   else -> 3
 }
+equals!20 -> {
+  5
+}
 
 
-real	0m0.039s
-user	0m0.035s
-sys	0m0.004s
+real	0m0.033s
+user	0m0.024s
+sys	0m0.008s
 descartes -p=2 -m=1: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 o21!6 -> Container!val!1
 o11!5 -> Container!val!0
 o13!9 -> Container!val!0
@@ -52,7 +55,7 @@ compareDouble!17 -> {
 }
 departureTime!3 -> {
   Container!val!2 -> 6
-  else -> 3
+  else -> 4
 }
 compareInt!18 -> {
   0
@@ -65,16 +68,19 @@ departureTimeIsBefore!4 -> {
   else -> false
 }
 departureMaxDuration!2 -> {
-  Container!val!1 -> 4
-  else -> 2
+  Container!val!1 -> 5
+  else -> 3
+}
+equals!20 -> {
+  5
 }
 
 
-real	0m0.034s
-user	0m0.023s
-sys	0m0.011s
+real	0m0.028s
+user	0m0.020s
+sys	0m0.008s
 descartes -p=2 -m=2: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 o21!6 -> Container!val!0
 o11!5 -> Container!val!1
 o13!9 -> Container!val!1
@@ -105,13 +111,16 @@ departureMaxDuration!2 -> {
   Container!val!0 -> 5
   else -> 3
 }
+equals!20 -> {
+  5
+}
 
 
-real	0m0.061s
+real	0m0.056s
 user	0m0.052s
-sys	0m0.008s
+sys	0m0.004s
 descartes -p=2 -m=3: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 o21!6 -> Container!val!1
 o11!5 -> Container!val!0
 o13!9 -> Container!val!0
@@ -126,7 +135,7 @@ compareDouble!17 -> {
 }
 departureTime!3 -> {
   Container!val!2 -> 6
-  else -> 3
+  else -> 4
 }
 compareInt!18 -> {
   0
@@ -139,11 +148,14 @@ departureTimeIsBefore!4 -> {
   else -> false
 }
 departureMaxDuration!2 -> {
-  Container!val!1 -> 4
-  else -> 2
+  Container!val!1 -> 5
+  else -> 3
+}
+equals!20 -> {
+  5
 }
 
 
-real	0m0.031s
-user	0m0.023s
-sys	0m0.008s
+real	0m0.029s
+user	0m0.024s
+sys	0m0.004s

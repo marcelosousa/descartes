@@ -1,6 +1,6 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o22!9 -> IsoSprite!val!2
 res1!12 -> 0
 o21!7 -> IsoSprite!val!1
@@ -10,16 +10,8 @@ o11!6 -> IsoSprite!val!0
 o12!8 -> IsoSprite!val!0
 o23!11 -> IsoSprite!val!2
 res2!13 -> (- 1)
-maxX!4 -> {
-  IsoSprite!val!2 -> 1
-  else -> 0
-}
 compareInt!19 -> {
   0
-}
-maxY!2 -> {
-  IsoSprite!val!2 -> 0
-  else -> (- 1)
 }
 minY!3 -> {
   IsoSprite!val!1 -> 1
@@ -28,16 +20,27 @@ minY!3 -> {
 compareDouble!18 -> {
   0
 }
-minX!5 -> {
-  IsoSprite!val!1 -> 2
+maxZ!0 -> {
+  IsoSprite!val!1 -> (- 1)
+  else -> 1
+}
+maxX!4 -> {
+  IsoSprite!val!2 -> 1
   else -> 0
+}
+maxY!2 -> {
+  IsoSprite!val!2 -> 0
+  else -> (- 1)
+}
+equals!21 -> {
+  5
 }
 compareIgnoreCaseString!20 -> {
   0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> (- 1)
-  else -> 1
+minX!5 -> {
+  IsoSprite!val!1 -> 2
+  else -> 0
 }
 minZ!1 -> {
   0
@@ -45,10 +48,10 @@ minZ!1 -> {
 
 
 real	0m0.074s
-user	0m0.061s
+user	0m0.062s
 sys	0m0.012s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o22!9 -> IsoSprite!val!2
 res1!12 -> 0
 o21!7 -> IsoSprite!val!1
@@ -58,15 +61,8 @@ o11!6 -> IsoSprite!val!0
 o12!8 -> IsoSprite!val!0
 o23!11 -> IsoSprite!val!2
 res2!13 -> (- 1)
-maxX!4 -> {
-  0
-}
 compareInt!19 -> {
   0
-}
-maxY!2 -> {
-  IsoSprite!val!2 -> 1
-  else -> 0
 }
 minY!3 -> {
   IsoSprite!val!1 -> 2
@@ -75,27 +71,37 @@ minY!3 -> {
 compareDouble!18 -> {
   0
 }
-minX!5 -> {
-  IsoSprite!val!1 -> 1
-  else -> (- 1)
+maxZ!0 -> {
+  IsoSprite!val!1 -> (- 1)
+  else -> 1
+}
+maxX!4 -> {
+  0
+}
+maxY!2 -> {
+  IsoSprite!val!2 -> 1
+  else -> 0
+}
+equals!21 -> {
+  5
 }
 compareIgnoreCaseString!20 -> {
   0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> (- 1)
-  else -> 1
+minX!5 -> {
+  IsoSprite!val!1 -> 1
+  else -> (- 1)
 }
 minZ!1 -> {
   0
 }
 
 
-real	0m0.041s
-user	0m0.041s
-sys	0m0.000s
+real	0m0.046s
+user	0m0.038s
+sys	0m0.008s
 descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res2!13 -> (- 1)
 res1!12 -> 0
 o21!7 -> IsoSprite!val!1
@@ -105,15 +111,8 @@ o11!6 -> IsoSprite!val!0
 o12!8 -> IsoSprite!val!0
 o23!11 -> IsoSprite!val!2
 o22!9 -> IsoSprite!val!2
-maxX!4 -> {
-  0
-}
 compareInt!19 -> {
   0
-}
-maxY!2 -> {
-  IsoSprite!val!2 -> 1
-  else -> 0
 }
 minY!3 -> {
   IsoSprite!val!1 -> 2
@@ -122,27 +121,37 @@ minY!3 -> {
 compareDouble!18 -> {
   0
 }
-minX!5 -> {
-  IsoSprite!val!1 -> 1
-  else -> (- 1)
+maxZ!0 -> {
+  IsoSprite!val!1 -> (- 1)
+  else -> 1
+}
+maxX!4 -> {
+  0
+}
+maxY!2 -> {
+  IsoSprite!val!2 -> 1
+  else -> 0
+}
+equals!21 -> {
+  5
 }
 compareIgnoreCaseString!20 -> {
   0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> (- 1)
-  else -> 1
+minX!5 -> {
+  IsoSprite!val!1 -> 1
+  else -> (- 1)
 }
 minZ!1 -> {
   0
 }
 
 
-real	0m0.085s
-user	0m0.073s
-sys	0m0.012s
+real	0m0.084s
+user	0m0.080s
+sys	0m0.004s
 descartes -p=3 -m=3: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 o22!9 -> IsoSprite!val!2
 res1!12 -> 0
 o21!7 -> IsoSprite!val!1
@@ -152,15 +161,8 @@ o11!6 -> IsoSprite!val!0
 o12!8 -> IsoSprite!val!0
 o23!11 -> IsoSprite!val!2
 res2!13 -> (- 1)
-maxX!4 -> {
-  0
-}
 compareInt!19 -> {
   0
-}
-maxY!2 -> {
-  IsoSprite!val!2 -> 1
-  else -> 0
 }
 minY!3 -> {
   IsoSprite!val!1 -> 2
@@ -169,22 +171,32 @@ minY!3 -> {
 compareDouble!18 -> {
   0
 }
-minX!5 -> {
-  IsoSprite!val!1 -> 1
-  else -> (- 1)
+maxZ!0 -> {
+  IsoSprite!val!1 -> (- 1)
+  else -> 1
+}
+maxX!4 -> {
+  0
+}
+maxY!2 -> {
+  IsoSprite!val!2 -> 1
+  else -> 0
+}
+equals!21 -> {
+  5
 }
 compareIgnoreCaseString!20 -> {
   0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> (- 1)
-  else -> 1
+minX!5 -> {
+  IsoSprite!val!1 -> 1
+  else -> (- 1)
 }
 minZ!1 -> {
   0
 }
 
 
-real	0m0.041s
-user	0m0.025s
-sys	0m0.016s
+real	0m0.048s
+user	0m0.040s
+sys	0m0.008s

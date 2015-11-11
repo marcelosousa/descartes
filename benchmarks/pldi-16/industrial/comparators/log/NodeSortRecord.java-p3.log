@@ -1,248 +1,22 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-level11 -> 2
-res1!12 -> 0
-level21!2032 -> 0
-cmp22!814 -> 0
-cmp33!1815 -> 1
-their32!1811 -> 0
-levels31 -> 1
-their33!1814 -> (- 2)
-their22!813 -> 1
-o12!8 -> NodeSortRecord!val!0
-level11!2033 -> 0
-levels21 -> 2
-o13!10 -> NodeSortRecord!val!1
-res3!14 -> (- 1)
-o11!6 -> NodeSortRecord!val!0
-o23!11 -> NodeSortRecord!val!2
-res2!13 -> 1
-our33!1813 -> (- 1)
-cmp23!817 -> (- 1)
-o21!7 -> NodeSortRecord!val!1
-level21 -> 1
-their23!816 -> 1
-our22!812 -> 1
-our23!815 -> 0
-levels11 -> 2
-o22!9 -> NodeSortRecord!val!2
-cmp32!1812 -> 0
-our32!1810 -> 0
-level31 -> 0
-level31!2031 -> 0
-compareInt!19 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-sortOrder!3 -> {
-  1
-}
-stringValue!1 -> {
-  (stringValue!1!2167 (:var 0) (k!2165 (:var 1)))
-}
-get!4 -> {
-  (get!4!2166 (:var 0) (k!2165 (:var 1)))
-}
-k!2165 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
-get!4!2166 -> {
-  NodeSortRecord!val!1 0 -> 15
-  NodeSortRecord!val!0 0 -> 0
-  else -> 13
-}
-node!0 -> {
-  0
-}
-numericValue!2 -> {
-  (numericValue!2!2168 (:var 0) (k!2165 (:var 1)))
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 1
-  else -> 2
-}
-equals!21 -> {
-  15
-}
-stringValue!1!2167 -> {
-  NodeSortRecord!val!2 1 -> 1
-  NodeSortRecord!val!1 0 -> (- 1)
-  NodeSortRecord!val!2 0 -> (- 2)
-  else -> 0
-}
-numericValue!2!2168 -> {
-  NodeSortRecord!val!1 0 -> 0
-  NodeSortRecord!val!2 0 -> 0
-  NodeSortRecord!val!0 0 -> 0
-  else -> 1
-}
 
-
-real	0m0.285s
-user	0m0.277s
-sys	0m0.008s
+real	0m0.288s
+user	0m0.276s
+sys	0m0.014s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-level11 -> 2
-res1!12 -> 0
-their23!7880 -> 0
-levels31 -> 1
-cmp33!8945 -> 1
-o12!8 -> NodeSortRecord!val!0
-levels21 -> 2
-cmp23!7881 -> (- 1)
-o13!10 -> NodeSortRecord!val!1
-res3!14 -> (- 1)
-o23!11 -> NodeSortRecord!val!2
-o11!6 -> NodeSortRecord!val!0
-our22!7876 -> 0
-their32!8941 -> (- 1)
-cmp32!8942 -> 0
-res2!13 -> 1
-o21!7 -> NodeSortRecord!val!1
-level21 -> 1
-level31!8946 -> 0
-our33!8943 -> 0
-level11!8948 -> 0
-levels11 -> 2
-o22!9 -> NodeSortRecord!val!2
-their33!8944 -> (- 1)
-cmp22!7878 -> 0
-level21!8947 -> 0
-our32!8940 -> (- 1)
-their22!7877 -> 0
-our23!7879 -> (- 1)
-level31 -> 0
-get!4!9081 -> {
-  NodeSortRecord!val!1 0 -> 14
-  NodeSortRecord!val!0 0 -> 0
-  else -> 12
-}
-compareInt!19 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-sortOrder!3 -> {
-  1
-}
-stringValue!1 -> {
-  (stringValue!1!9082 (:var 0) (k!9080 (:var 1)))
-}
-get!4 -> {
-  (get!4!9081 (:var 0) (k!9080 (:var 1)))
-}
-numericValue!2!9083 -> {
-  NodeSortRecord!val!1 0 -> (- 1)
-  NodeSortRecord!val!2 0 -> (- 1)
-  NodeSortRecord!val!0 0 -> (- 1)
-  else -> 0
-}
-node!0 -> {
-  0
-}
-numericValue!2 -> {
-  (numericValue!2!9083 (:var 0) (k!9080 (:var 1)))
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-equals!21 -> {
-  15
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 1
-  else -> 2
-}
-k!9080 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
-stringValue!1!9082 -> {
-  NodeSortRecord!val!2 1 -> 0
-  NodeSortRecord!val!1 0 -> 0
-  else -> (- 1)
-}
 
-
-real	0m0.722s
-user	0m0.710s
+real	0m0.741s
+user	0m0.727s
 sys	0m0.012s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-their12!143 -> 0
-level11 -> 448
-res1!12 -> 0
-our22!388 -> 1
-levels31 -> 610
-level12!148 -> 449
-o12!8 -> NodeSortRecord!val!0
-levels21 -> 450
-our32!635 -> 0
-o13!10 -> NodeSortRecord!val!1
-our13!145 -> (- 1)
-res3!14 -> (- 1)
-o11!6 -> NodeSortRecord!val!0
-their22!389 -> 0
-o23!11 -> NodeSortRecord!val!2
-res2!13 -> 1
-level31!779 -> 0
-cmp13!147 -> (- 1)
-their32!636 -> 1
-o21!7 -> NodeSortRecord!val!1
-level21 -> 449
-cmp22!390 -> 1
-level21!778 -> 0
-cmp32!637 -> (- 1)
-levels11 -> 450
-their13!146 -> 0
-o22!9 -> NodeSortRecord!val!2
-cmp12!144 -> 0
-our12!142 -> 0
-level31 -> 609
-level11!777 -> 0
-compareInt!19 -> {
-  0
-}
-compareDouble!18 -> {
-  0
-}
-stringValue!1 -> {
-  NodeSortRecord!val!1 448 -> 0
-  else -> (- 1)
-}
-get!4 -> {
-  0
-}
-node!0 -> {
-  0
-}
-numericValue!2 -> {
-  NodeSortRecord!val!0 449 -> 1
-  NodeSortRecord!val!2 609 -> 1
-  else -> 0
-}
-compareIgnoreCaseString!20 -> {
-  0
-}
-equals!21 -> {
-  5
-}
-settingsGetSortOrdersLength!5 -> {
-  NodeSortRecord!val!1 -> 610
-  else -> 450
-}
 
-
-real	0m0.290s
-user	0m0.274s
-sys	0m0.016s
+real	0m0.270s
+user	0m0.265s
+sys	0m0.004s
 descartes -p=3 -m=3: 
 Invariant:
 (let ((a!1 (exists ((level11 Int))
@@ -805,6 +579,6 @@ Invariant:
   (and a!1 a!2 (<= level31 0)))
 descartes: analyse_loop failed
 
-real	0m0.485s
-user	0m0.476s
-sys	0m0.008s
+real	0m0.461s
+user	0m0.445s
+sys	0m0.016s

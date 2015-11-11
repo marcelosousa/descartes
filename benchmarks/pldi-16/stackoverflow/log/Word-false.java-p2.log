@@ -1,373 +1,587 @@
 Property 2
 descartes -p=2 -m=0: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 o23!8 -> Word!val!2
-right21 -> 13
+right21 -> 12
+i121!2795 -> 0
 res3!11 -> (- 1)
 o13!7 -> Word!val!0
+left11 -> 12
+left31 -> 12
+i131 -> 2
+i111!2796 -> 0
+right31 -> 12
+o11!3 -> Word!val!0
+res2!10 -> 1
+i121 -> 0
+left21 -> 12
+o21!4 -> Word!val!1
+i131!2794 -> 0
+o22!6 -> Word!val!2
+right11 -> 12
+o12!5 -> Word!val!1
+res1!9 -> 1
+i111 -> 1
+compareIgnoreCaseString!17 -> {
+  0
+}
+k!3094 -> {
+  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
+}
+compareInt!16!3095 -> {
+  6 11 -> 1
+  6 10 -> 2
+  7 10 -> 1
+  17 10 -> 1
+  6 18 -> 2
+  18 17 -> 1
+  11 17 -> 0
+  17 11 -> 0
+  7 17 -> 1
+  18 18 -> 0
+  18 11 -> 1
+  18 10 -> 1
+  7 18 -> 1
+  6 17 -> 1
+  10 10 -> 0
+  11 10 -> 1
+  7 6 -> 1
+  7 11 -> 1
+  11 11 -> 0
+  6 6 -> 0
+  17 17 -> 0
+  7 7 -> 0
+  else -> (- 1)
+}
+get!1!3096 -> {
+  Word!val!1 1 -> 7
+  Word!val!1 0 -> 10
+  Word!val!2 0 -> 11
+  Word!val!0 0 -> 17
+  Word!val!2 1 -> 18
+  else -> 6
+}
+compareInt!16 -> {
+  (compareInt!16!3095 (k!3091 (:var 0)) (k!3091 (:var 1)))
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  15
+}
+get!1 -> {
+  (get!1!3096 (:var 0) (k!3094 (:var 1)))
+}
+count!2 -> {
+  12
+}
+length!0 -> {
+  Word!val!0 -> 2
+  Word!val!2 -> 0
+  else -> 1
+}
+k!3091 -> {
+  18 -> 18
+  10 -> 10
+  6 -> 6
+  11 -> 11
+  7 -> 7
+  else -> 17
+}
+
+
+real	0m5.739s
+user	0m5.721s
+sys	0m0.016s
+descartes -p=2 -m=1: 
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
+o23!8 -> Word!val!2
+right21 -> 9
+res3!11 -> (- 1)
+o13!7 -> Word!val!0
+left11 -> 9
+left31 -> 9
+i131 -> 5262
+right31 -> 9
+o11!3 -> Word!val!0
+i121!1806 -> 0
+res2!10 -> 1
+i131!1805 -> 0
+i121 -> 5260
+left21 -> 9
+o21!4 -> Word!val!1
+o22!6 -> Word!val!2
+right11 -> 9
+o12!5 -> Word!val!1
+res1!9 -> 1
+i111!1807 -> 0
+i111 -> 0
+compareIgnoreCaseString!17 -> {
+  0
+}
+k!2315 -> {
+  (let ((a!1 (ite (>= (:var 0) 5259)
+                  (ite (>= (:var 0) 5260)
+                       (ite (>= (:var 0) 5261) 5261 5260)
+                       5259)
+                  0)))
+    (ite (>= (:var 0) 0) a!1 (- 1)))
+}
+compareInt!16 -> {
+  (compareInt!16!2316 (k!2312 (:var 0)) (k!2312 (:var 1)))
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  15
+}
+count!2 -> {
+  9
+}
+get!1 -> {
+  (get!1!2317 (:var 0) (k!2315 (:var 1)))
+}
+compareInt!16!2316 -> {
+  14 7 -> 1
+  21 21 -> 0
+  16 17 -> 1
+  17 20 -> 1
+  19 21 -> 1
+  18 21 -> 1
+  16 20 -> 1
+  14 21 -> 1
+  8 7 -> 1
+  7 21 -> 1
+  14 8 -> 1
+  7 20 -> 1
+  8 21 -> 1
+  16 21 -> 1
+  16 7 -> 1
+  7 17 -> 1
+  7 7 -> 0
+  18 17 -> 1
+  18 20 -> 1
+  20 20 -> 0
+  16 14 -> 1
+  17 17 -> 0
+  19 17 -> 1
+  8 17 -> 1
+  8 20 -> 1
+  19 18 -> 1
+  14 14 -> 0
+  14 20 -> 1
+  14 19 -> 1
+  16 19 -> 1
+  19 20 -> 1
+  8 19 -> 1
+  14 18 -> 1
+  21 20 -> 1
+  21 17 -> 1
+  8 18 -> 1
+  8 8 -> 0
+  16 8 -> 1
+  14 17 -> 1
+  16 18 -> 1
+  18 18 -> 0
+  19 19 -> 0
+  7 19 -> 1
+  7 18 -> 1
+  16 16 -> 0
+  else -> (- 1)
+}
+length!0 -> {
+  Word!val!0 -> 5262
+  Word!val!2 -> 5260
+  else -> 5261
+}
+k!2312 -> {
+  21 -> 21
+  7 -> 7
+  16 -> 16
+  18 -> 18
+  8 -> 8
+  19 -> 19
+  14 -> 14
+  17 -> 17
+  else -> 20
+}
+get!1!2317 -> {
+  Word!val!2 5260 -> 8
+  Word!val!0 5260 -> 14
+  Word!val!0 5259 -> 16
+  Word!val!1 5259 -> 17
+  Word!val!0 0 -> 18
+  Word!val!1 0 -> 19
+  Word!val!2 5259 -> 20
+  Word!val!2 0 -> 21
+  else -> 7
+}
+
+
+real	0m14.233s
+user	0m14.214s
+sys	0m0.012s
+descartes -p=2 -m=2: 
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
+o23!8 -> Word!val!2
+right21 -> 13
+i131!1312 -> 0
+o13!7 -> Word!val!0
+res3!11 -> (- 1)
 left11 -> 13
-i121!2435 -> 0
+i131 -> 279
 left31 -> 13
-i131 -> 123
-i111!2436 -> 0
+i121!1311 -> 0
 right31 -> 13
 o11!3 -> Word!val!0
 res2!10 -> 1
-i131!2434 -> 0
-i121 -> 121
+i121 -> 281
 left21 -> 13
 o21!4 -> Word!val!1
 o22!6 -> Word!val!2
 right11 -> 13
+i111!1310 -> 0
 o12!5 -> Word!val!1
 res1!9 -> 1
-i111 -> 119
-compareInt!16 -> {
-  (compareInt!16!3001 (k!2998 (:var 0)) (k!2998 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-get!1 -> {
-  (get!1!3002 (:var 0) (k!3000 (:var 1)))
-}
-count!2 -> {
-  13
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-k!2998 -> {
-  26 -> 26
-  19 -> 19
-  11 -> 11
-  21 -> 21
-  8 -> 8
-  12 -> 12
-  24 -> 24
-  18 -> 18
-  9 -> 9
-  22 -> 22
-  23 -> 23
-  else -> 25
-}
-length!0 -> {
-  Word!val!0 -> 123
-  Word!val!2 -> 121
-  else -> 122
-}
-compareInt!16!3001 -> {
-  8 9 -> (- 2)
-  11 12 -> (- 2)
-  18 11 -> 2
-  8 19 -> 2
-  11 11 -> 0
-  18 18 -> 0
-  19 19 -> 0
-  21 22 -> (- 1)
-  23 24 -> 0
-  24 26 -> 2
-  12 11 -> 2
-  18 25 -> (- 2)
-  25 18 -> 2
-  9 21 -> (- 1)
-  26 21 -> (- 1)
-  9 25 -> (- 1)
-  25 21 -> (- 1)
-  9 11 -> 2
-  11 21 -> (- 1)
-  25 26 -> 2
-  26 25 -> (- 1)
-  23 25 -> (- 1)
-  22 23 -> 2
-  23 22 -> (- 2)
-  23 23 -> 0
-  11 18 -> (- 2)
-  18 21 -> (- 1)
-  18 8 -> 0
-  8 18 -> 0
-  18 26 -> 2
-  26 18 -> (- 2)
-  25 25 -> 0
-  19 9 -> (- 1)
-  24 24 -> 0
-  22 26 -> 2
-  26 22 -> (- 1)
-  22 22 -> 0
-  9 22 -> (- 1)
-  12 22 -> (- 2)
-  18 22 -> (- 1)
-  18 12 -> 3
-  8 26 -> 2
-  24 25 -> (- 1)
-  26 26 -> 0
-  26 23 -> (- 1)
-  19 18 -> (- 1)
-  24 23 -> 0
-  23 8 -> (- 1)
-  19 8 -> (- 1)
-  19 11 -> (- 1)
-  26 19 -> (- 1)
-  19 12 -> (- 1)
-  12 18 -> (- 3)
-  23 18 -> (- 1)
-  8 24 -> 2
-  24 18 -> (- 1)
-  8 21 -> (- 1)
-  26 12 -> (- 1)
-  25 22 -> (- 1)
-  22 11 -> 2
-  11 22 -> (- 1)
-  21 21 -> 0
-  23 21 -> (- 2)
-  21 23 -> 2
-  23 11 -> (- 1)
-  23 9 -> (- 2)
-  23 19 -> (- 1)
-  23 12 -> (- 1)
-  26 11 -> (- 1)
-  26 9 -> (- 1)
-  19 22 -> (- 1)
-  19 25 -> (- 1)
-  19 21 -> (- 1)
-  12 21 -> (- 2)
-  21 12 -> 2
-  8 8 -> 0
-  8 25 -> (- 1)
-  11 8 -> (- 1)
-  24 22 -> (- 2)
-  24 21 -> (- 2)
-  26 8 -> (- 2)
-  12 8 -> (- 1)
-  24 11 -> (- 1)
-  24 12 -> (- 1)
-  24 8 -> (- 2)
-  24 19 -> (- 1)
-  11 25 -> (- 2)
-  26 24 -> (- 2)
-  11 9 -> (- 1)
-  12 25 -> (- 2)
-  25 24 -> 2
-  12 9 -> (- 2)
-  18 9 -> (- 1)
-  9 18 -> 2
-  8 22 -> (- 1)
-  24 9 -> (- 2)
-  9 9 -> 0
-  12 12 -> 0
-  else -> 1
-}
-k!3000 -> {
-  (let ((a!1 (ite (>= (:var 0) 120)
-                  (ite (>= (:var 0) 121) (ite (>= (:var 0) 122) 122 121) 120)
-                  119)))
-    (ite (>= (:var 0) 118) (ite (>= (:var 0) 119) a!1 118) 0))
-}
-get!1!3002 -> {
-  Word!val!1 119 -> 9
-  Word!val!1 121 -> 11
-  Word!val!2 121 -> 12
-  Word!val!0 121 -> 18
-  Word!val!2 119 -> 19
-  Word!val!0 120 -> 21
-  Word!val!1 120 -> 22
-  Word!val!0 0 -> 23
-  Word!val!1 0 -> 24
-  Word!val!2 120 -> 25
-  Word!val!2 0 -> 26
-  else -> 8
-}
-
-
-real	0m11.854s
-user	0m11.843s
-sys	0m0.008s
-descartes -p=2 -m=1: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
-o23!8 -> Word!val!2
-right21 -> 10
-res3!11 -> (- 1)
-o13!7 -> Word!val!0
-left11 -> 10
-left31 -> 10
-i131 -> 2
-right31 -> 10
-i121!1394 -> 0
-o11!3 -> Word!val!0
-i111!1395 -> 0
-res2!10 -> 1
-i121 -> 0
-left21 -> 10
-o21!4 -> Word!val!1
-o22!6 -> Word!val!2
-right11 -> 10
-i131!1393 -> 0
-o12!5 -> Word!val!1
-res1!9 -> 1
-i111 -> 1
-compareInt!16 -> {
-  (compareInt!16!1630 (k!1627 (:var 0)) (k!1627 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-get!1 -> {
-  (get!1!1631 (:var 0) (k!1629 (:var 1)))
-}
-count!2 -> {
-  10
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-length!0 -> {
-  Word!val!2 -> 0
-  Word!val!0 -> 2
-  else -> 1
-}
-k!1627 -> {
-  17 -> 17
-  16 -> 16
-  6 -> 6
-  7 -> 7
-  15 -> 15
-  else -> 13
-}
-get!1!1631 -> {
-  Word!val!1 1 -> 7
-  Word!val!2 1 -> 13
-  Word!val!0 0 -> 15
-  Word!val!1 0 -> 16
-  Word!val!2 0 -> 17
-  else -> 6
-}
-compareInt!16!1630 -> {
-  7 6 -> 1
-  7 13 -> 1
-  6 13 -> 1
-  13 16 -> 1
-  13 13 -> 0
-  15 16 -> 1
-  15 17 -> 0
-  17 16 -> 1
-  13 15 -> 1
-  6 16 -> 1
-  6 17 -> 1
-  6 6 -> 0
-  6 15 -> 1
-  15 15 -> 0
-  7 17 -> 1
-  17 17 -> 0
-  7 15 -> 1
-  7 7 -> 0
-  17 15 -> 0
-  7 16 -> 1
-  16 16 -> 0
-  13 17 -> 1
-  else -> (- 1)
-}
-k!1629 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
-
-
-real	0m14.512s
-user	0m14.495s
-sys	0m0.016s
-descartes -p=2 -m=2: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
-o23!8 -> Word!val!2
-right21 -> 14
-o13!7 -> Word!val!0
-res3!11 -> (- 1)
-left11 -> 14
-i131 -> 279
-left31 -> 14
-i131!1023 -> 0
-right31 -> 14
-o11!3 -> Word!val!0
-res2!10 -> 1
-i121 -> 281
-left21 -> 14
-o21!4 -> Word!val!1
-i111!1021 -> 0
-o22!6 -> Word!val!2
-right11 -> 14
-i121!1022 -> 0
-o12!5 -> Word!val!1
-res1!9 -> 1
-i132!799 -> 280
+i132!1025 -> 280
 i111 -> 280
-compareInt!16 -> {
-  (compareInt!16!1259 (k!1256 (:var 0)) (k!1256 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-get!1 -> {
-  (get!1!1260 (:var 0) (k!1258 (:var 1)))
-}
-count!2 -> {
-  14
-}
 compareIgnoreCaseString!17 -> {
   0
 }
-length!0 -> {
-  Word!val!0 -> 283
-  Word!val!2 -> 281
-  else -> 282
-}
-compareInt!16!1259 -> {
-  9 20 -> (- 1)
-  12 13 -> (- 3)
-  12 16 -> 2
-  16 12 -> (- 2)
-  16 16 -> 0
-  13 13 -> 0
-  9 13 -> (- 2)
-  20 12 -> (- 1)
-  20 20 -> 0
-  16 13 -> (- 1)
-  13 20 -> 2
-  20 13 -> (- 2)
-  9 12 -> (- 3)
-  12 9 -> 3
-  12 12 -> 0
-  20 16 -> (- 1)
-  9 16 -> (- 1)
-  9 9 -> 0
-  else -> 1
-}
-get!1!1260 -> {
-  Word!val!0 280 -> 9
-  Word!val!1 280 -> 20
-  Word!val!1 281 -> 12
-  Word!val!2 281 -> 13
-  Word!val!2 280 -> 20
-  else -> 16
-}
-k!1256 -> {
-  13 -> 13
-  16 -> 16
-  12 -> 12
-  9 -> 9
-  else -> 20
-}
-k!1258 -> {
+k!1611 -> {
   (let ((a!1 (ite (>= (:var 0) 279)
                   (ite (>= (:var 0) 280) (ite (>= (:var 0) 281) 281 280) 279)
                   278)))
     (ite (>= (:var 0) 278) a!1 0))
 }
+compareInt!16!1612 -> {
+  8 19 -> (- 2)
+  11 12 -> (- 2)
+  11 15 -> 1
+  15 11 -> (- 2)
+  12 8 -> 1
+  8 12 -> (- 3)
+  11 19 -> 2
+  19 11 -> (- 1)
+  15 19 -> (- 1)
+  12 15 -> 2
+  15 12 -> (- 2)
+  12 19 -> 3
+  19 12 -> (- 1)
+  8 11 -> (- 1)
+  11 8 -> 2
+  19 15 -> 1
+  12 11 -> 1
+  19 8 -> 2
+  15 8 -> 2
+  8 15 -> (- 1)
+  else -> 0
+}
+compareInt!16 -> {
+  (compareInt!16!1612 (k!1608 (:var 0)) (k!1608 (:var 1)))
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  15
+}
+get!1 -> {
+  (get!1!1613 (:var 0) (k!1611 (:var 1)))
+}
+count!2 -> {
+  13
+}
+length!0 -> {
+  Word!val!2 -> 281
+  Word!val!0 -> 283
+  else -> 282
+}
+k!1608 -> {
+  12 -> 12
+  15 -> 15
+  11 -> 11
+  8 -> 8
+  else -> 19
+}
+get!1!1613 -> {
+  Word!val!0 280 -> 8
+  Word!val!1 280 -> 19
+  Word!val!1 281 -> 11
+  Word!val!2 281 -> 12
+  Word!val!2 280 -> 19
+  else -> 15
+}
 
 
-real	0m0.873s
-user	0m0.865s
-sys	0m0.008s
+real	0m0.986s
+user	0m0.966s
+sys	0m0.020s
 descartes -p=2 -m=3: 
+Invariant:
+(let ((a!1 (exists ((i111 Int))
+             (and (= o11!3 o13!7)
+                  (= o21!4 o12!5)
+                  (= o22!6 o23!8)
+                  (= left11 (count!2 o11!3))
+                  (= right11 (count!2 o21!4))
+                  (= left11 right11)
+                  (> (length!0 o11!3) (length!0 o21!4))
+                  (= i111 0))))
+      (a!2 (forall ((j1 Int))
+             (=> (and (<= 0 j1) (< j1 i111))
+                 (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+  (and a!1 a!2 (>= i111 0)))
+Invariant:
+(let ((a!1 (exists ((i121 Int))
+             (let ((a!1 (exists ((i111 Int))
+                          (and (= o11!3 o13!7)
+                               (= o21!4 o12!5)
+                               (= o22!6 o23!8)
+                               (= left11 (count!2 o11!3))
+                               (= right11 (count!2 o21!4))
+                               (= left11 right11)
+                               (> (length!0 o11!3) (length!0 o21!4))
+                               (= i111 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 i111))
+                              (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+               (and a!1
+                    a!2
+                    (>= i111 0)
+                    (< i111 (length!0 o11!3))
+                    (< (compareInt!16 (get!1 o11!3 i111) (get!1 o21!4 i111)) 0)
+                    (= res1!9 1)
+                    (= left21 (count!2 o12!5))
+                    (= right21 (count!2 o22!6))
+                    (= left21 right21)
+                    (> (length!0 o12!5) (length!0 o22!6))
+                    (= i121 0)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 i121))
+                 (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
+  (and a!1 a!2 (>= i121 0)))
+Invariant:
+(let ((a!1 (exists ((i131 Int))
+             (let ((a!1 (exists ((i121 Int))
+                          (let ((a!1 (exists ((i111 Int))
+                                       (and (= o11!3 o13!7)
+                                            (= o21!4 o12!5)
+                                            (= o22!6 o23!8)
+                                            (= left11 (count!2 o11!3))
+                                            (= right11 (count!2 o21!4))
+                                            (= left11 right11)
+                                            (> (length!0 o11!3)
+                                               (length!0 o21!4))
+                                            (= i111 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 i111))
+                                           (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= i111 0)
+                                 (< i111 (length!0 o11!3))
+                                 (< (compareInt!16 (get!1 o11!3 i111)
+                                                   (get!1 o21!4 i111))
+                                    0)
+                                 (= res1!9 1)
+                                 (= left21 (count!2 o12!5))
+                                 (= right21 (count!2 o22!6))
+                                 (= left21 right21)
+                                 (> (length!0 o12!5) (length!0 o22!6))
+                                 (= i121 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i121))
+                              (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
+               (and a!1
+                    a!2
+                    (>= i121 0)
+                    (< i121 (length!0 o12!5))
+                    (< (compareInt!16 (get!1 o12!5 i121) (get!1 o22!6 i121)) 0)
+                    (= res2!10 1)
+                    (= left31 (count!2 o13!7))
+                    (= right31 (count!2 o23!8))
+                    (= left31 right31)
+                    (> (length!0 o13!7) (length!0 o23!8))
+                    (= i131 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i131))
+                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
+  (and a!1 a!2 (>= i131 0)))
+Invariant:
+(let ((a!1 (exists ((i231 Int))
+             (let ((a!1 (exists ((i121 Int))
+                          (let ((a!1 (exists ((i111 Int))
+                                       (and (= o11!3 o13!7)
+                                            (= o21!4 o12!5)
+                                            (= o22!6 o23!8)
+                                            (= left11 (count!2 o11!3))
+                                            (= right11 (count!2 o21!4))
+                                            (= left11 right11)
+                                            (> (length!0 o11!3)
+                                               (length!0 o21!4))
+                                            (= i111 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 i111))
+                                           (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= i111 0)
+                                 (< i111 (length!0 o11!3))
+                                 (< (compareInt!16 (get!1 o11!3 i111)
+                                                   (get!1 o21!4 i111))
+                                    0)
+                                 (= res1!9 1)
+                                 (= left21 (count!2 o12!5))
+                                 (= right21 (count!2 o22!6))
+                                 (= left21 right21)
+                                 (> (length!0 o12!5) (length!0 o22!6))
+                                 (= i121 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i121))
+                              (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
+               (and a!1
+                    a!2
+                    (>= i121 0)
+                    (< i121 (length!0 o12!5))
+                    (< (compareInt!16 (get!1 o12!5 i121) (get!1 o22!6 i121)) 0)
+                    (= res2!10 1)
+                    (= left31 (count!2 o13!7))
+                    (= right31 (count!2 o23!8))
+                    (= left31 right31)
+                    (not (> (length!0 o13!7) (length!0 o23!8)))
+                    (= i231 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i231))
+                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
+  (and a!1 a!2 (>= i231 0)))
+Invariant:
+(let ((a!1 (exists ((i121 Int))
+             (let ((a!1 (exists ((i111 Int))
+                          (and (= o11!3 o13!7)
+                               (= o21!4 o12!5)
+                               (= o22!6 o23!8)
+                               (= left11 (count!2 o11!3))
+                               (= right11 (count!2 o21!4))
+                               (= left11 right11)
+                               (> (length!0 o11!3) (length!0 o21!4))
+                               (= i111 0))))
+                   (a!2 (forall ((j1 Int))
+                          (=> (and (<= 0 j1) (< j1 i111))
+                              (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+               (and a!1
+                    a!2
+                    (>= i111 0)
+                    (< i111 (length!0 o11!3))
+                    (< (compareInt!16 (get!1 o11!3 i111) (get!1 o21!4 i111)) 0)
+                    (= res1!9 1)
+                    (= left21 (count!2 o12!5))
+                    (= right21 (count!2 o22!6))
+                    (= left21 right21)
+                    (> (length!0 o12!5) (length!0 o22!6))
+                    (= i121 0)))))
+      (a!2 (forall ((j2 Int))
+             (=> (and (<= 0 j2) (< j2 i121))
+                 (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
+  (and a!1 a!2 (<= i121 0)))
+Invariant:
+(let ((a!1 (exists ((i131 Int))
+             (let ((a!1 (exists ((i121 Int))
+                          (let ((a!1 (exists ((i111 Int))
+                                       (and (= o11!3 o13!7)
+                                            (= o21!4 o12!5)
+                                            (= o22!6 o23!8)
+                                            (= left11 (count!2 o11!3))
+                                            (= right11 (count!2 o21!4))
+                                            (= left11 right11)
+                                            (> (length!0 o11!3)
+                                               (length!0 o21!4))
+                                            (= i111 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 i111))
+                                           (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= i111 0)
+                                 (< i111 (length!0 o11!3))
+                                 (< (compareInt!16 (get!1 o11!3 i111)
+                                                   (get!1 o21!4 i111))
+                                    0)
+                                 (= res1!9 1)
+                                 (= left21 (count!2 o12!5))
+                                 (= right21 (count!2 o22!6))
+                                 (= left21 right21)
+                                 (> (length!0 o12!5) (length!0 o22!6))
+                                 (= i121 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i121))
+                              (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
+               (and a!1
+                    a!2
+                    (<= i121 0)
+                    (< i121 (length!0 o12!5))
+                    (< (compareInt!16 (get!1 o12!5 i121) (get!1 o22!6 i121)) 0)
+                    (= res2!10 1)
+                    (= left31 (count!2 o13!7))
+                    (= right31 (count!2 o23!8))
+                    (= left31 right31)
+                    (> (length!0 o13!7) (length!0 o23!8))
+                    (= i131 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i131))
+                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
+  (and a!1 a!2 (>= i131 0)))
+Invariant:
+(let ((a!1 (exists ((i231 Int))
+             (let ((a!1 (exists ((i121 Int))
+                          (let ((a!1 (exists ((i111 Int))
+                                       (and (= o11!3 o13!7)
+                                            (= o21!4 o12!5)
+                                            (= o22!6 o23!8)
+                                            (= left11 (count!2 o11!3))
+                                            (= right11 (count!2 o21!4))
+                                            (= left11 right11)
+                                            (> (length!0 o11!3)
+                                               (length!0 o21!4))
+                                            (= i111 0))))
+                                (a!2 (forall ((j1 Int))
+                                       (=> (and (<= 0 j1) (< j1 i111))
+                                           (= (get!1 o11!3 j1) (get!1 o21!4 j1))))))
+                            (and a!1
+                                 a!2
+                                 (>= i111 0)
+                                 (< i111 (length!0 o11!3))
+                                 (< (compareInt!16 (get!1 o11!3 i111)
+                                                   (get!1 o21!4 i111))
+                                    0)
+                                 (= res1!9 1)
+                                 (= left21 (count!2 o12!5))
+                                 (= right21 (count!2 o22!6))
+                                 (= left21 right21)
+                                 (> (length!0 o12!5) (length!0 o22!6))
+                                 (= i121 0)))))
+                   (a!2 (forall ((j2 Int))
+                          (=> (and (<= 0 j2) (< j2 i121))
+                              (= (get!1 o12!5 j2) (get!1 o22!6 j2))))))
+               (and a!1
+                    a!2
+                    (<= i121 0)
+                    (< i121 (length!0 o12!5))
+                    (< (compareInt!16 (get!1 o12!5 i121) (get!1 o22!6 i121)) 0)
+                    (= res2!10 1)
+                    (= left31 (count!2 o13!7))
+                    (= right31 (count!2 o23!8))
+                    (= left31 right31)
+                    (not (> (length!0 o13!7) (length!0 o23!8)))
+                    (= i231 0)))))
+      (a!2 (forall ((j3 Int))
+             (=> (and (<= 0 j3) (< j3 i231))
+                 (= (get!1 o13!7 j3) (get!1 o23!8 j3))))))
+  (and a!1 a!2 (>= i231 0)))
 descartes: analyse_loop failed
 
-real	0m0.270s
-user	0m0.259s
-sys	0m0.012s
+real	0m0.527s
+user	0m0.523s
+sys	0m0.004s

@@ -2,95 +2,21 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m8.888s
-user	0m5.679s
+real	0m8.670s
+user	0m8.657s
 sys	0m0.008s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m8.659s
-user	0m8.642s
-sys	0m0.012s
+real	0m8.971s
+user	0m8.954s
+sys	0m0.013s
 descartes -p=2 -m=2: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-i32!741 -> 1
-i31 -> 0
-o23!8 -> Attributes!val!2
-res3!11 -> 0
-o13!7 -> Attributes!val!0
-c22!459 -> 1
-i31!1300 -> 0
-o11!3 -> Attributes!val!0
-res2!10 -> 1
-i11!1298 -> 0
-c12!178 -> 3
-i21!1299 -> 0
-o21!4 -> Attributes!val!1
-o22!6 -> Attributes!val!2
-o12!5 -> Attributes!val!1
-res1!9 -> 3
-i11 -> 7887
-c32!740 -> 0
-i21 -> 7887
-attributesSize!0 -> {
-  7888
-}
-compareIgnoreCaseString!17 -> {
-  0
-}
-k!1638 -> {
-  13 -> 13
-  10 -> 10
-  18 -> 18
-  else -> 9
-}
-compareInt!16!1642 -> {
-  9 10 -> 1
-  13 10 -> 1
-  13 9 -> 2
-  9 13 -> (- 2)
-  10 13 -> (- 1)
-  18 9 -> 3
-  9 18 -> (- 1)
-  18 10 -> 1
-  10 18 -> (- 1)
-  10 9 -> (- 1)
-  else -> 0
-}
-get!1!1643 -> {
-  Attributes!val!1 7887 -> 9
-  Attributes!val!2 7887 -> 10
-  Attributes!val!0 7887 -> 18
-  Attributes!val!1 7886 -> 30
-  Attributes!val!2 7886 -> 30
-  Attributes!val!0 7886 -> 30
-  else -> 13
-}
-get!1 -> {
-  (get!1!1643 (:var 0) (k!1641 (:var 1)))
-}
-compareInt!16 -> {
-  (compareInt!16!1642 (k!1638 (:var 0)) (k!1638 (:var 1)))
-}
-compareDouble!15 -> {
-  0
-}
-equals!18 -> {
-  15
-}
-k!1641 -> {
-  (ite (>= (:var 0) 0)
-       (ite (>= (:var 0) 7886) (ite (>= (:var 0) 7887) 7887 7886) 0)
-       (- 1))
-}
-mask!2 -> {
-  11
-}
 
-
-real	0m0.414s
-user	0m0.409s
-sys	0m0.004s
+real	0m0.398s
+user	0m0.389s
+sys	0m0.008s
 descartes -p=2 -m=3: 
 Invariant:
 (let ((a!1 (exists ((i31 Int))
@@ -618,6 +544,6 @@ Invariant:
   (and a!1 a!2 (<= i31 0)))
 descartes: analyse_loop failed
 
-real	0m1.026s
-user	0m1.017s
-sys	0m0.008s
+real	0m1.044s
+user	0m1.028s
+sys	0m0.016s

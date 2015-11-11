@@ -1,34 +1,41 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 res2!9 -> 1
-index32!696!1674 -> 0
+index12!19 -> 1
 o12!4 -> AInt!val!0
 o21!3 -> AInt!val!1
 o22!5 -> AInt!val!2
-index32!696 -> 0
-index12!18!1676 -> 0
+index22!303 -> 0
+bentry22!877 -> (- 1)
 res1!8 -> 0
 o13!6 -> AInt!val!1
+index22!303!2420 -> 0
+index32!960!2419 -> 0
 o11!2 -> AInt!val!0
 o23!7 -> AInt!val!2
-index22!239!1675 -> 0
-aentry22!630 -> 1
-index22!239 -> 0
-index12!18 -> 1
-bentry22!631 -> 0
+index32!960 -> 0
+index12!19!2421 -> 0
+aentry22!876 -> 0
 compareIgnoreCaseString!16 -> {
   0
 }
 compareDouble!14 -> {
   0
 }
-get!0 -> {
-  (get!0!1713 (:var 0) (k!1712 (:var 1)))
+get!0!2468 -> {
+  AInt!val!2 0 -> (- 1)
+  else -> 0
 }
-k!1712 -> {
+equals!17 -> {
+  5
+}
+k!2467 -> {
   (ite (>= (:var 0) 0) 0 (- 1))
+}
+get!0 -> {
+  (get!0!2468 (:var 0) (k!2467 (:var 1)))
 }
 compareInt!15 -> {
   0
@@ -37,35 +44,31 @@ length!1 -> {
   AInt!val!1 -> 0
   else -> 1
 }
-get!0!1713 -> {
-  AInt!val!2 0 -> 0
-  else -> 1
-}
 
 
-real	0m0.230s
-user	0m0.222s
-sys	0m0.008s
+real	0m0.258s
+user	0m0.246s
+sys	0m0.012s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res3!10 -> 0
 res2!9 -> 1
+index12!19 -> 1
 o12!4 -> AInt!val!0
 o21!3 -> AInt!val!1
 o22!5 -> AInt!val!2
-index12!18!7519 -> 0
-index32!6456!7517 -> 0
-index32!6456 -> 0
+index12!19!9303 -> 0
+index32!8146 -> 0
+index22!7615!9302 -> 0
 res1!8 -> 0
+bentry22!8145 -> (- 1)
 o13!6 -> AInt!val!1
-bentry22!6455 -> (- 1)
+index32!8146!9301 -> 0
 o11!2 -> AInt!val!0
 o23!7 -> AInt!val!2
-index22!6033!7518 -> 0
-aentry22!6454 -> 0
-index22!6033 -> 0
-index12!18 -> 1
-get!0!7556 -> {
+index22!7615 -> 0
+aentry22!8144 -> 0
+get!0!9350 -> {
   AInt!val!2 0 -> (- 1)
   else -> 0
 }
@@ -75,14 +78,17 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
-k!7555 -> {
-  (ite (>= (:var 0) 0) 0 (- 1))
+equals!17 -> {
+  5
 }
 get!0 -> {
-  (get!0!7556 (:var 0) (k!7555 (:var 1)))
+  (get!0!9350 (:var 0) (k!9349 (:var 1)))
 }
 compareInt!15 -> {
   0
+}
+k!9349 -> {
+  (ite (>= (:var 0) 0) 0 (- 1))
 }
 length!1 -> {
   AInt!val!1 -> 0
@@ -90,15 +96,15 @@ length!1 -> {
 }
 
 
-real	0m0.629s
-user	0m0.629s
-sys	0m0.000s
+real	0m0.628s
+user	0m0.612s
+sys	0m0.016s
 descartes -p=3 -m=2: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
 
 real	0m0.010s
-user	0m0.004s
-sys	0m0.007s
+user	0m0.005s
+sys	0m0.008s
 descartes -p=3 -m=3: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o11",Ident "length"]))) CAnd (BinOp (ExpName (Name [Ident "index1"])) LThan (ExpName (Name [Ident "o21",Ident "length"])))
 

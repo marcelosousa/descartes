@@ -1,236 +1,22 @@
 Property 3
 descartes -p=3 -m=0: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o12!6 -> UTF8SortedAsUnicodeComparator!val!0
-res1!10 -> 0
-o23!9 -> UTF8SortedAsUnicodeComparator!val!2
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!2
-aStop31 -> 9296
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 9297
-aStop21 -> 9296
-aByte32!4057 -> (- 1)
-aStop11 -> 9297
-aUpto31 -> 9295
-bUpto31 -> (- 1)
-aUpto11!4229 -> 0
-aUpto21!4228 -> 0
-res3!12 -> (- 1)
-aUpto21 -> 9296
-aUpto31!4227 -> 0
-bUpto21 -> (- 1)
-o13!8 -> UTF8SortedAsUnicodeComparator!val!1
-bUpto11 -> 0
-res2!11 -> 1
-diff32!4059 -> (- 1)
-bByte32!4058 -> 0
-nondet!15 -> {
-  18 -> (- 1)
-  else -> 0
-}
-equals!19 -> {
-  15
-}
-compareDouble!16 -> {
-  0
-}
-hasArray!3 -> {
-  true
-}
-k!4357 -> {
-  (let ((a!1 (ite (>= (:var 0) 9294)
-                  (ite (>= (:var 0) 9295)
-                       (ite (>= (:var 0) 9296) 9296 9295)
-                       9294)
-                  0)))
-    (ite (>= (:var 0) 0) a!1 (- 1)))
-}
-compareInt!17 -> {
-  0
-}
-length!1 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> 9296
-  else -> 9297
-}
-arrayOffset!2 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> (- 1)
-  else -> 0
-}
-get!0!4358 -> {
-  UTF8SortedAsUnicodeComparator!val!2 (- 1) -> 19
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 24
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 27
-  UTF8SortedAsUnicodeComparator!val!0 9294 -> 29
-  UTF8SortedAsUnicodeComparator!val!0 9295 -> 31
-  UTF8SortedAsUnicodeComparator!val!0 9296 -> 35
-  UTF8SortedAsUnicodeComparator!val!1 9294 -> 37
-  else -> 18
-}
-get!0 -> {
-  (get!0!4358 (:var 0) (k!4357 (:var 1)))
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
 
-
-real	0m1.077s
-user	0m1.069s
-sys	0m0.008s
+real	0m1.104s
+user	0m1.095s
+sys	0m0.010s
 descartes -p=3 -m=1: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-aStop31 -> 2
-res1!10 -> 0
-o23!9 -> UTF8SortedAsUnicodeComparator!val!2
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-bByte32!9469 -> 0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!2
-aUpto31!9471 -> 0
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aUpto11 -> 2
-aStop21 -> 2
-aStop11 -> 2
-aByte32!9468 -> 1
-aUpto31 -> 1
-aUpto21!9472 -> 0
-bUpto31 -> 15
-res3!12 -> 1
-diff32!9470 -> 1
-aUpto21 -> 2
-bUpto21 -> 15
-o13!8 -> UTF8SortedAsUnicodeComparator!val!1
-bUpto11 -> 0
-aUpto11!9473 -> 0
-res2!11 -> (- 1)
-o12!6 -> UTF8SortedAsUnicodeComparator!val!0
-nondet!15 -> {
-  20 -> 1
-  else -> 0
-}
-equals!19 -> {
-  15
-}
-compareDouble!16 -> {
-  0
-}
-k!9601 -> {
-  (ite (>= (:var 0) 1) (ite (>= (:var 0) 15) 15 1) 0)
-}
-hasArray!3 -> {
-  true
-}
-compareInt!17 -> {
-  0
-}
-length!1 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> 3
-  else -> 2
-}
-get!0!9602 -> {
-  UTF8SortedAsUnicodeComparator!val!2 15 -> 21
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 26
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 30
-  UTF8SortedAsUnicodeComparator!val!0 1 -> 32
-  else -> 20
-}
-arrayOffset!2 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> 15
-  else -> 0
-}
-get!0 -> {
-  (get!0!9602 (:var 0) (k!9601 (:var 1)))
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
 
-
-real	0m2.015s
-user	0m2.007s
+real	0m2.060s
+user	0m2.050s
 sys	0m0.008s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-aByte32!1237 -> (- 1)
-aUpto12!260 -> 1
-res1!10 -> 0
-o11!4 -> UTF8SortedAsUnicodeComparator!val!0
-o22!7 -> UTF8SortedAsUnicodeComparator!val!2
-o23!9 -> UTF8SortedAsUnicodeComparator!val!2
-aUpto11!1656 -> 0
-aByte12!257 -> 1
-aUpto11 -> 0
-o21!5 -> UTF8SortedAsUnicodeComparator!val!1
-aByte22!825 -> 1
-diff32!1239 -> (- 1)
-aStop11 -> 5886
-aStop21 -> 3611
-aUpto31!1658 -> 0
-diff22!827 -> 1
-bUpto31 -> (- 1)
-aUpto31 -> 3609
-bUpto12!261 -> 1
-bUpto21 -> (- 1)
-res2!11 -> 1
-bUpto11 -> 0
-aStop31 -> 3611
-aUpto21!1657 -> 0
-diff12!259 -> 0
-bByte22!826 -> 0
-bByte32!1238 -> 0
-res3!12 -> (- 1)
-aUpto21 -> 0
-bByte12!258 -> 1
-o13!8 -> UTF8SortedAsUnicodeComparator!val!1
-o12!6 -> UTF8SortedAsUnicodeComparator!val!0
-get!0!1787 -> {
-  UTF8SortedAsUnicodeComparator!val!1 0 -> 16
-  UTF8SortedAsUnicodeComparator!val!2 (- 1) -> 28
-  UTF8SortedAsUnicodeComparator!val!0 0 -> 35
-  UTF8SortedAsUnicodeComparator!val!2 0 -> 16
-  else -> 27
-}
-nondet!15 -> {
-  27 -> (- 1)
-  28 -> 0
-  else -> 1
-}
-equals!19 -> {
-  15
-}
-compareDouble!16 -> {
-  0
-}
-hasArray!3 -> {
-  true
-}
-compareInt!17 -> {
-  0
-}
-k!1786 -> {
-  (ite (>= (:var 0) 0)
-       (ite (>= (:var 0) 3608) (ite (>= (:var 0) 3609) 3609 3608) 0)
-       (- 1))
-}
-length!1 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> 3611
-  else -> 5886
-}
-arrayOffset!2 -> {
-  UTF8SortedAsUnicodeComparator!val!2 -> (- 1)
-  else -> 0
-}
-get!0 -> {
-  (get!0!1787 (:var 0) (k!1786 (:var 1)))
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
 
-
-real	0m0.721s
-user	0m0.709s
-sys	0m0.012s
+real	0m0.704s
+user	0m0.675s
+sys	0m0.028s
 descartes -p=3 -m=3: 
 Invariant:
 (let ((a!1 (exists ((aUpto11 Int))
@@ -1075,6 +861,6 @@ Invariant:
   (and a!1 a!2 (<= aUpto31 (arrayOffset!2 o13!8))))
 descartes: analyse_loop failed
 
-real	0m0.579s
-user	0m0.514s
-sys	0m0.064s
+real	0m0.603s
+user	0m0.595s
+sys	0m0.008s

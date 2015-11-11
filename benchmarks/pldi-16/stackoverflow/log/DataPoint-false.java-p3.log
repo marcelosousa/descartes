@@ -1,0 +1,177 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> DataPoint!val!2
+res3!11 -> 0
+o13!7 -> DataPoint!val!1
+o21!4 -> DataPoint!val!1
+fiscalResult31 -> 0
+o22!6 -> DataPoint!val!2
+fiscalResult11 -> 0
+o12!5 -> DataPoint!val!0
+res1!9 -> 0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!0
+res2!10 -> 1
+compareInt!16 -> {
+  0
+}
+industryCode!0 -> {
+  DataPoint!val!2 -> 0
+  else -> 1
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  5
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 7
+  DataPoint!val!2 -> 8
+  else -> 4
+}
+sectorCode!1 -> {
+  DataPoint!val!0 -> 0
+  else -> 1
+}
+
+
+real	0m0.518s
+user	0m0.514s
+sys	0m0.004s
+descartes -p=3 -m=1: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> DataPoint!val!2
+res3!11 -> 0
+o13!7 -> DataPoint!val!1
+o21!4 -> DataPoint!val!1
+fiscalResult31 -> 0
+o22!6 -> DataPoint!val!2
+fiscalResult11 -> 0
+o12!5 -> DataPoint!val!0
+res1!9 -> 0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!0
+res2!10 -> 1
+compareInt!16 -> {
+  0
+}
+industryCode!0 -> {
+  DataPoint!val!2 -> 0
+  else -> 1
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  5
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 6
+  DataPoint!val!2 -> 7
+  else -> 4
+}
+sectorCode!1 -> {
+  DataPoint!val!0 -> 0
+  else -> 1
+}
+
+
+real	0m1.634s
+user	0m1.630s
+sys	0m0.004s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> DataPoint!val!2
+res3!11 -> 0
+o13!7 -> DataPoint!val!1
+o21!4 -> DataPoint!val!1
+fiscalResult31 -> 0
+o22!6 -> DataPoint!val!2
+fiscalResult11 -> 0
+o12!5 -> DataPoint!val!0
+res1!9 -> 0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!0
+res2!10 -> 1
+compareInt!16 -> {
+  0
+}
+industryCode!0 -> {
+  DataPoint!val!2 -> 0
+  else -> 1
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  5
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 7
+  DataPoint!val!2 -> 8
+  else -> 4
+}
+sectorCode!1 -> {
+  DataPoint!val!0 -> 0
+  else -> 1
+}
+
+
+real	0m2.973s
+user	0m2.965s
+sys	0m0.010s
+descartes -p=3 -m=3: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+o23!8 -> DataPoint!val!2
+res3!11 -> 0
+o13!7 -> DataPoint!val!1
+o21!4 -> DataPoint!val!1
+fiscalResult31 -> 0
+o22!6 -> DataPoint!val!2
+fiscalResult11 -> 0
+o12!5 -> DataPoint!val!0
+res1!9 -> 0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!0
+res2!10 -> 1
+compareInt!16 -> {
+  0
+}
+industryCode!0 -> {
+  DataPoint!val!2 -> 0
+  else -> 1
+}
+compareDouble!15 -> {
+  0
+}
+equals!18 -> {
+  5
+}
+compareIgnoreCaseString!17 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 6
+  DataPoint!val!2 -> 7
+  else -> 4
+}
+sectorCode!1 -> {
+  DataPoint!val!0 -> 0
+  else -> 1
+}
+
+
+real	0m1.571s
+user	0m1.507s
+sys	0m0.064s

@@ -1,6 +1,6 @@
 Property 1
 descartes -p=1 -m=0: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!4 -> NzbFile!val!1
 res2!8 -> (- 1000)
 o12!5 -> NzbFile!val!1
@@ -23,13 +23,16 @@ getFileName!2 -> {
 getFileName_toLowerCase_endsWith!1 -> {
   true
 }
+equals!15 -> {
+  2
+}
 
 
-real	0m0.127s
-user	0m0.119s
-sys	0m0.008s
+real	0m0.134s
+user	0m0.128s
+sys	0m0.004s
 descartes -p=1 -m=1: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!4 -> NzbFile!val!1
 res2!8 -> (- 1000)
 o12!5 -> NzbFile!val!1
@@ -52,13 +55,16 @@ getFileName!2 -> {
 getFileName_toLowerCase_endsWith!1 -> {
   true
 }
+equals!15 -> {
+  2
+}
 
 
-real	0m0.181s
-user	0m0.164s
+real	0m0.205s
+user	0m0.190s
 sys	0m0.016s
 descartes -p=1 -m=2: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o22!6 -> NzbFile!val!0
 res2!8 -> (- 1000)
 o12!5 -> NzbFile!val!1
@@ -81,13 +87,16 @@ getFileName!2 -> {
 getFileName_toLowerCase_endsWith!1 -> {
   true
 }
+equals!15 -> {
+  2
+}
 
 
-real	0m0.364s
-user	0m0.355s
-sys	0m0.008s
+real	0m0.386s
+user	0m0.386s
+sys	0m0.000s
 descartes -p=1 -m=3: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 o21!4 -> NzbFile!val!1
 res2!8 -> (- 1000)
 o12!5 -> NzbFile!val!1
@@ -110,8 +119,11 @@ getFileName!2 -> {
 getFileName_toLowerCase_endsWith!1 -> {
   true
 }
+equals!15 -> {
+  2
+}
 
 
-real	0m0.186s
-user	0m0.172s
+real	0m0.206s
+user	0m0.194s
 sys	0m0.012s

@@ -1,6 +1,6 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res1!10 -> 0
 o23!9 -> CollectionItem!val!1
 res3!12 -> 1
@@ -12,6 +12,9 @@ o13!8 -> CollectionItem!val!0
 o12!6 -> CollectionItem!val!1
 cardType!0 -> {
   0
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -34,11 +37,11 @@ getCardId!1 -> {
 }
 
 
-real	0m0.165s
-user	0m0.157s
-sys	0m0.008s
+real	0m0.169s
+user	0m0.165s
+sys	0m0.004s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res1!10 -> 0
 o23!9 -> CollectionItem!val!1
 res3!12 -> 1
@@ -50,6 +53,9 @@ o13!8 -> CollectionItem!val!0
 o12!6 -> CollectionItem!val!1
 cardType!0 -> {
   0
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -72,11 +78,11 @@ getCardId!1 -> {
 }
 
 
-real	0m0.298s
-user	0m0.290s
-sys	0m0.008s
+real	0m0.347s
+user	0m0.331s
+sys	0m0.016s
 descartes -p=3 -m=2: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res1!10 -> 0
 o23!9 -> CollectionItem!val!0
 res3!12 -> 1
@@ -88,6 +94,9 @@ o13!8 -> CollectionItem!val!1
 o12!6 -> CollectionItem!val!0
 cardType!0 -> {
   0
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -110,11 +119,11 @@ getCardId!1 -> {
 }
 
 
-real	0m0.762s
-user	0m0.754s
+real	0m0.817s
+user	0m0.809s
 sys	0m0.008s
 descartes -p=3 -m=3: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 res1!10 -> 0
 o23!9 -> CollectionItem!val!1
 res3!12 -> 1
@@ -126,6 +135,9 @@ o13!8 -> CollectionItem!val!0
 o12!6 -> CollectionItem!val!1
 cardType!0 -> {
   0
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -148,6 +160,6 @@ getCardId!1 -> {
 }
 
 
-real	0m0.319s
-user	0m0.307s
-sys	0m0.012s
+real	0m0.338s
+user	0m0.331s
+sys	0m0.008s

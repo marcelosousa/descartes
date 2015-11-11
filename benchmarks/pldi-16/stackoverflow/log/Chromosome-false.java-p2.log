@@ -1,45 +1,47 @@
 Property 2
 descartes -p=2 -m=0: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res3!10 -> 0
 o21!3 -> Chromosome!val!0
 o12!4 -> Chromosome!val!0
-comp25!188 -> 1
-comp15!75 -> 1
+comp23!241 -> 0
+comp13!92 -> 0
 comp21 -> 0
 comp11 -> 0
-comp34!246 -> (- 1)
-comp36!248 -> 0
+comp34!319 -> 0
 o13!6 -> Chromosome!val!1
+comp15!94 -> 0
+comp33!318 -> 0
 o11!2 -> Chromosome!val!1
-comp23!186 -> 1
 o23!7 -> Chromosome!val!2
+comp22!240 -> 1
+comp16!95 -> 1
+comp26!244 -> 1
 comp31 -> 0
-comp35!247 -> 0
-comp32!244 -> 0
+comp12!91 -> (- 1)
+comp35!320 -> 1
+comp25!243 -> 2
 res2!9 -> 1
-comp33!245 -> 0
 o22!5 -> Chromosome!val!2
-comp12!72 -> 0
 res1!8 -> 1
-comp16!76 -> 1
-comp26!189 -> 1
-comp22!185 -> 0
-comp13!73 -> (- 1)
-comp14!74 -> 0
-comp24!187 -> 0
+comp32!317 -> 0
+comp14!93 -> (- 1)
+comp36!321 -> 0
+comp24!242 -> 1
 getScore!1 -> {
-  Chromosome!val!0 2 -> 1
-  Chromosome!val!1 3 -> 1
-  Chromosome!val!2 3 -> 2
+  Chromosome!val!0 1 -> 1
+  Chromosome!val!0 2 -> (- 1)
+  Chromosome!val!0 3 -> 1
   Chromosome!val!1 5 -> 1
   Chromosome!val!2 5 -> (- 1)
+  Chromosome!val!1 7 -> 1
+  Chromosome!val!2 7 -> 2
   else -> 0
 }
 isNull!0 -> {
-  Chromosome!val!1 -> 38
-  Chromosome!val!2 -> 39
-  else -> 37
+  Chromosome!val!1 -> 40
+  Chromosome!val!2 -> 41
+  else -> 39
 }
 compareIgnoreCaseString!16 -> {
   0
@@ -47,57 +49,58 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
+equals!17 -> {
+  15
+}
 compareInt!15 -> {
   0
 }
 
 
-real	0m0.163s
-user	0m0.151s
-sys	0m0.012s
+real	0m0.157s
+user	0m0.153s
+sys	0m0.004s
 descartes -p=2 -m=1: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res3!10 -> 0
 o21!3 -> Chromosome!val!0
 o12!4 -> Chromosome!val!0
-comp26!82 -> 1
-comp12!43 -> 1
 comp21 -> 0
 comp11 -> 0
+comp24!81 -> 1
 o13!6 -> Chromosome!val!1
 o11!2 -> Chromosome!val!1
-comp22!78 -> 1
 o23!7 -> Chromosome!val!2
+comp32!89 -> 0
+comp35!92 -> (- 1)
+comp16!48 -> 1
 comp31 -> 0
-comp32!88 -> 1
-comp14!45 -> 2
+comp14!46 -> (- 1)
 res2!9 -> 1
-comp34!90 -> 2
+comp25!82 -> 0
 o22!5 -> Chromosome!val!2
-comp13!44 -> 1
-comp23!79 -> 1
-comp15!46 -> 3
+comp34!91 -> 0
+comp33!90 -> 0
+comp22!79 -> 0
+comp23!80 -> 0
+comp36!93 -> 0
 res1!8 -> 1
-comp16!47 -> 2
-comp33!89 -> 1
-comp24!80 -> 2
-comp35!91 -> 1
-comp25!81 -> 1
-comp36!92 -> 0
+comp13!45 -> 0
+comp15!47 -> 0
+comp26!83 -> 1
+comp12!44 -> 0
 getScore!1 -> {
-  Chromosome!val!0 5 -> (- 2)
-  Chromosome!val!1 1 -> 1
-  Chromosome!val!2 1 -> (- 1)
-  Chromosome!val!1 3 -> 1
-  Chromosome!val!2 3 -> (- 1)
-  Chromosome!val!1 5 -> (- 1)
-  Chromosome!val!1 7 -> (- 1)
+  Chromosome!val!0 3 -> 1
+  Chromosome!val!1 5 -> 1
+  Chromosome!val!2 5 -> 2
+  Chromosome!val!1 7 -> 1
+  Chromosome!val!2 7 -> (- 1)
   else -> 0
 }
 isNull!0 -> {
-  Chromosome!val!1 -> 43
-  Chromosome!val!2 -> 44
-  else -> 42
+  Chromosome!val!1 -> 40
+  Chromosome!val!2 -> 41
+  else -> 39
 }
 compareIgnoreCaseString!16 -> {
   0
@@ -105,50 +108,55 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
+equals!17 -> {
+  15
+}
 compareInt!15 -> {
   0
 }
 
 
-real	0m0.112s
-user	0m0.100s
+real	0m0.114s
+user	0m0.102s
 sys	0m0.012s
 descartes -p=2 -m=2: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res3!10 -> 0
 o21!3 -> Chromosome!val!0
 o12!4 -> Chromosome!val!0
+comp15!22 -> 0
 comp21 -> 0
 comp11 -> 0
-comp23!24 -> 1
-comp36!32 -> 0
 o13!6 -> Chromosome!val!1
 o11!2 -> Chromosome!val!1
+comp25!27 -> 2
 o23!7 -> Chromosome!val!2
-comp16!22 -> 1
-comp32!28 -> 0
-comp26!27 -> 1
-comp22!23 -> 1
+comp34!31 -> 0
+comp35!32 -> 1
+comp24!26 -> 1
 comp31 -> 0
-comp15!21 -> 0
 res2!9 -> 1
 o22!5 -> Chromosome!val!2
-comp25!26 -> 2
-comp14!20 -> (- 1)
-comp13!19 -> (- 1)
-comp24!25 -> 1
+comp12!19 -> 1
+comp33!30 -> 0
+comp23!25 -> 0
+comp22!24 -> (- 1)
+comp14!21 -> (- 1)
+comp36!33 -> 0
 res1!8 -> 1
-comp12!18 -> (- 1)
-comp35!31 -> 1
-comp33!29 -> 0
-comp34!30 -> 0
+comp32!29 -> 0
+comp13!20 -> 0
+comp16!23 -> 1
+comp26!28 -> 1
 getScore!1 -> {
+  Chromosome!val!0 2 -> 1
+  Chromosome!val!0 3 -> 1
   Chromosome!val!0 5 -> 1
-  Chromosome!val!0 7 -> (- 2)
-  Chromosome!val!1 1 -> (- 1)
-  Chromosome!val!2 1 -> (- 1)
+  Chromosome!val!0 7 -> (- 1)
+  Chromosome!val!1 1 -> 1
+  Chromosome!val!2 1 -> 1
   Chromosome!val!1 5 -> 2
-  Chromosome!val!1 7 -> (- 1)
+  Chromosome!val!2 7 -> 1
   else -> 0
 }
 isNull!0 -> {
@@ -162,57 +170,58 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
+equals!17 -> {
+  15
+}
 compareInt!15 -> {
   0
 }
 
 
-real	0m0.366s
-user	0m0.349s
-sys	0m0.016s
+real	0m0.350s
+user	0m0.330s
+sys	0m0.020s
 descartes -p=2 -m=3: 
-Sat: Comparator VIOLATES Property 2: for all x, y and z, compare(x, y) > 0 and compare(y, z) > 0 implies compare(x, z) > 0.
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 res3!10 -> 0
 o21!3 -> Chromosome!val!0
 o12!4 -> Chromosome!val!0
-comp26!82 -> 1
-comp12!43 -> 1
 comp21 -> 0
 comp11 -> 0
+comp24!81 -> 1
 o13!6 -> Chromosome!val!1
 o11!2 -> Chromosome!val!1
-comp22!78 -> 1
 o23!7 -> Chromosome!val!2
+comp32!89 -> 0
+comp35!92 -> (- 1)
+comp16!48 -> 1
 comp31 -> 0
-comp32!88 -> 1
-comp14!45 -> 2
+comp14!46 -> (- 1)
 res2!9 -> 1
-comp34!90 -> 2
+comp25!82 -> 0
 o22!5 -> Chromosome!val!2
-comp13!44 -> 1
-comp23!79 -> 1
-comp15!46 -> 3
+comp34!91 -> 0
+comp33!90 -> 0
+comp22!79 -> 0
+comp23!80 -> 0
+comp36!93 -> 0
 res1!8 -> 1
-comp16!47 -> 2
-comp33!89 -> 1
-comp24!80 -> 2
-comp35!91 -> 1
-comp25!81 -> 1
-comp36!92 -> 0
+comp13!45 -> 0
+comp15!47 -> 0
+comp26!83 -> 1
+comp12!44 -> 0
 getScore!1 -> {
-  Chromosome!val!0 5 -> (- 2)
-  Chromosome!val!1 1 -> 1
-  Chromosome!val!2 1 -> (- 1)
-  Chromosome!val!1 3 -> 1
-  Chromosome!val!2 3 -> (- 1)
-  Chromosome!val!1 5 -> (- 1)
-  Chromosome!val!1 7 -> (- 1)
+  Chromosome!val!0 3 -> 1
+  Chromosome!val!1 5 -> 1
+  Chromosome!val!2 5 -> 2
+  Chromosome!val!1 7 -> 1
+  Chromosome!val!2 7 -> (- 1)
   else -> 0
 }
 isNull!0 -> {
-  Chromosome!val!1 -> 43
-  Chromosome!val!2 -> 44
-  else -> 42
+  Chromosome!val!1 -> 40
+  Chromosome!val!2 -> 41
+  else -> 39
 }
 compareIgnoreCaseString!16 -> {
   0
@@ -220,11 +229,14 @@ compareIgnoreCaseString!16 -> {
 compareDouble!14 -> {
   0
 }
+equals!17 -> {
+  15
+}
 compareInt!15 -> {
   0
 }
 
 
-real	0m0.123s
-user	0m0.124s
-sys	0m0.000s
+real	0m0.108s
+user	0m0.096s
+sys	0m0.012s

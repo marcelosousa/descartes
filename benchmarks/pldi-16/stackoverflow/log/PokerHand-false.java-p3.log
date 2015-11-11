@@ -1,48 +1,37 @@
 Property 3
 descartes -p=3 -m=0: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 tripleCount231 -> 0
 res1!10 -> 0
 o23!9 -> PokerHand!val!1
 o11!4 -> PokerHand!val!2
 o22!7 -> PokerHand!val!1
-i221 -> 10
+i211!11754 -> 0
+i221 -> 0
 o21!5 -> PokerHand!val!0
-higherTriple11 -> (- 1)
+higherTriple11 -> 1
+i221!11753 -> 0
 tripleCount131 -> 0
 tripleCount221 -> 0
 tripleCount211 -> 0
 tripleCount111 -> 1
-i211!9919 -> 0
 res3!12 -> 0
 tripleCount121 -> 1
 res2!11 -> 1
 o13!8 -> PokerHand!val!0
-i211 -> 12
-higherTriple21 -> (- 1)
-i221!9918 -> 0
+i211 -> 2
+higherTriple21 -> 1
 o12!6 -> PokerHand!val!2
-charAt!2 -> {
-  (charAt!2!10110 (:var 0) (k!10109 (:var 1)))
+lastIndexOf!0 -> {
+  1
 }
-indexOf!3 -> {
-  PokerHand!val!2 2 -> 6
-  else -> (- 1)
-}
-charAt!2!10110 -> {
-  PokerHand!val!2 10 -> 7
-  PokerHand!val!2 (- 2) -> 17
-  PokerHand!val!1 (- 2) -> 18
-  PokerHand!val!2 11 -> 19
-  PokerHand!val!0 11 -> 20
-  PokerHand!val!2 0 -> 22
-  PokerHand!val!1 0 -> 23
-  PokerHand!val!2 9 -> 24
-  PokerHand!val!0 9 -> 25
-  PokerHand!val!0 0 -> 26
-  PokerHand!val!1 9 -> 27
-  PokerHand!val!0 10 -> 28
+charAt!2!11840 -> {
+  PokerHand!val!2 0 -> 7
+  PokerHand!val!0 0 -> 14
   else -> 2
+}
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
@@ -51,101 +40,104 @@ countOccurrencesOf!1 -> {
   PokerHand!val!2 3 -> 1
   else -> 0
 }
-compareIgnoreCaseString!18 -> {
-  0
-}
-k!10109 -> {
-  (let ((a!1 (ite (>= (:var 0) 10)
-                  (ite (>= (:var 0) 11) (ite (>= (:var 0) 12) 12 11) 10)
-                  9)))
-    (ite (>= (:var 0) 0) (ite (>= (:var 0) 9) a!1 0) (- 2)))
-}
 compareInt!17 -> {
   0
 }
-lastIndexOf!0 -> {
-  (- 1)
+indexOf!3 -> {
+  PokerHand!val!2 2 -> 6
+  else -> (- 1)
+}
+k!11839 -> {
+  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) (ite (>= (:var 0) 2) 2 1) 0) (- 1))
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+charAt!2 -> {
+  (charAt!2!11840 (:var 0) (k!11839 (:var 1)))
 }
 
 
-real	0m2.417s
-user	0m2.401s
+real	0m2.296s
+user	0m2.279s
 sys	0m0.016s
 descartes -p=3 -m=1: 
-Sat: Comparator VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 tripleCount231 -> 0
 res1!10 -> 0
 o23!9 -> PokerHand!val!1
 o11!4 -> PokerHand!val!2
 o22!7 -> PokerHand!val!1
-i221!28115 -> 0
 i221 -> 0
 o21!5 -> PokerHand!val!0
-higherTriple11 -> 9
+i221!33532 -> 0
+higherTriple11 -> (- 2)
 tripleCount131 -> 0
 tripleCount221 -> 0
 tripleCount211 -> 0
-tripleCount111 -> 2
+tripleCount111 -> 1
 res3!12 -> 0
-tripleCount121 -> 2
+i211!33533 -> 0
+tripleCount121 -> 1
 res2!11 -> 1
 o13!8 -> PokerHand!val!0
-i211!28116 -> 0
-i211 -> 11
-higherTriple21 -> 9
+i211 -> 7
+higherTriple21 -> (- 2)
 o12!6 -> PokerHand!val!2
-charAt!2 -> {
-  (charAt!2!28214 (:var 0) (k!28213 (:var 1)))
+lastIndexOf!0 -> {
+  (- 2)
 }
-indexOf!3 -> {
-  (- 1)
-}
-charAt!2!28214 -> {
-  PokerHand!val!2 0 -> 6
-  PokerHand!val!1 0 -> 2
-  PokerHand!val!2 10 -> 16
-  PokerHand!val!0 10 -> 17
-  PokerHand!val!0 0 -> 19
-  PokerHand!val!2 8 -> 20
-  PokerHand!val!0 8 -> 21
-  else -> 3
+equals!19 -> {
+  5
 }
 compareDouble!16 -> {
   0
 }
+charAt!2!33619 -> {
+  PokerHand!val!2 0 -> 9
+  PokerHand!val!1 0 -> 3
+  PokerHand!val!2 6 -> 15
+  PokerHand!val!0 6 -> 16
+  PokerHand!val!0 0 -> 18
+  else -> 2
+}
 countOccurrencesOf!1 -> {
-  PokerHand!val!2 3 -> 2
+  PokerHand!val!2 3 -> 1
   else -> 0
-}
-compareIgnoreCaseString!18 -> {
-  0
-}
-k!28213 -> {
-  (let ((a!1 (ite (>= (:var 0) 8)
-                  (ite (>= (:var 0) 10) (ite (>= (:var 0) 11) 11 10) 8)
-                  0)))
-    (ite (>= (:var 0) 0) a!1 (- 1)))
 }
 compareInt!17 -> {
   0
 }
-lastIndexOf!0 -> {
-  9
+indexOf!3 -> {
+  PokerHand!val!2 2 -> 8
+  else -> (- 1)
+}
+compareIgnoreCaseString!18 -> {
+  0
+}
+k!33618 -> {
+  (let ((a!1 (ite (>= (:var 0) 0)
+                  (ite (>= (:var 0) 6) (ite (>= (:var 0) 7) 7 6) 0)
+                  (- 1))))
+    (ite (>= (:var 0) (- 1)) a!1 (- 3)))
+}
+charAt!2 -> {
+  (charAt!2!33619 (:var 0) (k!33618 (:var 1)))
 }
 
 
-real	0m9.220s
-user	0m9.172s
-sys	0m0.048s
+real	0m9.456s
+user	0m9.438s
+sys	0m0.016s
 descartes -p=3 -m=2: 
 descartes: buildArtCond: fn
 
 real	0m0.032s
-user	0m0.032s
-sys	0m0.000s
+user	0m0.024s
+sys	0m0.008s
 descartes -p=3 -m=3: 
 descartes: buildArtCond: fn
 
-real	0m0.031s
-user	0m0.027s
-sys	0m0.004s
+real	0m0.025s
+user	0m0.020s
+sys	0m0.005s

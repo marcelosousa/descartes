@@ -1,25 +1,25 @@
 Property 1
 descartes -p=1 -m=0: 
-Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.137s
-user	0m0.129s
-sys	0m0.008s
-descartes -p=1 -m=1: 
-Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-
-real	0m0.124s
-user	0m0.119s
+real	0m0.139s
+user	0m0.135s
 sys	0m0.004s
+descartes -p=1 -m=1: 
+Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.125s
+user	0m0.113s
+sys	0m0.012s
 descartes -p=1 -m=2: 
-Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.180s
-user	0m0.180s
-sys	0m0.000s
+user	0m0.171s
+sys	0m0.008s
 descartes -p=1 -m=3: 
-Unsat: Comparator OBEYS Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.119s
-user	0m0.102s
-sys	0m0.017s
+real	0m0.115s
+user	0m0.107s
+sys	0m0.008s

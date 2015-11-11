@@ -1,0 +1,141 @@
+Property 1
+descartes -p=1 -m=0: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res1!7 -> 1
+o21!4 -> DataPoint!val!1
+o22!6 -> DataPoint!val!0
+fiscalResult11 -> 0
+res2!8 -> 1
+o12!5 -> DataPoint!val!1
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!0
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  0
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!0 -> 7
+  else -> 6
+}
+equals!15 -> {
+  5
+}
+sectorCode!1 -> {
+  DataPoint!val!1 -> 1
+  else -> 2
+}
+
+
+real	0m0.242s
+user	0m0.234s
+sys	0m0.008s
+descartes -p=1 -m=1: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res1!7 -> 1
+o21!4 -> DataPoint!val!0
+o22!6 -> DataPoint!val!1
+fiscalResult11 -> 0
+res2!8 -> 1
+o12!5 -> DataPoint!val!0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!1
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  0
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 8
+  else -> 7
+}
+equals!15 -> {
+  5
+}
+sectorCode!1 -> {
+  DataPoint!val!1 -> 2
+  else -> 1
+}
+
+
+real	0m0.219s
+user	0m0.206s
+sys	0m0.012s
+descartes -p=1 -m=2: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res1!7 -> 1
+o21!4 -> DataPoint!val!0
+o22!6 -> DataPoint!val!1
+fiscalResult11 -> 0
+res2!8 -> 1
+o12!5 -> DataPoint!val!0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!1
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  0
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 8
+  else -> 7
+}
+equals!15 -> {
+  5
+}
+sectorCode!1 -> {
+  DataPoint!val!1 -> 2
+  else -> 1
+}
+
+
+real	0m0.318s
+user	0m0.306s
+sys	0m0.012s
+descartes -p=1 -m=3: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+res1!7 -> 1
+o21!4 -> DataPoint!val!0
+o22!6 -> DataPoint!val!1
+fiscalResult11 -> 0
+res2!8 -> 1
+o12!5 -> DataPoint!val!0
+fiscalResult21 -> 0
+o11!3 -> DataPoint!val!1
+compareDouble!12 -> {
+  0
+}
+compareInt!13 -> {
+  0
+}
+compareIgnoreCaseString!14 -> {
+  0
+}
+fiscalQuarter!2 -> {
+  DataPoint!val!1 -> 8
+  else -> 7
+}
+equals!15 -> {
+  5
+}
+sectorCode!1 -> {
+  DataPoint!val!1 -> 2
+  else -> 1
+}
+
+
+real	0m0.216s
+user	0m0.208s
+sys	0m0.008s

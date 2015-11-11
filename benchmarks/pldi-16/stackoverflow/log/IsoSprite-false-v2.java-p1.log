@@ -1,31 +1,37 @@
 Property 1
 descartes -p=1 -m=0: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 res2!11 -> (- 1)
 res1!10 -> (- 1)
 o11!6 -> IsoSprite!val!0
 o21!7 -> IsoSprite!val!1
 o12!8 -> IsoSprite!val!1
 o22!9 -> IsoSprite!val!0
+compareIgnoreCaseString!17 -> {
+  0
+}
+minY!3 -> {
+  IsoSprite!val!1 -> 0
+  else -> (- 1)
+}
+maxZ!0 -> {
+  1
+}
 compareDouble!15 -> {
   0
 }
 compareInt!16 -> {
   0
 }
+equals!18 -> {
+  5
+}
 maxX!4 -> {
   1
-}
-compareIgnoreCaseString!17 -> {
-  0
 }
 maxY!2 -> {
   IsoSprite!val!0 -> 1
   else -> 0
-}
-minY!3 -> {
-  IsoSprite!val!1 -> 0
-  else -> (- 1)
 }
 minX!5 -> {
   0
@@ -33,40 +39,44 @@ minX!5 -> {
 minZ!1 -> {
   0
 }
-maxZ!0 -> {
-  1
-}
 
 
-real	0m0.370s
-user	0m0.370s
-sys	0m0.000s
+real	0m0.380s
+user	0m0.379s
+sys	0m0.002s
 descartes -p=1 -m=1: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 res2!11 -> (- 1)
 res1!10 -> (- 1)
 o11!6 -> IsoSprite!val!0
 o21!7 -> IsoSprite!val!1
 o12!8 -> IsoSprite!val!1
 o22!9 -> IsoSprite!val!0
+compareIgnoreCaseString!17 -> {
+  0
+}
+minY!3 -> {
+  0
+}
+maxZ!0 -> {
+  IsoSprite!val!1 -> 0
+  else -> 1
+}
 compareDouble!15 -> {
   0
 }
 compareInt!16 -> {
   0
 }
+equals!18 -> {
+  5
+}
 maxX!4 -> {
   IsoSprite!val!0 -> 1
   else -> 0
 }
-compareIgnoreCaseString!17 -> {
-  0
-}
 maxY!2 -> {
   1
-}
-minY!3 -> {
-  0
 }
 minX!5 -> {
   IsoSprite!val!1 -> 0
@@ -76,41 +86,44 @@ minZ!1 -> {
   IsoSprite!val!0 -> (- 1)
   else -> 0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> 0
-  else -> 1
-}
 
 
-real	0m0.212s
-user	0m0.204s
-sys	0m0.008s
+real	0m0.233s
+user	0m0.221s
+sys	0m0.012s
 descartes -p=1 -m=2: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 res2!11 -> (- 1)
 res1!10 -> (- 1)
 o21!7 -> IsoSprite!val!1
 o11!6 -> IsoSprite!val!0
 o12!8 -> IsoSprite!val!1
 o22!9 -> IsoSprite!val!0
+compareIgnoreCaseString!17 -> {
+  0
+}
+minY!3 -> {
+  0
+}
+maxZ!0 -> {
+  IsoSprite!val!1 -> 0
+  else -> 1
+}
 compareDouble!15 -> {
   0
 }
 compareInt!16 -> {
   0
 }
+equals!18 -> {
+  5
+}
 maxX!4 -> {
   IsoSprite!val!0 -> 1
   else -> 0
 }
-compareIgnoreCaseString!17 -> {
-  0
-}
 maxY!2 -> {
   1
-}
-minY!3 -> {
-  0
 }
 minX!5 -> {
   IsoSprite!val!1 -> 0
@@ -120,41 +133,44 @@ minZ!1 -> {
   IsoSprite!val!0 -> (- 1)
   else -> 0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> 0
-  else -> 1
-}
 
 
-real	0m0.522s
-user	0m0.518s
+real	0m0.565s
+user	0m0.561s
 sys	0m0.004s
 descartes -p=1 -m=3: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 res2!11 -> (- 1)
 res1!10 -> (- 1)
 o11!6 -> IsoSprite!val!0
 o21!7 -> IsoSprite!val!1
 o12!8 -> IsoSprite!val!1
 o22!9 -> IsoSprite!val!0
+compareIgnoreCaseString!17 -> {
+  0
+}
+minY!3 -> {
+  0
+}
+maxZ!0 -> {
+  IsoSprite!val!1 -> 0
+  else -> 1
+}
 compareDouble!15 -> {
   0
 }
 compareInt!16 -> {
   0
 }
+equals!18 -> {
+  5
+}
 maxX!4 -> {
   IsoSprite!val!0 -> 1
   else -> 0
 }
-compareIgnoreCaseString!17 -> {
-  0
-}
 maxY!2 -> {
   1
-}
-minY!3 -> {
-  0
 }
 minX!5 -> {
   IsoSprite!val!1 -> 0
@@ -164,12 +180,8 @@ minZ!1 -> {
   IsoSprite!val!0 -> (- 1)
   else -> 0
 }
-maxZ!0 -> {
-  IsoSprite!val!1 -> 0
-  else -> 1
-}
 
 
-real	0m0.214s
-user	0m0.206s
+real	0m0.233s
+user	0m0.225s
 sys	0m0.008s

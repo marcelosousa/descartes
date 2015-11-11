@@ -2,21 +2,21 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m1.332s
-user	0m1.318s
-sys	0m0.012s
+real	0m1.270s
+user	0m1.260s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m2.970s
-user	0m2.957s
-sys	0m0.012s
+real	0m3.125s
+user	0m3.098s
+sys	0m0.024s
 descartes -p=1 -m=2: 
 descartes: src/Analysis/SelfComposition.hs:(92,2)-(107,54): Non-exhaustive patterns in case
 
 
-real	0m0.028s
-user	0m0.024s
+real	0m0.031s
+user	0m0.027s
 sys	0m0.004s
 descartes -p=1 -m=3: 
 Invariant:
@@ -35,6 +35,6 @@ Invariant:
 descartes: src/Analysis/Product.hs:(104,2)-(119,59): Non-exhaustive patterns in case
 
 
-real	0m0.022s
-user	0m0.004s
-sys	0m0.018s
+real	0m0.025s
+user	0m0.020s
+sys	0m0.004s

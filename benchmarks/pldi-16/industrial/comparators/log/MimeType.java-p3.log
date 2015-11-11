@@ -2,108 +2,21 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m1.181s
-user	0m1.164s
-sys	0m0.016s
+real	0m1.166s
+user	0m1.141s
+sys	0m0.020s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m3.147s
-user	0m3.140s
-sys	0m0.004s
+real	0m3.183s
+user	0m3.159s
+sys	0m0.016s
 descartes -p=3 -m=2: 
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
-o2Attribute12!144 -> 1
-i21 -> 2579
-o23!10 -> MimeType!val!2
-comp33!560 -> 0
-o1Value12!146 -> 0
-comp21 -> 0
-comp11 -> 0
-comp23!272 -> 0
-comp32!559 -> 0
-i31!2994 -> 0
-o11!5 -> MimeType!val!0
-comp15!148 -> 0
-i12!149 -> 2579
-o1Attribute12!143 -> 1
-res2!12 -> 1
-comp31 -> 0
-i31 -> 2581
-comp24!433 -> 1
-o13!9 -> MimeType!val!1
-o1Attribute32!719 -> (- 1)
-res1!11 -> 0
-comp34!721 -> (- 1)
-comp14!145 -> 0
-o22!8 -> MimeType!val!2
-comp13!23 -> 0
-o2Value12!147 -> 0
-i21!2993 -> 0
-o12!7 -> MimeType!val!0
-o21!6 -> MimeType!val!1
-o2Attribute22!432 -> (- 1)
-res3!13 -> (- 1)
-comp12!22 -> 0
-o1Attribute22!431 -> 0
-i11!2992 -> 0
-i11 -> 2578
-o2Attribute32!720 -> 0
-comp22!271 -> 0
-compareDouble!17 -> {
-  0
-}
-get!1 -> {
-  (get!1!3164 (:var 0) (k!3163 (:var 1)))
-}
-getSubtype!3 -> {
-  MimeType!val!1 -> 19
-  MimeType!val!2 -> 20
-  else -> 13
-}
-k!3163 -> {
-  (let ((a!1 (ite (>= (:var 0) 2579)
-                  (ite (>= (:var 0) 2580)
-                       (ite (>= (:var 0) 2581) 2581 2580)
-                       2579)
-                  2578)))
-    (ite (>= (:var 0) 2577) (ite (>= (:var 0) 2578) a!1 2577) 0))
-}
-getValue!0 -> {
-  0
-}
-equals!20 -> {
-  15
-}
-compareIgnoreCaseString!19 -> {
-  0
-}
-getType!4 -> {
-  MimeType!val!1 -> 17
-  MimeType!val!2 -> 18
-  else -> 12
-}
-getParametersSize!2 -> {
-  2582
-}
-compareInt!18 -> {
-  0
-}
-get!1!3164 -> {
-  MimeType!val!0 2579 -> 0
-  MimeType!val!2 2581 -> 0
-  MimeType!val!1 2580 -> 27
-  MimeType!val!2 2580 -> 27
-  MimeType!val!0 2578 -> 1
-  MimeType!val!2 2578 -> 1
-  MimeType!val!1 2578 -> 1
-  else -> (- 1)
-}
 
-
-real	0m1.565s
-user	0m1.553s
-sys	0m0.012s
+real	0m1.545s
+user	0m1.545s
+sys	0m0.000s
 descartes -p=3 -m=3: 
 Invariant:
 (let ((a!1 (exists ((i31 Int))
@@ -2671,6 +2584,6 @@ Invariant:
   (and a!1 a!2 (<= i31 0)))
 descartes: analyse_loop failed
 
-real	0m2.697s
-user	0m2.681s
-sys	0m0.016s
+real	0m2.806s
+user	0m2.798s
+sys	0m0.008s

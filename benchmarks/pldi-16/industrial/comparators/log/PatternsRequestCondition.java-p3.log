@@ -1,0 +1,25 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m16.633s
+user	0m16.532s
+sys	0m0.097s
+descartes -p=3 -m=1: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m22.121s
+user	0m22.113s
+sys	0m0.004s
+descartes -p=3 -m=2: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o1Size1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o2Size1"])))
+
+real	0m0.013s
+user	0m0.008s
+sys	0m0.004s
+descartes -p=3 -m=3: 
+descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o1Size1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "o2Size1"])))
+
+real	0m0.011s
+user	0m0.004s
+sys	0m0.008s

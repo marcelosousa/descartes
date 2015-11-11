@@ -1,70 +1,27 @@
 Property 1
 descartes -p=1 -m=0: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i21 -> 0
-currentName22!1320 -> 3
-y11 -> 3
-o21!2 -> NameComparator!val!1
-o22!4 -> NameComparator!val!0
-y21 -> 3
-res1!5 -> 1
-o11!1 -> NameComparator!val!0
-x21 -> 3
-currentName12!171 -> 3
-res2!6 -> 1
-o12!3 -> NameComparator!val!1
-i21!1479 -> 0
-i11!1480 -> 0
-i11 -> 0
-x11 -> 3
-compareInt!11 -> {
-  0
-}
-compareDouble!10 -> {
-  0
-}
-nondet!9!1547 -> {
-  (- 1) -> 4
-  else -> 3
-}
-Name!0 -> {
-  3
-}
-compareIgnoreCaseString!12 -> {
-  0
-}
-nondet!9 -> {
-  (nondet!9!1547 (k!1546 (:var 0)))
-}
-k!1546 -> {
-  (ite (>= (:var 0) 0) 0 (- 1))
-}
-
-
-real	0m0.145s
-user	0m0.141s
-sys	0m0.007s
-descartes -p=1 -m=1: 
-Sat: Comparator VIOLATES Property 1: forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21!1673 -> 0
 i21 -> 1
+currentName22!1589 -> 3
 y11 -> 3
 o21!2 -> NameComparator!val!1
-i21!1071 -> 0
+currentName12!216 -> 3
 o22!4 -> NameComparator!val!0
 y21 -> 3
 res1!5 -> 1
 o11!1 -> NameComparator!val!0
 x21 -> 3
-currentName12!171 -> 3
 res2!6 -> 1
 o12!3 -> NameComparator!val!1
-i11!1072 -> 0
-currentName22!1068 -> 3
+i11!1674 -> 0
 i11 -> 1
 x11 -> 3
-nondet!9!1231 -> {
-  0 -> 7
-  else -> 3
+equals!13 -> {
+  5
+}
+k!1719 -> {
+  (ite (>= (:var 0) 1) 1 0)
 }
 compareInt!11 -> {
   0
@@ -72,8 +29,57 @@ compareInt!11 -> {
 compareDouble!10 -> {
   0
 }
-k!1230 -> {
+Name!0 -> {
+  3
+}
+compareIgnoreCaseString!12 -> {
+  0
+}
+nondet!9!1720 -> {
+  0 -> 4
+  else -> 3
+}
+nondet!9 -> {
+  (nondet!9!1720 (k!1719 (:var 0)))
+}
+
+
+real	0m0.150s
+user	0m0.141s
+sys	0m0.008s
+descartes -p=1 -m=1: 
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+i21 -> 1
+i11!1475 -> 0
+y11 -> 3
+o21!2 -> NameComparator!val!1
+currentName12!216 -> 3
+o22!4 -> NameComparator!val!0
+y21 -> 3
+res1!5 -> 1
+o11!1 -> NameComparator!val!0
+x21 -> 3
+currentName22!1471 -> 3
+res2!6 -> 1
+o12!3 -> NameComparator!val!1
+i11 -> 1
+i21!1474 -> 0
+x11 -> 3
+equals!13 -> {
+  2
+}
+k!1639 -> {
   (ite (>= (:var 0) 1) 1 0)
+}
+compareInt!11 -> {
+  0
+}
+nondet!9!1640 -> {
+  0 -> 5
+  else -> 3
+}
+compareDouble!10 -> {
+  0
 }
 Name!0 -> {
   3
@@ -82,22 +88,22 @@ compareIgnoreCaseString!12 -> {
   0
 }
 nondet!9 -> {
-  (nondet!9!1231 (k!1230 (:var 0)))
+  (nondet!9!1640 (k!1639 (:var 0)))
 }
 
 
-real	0m0.131s
-user	0m0.119s
-sys	0m0.012s
+real	0m0.133s
+user	0m0.125s
+sys	0m0.008s
 descartes -p=1 -m=2: 
 descartes: buildArtCond: fn
 
-real	0m0.010s
+real	0m0.011s
 user	0m0.007s
-sys	0m0.003s
+sys	0m0.004s
 descartes -p=1 -m=3: 
 descartes: buildArtCond: fn
 
-real	0m0.009s
-user	0m0.009s
+real	0m0.008s
+user	0m0.008s
 sys	0m0.000s

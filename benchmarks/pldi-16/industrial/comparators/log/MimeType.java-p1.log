@@ -2,85 +2,21 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.394s
-user	0m0.378s
-sys	0m0.016s
+real	0m0.395s
+user	0m0.387s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.362s
-user	0m0.349s
-sys	0m0.013s
+real	0m0.359s
+user	0m0.347s
+sys	0m0.012s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
-i21 -> 0
-o1Value22!470 -> 0
-comp24!469 -> 0
-comp12!19 -> 0
-i21!1569 -> 0
-o1Attribute12!179 -> 9400
-o22!8 -> MimeType!val!0
-o2Attribute22!468 -> 9401
-comp11 -> 0
-comp21 -> 0
-o12!7 -> MimeType!val!1
-o21!6 -> MimeType!val!1
-res2!10 -> (- 1)
-o11!5 -> MimeType!val!0
-comp14!181 -> (- 2)
-o2Value22!471 -> 1
-i11!1568 -> 0
-comp23!308 -> 0
-comp13!20 -> 0
-comp22!307 -> 0
-o2Attribute12!180 -> 9402
-comp25!472 -> (- 1)
-o1Attribute22!467 -> 9401
-i11 -> 1
-res1!9 -> (- 2)
-get!1!1655 -> {
-  MimeType!val!0 1 -> 9400
-  MimeType!val!1 1 -> 9402
-  else -> 9401
-}
-compareIgnoreCaseString!16 -> {
-  0
-}
-get!1 -> {
-  (get!1!1655 (:var 0) (k!1654 (:var 1)))
-}
-compareDouble!14 -> {
-  0
-}
-getSubtype!3 -> {
-  MimeType!val!0 -> 13
-  else -> 12
-}
-equals!17 -> {
-  15
-}
-getValue!0 -> {
-  MimeType!val!0 9401 -> 1
-  else -> 0
-}
-k!1654 -> {
-  (ite (>= (:var 0) 0) (ite (>= (:var 0) 1) 1 0) (- 1))
-}
-getParametersSize!2 -> {
-  2
-}
-getType!4 -> {
-  MimeType!val!0 -> 11
-  else -> 10
-}
-compareInt!15 -> {
-  0
-}
 
-
-real	0m0.330s
-user	0m0.318s
-sys	0m0.012s
+real	0m0.304s
+user	0m0.296s
+sys	0m0.008s
 descartes -p=1 -m=3: 
 Invariant:
 (let ((a!1 (exists ((i21 Int))
@@ -305,6 +241,6 @@ Invariant:
   (and a!1 a!2 (<= i21 0)))
 descartes: analyse_loop failed
 
-real	0m0.218s
-user	0m0.206s
-sys	0m0.012s
+real	0m0.217s
+user	0m0.212s
+sys	0m0.004s

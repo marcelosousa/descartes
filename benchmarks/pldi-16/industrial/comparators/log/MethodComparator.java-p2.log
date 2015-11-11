@@ -1,153 +1,25 @@
 Property 2
 descartes -p=2 -m=0: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-parameterTypes2Length21 -> 1
-i21!5440 -> 0
-res3!11 -> (- 1)
-name211 -> 0
-parameterTypes1Length31 -> 3
-i31!5439 -> 0
-name111 -> 0
-parameterTypes1Length11 -> 3
-parameterTypeName112!1161 -> 1
-parameterTypeName212!1162 -> 0
-o21!4 -> MethodComparator!val!1
-o22!6 -> MethodComparator!val!2
-name131 -> 0
-res1!9 -> 1
-o23!8 -> MethodComparator!val!2
-i31 -> 1
-o13!7 -> MethodComparator!val!0
-value11 -> 0
-parameterTypes1Length21 -> 2
-parameterTypes2Length11 -> 2
-i11!5441 -> 0
-name121 -> 0
-name231 -> 0
-value31 -> 0
-o11!3 -> MethodComparator!val!0
-name221 -> 0
-res2!10 -> 1
-parameterTypes2Length31 -> 1
-value21 -> 0
-o12!5 -> MethodComparator!val!1
-i11 -> 1
-value12!1163 -> 1
-i21 -> 2088
-compareIgnoreCaseString!17 -> {
-  0
-}
-getParameterTypesLength!1 -> {
-  MethodComparator!val!0 -> 3
-  MethodComparator!val!2 -> 1
-  else -> 2
-}
-compareDouble!15 -> {
-  0
-}
-getParameterTypeName!0 -> {
-  (getParameterTypeName!0!5529 (:var 0) (k!5528 (:var 1)))
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  15
-}
-k!5528 -> {
-  (ite (>= (:var 0) 1) (ite (>= (:var 0) 2087) 2087 1) 0)
-}
-getParameterTypeName!0!5529 -> {
-  MethodComparator!val!0 1 -> 1
-  else -> 0
-}
-getName!2 -> {
-  0
-}
 
-
-real	0m0.616s
-user	0m0.607s
+real	0m0.586s
+user	0m0.578s
 sys	0m0.008s
 descartes -p=2 -m=1: 
 Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
-res3!11 -> (- 1)
-name211 -> 0
-parameterTypes1Length31 -> 3
-value12!827 -> 1
-name111 -> 0
-i21!5353 -> 0
-parameterTypes1Length11 -> 3
-o21!4 -> MethodComparator!val!1
-o22!6 -> MethodComparator!val!2
-name131 -> 0
-res1!9 -> 1
-parameterTypeName112!825 -> 1
-o23!8 -> MethodComparator!val!2
-i31 -> 1
-o13!7 -> MethodComparator!val!0
-value11 -> 0
-parameterTypes1Length21 -> 2
-parameterTypes2Length11 -> 2
-name121 -> 0
-value31 -> 0
-parameterTypeName212!826 -> 0
-name231 -> 0
-o11!3 -> MethodComparator!val!0
-i11!5354 -> 0
-name221 -> 0
-res2!10 -> 1
-i31!5352 -> 0
-parameterTypes2Length31 -> 1
-value21 -> 0
-o12!5 -> MethodComparator!val!1
-i11 -> 1
-parameterTypes2Length21 -> 1
-i21 -> 1677
-compareIgnoreCaseString!17 -> {
-  0
-}
-k!5482 -> {
-  (ite (>= (:var 0) 1) (ite (>= (:var 0) 1676) 1676 1) 0)
-}
-getParameterTypesLength!1 -> {
-  MethodComparator!val!0 -> 3
-  MethodComparator!val!2 -> 1
-  else -> 2
-}
-compareDouble!15 -> {
-  0
-}
-getParameterTypeName!0 -> {
-  (getParameterTypeName!0!5483 (:var 0) (k!5482 (:var 1)))
-}
-compareInt!16 -> {
-  0
-}
-equals!18 -> {
-  15
-}
-getParameterTypeName!0!5483 -> {
-  MethodComparator!val!0 1 -> 1
-  else -> 0
-}
-getName!2 -> {
-  0
-}
 
-
-real	0m0.875s
-user	0m0.866s
-sys	0m0.008s
+real	0m0.877s
+user	0m0.877s
+sys	0m0.000s
 descartes -p=2 -m=2: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes1Length1"]))) CAnd (BinOp (ExpName (Name [Ident "i1"])) LThan (ExpName (Name [Ident "parameterTypes2Length1"])))
 
-real	0m0.019s
-user	0m0.019s
-sys	0m0.000s
+real	0m0.016s
+user	0m0.012s
+sys	0m0.004s
 descartes -p=2 -m=3: 
 descartes: guessInvariant procedure failed at:BinOp (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "parameterTypes1Length3"]))) CAnd (BinOp (ExpName (Name [Ident "i3"])) LThan (ExpName (Name [Ident "parameterTypes2Length3"])))
 
-real	0m0.019s
-user	0m0.009s
-sys	0m0.009s
+real	0m0.018s
+user	0m0.014s
+sys	0m0.004s
