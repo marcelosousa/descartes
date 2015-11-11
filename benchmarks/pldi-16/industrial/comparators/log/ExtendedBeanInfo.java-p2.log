@@ -2,24 +2,144 @@ Property 2
 descartes -p=2 -m=0: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.539s
+real	0m0.535s
 user	0m0.530s
-sys	0m0.008s
+sys	0m0.004s
 descartes -p=2 -m=1: 
 Unsat: OBEYS [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
 
-real	0m0.829s
-user	0m0.825s
-sys	0m0.004s
+real	0m0.845s
+user	0m0.837s
+sys	0m0.008s
 descartes -p=2 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
 
-real	0m0.011s
-user	0m0.008s
-sys	0m0.004s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o13!6 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o23!7 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o13!6 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o23!7 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+Sat: VIOLATES [Transitivity] (compare): for all x, y and z, compare(x, y) > 0 and compare/equals(y, z) > 0 implies compare/equals(x, z) > 0.
+
+real	0m0.299s
+user	0m0.291s
+sys	0m0.008s
 descartes -p=2 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
 
-real	0m0.008s
-user	0m0.004s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o13!6 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o23!7 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o13!6 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o23!7 of sort PropertyDescriptorComparator
+j3 of sort Int
+
+./run-descartes.sh: line 17:  8599 Segmentation fault      (core dumped) descartes -p=2 -m=3 $f
+
+real	0m0.244s
+user	0m0.091s
 sys	0m0.004s

@@ -2,24 +2,204 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m2.847s
-user	0m2.834s
+real	0m2.928s
+user	0m2.916s
 sys	0m0.012s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m4.425s
-user	0m4.421s
-sys	0m0.004s
+real	0m4.329s
+user	0m4.304s
+sys	0m0.024s
 descartes -p=3 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o11!3 of sort CompositeRequestCondition
+j1 of sort Int
 
-real	0m0.014s
-user	0m0.007s
-sys	0m0.007s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o21!4 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o11!3 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o21!4 of sort CompositeRequestCondition
+j1 of sort Int
+
+./run-descartes.sh: line 28:  8698 Segmentation fault      (core dumped) descartes -p=3 -m=2 $f
+
+real	0m0.175s
+user	0m0.026s
+sys	0m0.004s
 descartes -p=3 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
 
-real	0m0.018s
-user	0m0.004s
-sys	0m0.013s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o13!7 of sort CompositeRequestCondition
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o23!8 of sort CompositeRequestCondition
+j3 of sort Int
+
+./run-descartes.sh: line 28:  8700 Segmentation fault      (core dumped) descartes -p=3 -m=3 $f
+
+real	0m0.240s
+user	0m0.083s
+sys	0m0.008s

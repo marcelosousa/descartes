@@ -2,24 +2,104 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.350s
-user	0m0.341s
+real	0m0.366s
+user	0m0.358s
 sys	0m0.008s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m0.630s
-user	0m0.621s
+real	0m0.648s
+user	0m0.640s
 sys	0m0.008s
 descartes -p=3 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
 
-real	0m0.013s
-user	0m0.013s
-sys	0m0.000s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+./run-descartes.sh: line 28:  8674 Segmentation fault      (core dumped) descartes -p=3 -m=2 $f
+
+real	0m0.182s
+user	0m0.017s
+sys	0m0.011s
 descartes -p=3 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
 
-real	0m0.009s
-user	0m0.003s
-sys	0m0.006s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toLowerCase!11 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o11!2 of sort CaseIgnoringComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun toUpperCase!12 (Int) Int) applied to: 
+o21!3 of sort CaseIgnoringComparator
+j1 of sort Int
+
+./run-descartes.sh: line 28:  8676 Segmentation fault      (core dumped) descartes -p=3 -m=3 $f
+
+real	0m0.178s
+user	0m0.023s
+sys	0m0.000s

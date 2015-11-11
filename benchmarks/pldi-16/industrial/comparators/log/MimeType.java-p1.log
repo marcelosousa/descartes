@@ -2,24 +2,164 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.412s
-user	0m0.400s
+real	0m0.419s
+user	0m0.407s
 sys	0m0.012s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.386s
-user	0m0.378s
-sys	0m0.008s
+real	0m0.376s
+user	0m0.372s
+sys	0m0.004s
 descartes -p=1 -m=2: 
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.329s
-user	0m0.318s
-sys	0m0.012s
+real	0m0.298s
+user	0m0.281s
+sys	0m0.016s
 descartes -p=1 -m=3: 
-descartes: none of the invariants was able to prove the property.
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
 
-real	0m0.217s
-user	0m0.204s
-sys	0m0.012s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+./run-descartes.sh: line 6:  8502 Segmentation fault      (core dumped) descartes -p=1 -m=3 $f
+
+real	0m0.373s
+user	0m0.212s
+sys	0m0.008s

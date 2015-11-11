@@ -2,24 +2,24 @@ Property 1
 descartes -p=1 -m=0: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.283s
+real	0m0.287s
 user	0m0.271s
-sys	0m0.012s
+sys	0m0.016s
 descartes -p=1 -m=1: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.278s
-user	0m0.264s
-sys	0m0.016s
+real	0m0.273s
+user	0m0.269s
+sys	0m0.004s
 descartes -p=1 -m=2: 
 Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.232s
-user	0m0.228s
-sys	0m0.004s
+real	0m0.189s
+user	0m0.176s
+sys	0m0.012s
 descartes -p=1 -m=3: 
 descartes: none of the invariants was able to prove the property.
 
-real	0m0.098s
-user	0m0.086s
+real	0m0.057s
+user	0m0.045s
 sys	0m0.012s

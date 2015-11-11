@@ -2,24 +2,124 @@ Property 1
 descartes -p=1 -m=0: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.415s
-user	0m0.406s
-sys	0m0.009s
+real	0m0.393s
+user	0m0.384s
+sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.451s
-user	0m0.438s
+real	0m0.455s
+user	0m0.443s
 sys	0m0.012s
 descartes -p=1 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o11!3 of sort CompositeRequestCondition
+j1 of sort Int
 
-real	0m0.014s
-user	0m0.014s
-sys	0m0.000s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o21!4 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o11!3 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o21!4 of sort CompositeRequestCondition
+j1 of sort Int
+
+./run-descartes.sh: line 6:  8449 Segmentation fault      (core dumped) descartes -p=1 -m=2 $f
+
+real	0m0.184s
+user	0m0.018s
+sys	0m0.005s
 descartes -p=1 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
 
-real	0m0.017s
-user	0m0.013s
-sys	0m0.004s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o12!5 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o22!6 of sort CompositeRequestCondition
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o11!3 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o21!4 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o11!3 of sort CompositeRequestCondition
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getLength!0 (CompositeRequestCondition) Int) applied to: 
+o21!4 of sort CompositeRequestCondition
+j1 of sort Int
+
+./run-descartes.sh: line 6:  8451 Segmentation fault      (core dumped) descartes -p=1 -m=3 $f
+
+real	0m0.217s
+user	0m0.051s
+sys	0m0.008s

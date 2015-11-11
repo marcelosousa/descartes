@@ -2,24 +2,3584 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m13.040s
-user	0m13.016s
-sys	0m0.016s
+real	0m13.842s
+user	0m13.827s
+sys	0m0.013s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m44.344s
-user	0m44.318s
-sys	0m0.012s
+real	0m41.472s
+user	0m41.438s
+sys	0m0.028s
 descartes -p=3 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
 
-real	0m0.037s
-user	0m0.037s
-sys	0m0.000s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m12.701s
+user	0m12.655s
+sys	0m0.044s
 descartes -p=3 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
 
-real	0m0.106s
-user	0m0.098s
-sys	0m0.008s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o11!6 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o21!7 of sort ElementComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun ElementsSize!2 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o12!8 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o22!9 of sort ElementComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o13!10 of sort ElementComparator
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun AttributesSize!3 (ElementComparator) Int) applied to: 
+o23!11 of sort ElementComparator
+j3 of sort Int
+
+./run-descartes.sh: line 28:  8719 Segmentation fault      (core dumped) descartes -p=3 -m=3 $f
+
+real	0m26.552s
+user	0m26.207s
+sys	0m0.188s

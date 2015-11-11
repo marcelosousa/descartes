@@ -8,18 +8,118 @@ sys	0m0.004s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.160s
-user	0m0.144s
-sys	0m0.016s
+real	0m0.152s
+user	0m0.148s
+sys	0m0.004s
 descartes -p=1 -m=2: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
 
-real	0m0.012s
-user	0m0.008s
-sys	0m0.004s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
+
+real	0m0.104s
+user	0m0.095s
+sys	0m0.008s
 descartes -p=1 -m=3: 
-descartes: buildArtCond: fn
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
 
-real	0m0.011s
-user	0m0.007s
-sys	0m0.004s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o11!2 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o21!3 of sort PropertyDescriptorComparator
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o12!4 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getNameLength!1 (PropertyDescriptorComparator) Int) applied to: 
+o22!5 of sort PropertyDescriptorComparator
+j2 of sort Int
+
+./run-descartes.sh: line 6:  8473 Segmentation fault      (core dumped) descartes -p=1 -m=3 $f
+
+real	0m0.255s
+user	0m0.088s
+sys	0m0.008s

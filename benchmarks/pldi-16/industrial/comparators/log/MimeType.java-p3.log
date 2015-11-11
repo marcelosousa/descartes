@@ -2,24 +2,904 @@ Property 3
 descartes -p=3 -m=0: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m1.173s
-user	0m1.168s
-sys	0m0.004s
+real	0m1.132s
+user	0m1.132s
+sys	0m0.000s
 descartes -p=3 -m=1: 
 Unsat: OBEYS Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m3.125s
-user	0m3.117s
-sys	0m0.008s
+real	0m3.380s
+user	0m3.359s
+sys	0m0.020s
 descartes -p=3 -m=2: 
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
 Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
 
-real	0m1.559s
-user	0m1.547s
-sys	0m0.012s
+real	0m1.609s
+user	0m1.599s
+sys	0m0.009s
 descartes -p=3 -m=3: 
-descartes: none of the invariants was able to prove the property.
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
 
-real	0m2.667s
-user	0m2.658s
-sys	0m0.008s
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o11!5 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o21!6 of sort MimeType
+j1 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o12!7 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o22!8 of sort MimeType
+j2 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o13!9 of sort MimeType
+j3 of sort Int
+
+WARNING: invalid function application, wrong number of arguments
+WARNING: (declare-fun getParametersSize!2 (MimeType) Int) applied to: 
+o23!10 of sort MimeType
+j3 of sort Int
+
+./run-descartes.sh: line 28:  8753 Segmentation fault      (core dumped) descartes -p=3 -m=3 $f
+
+real	0m2.578s
+user	0m2.402s
+sys	0m0.020s

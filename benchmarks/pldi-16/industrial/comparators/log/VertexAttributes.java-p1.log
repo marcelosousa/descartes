@@ -3,23 +3,23 @@ descartes -p=1 -m=0:
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
 real	0m0.828s
-user	0m0.819s
+user	0m0.820s
 sys	0m0.008s
 descartes -p=1 -m=1: 
 Unsat: OBEYS [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.847s
-user	0m0.833s
+real	0m0.840s
+user	0m0.828s
 sys	0m0.012s
 descartes -p=1 -m=2: 
-descartes: buildArtCond: fn
+Sat: VIOLATES [Anti-symmetry] (compare): forall x and y, sgn(compare(x,y)) == −sgn(compare(y,x))
 
-real	0m0.014s
-user	0m0.009s
-sys	0m0.005s
+real	0m0.460s
+user	0m0.431s
+sys	0m0.029s
 descartes -p=1 -m=3: 
-descartes: buildArtCond: fn
+descartes: none of the invariants was able to prove the property.
 
-real	0m0.018s
-user	0m0.010s
-sys	0m0.007s
+real	0m0.464s
+user	0m0.455s
+sys	0m0.008s
