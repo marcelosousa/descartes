@@ -28,10 +28,14 @@ guessInvariants pid cond body = do
 
 search fields list (Name n) =
   case n of 
-    [ident] ->
+    [ident@(Ident "nondet")] ->
       case M.lookup ident fields of
         Nothing -> return list
-        Just fn -> return $ fn:list
+        Just fn -> return $ (fn,0):list
+    [obj,field] ->
+      case M.lookup field fields of
+        Nothing -> return list
+        Just fn -> return $ (fn,1):list
 {-
     [Ident "Character",fnName] -> return list
         Just fn -> return $ fn:list
@@ -50,24 +54,23 @@ search fields list (Name n) =
       in case M.lookup fnName fields of
         Nothing -> return list
         Just fn -> return $ fn:list
-    [obj,field] ->
-      case M.lookup field fields of
-        Nothing -> return list
-        Just fn -> return $ fn:list -}
+ -}
     _ -> return list
         
 type Z3Op = (AST -> AST -> Z3 AST)
 --
-guessInvariant :: [FuncDecl] -> Z3Op -> Z3Op -> Z3Op -> Int -> Exp -> EnvOp [AST]
+guessInvariant :: [(FuncDecl,Int)] -> Z3Op -> Z3Op -> Z3Op -> Int -> Exp -> EnvOp [AST]
 guessInvariant fnNames op op' op'' pid cond = do
  env@Env{..} <- get 
  case getCondCounter cond of 
-  Nothing -> error "none of the invariants was able to prove the property." -- at:" ++ show cond -- mkTrue
+  Nothing -> do 
+    t <- lift $ mkTrue
+    return [t]
   Just i -> do
    let (iAST,_,_)  = safeLookup "guessInvariant: i" i _ssamap
        e = safeLookup ("getting last condition assignment" ++ show i) i _assmap
    -- i `op` Init
-   i0 <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) e --T.trace (show e) $ lift $ mkIntNum 0
+   i0 <- lift $ processExp (_objSort,_params,_res,_fields,_ssamap) e 
    c1 <- lift $ op iAST i0
    -- exists i. pre
    iApp <- lift $ toApp iAST
@@ -80,11 +83,11 @@ getCondCounter :: Exp -> Maybe Ident
 getCondCounter expr = 
   case expr of
     BinOp (ExpName (Name [i])) _ _ -> Just i
-    BinOp (BinOp (ExpName (Name [i])) _ _) And _ -> Just i
+    BinOp (BinOp (ExpName (Name [i])) _ _) _ _ -> Just i
     BinOp (BinOp (BinOp (ExpName (Name [i])) _ _) _ _) And _ -> Just i
     _ -> Nothing --error $ "getCondCounter: " ++ show expr
 
-generalizeCond :: [FuncDecl] -> Z3Op -> Z3Op -> (Sort, Params, [AST], Fields, SSAMap) ->  AST -> Ident -> AST -> Exp -> Int -> Z3 [AST]
+generalizeCond :: [(FuncDecl,Int)] -> Z3Op -> Z3Op -> (Sort, Params, [AST], Fields, SSAMap) ->  AST -> Ident -> AST -> Exp -> Int -> Z3 [AST]
 generalizeCond fnNames op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST _cond pid =
   case _cond of 
     BinOp _ And cond -> do
@@ -114,12 +117,17 @@ generalizeCond fnNames op op' env@(objSort, pars, res, fields, ssamap) i0 i iAST
       c1 <- op i0 j >>= \left -> op' j iAST >>= \right -> mkAnd [left, right]
       -- c2: 
       let ssamap' = M.insert jIdent (j, sort, pid) ssamap
+      c2p <- processExp (objSort, pars, res, fields, ssamap) _cond
       c2s <- mapM (\fnName -> buildArtCond fnName (pars,fields) j pid) fnNames
       -- \forall j. c1 => c2
       mapM (\c2 -> mkImplies c1 c2 >>= \body -> mkForallConst [] [jApp] body) c2s
     
-buildArtCond :: FuncDecl -> (Params, Fields) -> AST -> Int -> Z3 AST
-buildArtCond fn (pars,fields) j pid = do
+buildArtCond :: (FuncDecl,Int) -> (Params, Fields) -> AST -> Int -> Z3 AST
+buildArtCond (fn,0) (pars,fields) j pid = do 
+  get1 <- mkApp fn [j]
+  get2 <- mkApp fn [j]
+  mkEq get1 get2
+buildArtCond (fn,1) (pars,fields) j pid = do
   let o1 = Ident $ "o1" ++ show pid
       o2 = Ident $ "o2" ++ show pid
       o1z3 = safeLookup "buildArtCond: o1" o1 pars
