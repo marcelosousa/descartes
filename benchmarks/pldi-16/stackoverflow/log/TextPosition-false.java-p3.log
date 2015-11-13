@@ -1,0 +1,25 @@
+Property 3
+descartes -p=3 -m=0: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m0.261s
+user	0m0.244s
+sys	0m0.016s
+descartes -p=3 -m=1: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m0.402s
+user	0m0.392s
+sys	0m0.008s
+descartes -p=3 -m=2: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m1.041s
+user	0m1.025s
+sys	0m0.016s
+descartes -p=3 -m=3: 
+Sat: VIOLATES Property 3: for all x, y and z, compare(x,y) == 0 implies that sgn(compare(x, z)) == sgn(compare(y, z)).
+
+real	0m0.389s
+user	0m0.380s
+sys	0m0.008s
