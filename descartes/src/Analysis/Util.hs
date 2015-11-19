@@ -588,6 +588,8 @@ replaceExp i j phi =
     PreMinus      expr -> PreMinus      $ replaceExp i j expr
     PreBitCompl   expr -> PreBitCompl   $ replaceExp i j expr
     PreNot        expr -> PreNot        $ replaceExp i j expr
+    MethodInv (MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args) ->
+      BinOp (args!!0) Sub (args!!1)
     MethodInv (MethodCall _name args) -> 
         let args' = map (replaceExp i j) args
         in MethodInv $ MethodCall _name args'
