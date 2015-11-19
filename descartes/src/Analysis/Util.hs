@@ -403,7 +403,7 @@ instance Rewritable Stmt where
         BasicFor mForInit mExp mLExp _body -> error "rewrite: BasicFor not supported"
         EnhancedFor mods ty ident expr _body -> error "rewrite: EnhancedFor not supported"
         Empty -> Empty
-        ExpStmt expr -> ExpStmt expr
+        ExpStmt expr -> ExpStmt $ rewrite expr
         Assert expr mexpr -> Assert expr mexpr
         Switch expr lSwitchBlock -> error "rename: Switch not supported"
         Do _body cond -> error "rewrite: Do not supported"
@@ -416,6 +416,13 @@ instance Rewritable Stmt where
         Labeled ident _stmt -> Labeled ident $ rewrite _stmt
         Assume expr -> Assume expr
 
+instance Rewritable Exp where
+  rewrite expr = case expr of
+    Assign lhs op aexpr -> ASsign lhs op $ rewrite aexpr
+    MethodInv (MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args) ->
+      BinOp (args!!0) Sub (args!!1)
+    _ -> expr
+    
 -- apply the transform rules
 transform :: Stmt -> Stmt
 transform (While cond body) = 
@@ -478,8 +485,6 @@ replace name rhs phi =
         PreMinus      expr -> PreMinus      $ replace name rhs expr
         PreBitCompl   expr -> PreBitCompl   $ replace name rhs expr
         PreNot        expr -> PreNot        $ replace name rhs expr
-        MethodInv (MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args) ->
-          BinOp (args!!0) Sub (args!!1)
         MethodInv (MethodCall _name args) -> 
             let args' = map (replace name rhs) args
                 nname = if name == _name then error "dont know what to do" else _name
