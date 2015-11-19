@@ -478,6 +478,8 @@ replace name rhs phi =
         PreMinus      expr -> PreMinus      $ replace name rhs expr
         PreBitCompl   expr -> PreBitCompl   $ replace name rhs expr
         PreNot        expr -> PreNot        $ replace name rhs expr
+        MethodInv (MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args) ->
+          BinOp (args!!0) Sub (args!!1)
         MethodInv (MethodCall _name args) -> 
             let args' = map (replace name rhs) args
                 nname = if name == _name then error "dont know what to do" else _name
