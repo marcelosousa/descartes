@@ -192,6 +192,7 @@ instance Pretty BlockStmt where
 
 instance Pretty Stmt where
   prettyPrec p (StmtBlock block) = prettyPrec p block
+  prettyPrec p Hole = text "<?HOLE?>"
   prettyPrec p (IfThen c th) =
     text "if" <+> parens (prettyPrec 0 c) $+$ prettyNestedStmt 0 th
 

@@ -178,7 +178,7 @@ analyse_conditional pid r1 rest cond s1 s2 =
 
 -- Analyse Loops
 analyse_loop :: Int -> [BlockStmt] -> [(Int,Block)] -> Exp -> Stmt -> EnvOp (Result,Maybe Model)
-analyse_loop pid r1 rest _cond _body =  do
+analyse_loop pid r1 rest _cond _body = do
  let bstmt = BlockStmt $ While _cond _body
  env@Env{..} <- get
  invs <- guessInvariants (pid+1) _cond _body

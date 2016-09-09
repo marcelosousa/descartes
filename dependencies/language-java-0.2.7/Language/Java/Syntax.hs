@@ -244,6 +244,8 @@ data Stmt
     | Try Block [Catch] (Maybe {- finally -} Block)
     -- | Statements may have label prefixes.
     | Labeled Ident Stmt
+    -- | Hole for edit script synthesis.
+    | Hole
   DERIVE
 
 -- | If a value is thrown and the try statement has one or more catch clauses that can catch it, then control will be
