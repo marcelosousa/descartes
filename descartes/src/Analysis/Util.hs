@@ -418,7 +418,7 @@ instance Rewritable Stmt where
 
 instance Rewritable Exp where
   rewrite expr = case expr of
-    Assign lhs op aexpr -> ASsign lhs op $ rewrite aexpr
+    Assign lhs op aexpr -> Assign lhs op $ rewrite aexpr
     MethodInv (MethodCall name@(Name [Ident "String",Ident "compareIgnoreCase"]) args) ->
       BinOp (args!!0) Sub (args!!1)
     _ -> expr

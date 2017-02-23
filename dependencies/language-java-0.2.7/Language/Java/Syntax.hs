@@ -246,6 +246,7 @@ data Stmt
     | Labeled Ident Stmt
     -- | Hole for edit script synthesis.
     | Hole
+    | Skip
   DERIVE
 
 -- | If a value is thrown and the try statement has one or more catch clauses that can catch it, then control will be
